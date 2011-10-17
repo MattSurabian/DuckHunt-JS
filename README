@@ -1,0 +1,12 @@
+DUCK HUNT JS - MIT License
+created by Matthew Surabian
+http://mattsurabian.com/duckhunt
+This readme file could obviously use some work…
+
+
+Overview:
+Currently everything is controlled by the game object.  I'm not sure how valuable doing duck and dog objects would be.  Mostly I'd like to find a better way to control the chaining of animations.
+
+I've got variables in place that would make calculating bonuses and stuff a breeze, so that could be fun.  Maybe a way to be able to create levels and send them to friends (I guess that would actually be pretty easy with some URL variables).
+
+At some point I'll flesh this doc out...
