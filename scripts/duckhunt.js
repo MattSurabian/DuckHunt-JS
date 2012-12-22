@@ -9,18 +9,7 @@ $(document).ready(function(){
 	//$(".sounds").attr("volume","0");
 	theGame.loadLevel(levelArray[theGame.currentLevel][0],levelArray[theGame.currentLevel][1],levelArray[theGame.currentLevel][2],levelArray[theGame.currentLevel][3],levelArray[theGame.currentLevel][4],levelArray[theGame.currentLevel][5]);
 });
-var mute= 0;
-function muteAll(){
-	if(mute == 0){
-		$(".sounds").attr("volume","0");
-		$("#mute").html("UNMUTE");
-		mute = 1;
-	}else{
-		$(".sounds").attr("volume","1");
-		$("#mute").html("MUTE");
-		mute=0;
-	}
-}
+
 var theGame={
 	playfield:"#game",
 	pieces: ["theFlash","tree","grass","theDog","sniffDog"],

@@ -170,7 +170,7 @@
             return parseInt(rand_no = Math.floor((higher - (lower - 1)) * Math.random()) + lower);
         },
         getBgY: function(el) {
-            if ($.browser.msie) {
+            if ($('html').hasClass('msie')) {
                 // fixme - the background-position property does not work
                 // correctly in IE so we have to hack it here... Not ideal
                 // especially as $.browser is depricated
@@ -181,7 +181,7 @@
             return bgY;
         },
         getBgX: function(el) {
-            if ($.browser.msie) {
+            if ($('html').hasClass('msie')) {
                 // see note, above
                 var bgX = $(el).css('background-position-x') || '0';
             } else {
