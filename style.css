@@ -149,3 +149,6 @@ body{
 	font-weight:bold;
 	top:3px;
 }
+.sounds{
+    display:none;
+}
