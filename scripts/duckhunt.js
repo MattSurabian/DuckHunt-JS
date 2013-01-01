@@ -49,7 +49,7 @@ var theGame={
 		$(theGame.playfield).html("");
 		
 		for(var i=0;i<theGame.pieces.length;i++){
-			$(theGame.playfield).append('<div id="'+theGame.pieces[i]+'"></div>');	
+			$(theGame.playfield).append('<div id="'+theGame.pieces[i]+'" class="'+theGame.pieces[i]+'"></div>');
 		}
 		
 		$(".messages").css("display","none");

@@ -14,38 +14,38 @@
 </style>
 </head>
 <body>
-<div id="header"><h1>Duck Hunt via HTML5 + JavaScript<br/><small>with level creator!</small></h1></div>
+<div id="header" class="header"><h1>Duck Hunt via HTML5 + JavaScript<br/><small>with level creator!</small></h1></div>
 <div id="mute" class="mute">MUTE</div>
-<div id="gameField">
+<div id="gameField" class="gameField">
 
 
-<div id="game"></div>
-<div class="gameinfo" id="ammo"></div>
-<div class="gameinfo" id="waves"></div>
-<div class="gameinfo" id="ducksKilled"></div>
-<div class="gameinfo" id="scoreboard"></div>
-<div id="loser" class="messages">
+<div id="game" class="game"></div>
+<div class="gameinfo ammo" id="ammo"></div>
+<div class="gameinfo waves" id="waves"></div>
+<div class="gameinfo ducksKilled" id="ducksKilled"></div>
+<div class="gameinfo scoreboard" id="scoreboard"></div>
+<div id="loser" class="messages loser">
 Are you kidding me with that?
 <br/><br/>
-<div class="tryAgain" onClick="tryAgain();">Try Again</div>
+<div class="tryAgain">Try Again</div>
 </div>
 
 
-<div id="winner" class="messages">
+<div id="winner" class="messages winner">
 You are a champion!  
 </div>
 
 
-<div id="level" class="messages">
+<div id="level" class="messages level">
 Level 1
 </div>
 
 </div>
 
-<div id="levelCreate" style="width:900px;margin:0 auto;"><br/>
+<div id="levelCreate" class="levelCreator"><br/>
 <strong>Level Creator:</strong><br/>
 Waves: <input id="LCwaves" name="LCwaves" size="3" type="text" value="1"/> &nbsp; &nbsp; Starting Ducks: <input name="LCducks" id="LCducks" size="3" type="text" value="2"/> &nbsp; &nbsp; Starting Bullets: <input type="text" name="LCbullets" id="LCbullets" size="3" value="4"/> &nbsp; &nbsp; Wave Time (sec): <input type="text" name="LCwavetime" id="LCwavetime" size="3" value="10"/> &nbsp; &nbsp; Difficulty: <input type="text" name="LCdif" id="LCdif" size="3" value="5"/>
-<div id="doit" style="margin-left:15px;display:inline;padding:5px;border:solid;width:100px;text-align:center;cursor:pointer;" onClick="makeLevel()">Bring It On</div>
+<div id="doit" class="doit">Bring It On</div>
 <br/><br/>
 <small>It's probably worth mentioning that it's very possible to crash your browser if you're overzealous with the level creator.  Wave time is the amount of time before the ducks fly away.  Difficulty is rated from 1-10 and controls the speed of the ducks.  Anything over 8 is kind of ridiculous. The bullet and duck counters have a maximum size- you will receive everything you configure but they may not all display if the number of bullets or ducks is too high.</small>
 </div>

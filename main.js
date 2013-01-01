@@ -16,4 +16,12 @@ $(function() {
         $('.unmute').addClass('mute').removeClass('unmute').html('mute');
     });
 
+    $(document).on('click','.tryAgain',function(){
+       tryAgain();
+    });
+
+    $(document).on('click','.doit',function(){
+        makeLevel();
+    });
+
 });
