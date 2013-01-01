@@ -1,4 +1,4 @@
-function player(id,name){
+function Player(id,name){
     this.id = id;
     this.name = name;
     this.score = 0;
@@ -8,6 +8,11 @@ function player(id,name){
     this.levelStats = [];
 }
 
-player.prototype.getScore = function(){
+Player.prototype.getScore = function(){
     return addCommas(this.score.toString());
+}
+
+Player.prototype.updateScore = function(delta){
+    this.score+=delta;
+    $("#scoreboard").html(Player.getScore());
 }

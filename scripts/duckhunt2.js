@@ -68,12 +68,17 @@ var gameLevels = [
 ];
 
 var duckhunt = {
-    curLevel:{},
+    level:null,
     playfield: $('#game'),
     curWave:0,
     gameTimers: {
         quackID: null,
-        sniffID: null,
-    }
+        sniffID: null
+    },
+    init: function(){
 
+    },
+    loadLevel: function(level){
+        duckhunt.level = level;
+    }
 }
