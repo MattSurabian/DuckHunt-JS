@@ -150,7 +150,7 @@ body{
 .sounds{
     display:none;
 }
-.mute{
+.mute,.unmute{
     cursor:pointer;
     z-index:5;
     width:900px;

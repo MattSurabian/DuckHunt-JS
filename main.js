@@ -24,4 +24,10 @@ $(function() {
         makeLevel();
     });
 
+    $(document).ready(function(){
+        //mute the sounds for debuging
+        $('.mute').trigger('click');
+        theGame.loadLevel(levelArray[theGame.currentLevel][0],levelArray[theGame.currentLevel][1],levelArray[theGame.currentLevel][2],levelArray[theGame.currentLevel][3],levelArray[theGame.currentLevel][4],levelArray[theGame.currentLevel][5]);
+    });
 });
+

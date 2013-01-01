@@ -4,11 +4,6 @@
 		A first draft...
 **************************************************/
 var levelArray = [["Level 1",3,2,5,3,13],["Level 2",5,3,6,4,10],["Level 3",6,3,7,4,10],["Level 4",3,10,7,11,18],["Level 5",5,2,8,3,13], ["Level 6",1,15,8,15,25]];
-$(document).ready(function(){
-	//mute the sounds for debuging	
-	//$(".sounds").attr("volume","0");
-	theGame.loadLevel(levelArray[theGame.currentLevel][0],levelArray[theGame.currentLevel][1],levelArray[theGame.currentLevel][2],levelArray[theGame.currentLevel][3],levelArray[theGame.currentLevel][4],levelArray[theGame.currentLevel][5]);
-});
 
 var theGame={
 	playfield:"#game",
