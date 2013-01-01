@@ -152,3 +152,9 @@ body{
 .sounds{
     display:none;
 }
+.mute{
+    cursor:pointer;
+    z-index:5;
+    width:900px;
+    margin:0 auto;
+}
