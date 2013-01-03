@@ -166,9 +166,11 @@ var duckhunt = {
         this.liveDucks = [];
     },
     victory: function(){
+        this.unbindInteractions();
         $(".winner").css("display","block");
     },
     defeat: function(){
+        this.unbindInteractions();
         $(".loser").css("display","block");
     },
     retry: function(){
