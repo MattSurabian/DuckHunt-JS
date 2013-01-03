@@ -53,6 +53,11 @@ var duckhunt = {
         this.clearTimers();
         this.unbindInteractions();
 
+        // id's equal to zero are from the level creator, progress doesn't count toward beating the game
+        if(level.id === 0){
+            this.curLevel--;
+        }
+
         this.level = level;
         this.curWave = 0;
         this.levelStats = {
@@ -169,7 +174,7 @@ var duckhunt = {
             duck.escape();
         });
         this.liveDucks = [];
-        
+
         $('.messages').css('display','none');
     },
     flashScreen : function(){
