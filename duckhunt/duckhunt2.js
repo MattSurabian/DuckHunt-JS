@@ -51,6 +51,8 @@ var duckhunt = {
     },
     loadLevel: function(level){
         this.clearTimers();
+        this.unbindInteractions();
+
         this.level = level;
         this.curWave = 0;
         this.levelStats = {
@@ -161,6 +163,14 @@ var duckhunt = {
         _.map(this.gameIntervals,function(interval,intervalName){
             clearInterval(interval);
         });
+    },
+    clearField: function(){
+        this.liveDucks.map(function(duck){
+            duck.escape();
+        });
+        this.liveDucks = [];
+        
+        $('.messages').css('display','none');
     },
     flashScreen : function(){
         $(".theFlash").css("display","block");

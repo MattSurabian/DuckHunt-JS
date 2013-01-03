@@ -21,7 +21,24 @@ $(function() {
     });
 
     $(document).on('click','.doit',function(){
-        makeLevel();
+        var LCwaves = parseInt($("#LCwaves").attr("value"));
+        var LCducks = parseInt($("#LCducks").attr("value"));
+        var LCbullets = parseInt($("#LCbullets").attr("value"));
+        var LCwavetime = parseInt($("#LCwavetime").attr("value"));
+        var LCdif = parseInt($("#LCdif").attr("value"));
+
+        duckhunt.clearField();
+
+        duckhunt.loadLevel({
+            id: 0,
+            title: 'Custom Level',
+            waves: LCwaves,
+            ducks: LCducks,
+            pointsPerDuck: 100,
+            speed: LCdif,
+            bullets: LCbullets,
+            time: LCwavetime
+        })
     });
 
     $(document).ready(function(){
