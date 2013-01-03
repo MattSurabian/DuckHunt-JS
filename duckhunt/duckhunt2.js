@@ -15,8 +15,10 @@ var duckhunt = {
     levelStats: {},
     player: new Player('1', 'Player 1'), // only a single player for now
     gameTimers: {
-        quackID: null,
         waveTimer: null
+    },
+    gameIntervals: {
+        quackID: null
     },
     init: function(){
         var _this = this;
@@ -48,6 +50,7 @@ var duckhunt = {
         })
     },
     loadLevel: function(level){
+        this.clearTimers();
         this.level = level;
         this.curWave = 0;
         this.levelStats = {
@@ -150,6 +153,14 @@ var duckhunt = {
     retry: function(){
         $('.messages').css('display','none');
         this.loadLevel(levels[this.curLevel]);
+    },
+    clearTimers: function(){
+        _.map(this.gameTimers,function(timer,timerName){
+            clearTimeout(timer);
+        });
+        _.map(this.gameIntervals,function(interval,intervalName){
+            clearInterval(interval);
+        });
     },
     flashScreen : function(){
         $(".theFlash").css("display","block");
