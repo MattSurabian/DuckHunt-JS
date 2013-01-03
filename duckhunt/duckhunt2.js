@@ -6,13 +6,13 @@
 
 var duckhunt = {
     playfield: '#game', // jquery selector, will change to jquery object on init
-    level:null,
-    curWave:0,
-    curLevel:0,
-    duckMax: 0,
-    waveEnding: false,
+    level:null, // current level object passed in via loadLevel
+    curLevel:0, // current level
+    curWave:0, // current wave
+    duckMax: 0, // incremented and used as an id when new ducks are created
+    waveEnding: false, // semaphore style flag to prevent race conditions
     liveDucks: [], // array of duck objects
-    levelStats: {},
+    levelStats: {}, // initialized in load level
     player: new Player('1', 'Player 1'), // only a single player for now
     gameTimers: {
         waveTimer: null
@@ -22,35 +22,42 @@ var duckhunt = {
     },
     init: function(){
         var _this = this;
-        this.playfield = $(this.playfield);
+        this.playfield = $(this.playfield); // make jquery object from selector
 
-        this.player.setWeapon(new Gun(weapons.rifle,_this.playfield));
+        this.player.setWeapon(new Gun(weapons.rifle,_this.playfield)); // assign default weapon
 
+        // bind to wave events
         this.playfield.on('wave:time_up',function(e,wave){_this.endWave(wave)});
         this.playfield.on('wave:end',function(e,wave){_this.endWave(wave)});
 
+        // bind to game events
         this.playfield.on('game:next_level',function(){_this.nextLevel()});
         this.playfield.on('game:defeat',function(){_this.defeat()});
         this.playfield.on('game:victory',function(){_this.victory()});
 
+        // bind to duck events
         this.playfield.on('duck:died',function(e,duck){_this.killDuck(duck)});
 
+        //bind to gun events
         this.playfield.on('gun:out_of_ammo',function(){_this.outOfAmmo()});
         this.playfield.on('gun:fire',function(){_this.flashScreen()});
 
     },
     bindInteractions: function(){
         var _this = this;
+
+        // bind interactions used during live play
         this.playfield.on('click',function(){_this.fireGun()});
     },
     unbindInteractions: function(){
+        // unbind interactions that should not be available during transitions and other non live play states
         this.playfield.off('click');
         this.liveDucks.map(function(duck){
             duck.unbindEvents();
         })
     },
     loadLevel: function(level){
-        this.clearTimers();
+        this.clearTimers(); // wipe out current level timers
         this.unbindInteractions();
 
         // id's equal to zero are from the level creator, progress doesn't count toward beating the game
@@ -59,7 +66,10 @@ var duckhunt = {
         }
 
         this.level = level;
-        this.curWave = 0;
+
+        this.curWave = 0; // reset curWave
+
+        // initialize level stats
         this.levelStats = {
             levelID: this.level.id,
             totalDucks: this.level.ducks*this.level.waves,
@@ -72,7 +82,6 @@ var duckhunt = {
     doWave: function(){
         var _this = this;
         clearInterval(this.gameIntervals.quackID);
-        this.bindInteractions();
 
         this.curWave++;
         if(this.curWave > this.level.waves){
@@ -80,9 +89,11 @@ var duckhunt = {
             return;
         }
 
-        this.player.getWeapon().setAmmo(this.level.bullets);
+        this.bindInteractions();
+        this.player.getWeapon().setAmmo(this.level.bullets); // reload the weapon for this wave
         this.releaseDucks();
 
+        // set wave timer
         var _curWave = this.curWave;
         this.gameTimers.waveTimer = setTimeout(function(){
             _this.playfield.trigger('wave:time_up',_curWave)
@@ -98,6 +109,7 @@ var duckhunt = {
 
             this.flyAway();
 
+            // allow animations to complete before launching next wave
             setTimeout(function(){
                 _this.waveEnding = false;
                 _this.doWave();
@@ -105,11 +117,13 @@ var duckhunt = {
         }
     },
     nextLevel : function(){
+        // calculate skill level to determine whether player advances
         var skills = (this.levelStats.ducksKilled/this.levelStats.totalDucks)*100;
         if(skills < 70){
             this.playfield.trigger('game:defeat');
             return;
         }
+
         this.player.pushLevelStats(this.levelStats);
         this.curLevel+=1;
         if(this.curLevel === levels.length){
@@ -128,7 +142,7 @@ var duckhunt = {
         }
     },
     killDuck: function(deadDuck){
-        this.levelStats.ducksKilled++;
+        this.levelStats.ducksKilled+=1;
         this.liveDucks = _(this.liveDucks).reject(function(duck){
             return duck.id === deadDuck.id;
         });
@@ -138,7 +152,7 @@ var duckhunt = {
         }
     },
     fireGun : function(){
-        this.levelStats.shotsFired++;
+        this.levelStats.shotsFired+=1;
         this.player.getWeapon().shoot();
     },
     outOfAmmo: function(){
