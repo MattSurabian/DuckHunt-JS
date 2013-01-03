@@ -71,7 +71,7 @@ var duckhunt = {
     },
     doWave: function(){
         var _this = this;
-        clearInterval(this.gameTimers.quackID);
+        clearInterval(this.gameIntervals.quackID);
         this.bindInteractions();
 
         this.curWave++;
