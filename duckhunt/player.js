@@ -6,6 +6,7 @@ function Player(id,name){
     this.totalMisses = 0;
     this.shotsTaken = 0;
     this.levelStats = [];
+    this.weapon = null;
 }
 
 Player.prototype.getScore = function(){
@@ -15,4 +16,12 @@ Player.prototype.getScore = function(){
 Player.prototype.updateScore = function(delta){
     this.score+=delta;
     $("#scoreboard").html(Player.getScore());
+}
+
+Player.prototype.setWeapon = function(weapon){
+    this.weapon = weapon;
+}
+
+Player.prototype.getWeapon = function(){
+    return this.weapon;
 }
