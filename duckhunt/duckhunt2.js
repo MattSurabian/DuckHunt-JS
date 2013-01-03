@@ -27,12 +27,14 @@ var duckhunt = {
         this.playfield.on('wave:time_up',function(e,wave){_this.endWave(wave)});
         this.playfield.on('wave:end',function(e,wave){_this.endWave(wave)});
 
-        this.playfield.on('game:next_level',function(){_this.nextLevel();});
+        this.playfield.on('game:next_level',function(){_this.nextLevel()});
+        this.playfield.on('game:defeat',function(){_this.defeat()});
+        this.playfield.on('game:victory',function(){_this.victory()});
 
         this.playfield.on('duck:died',function(e,duck){_this.killDuck(duck)});
 
-        this.playfield.on('gun:out_of_ammo',function(){_this.outOfAmmo();});
-        this.playfield.on('gun:fire',function(){_this.flashScreen();});
+        this.playfield.on('gun:out_of_ammo',function(){_this.outOfAmmo()});
+        this.playfield.on('gun:fire',function(){_this.flashScreen()});
 
     },
     bindInteractions: function(){
@@ -93,6 +95,11 @@ var duckhunt = {
         }
     },
     nextLevel : function(){
+        var skills = (this.levelStats.ducksKilled/this.levelStats.totalDucks)*100;
+        if(skills < 70){
+            this.playfield.trigger('game:defeat');
+            return;
+        }
         this.player.pushLevelStats(this.levelStats);
         this.curLevel+=1;
         if(this.curLevel === levels.length){
@@ -133,6 +140,16 @@ var duckhunt = {
             duck.escape();
         })
         this.liveDucks = [];
+    },
+    victory: function(){
+        $(".winner").css("display","block");
+    },
+    defeat: function(){
+        $(".loser").css("display","block");
+    },
+    retry: function(){
+        $('.messages').css('display','none');
+        this.loadLevel(levels[this.curLevel]);
     },
     flashScreen : function(){
         $(".theFlash").css("display","block");

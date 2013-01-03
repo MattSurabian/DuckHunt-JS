@@ -17,7 +17,7 @@ $(function() {
     });
 
     $(document).on('click','.tryAgain',function(){
-       tryAgain();
+       duckhunt.retry();
     });
 
     $(document).on('click','.doit',function(){
