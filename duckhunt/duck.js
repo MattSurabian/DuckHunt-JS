@@ -9,10 +9,13 @@ function Duck(id, style, speed, game){
     this.setSpeed(speed);
     this.hatch(); // add duck to DOM
 
+    return this;
+
 }
 
 Duck.prototype.die = function(){
-    this.game.trigger('duck:died');
+    var _duck = this;
+    this.game.trigger('duck:died',_duck);
 
     $._spritely.instances[this.id].stop_random=true;
     this.DOM.stop(true,false);
@@ -26,6 +29,8 @@ Duck.prototype.die = function(){
     setTimeout(function(){
         _duck.deathSpin()
     },500);
+
+    return this;
 }
 
 Duck.prototype.deathSpin = function(){
@@ -40,8 +45,9 @@ Duck.prototype.deathSpin = function(){
 }
 
 Duck.prototype.hatch = function(){
-    this.DOM = $('<div id="'+this.id+'" class="duck '+this.class+'"></div>').appendTo(this.game);
 
+    $('<div id="'+this.id+'" class="duck '+this.class+'"></div>').appendTo(this.game);
+    this.DOM = $("#"+this.id);
     var _duck = this;
     this.DOM.bind('mousedown',function(){
         _duck.die();
@@ -49,15 +55,18 @@ Duck.prototype.hatch = function(){
 }
 
 Duck.prototype.fly = function(){
+    var _this = this;
     this.DOM.sprite({fps: 6, no_of_frames: 3,start_at_frame: 1});
     this.DOM.spRandom({
         top: 400,
         left: 700,
         right: 0,
         bottom: 0,
-        speed: theGame.duckSpeed,
+        speed: _this.speed,
         pause: 0
     });
+
+    return this;
 }
 
 Duck.prototype.escape = function(){
@@ -73,6 +82,8 @@ Duck.prototype.escape = function(){
             $(this).attr("class","deadDuck");
         });
     }
+
+    return this;
 }
 
 Duck.prototype.setSpeed = function(duckSpeed){
