@@ -5,17 +5,16 @@
  **************************************************/
 
 var duckhunt = {
-    level:null,
     playfield: '#game', // jquery selector, will change to jquery object on init
+    level:null,
     curWave:0,
     curLevel:0,
     duckMax: 0,
     waveEnding: false,
     liveDucks: [], // array of duck objects
-    player: new Player('1', 'Player 1'),
+    player: new Player('1', 'Player 1'), // only a single player for now
     gameTimers: {
         quackID: null,
-        sniffID: null,
         waveTimer: null
     },
     init: function(){
@@ -131,4 +130,4 @@ var duckhunt = {
             $('.theFlash').css("display","none");
         },70);
     }
-}
+};
