@@ -25,3 +25,7 @@ Player.prototype.setWeapon = function(weapon){
 Player.prototype.getWeapon = function(){
     return this.weapon;
 }
+
+Player.prototype.pushLevelStats = function(stats){
+    this.levelStats.push(stats);
+}

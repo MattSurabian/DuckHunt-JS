@@ -12,6 +12,7 @@ var duckhunt = {
     duckMax: 0,
     waveEnding: false,
     liveDucks: [], // array of duck objects
+    levelStats: {},
     player: new Player('1', 'Player 1'), // only a single player for now
     gameTimers: {
         quackID: null,
@@ -47,6 +48,12 @@ var duckhunt = {
     loadLevel: function(level){
         this.level = level;
         this.curWave = 0;
+        this.levelStats = {
+            levelID: this.level.id,
+            totalDucks: this.level.ducks*this.level.waves,
+            ducksKilled: 0,
+            shotsFired: 0
+        };
 
         this.doWave();
     },
@@ -86,6 +93,7 @@ var duckhunt = {
         }
     },
     nextLevel : function(){
+        this.player.pushLevelStats(this.levelStats);
         this.curLevel+=1;
         if(this.curLevel === levels.length){
             this.playfield.trigger('game:victory')
@@ -103,6 +111,7 @@ var duckhunt = {
         }
     },
     killDuck: function(deadDuck){
+        this.levelStats.ducksKilled++;
         this.liveDucks = _(this.liveDucks).reject(function(duck){
             return duck.id === deadDuck.id;
         });
@@ -112,6 +121,7 @@ var duckhunt = {
         }
     },
     fireGun : function(){
+        this.levelStats.shotsFired++;
         this.player.getWeapon().shoot();
     },
     outOfAmmo: function(){
