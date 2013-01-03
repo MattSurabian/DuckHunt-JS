@@ -13,13 +13,24 @@ function Duck(id, style, speed, game){
 
 }
 
+Duck.prototype.bindEvents = function(){
+    var _duck = this;
+    this.DOM.on('mousedown',function(){
+        _duck.die();
+    })
+}
+
+Duck.prototype.unbindEvents = function(){
+    this.DOM.off('mousedown');
+}
+
 Duck.prototype.die = function(){
     var _duck = this;
     this.game.trigger('duck:died',_duck);
 
     $._spritely.instances[this.id].stop_random=true;
     this.DOM.stop(true,false);
-    this.DOM.unbind();
+
     this.DOM.addClass("deadSpin");
 
     this.DOM.spStop(true);
@@ -48,10 +59,7 @@ Duck.prototype.hatch = function(){
 
     $('<div id="'+this.id+'" class="duck '+this.class+'"></div>').appendTo(this.game);
     this.DOM = $("#"+this.id);
-    var _duck = this;
-    this.DOM.bind('mousedown',function(){
-        _duck.die();
-    })
+    this.bindEvents();
 }
 
 Duck.prototype.fly = function(){
@@ -70,6 +78,7 @@ Duck.prototype.fly = function(){
 }
 
 Duck.prototype.escape = function(){
+    this.unbindEvents();
     if(!this.DOM.hasClass("deadSpin")){
         this.game.trigger("duck:miss");
         $._spritely.instances[this.id].stop_random=true;
