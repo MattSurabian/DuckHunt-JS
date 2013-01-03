@@ -129,6 +129,6 @@ var duckhunt = {
         $(".theFlash").css("display","block");
         setTimeout(function(){
             $('.theFlash').css("display","none");
-        },90);
+        },70);
     }
 }
