@@ -1,3 +1,17 @@
+/**
+ * Levels array made up of Level objects
+ *
+ * Level object:
+ *  id: int
+ *  title: String
+ *  waves: The number of waves of ducks in a level
+ *  ducks: The number of ducks per wave
+ *  pointsPerDuck: int
+ *  speed: int Speed of ducks on an increasing scale of 1-10
+ *  bullets: int Bullets provided per wave
+ *  time: int Time in seconds to complete each wave
+ * @type {Array}
+ */
 var levels = [
     {
         id: 1,

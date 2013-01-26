@@ -18,11 +18,11 @@ Duck.prototype.bindEvents = function(){
     this.DOM.on('mousedown',function(){
         _duck.die();
     })
-}
+};
 
 Duck.prototype.unbindEvents = function(){
     this.DOM.off('mousedown');
-}
+};
 
 Duck.prototype.die = function(){
     var _duck = this;
@@ -42,7 +42,7 @@ Duck.prototype.die = function(){
     },500);
 
     return this;
-}
+};
 
 Duck.prototype.deathSpin = function(){
         this.DOM.spState(6);
@@ -53,7 +53,7 @@ Duck.prototype.deathSpin = function(){
             delete $._spritely.instances[this.id];
             $(this).attr("class","deadDuck");
         });
-}
+};
 
 Duck.prototype.hatch = function(){
 
@@ -75,7 +75,7 @@ Duck.prototype.fly = function(){
     });
 
     return this;
-}
+};
 
 Duck.prototype.escape = function(){
     this.unbindEvents();
@@ -93,7 +93,7 @@ Duck.prototype.escape = function(){
     }
 
     return this;
-}
+};
 
 Duck.prototype.setSpeed = function(duckSpeed){
     switch(duckSpeed){
@@ -131,4 +131,4 @@ Duck.prototype.setSpeed = function(duckSpeed){
             this.speed = 500;
             break;
     }
-}
+};

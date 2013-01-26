@@ -21,7 +21,7 @@ Gun.prototype.shoot = function(){
     if(this.ammo == 0){
         this.outOfAmmo();
     }
-}
+};
 
 
 Gun.prototype.sound = function(){
@@ -32,28 +32,28 @@ Gun.prototype.sound = function(){
         this.audio1.get(0).play();
         this.lastAudio = this.audio1;
     }
-}
+};
 
 Gun.prototype.outOfAmmo = function(){
     this.game.trigger('gun:out_of_ammo');
-}
+};
 
 Gun.prototype.getAmmo = function(){
     return this.ammo;
-}
+};
 
 Gun.prototype.setAmmo = function(ammoCount){
     this.ammo = ammoCount;
-}
+};
 
 Gun.prototype.reload = function(){
     this.game.trigger('gun:reloaded');
-}
+};
 
 Gun.prototype.getSpread = function(){
     return this.spread;
-}
+};
 
 Gun.prototype.getReloadTime = function(){
     return this.reloadTime;
-}
+};
