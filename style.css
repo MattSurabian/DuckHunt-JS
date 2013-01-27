@@ -8,7 +8,7 @@ user-select: none;
 body{
 	font-family:arial;	
 }
-#header{
+.header{
 	width:900px;
 	margin:0 auto;
 	text-align:center;	
@@ -33,7 +33,7 @@ body{
 	width:76px;
 	height:73px;	
 }
-#gameField{
+.gameField{
 	width:900px;
 	height:500px;
 	position:relative;
@@ -43,12 +43,12 @@ body{
 	cursor:pointer;
 	overflow:hidden;
 }
-#game{
+.game{
 	width:900px;
 	height:500px;
 	position:relative;
 }
-#grass{
+.grass{
 	position:absolute;
 	background:url(images/back.png) bottom left no-repeat;
 	 z-index:3;
@@ -56,7 +56,7 @@ body{
 	 height:180px;
 	 bottom:0px;
 }
-#tree{
+.tree{
 	position:absolute;
 	background:url(images/tree.png) top left no-repeat;
 	left:70px;
@@ -65,7 +65,7 @@ body{
 	height:260px;
 	z-index:4;
 }
-#theFlash{
+.theFlash{
 	background:#ffffff;
 	width:900px;
 	height:500px;
@@ -74,34 +74,34 @@ body{
 	z-index:10;
 	display:none;
 }
-#theDog{
+.theDog{
 	width:138px;
 	height:113px;
-	background:url(images/dog.png) top left no-repeat;	
+	background:url(images/dog.png) 0 0 no-repeat;
 	position:absolute;
 	bottom:-10px;
 	left:350px;
 	z-index:2;
 }
-#sniffDog{
+.searchDog{
 	width:124px;
 	height:130px;
-	background:url(images/dogSniffJump.png) top left no-repeat;	
+	background:url(images/dogSniffJump.png) 0 0 no-repeat;
 	position:absolute;
 	bottom:4px;
 	left:-400px;
 	z-index:5;
 }
-#ammo{
+.ammo{
 	color:#ffffff;
 	font-size:10px;	
 	text-transform:uppercase;
 	padding-left:10px;
 	position:absolute;
 	top:5px;
-	left:40px;
+	left:10px;
 }
-#waves{
+.waves{
 	position:absolute;
 	bottom:10px;
 	color:#ffffff;
@@ -109,19 +109,17 @@ body{
 	padding-left:10px;
 	z-index:4;
 }
-#ducksKilled{
+.duckBoard{
 	position:absolute;
 	bottom:10px;
 	right:10px;
 	height:40px;
 	width:350px;
 	text-align:right;
-	z-index:4;	
+	z-index:4;
+    float:right;
 }
-#ducksKilled{
-	float:right;	
-}
-#loser,#winner,#level{
+.loser,.winner,.level{
 	text-align:center;
 	width:500px;
 	color:#ffffff;
@@ -141,11 +139,33 @@ body{
 	text-align:center;
 	cursor:pointer;
 }
-#scoreboard{
+.scoreboard{
 	font-size:16px;
 	color:#ffffff;	
 	position:absolute;
 	right:10px;
 	font-weight:bold;
 	top:3px;
+}
+.sounds{
+    display:none;
+}
+.mute,.unmute{
+    cursor:pointer;
+    z-index:5;
+    width:900px;
+    margin:0 auto;
+}
+.doit{
+    margin-left:15px;
+    display:inline;
+    padding:5px;
+    border:solid;
+    width:100px;
+    text-align:center;
+    cursor:pointer;
+}
+.levelCreator{
+    width:900px;
+    margin:0 auto;
 }
