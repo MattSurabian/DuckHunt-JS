@@ -6,11 +6,25 @@ module.exports = function(grunt) {
         },
         min: {
             duckhunt: {
-                src: ['duckhunt/dog.js', 'duckhunt/duck.js', 'duckhunt/gun.js', 'duckhunt/player.js', 'duckhunt/duckhunt.js', 'duckhunt/weapons.js', 'duckhunt/levels.js'],
+                src: [
+                    'duckhunt/dog.js',
+                    'duckhunt/duck.js',
+                    'duckhunt/gun.js',
+                    'duckhunt/player.js',
+                    'duckhunt/overlay.js',
+                    'duckhunt/weapons.js',
+                    'duckhunt/levels.js',
+                    'duckhunt/duckhunt.js'
+                ],
                 dest: 'build/duckhunt.min.js'
             },
             libs: {
-                src: ['lib/jquery.js', 'lib/underscore.js', 'lib/jquery.spritely-0.6.js'],
+                src: [
+                    'lib/jquery.js',
+                    'lib/underscore.js',
+                    'lib/jquery.spritely.js',
+                    'lib/jquery.color.js'
+                ],
                 dest: 'build/libs.min.js'
             }
 

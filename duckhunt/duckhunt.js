@@ -21,8 +21,14 @@ var duckhunt = {
     gameIntervals: {
         quackID: null
     },
+    gameInfoPanels: {},
     init: function(){
         this.playfield = $(this.playfield); // make jquery object from selector
+        this.gameInfoPanels = {
+            ammo: $('#ammo'),
+            duckBoard: $('#duckBoard'),
+            waves: $('#waves')
+        };
 
         this.player = new Player('1', 'Player 1');
         this.player.setWeapon(new Gun(weapons.rifle,this.playfield)); // assign default weapon
@@ -38,20 +44,28 @@ var duckhunt = {
         this.playfield.on('game:victory',_.bind(function(){this.victory();},this));
 
         // bind to duck events
-        this.playfield.on('duck:died', _.bind(function(e,duck){this.killDuck(duck);},this));
+        this.playfield.on('duck:died', _.bind(function(e,duck){
+            this.killDuck(duck);
+            this.player.updateScore(this.level.pointsPerDuck);
+        },this));
 
         //bind to gun events
         this.playfield.on('gun:out_of_ammo',_.bind(function(){this.outOfAmmo();},this));
-        this.playfield.on('gun:fire',_.bind(function(){this.flashScreen();},this));
+        this.playfield.on('gun:fire',_.bind(function(){
+            this.flashScreen();
+        },this));
 
     },
     bindInteractions: function(){
         // bind interactions used during live play
-        this.playfield.on('click', _.bind(function(){this.fireGun();},this));
+        this.playfield.on('mousedown', _.bind(function(){
+            this.fireGun();
+        },this));
+        this.showLevelInfo();
     },
     unbindInteractions: function(){
         // unbind interactions that should not be available during transitions and other non live play states
-        this.playfield.off('click');
+        this.playfield.off('mousedown');
         this.liveDucks.map(function(duck){
             duck.unbindEvents();
         });
@@ -59,6 +73,7 @@ var duckhunt = {
     loadLevel: function(level){
         this.clearTimers(); // wipe out current level timers
         this.unbindInteractions();
+        this.hideLevelInfo();
 
         // id's equal to zero are from the level creator, progress doesn't count toward beating the game
         if(level.id === 0){
@@ -67,6 +82,7 @@ var duckhunt = {
 
         this.level = level;
 
+        $('#level').html(level.title).fadeIn();
         this.curWave = 0; // reset curWave
 
         // initialize level stats
@@ -80,12 +96,12 @@ var duckhunt = {
         var dogIntroDef = $.Deferred();
         this.dog.intro(dogIntroDef);
         dogIntroDef.always(_.bind(function(){
+            $('#level').fadeOut();
             this.doWave();
         },this)
         );
     },
     doWave: function(){
-        var _this = this;
         clearInterval(this.gameIntervals.quackID);
 
         // ensure background color is set correctly
@@ -95,9 +111,12 @@ var duckhunt = {
 
         this.curWave++;
         if(this.curWave > this.level.waves){
+            this.hideLevelInfo();
             this.playfield.trigger('game:next_level');
             return;
         }
+
+        this.gameInfoPanels.waves.html("WAVE "+(this.curWave)+" of "+this.level.waves);
 
         this.bindInteractions();
         this.player.getWeapon().setAmmo(this.level.bullets); // reload the weapon for this wave
@@ -116,12 +135,29 @@ var duckhunt = {
 
             this.flyAway();
 
+            this.drawDucks();
+
             // allow animations to complete before launching next wave
             setTimeout(_.bind(function(){
                 this.waveEnding = false;
+                this.unbindInteractions();
                 this.doWave();
             },this),4000);
         }
+    },
+    hideLevelInfo: function(){
+        var uiToHide = [this.gameInfoPanels.ammo,this.gameInfoPanels.waves,this.gameInfoPanels.duckBoard];
+
+        _.each(uiToHide,function(ui){
+            ui.fadeOut();
+        });
+    },
+    showLevelInfo: function(){
+        var uiToHide = [this.gameInfoPanels.ammo,this.gameInfoPanels.waves,this.gameInfoPanels.duckBoard];
+
+        _.each(uiToHide,function(ui){
+            ui.fadeIn();
+        });
     },
     nextLevel : function(){
         // calculate skill level to determine whether player advances
@@ -130,12 +166,13 @@ var duckhunt = {
             this.playfield.trigger('game:defeat');
             return;
         }
-
         this.player.pushLevelStats(this.levelStats);
+
         this.curLevel+=1;
         if(this.curLevel === levels.length){
             this.playfield.trigger('game:victory');
         }else{
+            this.gameInfoPanels.duckBoard.html('');
             this.loadLevel(levels[this.curLevel]);
         }
     },
@@ -155,6 +192,22 @@ var duckhunt = {
         if(this.liveDucks.length === 0){
             this.playfield.trigger('wave:end',this.curWave);
         }
+
+    },
+    drawDucks: function(){
+        var ducksScore = "";
+        var missedDucks = (this.level.ducks*this.curWave) - this.levelStats.ducksKilled;
+        missedDucks = ( missedDucks > 25) ? 25 : missedDucks;
+		var deadDucks = (this.levelStats.ducksKilled > 25) ? 25 : this.levelStats.ducksKilled;
+
+		for(var i=0;i<missedDucks;i++){
+			ducksScore += "<img src='images/duckLive.png'/>";
+		}
+		for(i=0;i<deadDucks;i++){
+			ducksScore += "<img src='images/duckDead.png'/>";
+		}
+
+        this.gameInfoPanels.duckBoard.html(ducksScore);
     },
     fireGun : function(){
         this.levelStats.shotsFired+=1;
@@ -176,6 +229,7 @@ var duckhunt = {
     },
     defeat: function(){
         this.unbindInteractions();
+        this.showLevelInfo();
         $(".loser").css("display","block");
     },
     retry: function(){

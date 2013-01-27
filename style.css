@@ -99,7 +99,7 @@ body{
 	padding-left:10px;
 	position:absolute;
 	top:5px;
-	left:40px;
+	left:10px;
 }
 .waves{
 	position:absolute;
@@ -109,7 +109,7 @@ body{
 	padding-left:10px;
 	z-index:4;
 }
-.ducksKilled{
+.duckBoard{
 	position:absolute;
 	bottom:10px;
 	right:10px;

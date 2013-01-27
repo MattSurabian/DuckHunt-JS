@@ -17,12 +17,12 @@ function Player(id,name){
 }
 
 Player.prototype.getScore = function(){
-    return addCommas(this.score.toString());
+    return this._formatScore(this.score.toString());
 };
 
 Player.prototype.updateScore = function(delta){
     this.score+=delta;
-    $("#scoreboard").html(Player.getScore());
+    $("#scoreboard").html(this.getScore());
 };
 
 Player.prototype.setWeapon = function(weapon){
@@ -35,4 +35,16 @@ Player.prototype.getWeapon = function(){
 
 Player.prototype.pushLevelStats = function(stats){
     this.levelStats.push(stats);
+};
+
+Player.prototype._formatScore = function(nStr){
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
 };

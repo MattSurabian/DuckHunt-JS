@@ -3,15 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <title>Duck Hunt JS</title>
+    <!-- TODO: Create favion.ico-->
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 <link rel="stylesheet" type="text/css" href="style.css"/>
-
 <script src="build/libs.min.js"></script>
 <script src="build/duckhunt.min.js"></script>
-    <!-- TODO: CHECK IF COLOR.JS IS DEPRECATED -->
-<script src="lib/jquery.color.js"></script>
 <script src="main.js"></script>
-
 <style>
 </style>
 </head>
@@ -22,14 +19,13 @@
 
 
 <div id="game" class="game">
-
     <div id="theFlash" class="theFlash"></div>
     <div id="tree" class="tree"></div>
     <div id="grass" class="grass"></div>
 </div>
 <div class="gameinfo ammo" id="ammo"></div>
 <div class="gameinfo waves" id="waves"></div>
-<div class="gameinfo ducksKilled" id="ducksKilled"></div>
+<div class="gameinfo duckBoard" id="duckBoard"></div>
 <div class="gameinfo scoreboard" id="scoreboard"></div>
 
 <div id="loser" class="messages loser">
@@ -114,9 +110,6 @@ Waves: <input id="LCwaves" name="LCwaves" size="3" type="text" value="1"/> &nbsp
     <source type="audio/ogg" src="sounds/loserSound.ogg"/>
     <source type="audio/mp3" src="sounds/loserSound.mp3"/>
 </audio>
-
-
-
 
 </body>
 </html>

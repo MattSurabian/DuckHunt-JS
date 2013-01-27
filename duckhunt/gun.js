@@ -8,14 +8,25 @@ function Gun(weapon, game){
 
     this.ammo = 0; // how much ammo the weapon has at any given time
     this.lastAudio = null; // convenience variable for concurrent sound play
-
+    this.magazine = $("#ammo"); // DOM element to display bullets left to user
 }
+
+Gun.prototype.updateMagazine = function(){
+    var bulletsText = "";
+    var shotsToDraw = (this.ammo>15) ? 15 : this.ammo;  // don't draw more than 15 bullets
+
+    for(var i=0; i<shotsToDraw; i++){
+        bulletsText += '<img src="images/bullet.png" align="absmiddle"/>';
+    }
+    this.magazine.html("<strong>Shots: </strong>"+bulletsText);
+};
 
 Gun.prototype.shoot = function(){
     if(this.ammo > 0){
         this.ammo -= 1;
         this.sound();
         this.game.trigger('gun:fire');
+        this.updateMagazine();
     }
 
     if(this.ammo === 0){
@@ -44,6 +55,7 @@ Gun.prototype.getAmmo = function(){
 
 Gun.prototype.setAmmo = function(ammoCount){
     this.ammo = ammoCount;
+    this.updateMagazine();
 };
 
 Gun.prototype.reload = function(){
