@@ -1,7 +1,7 @@
 /************************************************
- DUCK HUNT JS
- by Matthew Surabian - MattSurabian.com
- A first draft...
+ DUCK HUNT JS v2
+ by Matt Surabian - MattSurabian.com
+ MIT License
  **************************************************/
 
 var duckhunt = {
