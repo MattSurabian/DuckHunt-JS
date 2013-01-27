@@ -21,33 +21,30 @@ var duckhunt = {
         quackID: null
     },
     init: function(){
-        var _this = this;
         this.playfield = $(this.playfield); // make jquery object from selector
 
-        this.player.setWeapon(new Gun(weapons.rifle,_this.playfield)); // assign default weapon
+        this.player.setWeapon(new Gun(weapons.rifle,this.playfield)); // assign default weapon
 
         // bind to wave events
-        this.playfield.on('wave:time_up',function(e,wave){_this.endWave(wave);});
-        this.playfield.on('wave:end',function(e,wave){_this.endWave(wave);});
+        this.playfield.on('wave:time_up', _.bind(function(e,wave){this.endWave(wave);},this));
+        this.playfield.on('wave:end',_.bind(function(e,wave){this.endWave(wave);},this));
 
         // bind to game events
-        this.playfield.on('game:next_level',function(){_this.nextLevel();});
-        this.playfield.on('game:defeat',function(){_this.defeat();});
-        this.playfield.on('game:victory',function(){_this.victory();});
+        this.playfield.on('game:next_level',_.bind(function(){this.nextLevel();},this));
+        this.playfield.on('game:defeat',_.bind(function(){this.defeat();},this));
+        this.playfield.on('game:victory',_.bind(function(){this.victory();},this));
 
         // bind to duck events
-        this.playfield.on('duck:died',function(e,duck){_this.killDuck(duck);});
+        this.playfield.on('duck:died', _.bind(function(e,duck){this.killDuck(duck);},this));
 
         //bind to gun events
-        this.playfield.on('gun:out_of_ammo',function(){_this.outOfAmmo();});
-        this.playfield.on('gun:fire',function(){_this.flashScreen();});
+        this.playfield.on('gun:out_of_ammo',_.bind(function(){this.outOfAmmo();},this));
+        this.playfield.on('gun:fire',_.bind(function(){this.flashScreen();},this));
 
     },
     bindInteractions: function(){
-        var _this = this;
-
         // bind interactions used during live play
-        this.playfield.on('click',function(){_this.fireGun();});
+        this.playfield.on('click', _.bind(function(){this.fireGun();},this));
     },
     unbindInteractions: function(){
         // unbind interactions that should not be available during transitions and other non live play states
@@ -98,15 +95,12 @@ var duckhunt = {
         this.releaseDucks();
 
         // set wave timer
-        var _curWave = this.curWave;
-        this.gameTimers.waveTimer = setTimeout(function(){
-            _this.playfield.trigger('wave:time_up',_curWave);
-        },(this.level.time*1000));
+        this.gameTimers.waveTimer = setTimeout(_.bind(function(curWave){
+            this.playfield.trigger('wave:time_up',this.curWave);
+        },this),(this.level.time*1000));
     },
     endWave: function(wave){
         if(this.curWave == wave && !this.waveEnding){
-            var _this = this;
-
             clearTimeout(this.gameTimers.waveTimer);
 
             this.waveEnding = true;
@@ -114,10 +108,10 @@ var duckhunt = {
             this.flyAway();
 
             // allow animations to complete before launching next wave
-            setTimeout(function(){
-                _this.waveEnding = false;
-                _this.doWave();
-            },4000);
+            setTimeout(_.bind(function(){
+                this.waveEnding = false;
+                this.doWave();
+            },this),4000);
         }
     },
     nextLevel : function(){
@@ -137,12 +131,10 @@ var duckhunt = {
         }
     },
     releaseDucks : function(){
-        var _this = this;
-
         for(var i=0;i<this.level.ducks;i++){
             var duckClass = (i%2 === 0) ? 'duckA' : 'duckB';
             this.duckMax++;
-            this.liveDucks.push(new Duck(_this.duckMax.toString(),duckClass,_this.level.speed,_this.playfield).fly());
+            this.liveDucks.push(new Duck(this.duckMax.toString(),duckClass,this.level.speed,this.playfield).fly());
         }
     },
     killDuck: function(deadDuck){
