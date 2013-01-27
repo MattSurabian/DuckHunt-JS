@@ -50,6 +50,7 @@ a{
 	width:900px;
 	height:500px;
 	position:relative;
+    margin:0 auto;
 }
 .grass{
 	position:absolute;
@@ -105,10 +106,16 @@ a{
 	left:10px;
 }
 .social{
-    width:150px;
+    width:200px;
+    height:15px;
     float:right;
-    text-align:left;
+    text-align:right;
     height:20px;
+}
+.topMenu{
+    width:900px;
+    margin:0 auto;
+    position: relative;
 }
 .linkText{
     font-size: 11px;
@@ -166,8 +173,8 @@ a{
 .mute,.unmute{
     cursor:pointer;
     z-index:5;
-    width:900px;
-    margin:0 auto;
+    width:150px;
+    float:left
 }
 .doit{
     margin-left:15px;
