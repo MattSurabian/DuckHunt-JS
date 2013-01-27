@@ -1,7 +1,7 @@
 function Duck(id, style, speed, game){
 
     this.id = id;
-    this.class = style;
+    this.className = style;
     this.speed = 0;
     this.game = game; // game object to trigger events on and append to
     this.DOM = null;
@@ -17,7 +17,7 @@ Duck.prototype.bindEvents = function(){
     var _duck = this;
     this.DOM.on('mousedown',function(){
         _duck.die();
-    })
+    });
 };
 
 Duck.prototype.unbindEvents = function(){
@@ -36,9 +36,8 @@ Duck.prototype.die = function(){
     this.DOM.spStop(true);
     this.DOM.spState(5);
 
-    var _duck = this;
     setTimeout(function(){
-        _duck.deathSpin()
+        _duck.deathSpin();
     },500);
 
     return this;
@@ -57,10 +56,10 @@ Duck.prototype.deathSpin = function(){
 
 Duck.prototype.hatch = function(){
 
-    $('<div id="'+this.id+'" class="duck '+this.class+'"></div>').appendTo(this.game);
+    $('<div id="'+this.id+'" class="duck '+this.className+'"></div>').appendTo(this.game);
     this.DOM = $("#"+this.id);
     this.bindEvents();
-}
+};
 
 Duck.prototype.fly = function(){
     var _this = this;
@@ -81,12 +80,15 @@ Duck.prototype.escape = function(){
     this.unbindEvents();
     if(!this.DOM.hasClass("deadSpin")){
         this.game.trigger("duck:miss");
+        this.game.animate({
+            backgroundColor: '#fbb4d4'
+        },900);
         $._spritely.instances[this.id].stop_random=true;
         this.DOM.spState(2);
         this.DOM.animate({
             top:'-200',
             left:'460'
-        },500,function(){
+        },500, function(){
             delete $._spritely.instances[this.id];
             $(this).attr("class","deadDuck");
         });

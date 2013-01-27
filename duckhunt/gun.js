@@ -18,7 +18,7 @@ Gun.prototype.shoot = function(){
         this.game.trigger('gun:fire');
     }
 
-    if(this.ammo == 0){
+    if(this.ammo === 0){
         this.outOfAmmo();
     }
 };
