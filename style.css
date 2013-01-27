@@ -77,16 +77,16 @@ body{
 .theDog{
 	width:138px;
 	height:113px;
-	background:url(images/dog.png) top left no-repeat;	
+	background:url(images/dog.png) 0 0 no-repeat;
 	position:absolute;
 	bottom:-10px;
 	left:350px;
 	z-index:2;
 }
-.sniffDog{
+.searchDog{
 	width:124px;
 	height:130px;
-	background:url(images/dogSniffJump.png) top left no-repeat;	
+	background:url(images/dogSniffJump.png) 0 0 no-repeat;
 	position:absolute;
 	bottom:4px;
 	left:-400px;
