@@ -43,7 +43,7 @@ $(function() {
 
     $(document).ready(function(){
         //mute the sounds for debuging
-        $('.mute').trigger('click');
+        //$('.mute').trigger('click');
         duckhunt.init();
         duckhunt.loadLevel(levels[0]);
     });

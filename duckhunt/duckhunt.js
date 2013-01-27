@@ -18,9 +18,7 @@ var duckhunt = {
     gameTimers: {
         waveTimer: null
     },
-    gameIntervals: {
-        quackID: null
-    },
+    sounds: {},
     gameInfoPanels: {},
     init: function(){
         this.playfield = $(this.playfield); // make jquery object from selector
@@ -29,7 +27,11 @@ var duckhunt = {
             duckBoard: $('#duckBoard'),
             waves: $('#waves')
         };
-
+        this.sounds = {
+            quacking: $('#quacking'),
+            win: $('#victory'),
+            lose: $('#defeat')
+        };
         this.player = new Player('1', 'Player 1');
         this.player.setWeapon(new Gun(weapons.rifle,this.playfield)); // assign default weapon
         this.dog = new Dog('theDog',this.playfield);
@@ -37,6 +39,10 @@ var duckhunt = {
         // bind to wave events
         this.playfield.on('wave:time_up', _.bind(function(e,wave){this.endWave(wave);},this));
         this.playfield.on('wave:end',_.bind(function(e,wave){this.endWave(wave);},this));
+        this.playfield.on('wave:missedDucks', _.bind(function(){
+            this.flyAway();
+            this.dog.laugh();
+        },this));
 
         // bind to game events
         this.playfield.on('game:next_level',_.bind(function(){this.nextLevel();},this));
@@ -47,6 +53,9 @@ var duckhunt = {
         this.playfield.on('duck:died', _.bind(function(e,duck){
             this.killDuck(duck);
             this.player.updateScore(this.level.pointsPerDuck);
+        },this));
+        this.playfield.on('duck:down', _.bind(function(){
+            this.dog.fetch();
         },this));
 
         //bind to gun events
@@ -75,11 +84,6 @@ var duckhunt = {
         this.unbindInteractions();
         this.hideLevelInfo();
 
-        // id's equal to zero are from the level creator, progress doesn't count toward beating the game
-        if(level.id === 0){
-            this.curLevel--;
-        }
-
         this.level = level;
 
         $('#level').html(level.title).fadeIn();
@@ -93,17 +97,26 @@ var duckhunt = {
             shotsFired: 0
         };
 
-        var dogIntroDef = $.Deferred();
-        this.dog.intro(dogIntroDef);
-        dogIntroDef.always(_.bind(function(){
+        // id's equal to zero are from the level creator,
+        // progress doesn't count toward beating the game
+        // avoid dog animation issues by not running dog intro
+        // for custom levels
+
+        if(level.id !== 0){
+            var dogIntroDef = $.Deferred();
+            this.dog.intro(dogIntroDef);
+            dogIntroDef.always(_.bind(function(){
+                $('#level').fadeOut();
+                this.doWave();
+            },this)
+            );
+        }else{
+            this.curLevel--;
             $('#level').fadeOut();
             this.doWave();
-        },this)
-        );
+        }
     },
     doWave: function(){
-        clearInterval(this.gameIntervals.quackID);
-
         // ensure background color is set correctly
         this.playfield.animate({
             backgroundColor: '#64b0ff'
@@ -121,6 +134,7 @@ var duckhunt = {
         this.bindInteractions();
         this.player.getWeapon().setAmmo(this.level.bullets); // reload the weapon for this wave
         this.releaseDucks();
+        this.sounds.quacking[0].play();
 
         // set wave timer
         this.gameTimers.waveTimer = setTimeout(_.bind(function(curWave){
@@ -133,8 +147,10 @@ var duckhunt = {
 
             this.waveEnding = true;
 
-            this.flyAway();
-
+            if(this.liveDucks.length > 0){
+                this.playfield.trigger('wave:missedDucks');
+            }
+            this.sounds.quacking[0].pause();
             this.drawDucks();
 
             // allow animations to complete before launching next wave
@@ -225,11 +241,13 @@ var duckhunt = {
     },
     victory: function(){
         this.unbindInteractions();
+        this.sounds.win[0].play();
         $(".winner").css("display","block");
     },
     defeat: function(){
         this.unbindInteractions();
         this.showLevelInfo();
+        this.sounds.lose[0].play();
         $(".loser").css("display","block");
     },
     retry: function(){
@@ -240,15 +258,11 @@ var duckhunt = {
         _.map(this.gameTimers,function(timer,timerName){
             clearTimeout(timer);
         });
-        _.map(this.gameIntervals,function(interval,intervalName){
-            clearInterval(interval);
-        });
     },
     clearField: function(){
-        this.liveDucks.map(function(duck){
-            duck.escape();
-        });
-        this.liveDucks = [];
+        this.clearTimers();
+        this.dog.inTheCrate();
+        this.playfield.trigger('wave:missedDucks');
 
         $('.messages').css('display','none');
     },

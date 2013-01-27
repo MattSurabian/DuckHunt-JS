@@ -9,6 +9,11 @@ function Duck(id, style, speed, game){
     this.setSpeed(speed);
     this.hatch(); // add duck to DOM
 
+    this.sounds = {
+        quackHit: $('#quak'),
+        thud: $('#thud')
+    };
+
     return this;
 
 }
@@ -26,6 +31,7 @@ Duck.prototype.unbindEvents = function(){
 
 Duck.prototype.die = function(){
     var _duck = this;
+    this.sounds.quackHit[0].play();
     this.game.trigger('duck:died',_duck);
 
     $._spritely.instances[this.id].stop_random=true;
@@ -48,10 +54,12 @@ Duck.prototype.deathSpin = function(){
         this.DOM.spStart();
         this.DOM.animate({
             top:'420'
-        },800,function(){
+        },800, _.bind(function(){
+            this.sounds.thud[0].play();
             delete $._spritely.instances[this.id];
-            $(this).attr("class","deadDuck");
-        });
+            this.DOM.attr("class","deadDuck");
+            this.game.trigger('duck:down'); // HA GET IT, DUCK DOWN!?!
+        },this));
 };
 
 Duck.prototype.hatch = function(){
