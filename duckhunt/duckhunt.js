@@ -89,7 +89,9 @@ var duckhunt = {
             return;
         }
         // ensure background color is set correctly
-        this.playfield.css('backgroundColor','#64b0ff');
+        this.playfield.animate({
+            backgroundColor: '#64b0ff'
+        },900);
 
         this.bindInteractions();
         this.player.getWeapon().setAmmo(this.level.bullets); // reload the weapon for this wave
