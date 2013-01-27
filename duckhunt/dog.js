@@ -58,8 +58,12 @@ Dog.prototype.laugh = function(){
     this._upDown();
 };
 
+/**
+ * Utility method to move dog up and down
+ * @private
+ */
 Dog.prototype._upDown = function(){
-    return this.DOM.animate({
+    this.DOM.animate({
         bottom: '110'
     },400,function(){
         setTimeout(_.bind(function(){
