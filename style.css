@@ -8,6 +8,9 @@ user-select: none;
 body{
 	font-family:arial;	
 }
+a{
+    color:#000000;
+}
 .header{
 	width:900px;
 	margin:0 auto;
@@ -100,6 +103,16 @@ body{
 	position:absolute;
 	top:5px;
 	left:10px;
+}
+.social{
+    width:150px;
+    float:right;
+    text-align:left;
+    height:20px;
+}
+.linkText{
+    font-size: 11px;
+    color:#000000;
 }
 .waves{
 	position:absolute;
