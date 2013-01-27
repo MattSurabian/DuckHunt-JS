@@ -13,7 +13,8 @@ var duckhunt = {
     waveEnding: false, // semaphore style flag to prevent race conditions
     liveDucks: [], // array of duck objects
     levelStats: {}, // initialized in load level
-    player: new Player('1', 'Player 1'), // only a single player for now
+    player: null, // assigned in init
+    dog: null, // assigned in init
     gameTimers: {
         waveTimer: null
     },
@@ -23,7 +24,9 @@ var duckhunt = {
     init: function(){
         this.playfield = $(this.playfield); // make jquery object from selector
 
+        this.player = new Player('1', 'Player 1');
         this.player.setWeapon(new Gun(weapons.rifle,this.playfield)); // assign default weapon
+        this.dog = new Dog('theDog',this.playfield);
 
         // bind to wave events
         this.playfield.on('wave:time_up', _.bind(function(e,wave){this.endWave(wave);},this));
@@ -74,21 +77,27 @@ var duckhunt = {
             shotsFired: 0
         };
 
-        this.doWave();
+        var dogIntroDef = $.Deferred();
+        this.dog.intro(dogIntroDef);
+        dogIntroDef.always(_.bind(function(){
+            this.doWave();
+        },this)
+        );
     },
     doWave: function(){
         var _this = this;
         clearInterval(this.gameIntervals.quackID);
+
+        // ensure background color is set correctly
+        this.playfield.animate({
+            backgroundColor: '#64b0ff'
+        },900);
 
         this.curWave++;
         if(this.curWave > this.level.waves){
             this.playfield.trigger('game:next_level');
             return;
         }
-        // ensure background color is set correctly
-        this.playfield.animate({
-            backgroundColor: '#64b0ff'
-        },900);
 
         this.bindInteractions();
         this.player.getWeapon().setAmmo(this.level.bullets); // reload the weapon for this wave

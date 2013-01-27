@@ -11,7 +11,7 @@ function Dog(id, game){
 /**
  * Used at the start of a level
  */
-Dog.prototype.intro = function(){
+Dog.prototype.intro = function(def){
     this.DOM.addClass('searchDog');
     this.DOM.show(); // HA GET IT DOG SHOW!?!
     this.DOM.sprite({fps: 6, no_of_frames: 4});
@@ -32,6 +32,7 @@ Dog.prototype.intro = function(){
                     // reset css modifications so animation can be easily rerun
                     this.attr('style','');
                     this.removeClass('searchDog');
+                    def.resolve();
                 },this));
             this.spStop();
             this.destroy();
