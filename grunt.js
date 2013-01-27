@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         compress: {
             build: {
                 files:{
-                    'build/build.js.gz' : ['build/duckhunt.min.js','libs.min.js']
+                    'build/build.js.gz' : ['build/libs.min.js','build/duckhunt.min.js']
                 }
             }
         }
@@ -43,5 +43,5 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['lint', 'min']);
-    grunt.registerTask('build', ['min','compress']);
+    grunt.registerTask('build', ['lint', 'min','compress']);
 };
