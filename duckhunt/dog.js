@@ -100,11 +100,13 @@ Dog.prototype._upDown = function(){
  * and the dog is still sniffing.
  */
 Dog.prototype.inTheCrate = function(){
-    clearTimeout(this.animationQueue.jump);
-    this.DOM.attr('style','');
-    this.DOM.spStop();
-    this.DOM.destroy();
-    this.DOM.removeClass('searchDog');
-    this.DOM.hide();
-    clearInterval(this.intervals.sniffInterval);
+    if(this.DOM.hasClass('searchDog')){
+        clearTimeout(this.animationQueue.jump);
+        this.DOM.attr('style','');
+        this.DOM.spStop();
+        this.DOM.destroy();
+        this.DOM.removeClass('searchDog');
+        this.DOM.hide();
+        clearInterval(this.intervals.sniffInterval);
+    }
 };
