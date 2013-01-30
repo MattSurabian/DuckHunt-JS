@@ -21,11 +21,11 @@ $(function() {
     });
 
     $(document).on('click','.doit',function(){
-        var LCwaves = parseInt($("#LCwaves").attr("value"));
-        var LCducks = parseInt($("#LCducks").attr("value"));
-        var LCbullets = parseInt($("#LCbullets").attr("value"));
-        var LCwavetime = parseInt($("#LCwavetime").attr("value"));
-        var LCdif = parseInt($("#LCdif").attr("value"));
+        var LCwaves = parseInt($("#LCwaves").val());
+        var LCducks = parseInt($("#LCducks").val());
+        var LCbullets = parseInt($("#LCbullets").val());
+        var LCwavetime = parseInt($("#LCwavetime").val());
+        var LCdif = parseInt($("#LCdif").val());
 
         duckhunt.clearField();
 
