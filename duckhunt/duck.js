@@ -19,14 +19,28 @@ function Duck(id, style, speed, game){
 }
 
 Duck.prototype.bindEvents = function(){
-    var _duck = this;
-    this.DOM.on('mousedown',function(){
-        _duck.die();
-    });
 };
 
 Duck.prototype.unbindEvents = function(){
-    this.DOM.off('mousedown');
+};
+
+Duck.prototype.getCenterPoint = function() {
+    var duckPosition = this.DOM.position();
+    duckPosition.left += this.DOM.width()/2;
+    duckPosition.top += this.DOM.height()/2;
+    return duckPosition;
+};
+
+Duck.prototype.shotsFired = function(shotLocation, killRange) {
+    var duckPosition = this.getCenterPoint();
+    var xs = Math.pow((shotLocation.left - duckPosition.left), 2);
+    var ys = Math.pow((shotLocation.top - duckPosition.top), 2);
+
+    // If the distance between the duck and shot is less than
+    // the killRange, then the duck is dead.
+    if(Math.sqrt( xs + ys ) < killRange) {
+        this.die();
+    }
 };
 
 Duck.prototype.die = function(){
