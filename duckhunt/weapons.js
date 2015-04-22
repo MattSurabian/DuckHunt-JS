@@ -13,7 +13,21 @@ var weapons = {
     rifle : {
         name: 'rifle',
         spread: 0,
-        reloadTime: 0,
+        reloadTime: 500,
+        audio1: '#gunSound',
+        audio2: '#gunSound2'
+    },
+    shotgun : {
+        name: 'shotgun',
+        spread: 75,
+        reloadTime: 1000,
+        audio1: '#gunSound',
+        audio2: '#gunSound2'
+    },
+    cannon: {
+        name: 'cannon',
+        spread: 200,
+        reloadTime: 3000,
         audio1: '#gunSound',
         audio2: '#gunSound2'
     }

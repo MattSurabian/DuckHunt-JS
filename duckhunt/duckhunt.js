@@ -67,15 +67,25 @@ var duckhunt = {
     },
     bindInteractions: function(){
         // bind interactions used during live play
-        this.playfield.on('mousedown', _.bind(function(){
+        this.playfield.on('mousedown', _.throttle(_.bind(function(event){
             this.fireGun();
-        },this));
+            var weaponSpread = this.player.getWeapon().getSpread();
+            var playfieldOffset = $(event.delegateTarget).offset();
+            var location = {
+                top: event.pageY - playfieldOffset.top,
+                left: event.pageX - playfieldOffset.left
+            };
+            $.each(this.liveDucks, function(i,duck){
+               duck.shotsFired(location, weaponSpread);
+            });
+
+        },this), this.player.getWeapon().getReloadTime()));
         this.showLevelInfo();
     },
     unbindInteractions: function(){
         // unbind interactions that should not be available during transitions and other non live play states
         this.playfield.off('mousedown');
-        this.liveDucks.map(function(duck){
+        $.each(this.liveDucks, function(i, duck) {
             duck.unbindEvents();
         });
     },
