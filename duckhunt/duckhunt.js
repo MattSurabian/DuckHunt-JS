@@ -70,6 +70,9 @@ var duckhunt = {
         this.playfield.on('mousedown', _.throttle(_.bind(function(event){
             this.fireGun();
             var weaponSpread = this.player.getWeapon().getSpread();
+            if(weaponSpread <= 0) {
+              console.error("Zero spread weapons can do no damage. Recommended minimum size: 25");
+            }
             var playfieldOffset = $(event.delegateTarget).offset();
             var location = {
                 top: event.pageY - playfieldOffset.top,
