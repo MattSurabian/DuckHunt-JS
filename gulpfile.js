@@ -36,11 +36,11 @@ gulp.task('duckhunt', function() {
 
 gulp.task('libs', function() {
   return gulp.src([
-    './lib/jquery.js',
-    './lib/underscore.js',
-    './lib/jquery.spritely.js',
-    './lib/jquery.color.js',
-    './lib/fastclick.js'
+    'lib/jquery.js',
+    'lib/underscore.js',
+    'lib/jquery.spritely.js',
+    'lib/jquery.color.js',
+    'lib/fastclick.js'
   ]).pipe(concat('libs.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./build/'))
@@ -49,8 +49,8 @@ gulp.task('libs', function() {
 
 gulp.task('dev', function() {
   livereload.listen();
-  gulp.watch('./duckhunt/*.js', ['duckhunt']);
-  gulp.watch('./lib/*.js', ['libs']);
+  gulp.watch('duckhunt/*.js', ['duckhunt']);
+  gulp.watch('lib/*.js', ['libs']);
 
 });
 
