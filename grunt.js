@@ -23,7 +23,8 @@ module.exports = function(grunt) {
                     'lib/jquery.js',
                     'lib/underscore.js',
                     'lib/jquery.spritely.js',
-                    'lib/jquery.color.js'
+                    'lib/jquery.color.js',
+                    'lib/fastclick.js'
                 ],
                 dest: 'build/libs.min.js'
             }

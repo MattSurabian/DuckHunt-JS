@@ -1,4 +1,5 @@
 $(function() {
+    FastClick.attach(document.body);
 
     $(document).on("click",'.mute',function(){
         $(".sounds").each(function(index,audio){
