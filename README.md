@@ -4,13 +4,15 @@
 
 This is an implementation of DuckHunt in javascript using HTML5 audio.
 
-All of the game logic is in the duckhunt directory.  This project uses [gulp](http://gulpjs.com/) to build two concatenated js files;
+All of the game logic is in the duckhunt directory. This project uses [gulp](http://gulpjs.com/) to build two concatenated js files;
 one representing all of our game logic the other representing necessary javascript library dependencies.
 
 This refactor of the game relies on custom events to control game flow which has cut down a bit on the "animation callback hell"
 faced in version 1.
 
-To work with this project on your own simply clone this git repo into a directory, and run `npm install` inside that
-directory. The package.json file included in this repo helps npm install all the necessary node module dependencies.  Make your edits
-to the code and run `gulp`. The default gulp task will lint the javascript, concatenate, and minify it into the build
-directory.
+## Working With This Repo
+
+1. Clone the repo into a directory of your choice
+1. `cd` into that directory and run `npm install`
+1. Use the `gulp dev` task during active development. This task automatically builds all necessary JS files and triggers the [livereload browser extension](http://livereload.com/extensions/) to do its thing and reload the page when changes are detected in the `lib` and `duckhunt` directories.
+1. If you want to manually cut a build of the JS the default gulp task will lint, concatenate, and minify the project's javascript files it into the build directory.
