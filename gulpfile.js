@@ -3,6 +3,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
 var gutil = require('gulp-util');
+var livereload = require('gulp-livereload');
 
 // Handle an error based on its severity level.
 // Log all levels, and exit the process for fatal levels.
@@ -29,7 +30,8 @@ gulp.task('duckhunt', function() {
     .on('error', handleError.bind(this, 'error'))
     .pipe(concat('duckhunt.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./build/'));
+    .pipe(gulp.dest('./build/'))
+    .pipe(livereload());
 });
 
 gulp.task('libs', function() {
@@ -41,7 +43,15 @@ gulp.task('libs', function() {
     './lib/fastclick.js'
   ]).pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./build/'));
+    .pipe(gulp.dest('./build/'))
+    .pipe(livereload());
+});
+
+gulp.task('dev', function() {
+  livereload.listen();
+  gulp.watch('./duckhunt/*.js', ['duckhunt']);
+  gulp.watch('./lib/*.js', ['libs']);
+
 });
 
 gulp.task('default', ['libs', 'duckhunt']);
