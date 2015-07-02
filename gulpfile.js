@@ -1,71 +1,78 @@
 var gulp = require('gulp');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+var babelify = require('babelify');
+var browserify = require('browserify');
 var jshint = require('gulp-jshint');
-var gutil = require('gulp-util');
+var jscs = require('gulp-jscs');
+var source = require('vinyl-source-stream');
 var livereload = require('gulp-livereload');
+var audiosprite = require('audiosprite');
+var glob = require('glob');
+var shell = require('gulp-shell');
+var fs = require('fs');
 
-// Command line option:
-//  --fatal=[warning|error|off]
-var fatalLevel = require('yargs').argv.fatal;
+gulp.task('modules', function() {
+  browserify({
+    entries: './duckhunt.js',
+    debug: true
+  }).transform(babelify)
+    .bundle()
+    .pipe(source('duckhunt.js'))
+    .pipe(gulp.dest('./dist'))
+    .pipe(livereload());
+});
 
-var ERROR_LEVELS = ['error', 'warning'];
-
-function isFatal(level) {
-  return ERROR_LEVELS.indexOf(level) <= ERROR_LEVELS.indexOf(fatalLevel || 'error');
-}
-
-// Handle an error based on its severity level.
-// Log all levels, and exit the process for fatal levels.
-function handleError(level, error) {
-  gutil.log(gutil.colors.red(error.message));
-  if (isFatal(level)) {
-    process.exit(1);
-  }
-}
-
-gulp.task('duckhunt', function() {
+gulp.task('jshint', function() {
   return gulp.src([
-    'duckhunt/dog.js',
-    'duckhunt/duck.js',
-    'duckhunt/gun.js',
-    'duckhunt/player.js',
-    'duckhunt/overlay.js',
-    'duckhunt/weapons.js',
-    'duckhunt/levels.js',
-    'duckhunt/duckhunt.js'
+    '_modules/**',
+    'duckhunt.js'
   ]).pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(jshint.reporter('fail'))
-    .on('error', handleError.bind(this, 'error'))
-    .pipe(concat('duckhunt.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./build/'))
-    .pipe(livereload());
 });
 
-gulp.task('libs', function() {
+gulp.task('jscs', function() {
   return gulp.src([
-    'lib/jquery.js',
-    'lib/underscore.js',
-    'lib/jquery.spritely.js',
-    'lib/jquery.color.js',
-    'lib/fastclick.js'
-  ]).pipe(concat('libs.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./build/'))
-    .pipe(livereload());
+    '_modules/*.js',
+    'duckhunt.js'
+  ]).pipe(jscs())
 });
+
 
 gulp.task('dev', function() {
-  // no fatal errors during active development by default
-  // this prevents this task from exiting unexpectedly
-  fatalLevel = fatalLevel || 'off';
-
   livereload.listen();
-  gulp.watch('duckhunt/*.js', ['duckhunt']);
-  gulp.watch('lib/*.js', ['libs']);
+  gulp.watch(['_modules/*.js', 'duckhunt.js'], ['jshint', 'jscs', 'modules']);
+  gulp.watch(['_assets/images/**/*.png'], ['images']);
+  gulp.watch(['_assets/sounds/**/*.mp3'], ['audio']);
 
 });
 
-gulp.task('default', ['libs', 'duckhunt']);
+gulp.task('audio', function() {
+  var files = glob.sync('./_assets/sounds/*.mp3');
+  var outputPath = './dist/audio';
+  var opts = {
+    output: outputPath,
+    'export': 'ogg,mp3',
+    loop: ['quacking', 'sniff']
+  };
+
+  return audiosprite(files, opts, function(err, obj) {
+    if (err) {
+      console.error(err);
+    }
+
+    return fs.writeFile('./dist/audio' + '.json', JSON.stringify(obj, null, 2));
+  });
+});
+
+gulp.task('images', function(){
+  // There is a texturepacker template for spritesmith but it doesn't work
+  // well with complex directory structures, so instead we use the shell
+  // checking TexturePacker --version first ensures it bails if TexturePacker
+  // isn't installed
+  return gulp.src('', {read:false})
+  .pipe(shell([
+    'TexturePacker --version || echo ERROR: TexturePacker not found, install TexturePacker',
+    'TexturePacker --disable-rotation --data dist/sprites.json --format json --sheet dist/sprites.png _assets/images'
+  ]))
+  .pipe(livereload());
+});
