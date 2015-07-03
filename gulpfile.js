@@ -9,21 +9,23 @@ var audiosprite = require('audiosprite');
 var glob = require('glob');
 var shell = require('gulp-shell');
 var fs = require('fs');
+var rename = require('gulp-rename');
 
 gulp.task('modules', function() {
   browserify({
-    entries: './duckhunt.js',
+    entries: './main.js',
     debug: true
   }).transform(babelify)
     .bundle()
-    .pipe(source('duckhunt.js'))
+    .pipe(source('main.js'))
+    .pipe(rename('duckhunt.js'))
     .pipe(gulp.dest('./dist'))
     .pipe(livereload());
 });
 
 gulp.task('jshint', function() {
   return gulp.src([
-    '_modules/**',
+    'src/modules/**',
     'duckhunt.js'
   ]).pipe(jshint())
     .pipe(jshint.reporter('default'))
@@ -32,7 +34,7 @@ gulp.task('jshint', function() {
 
 gulp.task('jscs', function() {
   return gulp.src([
-    '_modules/*.js',
+    'src/modules/*.js',
     'duckhunt.js'
   ]).pipe(jscs())
 });
@@ -40,17 +42,19 @@ gulp.task('jscs', function() {
 
 gulp.task('dev', function() {
   livereload.listen();
-  gulp.watch(['_modules/*.js', 'duckhunt.js'], ['jshint', 'jscs', 'modules']);
-  gulp.watch(['_assets/images/**/*.png'], ['images']);
-  gulp.watch(['_assets/sounds/**/*.mp3'], ['audio']);
+  gulp.watch(['./src/modules/*.js', 'duckhunt.js', 'libs/*.js'], ['jshint', 'jscs', 'modules']);
+  gulp.watch(['./src/assets/images/**/*.png'], ['images']);
+  gulp.watch(['./src/assets/sounds/**/*.mp3'], ['audio']);
 
 });
 
 gulp.task('audio', function() {
-  var files = glob.sync('./_assets/sounds/*.mp3');
+  var files = glob.sync('./src/assets/sounds/*.mp3');
   var outputPath = './dist/audio';
   var opts = {
     output: outputPath,
+    path: './',
+    format: 'howler',
     'export': 'ogg,mp3',
     loop: ['quacking', 'sniff']
   };
@@ -72,7 +76,9 @@ gulp.task('images', function(){
   return gulp.src('', {read:false})
   .pipe(shell([
     'TexturePacker --version || echo ERROR: TexturePacker not found, install TexturePacker',
-    'TexturePacker --disable-rotation --data dist/sprites.json --format json --sheet dist/sprites.png _assets/images'
+    'TexturePacker --disable-rotation --data dist/sprites.json --format json --sheet dist/sprites.png src/assets/images'
   ]))
   .pipe(livereload());
 });
+
+gulp.task('default', ['images', 'audio', 'jshint', 'jscs', 'modules']);
