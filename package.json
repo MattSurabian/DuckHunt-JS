@@ -4,6 +4,7 @@
   "description": "Duckhunt implemented in JS",
   "main": "main.js",
   "scripts": {
+    "run": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,9 +28,9 @@
     "glob": "^5.0.13",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
+    "gulp-connect": "^2.2.0",
     "gulp-jscs": "^1.6.0",
     "gulp-jshint": "^1.11.0",
-    "gulp-livereload": "^3.8.0",
     "gulp-rename": "^1.2.2",
     "gulp-shell": "^0.4.2",
     "howler": "^1.1.26",

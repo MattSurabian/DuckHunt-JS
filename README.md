@@ -20,8 +20,8 @@ The flow of this game is managed using Javascript. The main chunks of business l
 
 1. Clone the repo into a directory of your choice
 1. `cd` into that directory and run `npm install`
-1. Use the `gulp dev` task during active development. This task automatically builds all necessary JS files and triggers the [livereload browser extension](http://livereload.com/extensions/) to reload the page when changes are detected in the `src` directory.
-1. If you want to manually cut a build of the JS, the default gulp task will run jshint, ensure code style compliance via JSCS, transpile to ES5 and browserify everything into a single `duckhunt.js` file. The default task also constructs new image and audio sprites and their respecitve manifests.
+1. Use the `gulp dev` task to serve the built game on http://localhost:8080/. This task automatically builds all necessary JS files and triggers triggers livereload to reload the page when changes are detected in the `src` directory.
+1. If you want to manually cut a build of the JS, the default gulp task will run jshint, ensure code style compliance via JSCS, transpile to ES5 and browserify everything into a single `duckhunt.js` file. The default task also constructs new image and audio sprite sheets and their respecitve manifests.
 
 ## Bugs
 Please report bugs as [issues](https://github.com/MattSurabian/DuckHunt-JS/issues).

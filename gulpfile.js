@@ -10,6 +10,7 @@ var glob = require('glob');
 var shell = require('gulp-shell');
 var fs = require('fs');
 var rename = require('gulp-rename');
+var connect = require('gulp-connect');
 
 gulp.task('modules', function() {
   browserify({
@@ -20,7 +21,7 @@ gulp.task('modules', function() {
     .pipe(source('main.js'))
     .pipe(rename('duckhunt.js'))
     .pipe(gulp.dest('./dist'))
-    .pipe(livereload());
+    .pipe(connect.reload());
 });
 
 gulp.task('jshint', function() {
@@ -39,12 +40,14 @@ gulp.task('jscs', function() {
   ]).pipe(jscs())
 });
 
-
-gulp.task('dev', function() {
-  livereload.listen();
-  gulp.watch(['./src/modules/*.js', 'duckhunt.js', 'libs/*.js'], ['jshint', 'jscs', 'modules']);
+gulp.task('watch-and-serve', function() {
+  gulp.watch(['./src/modules/*.js', './src/data/*.json', 'main.js', 'libs/*.js'], ['jshint', 'jscs', 'modules']);
   gulp.watch(['./src/assets/images/**/*.png'], ['images']);
   gulp.watch(['./src/assets/sounds/**/*.mp3'], ['audio']);
+  connect.server({
+    root: 'dist',
+    livereload: true
+  });
 
 });
 
@@ -74,11 +77,12 @@ gulp.task('images', function(){
   // checking TexturePacker --version first ensures it bails if TexturePacker
   // isn't installed
   return gulp.src('', {read:false})
-  .pipe(shell([
-    'TexturePacker --version || echo ERROR: TexturePacker not found, install TexturePacker',
-    'TexturePacker --disable-rotation --data dist/sprites.json --format json --sheet dist/sprites.png src/assets/images'
-  ]))
-  .pipe(livereload());
+    .pipe(shell([
+      'TexturePacker --version || echo ERROR: TexturePacker not found, install TexturePacker',
+      'TexturePacker --disable-rotation --data dist/sprites.json --format json --sheet dist/sprites.png src/assets/images'
+    ]))
+    .pipe(connect.reload());
 });
 
 gulp.task('default', ['images', 'audio', 'jshint', 'jscs', 'modules']);
+gulp.task('dev', ['default', 'watch-and-serve']);
