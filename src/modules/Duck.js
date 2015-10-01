@@ -53,9 +53,9 @@ class Duck extends Character {
 
     let options = _extend({
       minX: 0,
-      maxX: this.parent.gameWidth - this.width,
+      maxX: this.parent.getWidth() - this.width,
       minY: 0,
-      maxY: this.parent.gameHeight - this.height,
+      maxY: this.parent.getHeight() - this.height,
       minDistance: 300,
       speed: this.flightSpeed
     }, opts);
@@ -93,7 +93,7 @@ class Duck extends Character {
     let _this = this;
     this.tween.stop();
     let destination = {
-      x: this.parent.gameWidth / 2 + this.width / 2,
+      x: this.parent.getWidth() / 2 + this.width / 2,
       y: -500
     };
 
@@ -120,7 +120,7 @@ class Duck extends Character {
 
     let _this = this;
     this.tween = new TWEEN.Tween({y: this.position.y })
-      .to({y: this.parent.gameHeight }, 600)
+      .to({y: this.parent.getHeight() }, 600)
       .delay(450)
       .onStart(this.setState.bind(this, 'dead'))
       .onUpdate(function() {

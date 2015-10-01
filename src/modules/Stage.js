@@ -10,12 +10,13 @@ const TWEEN = require('tween.js');
 import Duck from './Duck';
 import Dog from './Dog';
 
+const DEFAULT_WIDTH = 800;
+const DEFAULT_HEIGHT = 600;
+
 class Stage extends PIXI.Container {
 
   constructor(opts) {
     super();
-    this.gameWidth = opts.gameWidth;
-    this.gameHeight = opts.gameHeight;
     this.spritesheet = opts.sprites;
     this.interactive = true;
     this.ducks = [];
@@ -23,6 +24,11 @@ class Stage extends PIXI.Container {
     this.dog.visible = false;
 
     this._setStage();
+    this.scaleToWindow();
+  }
+
+  scaleToWindow() {
+    this.scale.set(window.innerWidth / DEFAULT_WIDTH, window.innerHeight / DEFAULT_HEIGHT);
   }
 
   _setStage() {
@@ -47,7 +53,7 @@ class Stage extends PIXI.Container {
     for (let i = 0; i < numDucks; i++) {
       let duckColor = i % 2 === 0 ? 'red' : 'black';
       let newDuck = new Duck(duckColor, this.spritesheet); // Al was here.
-      newDuck.setPosition(this.gameWidth / 2, this.gameHeight);
+      newDuck.setPosition(this.getWidth() / 2, this.getHeight());
 
       this.ducks.push(newDuck);
       newDuck.play();
@@ -60,6 +66,8 @@ class Stage extends PIXI.Container {
 
   shotsFired(clickPoint) {
     sound.play('gunSound');
+    clickPoint.x /= this.scale.x;
+    clickPoint.y /= this.scale.y;
     let killed = 0;
     for (let i = 0; i < this.ducks.length; i++) {
       let duck = this.ducks[i];
@@ -70,6 +78,14 @@ class Stage extends PIXI.Container {
       }
     }
     return killed;
+  }
+
+  getWidth() {
+    return DEFAULT_WIDTH;
+  }
+
+  getHeight() {
+    return DEFAULT_HEIGHT;
   }
 
   flyAway() {
@@ -106,12 +122,10 @@ class Stage extends PIXI.Container {
   }
 
   victoryScreen() {
-    console.log('won');
     sound.play('champ');
   }
 
   loserScreen() {
-    console.log('lost');
     sound.play('loserSound');
   }
 }

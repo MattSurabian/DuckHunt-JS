@@ -6,27 +6,35 @@ const HUD_TEXT_STYLE = {
   fill: 'white'
 };
 
+const GAME_STATUS_TEXT = {
+  font: '40px Arial',
+  align: 'left',
+  fill: 'white'
+};
+
 const GUTTER_SIZE = 10;
 
 class Hud extends PIXI.Container {
-  constructor(opts) {
+  constructor() {
     super();
 
-    this.gameWidth = opts.gameWidth;
-    this.gameHeight = opts.gameHeight;
+    this.waveStatus = this.addChild(new PIXI.Text('', HUD_TEXT_STYLE));
+    this.gameStatus = this.addChild(new PIXI.Text('', GAME_STATUS_TEXT));
+    this.score = this.addChild(new PIXI.Text('', HUD_TEXT_STYLE));
+  }
 
-    this.waveStatus = new PIXI.Text('', HUD_TEXT_STYLE);
-    this.waveStatus.position.set(GUTTER_SIZE, this.gameHeight - this.waveStatus.height - GUTTER_SIZE);
+  setGameStatus(text) {
+    this.gameStatus.text = text;
+    this.gameStatus.position.set(this.parent.getWidth() / 2 - this.gameStatus.width / 2, this.parent.getHeight() / 2 - this.gameStatus.height);
+  }
 
-    this.score = new PIXI.Text('', HUD_TEXT_STYLE);
-    this.score.position.set(this.gameWidth - GUTTER_SIZE, GUTTER_SIZE);
-
-    this.addChild(this.score);
-    this.addChild(this.waveStatus);
+  clearGameStatus() {
+    this.setGameStatus('');
   }
 
   setWaveStatus(text) {
     this.waveStatus.text = text;
+    this.waveStatus.position.set(GUTTER_SIZE, this.parent.getHeight() * 0.95 - GUTTER_SIZE);
   }
 
   clearWaveStatus() {
@@ -35,7 +43,7 @@ class Hud extends PIXI.Container {
 
   setScore(text) {
     this.score.text = text;
-    this.score.position.x = this.gameWidth - this.score.width - GUTTER_SIZE;
+    this.score.position.set(this.parent.getWidth() - this.score.width - GUTTER_SIZE, GUTTER_SIZE);
   }
 
   clearScore() {

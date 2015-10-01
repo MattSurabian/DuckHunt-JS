@@ -46,11 +46,11 @@ class Dog extends Character {
     return new BPromise(function(resolve, reject) {
       new TWEEN.Tween({
         x: 0,
-        y: _this.parent.gameHeight - _this.height
+        y: _this.parent.getHeight() - _this.height
       })
       .to({
-          x: _this.parent.gameWidth / 2 - _this.width / 2,
-          y: _this.parent.gameHeight - _this.height
+          x: _this.parent.getWidth() / 2 - _this.width / 2,
+          y: _this.parent.getHeight() - _this.height
         }, 2000)
       .onStart(function() {
           _this.visible = true;
@@ -87,12 +87,12 @@ class Dog extends Character {
     let _this = this;
 
     let start = {
-      x: _this.parent.gameWidth / 2 - _this.width / 2,
-      y: _this.parent.gameHeight
+      x: _this.parent.getWidth() / 2 - _this.width / 2,
+      y: _this.parent.getHeight()
     };
 
     let end = {
-      y: _this.parent.gameHeight - 230
+      y: _this.parent.getHeight() - 230
     };
 
     return new TWEEN.Tween(start)
@@ -159,7 +159,7 @@ class Dog extends Character {
   hide() {
     this.visible = false;
     this.parent.setChildIndex(this, 0);
-    this.setPosition(this.parent.gameWidth / 2, this.parent.gameHeight);
+    this.setPosition(this.parent.getWidth() / 2, this.parent.getHeight());
   }
 
   retrieve() {

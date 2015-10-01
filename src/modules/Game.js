@@ -20,11 +20,9 @@ const SUCCESS_RATIO = 0.6;
 
 class Game {
   constructor(opts) {
-    this.gameWidth = opts.gameWidth;
-    this.gameHeight = opts.gameHeight;
     this.spritesheet = opts.spritesheet;
     this.loader = PIXI.loader;
-    this.renderer =  PIXI.autoDetectRenderer(this.gameWidth, this.gameHeight, {
+    this.renderer =  PIXI.autoDetectRenderer(window.innerWidth, window.innerHeight, {
       backgroundColor: DEFAULT_BACKGROUND_COLOR
     });
     this.levelIndex = 0;
@@ -46,19 +44,24 @@ class Game {
     document.body.appendChild(this.renderer.view);
 
     this.stage = new Stage({
-      gameWidth: this.gameWidth,
-      gameHeight: this.gameHeight,
       sprites: this.spritesheet
     });
 
-    this.hud = new Hud({
-      gameWidth: this.gameWidth,
-      gameHeight: this.gameHeight
-    });
+    this.hud = new Hud();
 
     this.stage.addChild(this.hud);
+    this.scaleToWindow();
+
+    //bind events
+    window.addEventListener('resize', this.scaleToWindow.bind(this));
+
     this.startLevel();
     this.animate();
+  }
+
+  scaleToWindow() {
+    this.renderer.resize(window.innerWidth, window.innerHeight);
+    this.stage.scaleToWindow();
   }
 
   startLevel() {
@@ -67,14 +70,11 @@ class Game {
     this.level = this.levels[this.levelIndex];
     this.ducksShotThisLevel = 0;
 
-    let levelText = new PIXI.Text(this.level.title, STATUS_TEXT_STYLE);
-    levelText.position.set(this.gameWidth / 2 - levelText.width / 2, this.gameHeight / 2 - levelText.height);
-
-    this.stage.addChild(levelText);
+    this.hud.setGameStatus(this.level.title);
     this.wave = 0;
 
     this.stage.preLevelAnimation().then(function() {
-      _this.stage.removeChild(levelText);
+      _this.hud.clearGameStatus();
       _this.stage.mousedown = _this.stage.touchstart = _this.handleClick.bind(_this);
       _this.startWave();
     });
@@ -82,7 +82,6 @@ class Game {
 
   startWave() {
     this.wave++;
-    console.log('Wave ' + this.wave + ' has begun');
     this.hud.setWaveStatus('Wave ' + this.wave + ' of ' + this.level.waves);
     this.waveStartTime = Date.now();
     this.shotsFired = 0;
@@ -92,7 +91,6 @@ class Game {
   }
 
   endWave() {
-    console.log('Wave ' + this.wave + ' is over');
     this.stage.cleanUpDucks();
     this.goToNextWave();
   }
@@ -115,7 +113,6 @@ class Game {
   }
 
   endLevel() {
-    console.log(this.level.title + ' is over');
     this.hud.clearWaveStatus('');
     this.stage.mousedown = this.stage.touchstart = _noop;
     this.goToNextLevel();
@@ -137,31 +134,24 @@ class Game {
   }
 
   win() {
-    let winnerText = new PIXI.Text('You Win!', STATUS_TEXT_STYLE);
-    winnerText.position.set(this.gameWidth / 2 - winnerText.width / 2, this.gameHeight / 2 - winnerText.height);
     this.hud.clearWaveStatus();
-    this.stage.addChild(winnerText);
+    this.hud.setGameStatus('You Win!');
     this.stage.victoryScreen();
   }
 
   loss() {
-    let loserText = new PIXI.Text('Game Over', STATUS_TEXT_STYLE);
-    loserText.position.set(this.gameWidth / 2 - loserText.width / 2, this.gameHeight / 2 - loserText.height);
     this.hud.clearWaveStatus();
-    this.stage.addChild(loserText);
+    this.hud.setGameStatus('You Lose!');
     this.stage.loserScreen();
   }
 
   handleClick(event) {
-
     if (!this.outOfAmmo()) {
       this.shotsFired++;
       this.updateScore(this.stage.shotsFired({
         x: event.data.global.x,
         y: event.data.global.y
       }));
-    } else {
-      console.log('Out of ammo');
     }
   }
 
