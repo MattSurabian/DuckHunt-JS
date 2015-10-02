@@ -1,54 +1,61 @@
-const PIXI = require('pixi.js');
+import PIXI from 'pixi.js';
+import _extend from 'lodash/object/assign';
 
-const HUD_TEXT_STYLE = {
-  font: '18px Arial',
-  align: 'left',
-  fill: 'white'
-};
-
-const GAME_STATUS_TEXT = {
-  font: '40px Arial',
-  align: 'left',
-  fill: 'white'
-};
-
-const GUTTER_SIZE = 10;
-
+/**
+ * Hud
+ * The heads up display class, or Hud is an abstraction that aids in the creation
+ * and visual updating of text boxes that display useful information to the
+ * user as they play the game.
+ *
+ * The instantiator of this class is responsible for displaying it at the proper
+ * depth in it's parent container.
+ */
 class Hud extends PIXI.Container {
   constructor() {
     super();
-
-    this.waveStatus = this.addChild(new PIXI.Text('', HUD_TEXT_STYLE));
-    this.gameStatus = this.addChild(new PIXI.Text('', GAME_STATUS_TEXT));
-    this.score = this.addChild(new PIXI.Text('', HUD_TEXT_STYLE));
   }
 
-  setGameStatus(text) {
-    this.gameStatus.text = text;
-    this.gameStatus.position.set(this.parent.getWidth() / 2 - this.gameStatus.width / 2, this.parent.getHeight() / 2 - this.gameStatus.height);
+  /**
+   * createTextBox
+   * This method defines a property key on the Hud object that when modified
+   * ensures the text box is visually updated. This is accomplished using ES6 getters
+   * and setters.
+   * @param name string - This name becomes a property key on the Hud object,
+   *   modifying it will update the textBox automatically.
+   * @param opts object - Object to convey style, location, anchor point, etc of the text box
+   */
+  createTextBox(name, opts) {
+    // set defaults, and allow them to be overwritten
+    let options = _extend({
+      style: {
+        font: '18px Arial',
+        align: 'left',
+        fill: 'white'
+      },
+      location: new PIXI.Point(0, 0),
+      anchor: {
+        x: 0.5,
+        y: 0.5
+      }
+    }, opts);
+
+    this[name + 'TextBox'] = new PIXI.Text('', options.style);
+
+    let textBox = this[name + 'TextBox'];
+    textBox.position.set(options.location.x, options.location.y);
+    textBox.anchor.set(options.anchor.x, options.anchor.y);
+    this.addChild(textBox);
+
+    Object.defineProperty(this, name, {
+      set: function(val) {
+        textBox.text = val;
+      },
+      get: function() {
+        return textBox.text;
+      }
+    });
   }
 
-  clearGameStatus() {
-    this.setGameStatus('');
-  }
-
-  setWaveStatus(text) {
-    this.waveStatus.text = text;
-    this.waveStatus.position.set(GUTTER_SIZE, this.parent.getHeight() * 0.95 - GUTTER_SIZE);
-  }
-
-  clearWaveStatus() {
-    this.setWaveStatus('');
-  }
-
-  setScore(text) {
-    this.score.text = text;
-    this.score.position.set(this.parent.getWidth() - this.score.width - GUTTER_SIZE, GUTTER_SIZE);
-  }
-
-  clearScore() {
-    this.setScore('');
-  }
 }
 
 export default Hud;

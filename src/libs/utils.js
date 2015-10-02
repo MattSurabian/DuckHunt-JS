@@ -3,7 +3,7 @@ module.exports.pointDistance = function(point1, point2) {
 };
 
 module.exports.directionOfTravel = function(pointStart, pointEnd) {
-  let direction;
+  let direction = '';
 
   //positive means down
   let rise = pointEnd.y - pointStart.y;

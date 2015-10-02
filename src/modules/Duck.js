@@ -1,19 +1,32 @@
-const TWEEN = require('tween.js');
-const Howler = require('howler');
-const audioSpriteSheet = require('../../dist/audio.json');
-const sound = new Howl(audioSpriteSheet);
-const _random = require('lodash/number/random');
-const _extend = require('lodash/object/assign');
-const Utils = require('../libs/utils');
-
+import Howler from 'howler';
+import _random from 'lodash/number/random';
+import _extend from 'lodash/object/assign';
+import _noop from 'lodash/utility/noop';
+import audioSpriteSheet from '../../dist/audio.json';
+import Utils from '../libs/utils';
 import Character from './Character';
 
+const sound = new Howl(audioSpriteSheet);
+const DEATH_ANIMATION_SECONDS = 0.6;
+const RANDOM_FLIGHT_DELTA = 300;
+
 class Duck extends Character {
-  constructor(color, resourceKey) {
+  /**
+   * Duck constructor
+   * Method to instantiate a new Duck character
+   * @param {Object} options with various duck configuration values
+   * @param {String} options.colorProfile String that is concatinated with `duck/` to generate the sprite ID
+   * @param {String} options.spritesheet The object property to ask PIXI's resource loader for
+   * @param {Number} [options.maxX] When randomly flying, imposes an upper bound on the X coordinate
+   * @param {Number} [options.maxY] When randomly flying, imposes an upper bound on the Y coordinate
+   * @param {Number} [options.randomFlightDelta] The minimum distance the duck must travel when randomly flying
+   */
+  constructor(options) {
+    let spriteId = 'duck/' + options.colorProfile;
     let states = [
       {
         name: 'left',
-        animationSpeed: 0.1
+        animationSpeed: 0.18
 
       },
       {
@@ -42,25 +55,35 @@ class Duck extends Character {
 
       }
     ];
-
-    let resourceId = 'duck/' + color;
-    super(resourceId, resourceKey, states);
+    super(spriteId, options.spritesheet, states);
     this.alive = true;
+    this.visible = true;
+    this.options = options;
+    this.anchor.set(0.5, 0.5);
   }
 
-  fly(opts) {
+  /**
+   * randomFlight
+   * Method that causes the duck the randomly fly around a specific region of its parent
+   * @param {Object} opts options for the flight tween
+   * @param {Number} [opts.minX=0] Lowest x value allowed
+   * @param {Number} [opts.maxX=Infinity] Highest x value allowed
+   * @param {Number} [opts.minY=0] Lowest Y value allowed
+   * @param {Number} [opts.maxY=Infinity] Highest Y value allowed
+   * @param {Number} [opts.randomFlightDelta=300] Minimum distance to the next destination
+   * @param {Number} [opts.speed=1] Speed of travel on a scale of 0 (slow) to 10 (fast)
+   */
+  randomFlight(opts) {
     let _this = this;
 
     let options = _extend({
       minX: 0,
-      maxX: this.parent.getWidth() - this.width,
+      maxX: this.options.maxX || Infinity,
       minY: 0,
-      maxY: this.parent.getHeight() - this.height,
-      minDistance: 300,
-      speed: this.flightSpeed
+      maxY: this.options.maxY || Infinity,
+      randomFlightDelta: this.options.randomFilghtDelta || RANDOM_FLIGHT_DELTA,
+      speed: 1
     }, opts);
-
-    this.setFlightSpeed(options.speed);
 
     let distance, destination;
     do {
@@ -68,118 +91,159 @@ class Duck extends Character {
         x: _random(options.minX, options.maxX),
         y: _random(options.minY, options.maxY)
       };
-      distance = Utils.pointDistance(this.getCenterPoint(), destination);
-    } while (distance < options.minDistance);
+      distance = Utils.pointDistance(this.position, destination);
+    } while (distance < options.randomFlightDelta);
 
-
-    let direction = Utils.directionOfTravel(this.getCenterPoint(), destination);
-
-    // we don't have bottom-X animations
-    this.setState(direction.replace('bottom', 'top'));
-    this.tween = new TWEEN.Tween(this.position)
-      .to(destination, this.flightSpeed + _random(0, 300))
-      .onUpdate(function() {
-        _this.setPosition(parseInt(this.x), parseInt(this.y));
-      })
-      .onComplete(function() {
-        if (_this.alive) {
-          _this.fly(options);
-        }
-      })
-      .start();
+    this.flyTo({
+      point: destination,
+      speed: options.speed,
+      onComplete: _this.randomFlight.bind(_this, options)
+    });
   }
 
-  flyAway() {
+  /**
+   * flyTo
+   * Method that adds an animation to the ducks timeline for flying to a specified point.
+   * @param opts
+   * @param {PIXI.Point} [opts.point] Location the duck should go to
+   * @param {Number} [opts.speed] Integer from 0 to 10 which determines how fast the duck flys
+   * @param {Function} [opts.onStart=_noop] Method to call when the duck begins flying to the destination
+   * @param {Function} [opts.onComplete_noop] Method to call when the duck has arrived at the destination
+   * @returns {Duck}
+   */
+  flyTo(opts) {
     let _this = this;
-    this.tween.stop();
-    let destination = {
-      x: this.parent.getWidth() / 2 + this.width / 2,
-      y: -500
-    };
+    let options = _extend({
+      point: this.position,
+      speed: this.speed,
+      onStart: _noop,
+      onComplete: _noop
+    }, opts);
 
-    let direction = Utils.directionOfTravel(this.getCenterPoint(), destination);
+    this.speed = options.speed;
 
-    // we don't have bottom-X animations
-    this.setState(direction.replace('bottom', 'top'));
-    this.tween = new TWEEN.Tween(this.position)
-      .to(destination, 800)
-      .onUpdate(function() {
-        _this.setPosition(parseInt(this.x), parseInt(this.y));
-      })
-    .start();
+    let direction = Utils.directionOfTravel(this.position, options.point);
+    let tweenSeconds = (this.flightAnimationMs + _random(0, 300)) / 1000;
+
+    this.timeline.to(_this.position, tweenSeconds, {
+      x: options.point.x,
+      y: options.point.y,
+      ease: 'Linear.easeNone',
+      onStart: function() {
+        if (!_this.alive) {
+          this.kill();
+        }
+        _this.play();
+        _this.state = direction.replace('bottom', 'top');
+        options.onStart();
+      },
+      onComplete: options.onComplete
+    });
+
+    return this;
   }
 
+  /**
+   * shot
+   * Method that animates the duck when the player shoots it
+   */
   shot() {
+    let _this = this;
+
     if (!this.alive) {
       return;
     }
     this.alive = false;
-    this.tween.stop();
-    this.setState('shot');
-    sound.play('quak');
 
-    let _this = this;
-    this.tween = new TWEEN.Tween({y: this.position.y })
-      .to({y: this.parent.getHeight() }, 600)
-      .delay(450)
-      .onStart(this.setState.bind(this, 'dead'))
-      .onUpdate(function() {
-        _this.setPosition(_this.position.x, this.y);
-      })
-      .onComplete(function() {
-        sound.play('thud');
+    this.stopAndClearTimeline();
+    this.timeline.add(function() {
+      _this.state = 'shot';
+      sound.play('quak', _noop);
+    });
+
+    this.timeline.to(_this.position, DEATH_ANIMATION_SECONDS, {
+      y: this.options.maxY,
+      ease: 'Linear.easeNone',
+      delay: 0.3,
+      onStart: function() {
+        _this.state = 'dead';
+      },
+      onComplete: function() {
+        sound.play('thud', _noop);
         _this.visible = false;
-      })
-      .start();
+      }
+    });
 
-    return this.tween;
   }
 
-  getCenterPoint() {
-    let point = {
-      x: this.position.x + this.width / 2,
-      y: this.position.y + this.height / 2
-    };
-
-    return point;
+  /**
+   * isActive
+   * Helper that tells whether the duck is currently or is able to be animated.
+   * Because ducks have a complex death sequence, this method checks if a duck is visible
+   * in addition to the standard timeline animation check. This avoids potential race conditions
+   * since in Duckhunt, if you can see the duck, it's beind animated in some way even if it's
+   * technically "dead"
+   * @returns {*|boolean}
+   */
+  isActive() {
+    return this.visible || super.isActive();
   }
 
-  setFlightSpeed(speed) {
-    switch (speed) {
+  /**
+   * speed - getter
+   * This method returns the
+   * @returns {Number} Returns the speed level, a number from 0 to 10
+   */
+  get speed() {
+    return this.speedVal;
+  }
+
+  /**
+   * speed - setter
+   * Method that determines how fast the duck should fly. Uses a 0-10 scale for ease and since
+   * it technically "goes to 11"
+   * @see https://www.youtube.com/watch?v=KOO5S4vxi0o.
+   * @param {Number} val A number from 0 (slow) to 10 (fast) that sets the length of the flight tween
+   */
+  set speed(val) {
+    let flightAnimationMs;
+    switch (val) {
       case 0:
-        this.flightSpeed = 3000;
+        flightAnimationMs = 3000;
         break;
       case 1:
-        this.flightSpeed = 2800;
+        flightAnimationMs = 2800;
         break;
       case 2:
-        this.flightSpeed = 2500;
+        flightAnimationMs = 2500;
         break;
       case 3:
-        this.flightSpeed = 2000;
+        flightAnimationMs = 2000;
         break;
       case 4:
-        this.flightSpeed = 1800;
+        flightAnimationMs = 1800;
         break;
       case 5:
-        this.flightSpeed = 1500;
+        flightAnimationMs = 1500;
         break;
       case 6:
-        this.flightSpeed = 1300;
+        flightAnimationMs = 1300;
         break;
       case 7:
-        this.flightSpeed = 1200;
+        flightAnimationMs = 1200;
         break;
       case 8:
-        this.flightSpeed = 800;
+        flightAnimationMs = 800;
         break;
       case 9:
-        this.flightSpeed = 600;
+        flightAnimationMs = 600;
         break;
       case 10:
-        this.flightSpeed = 500;
+        flightAnimationMs = 500;
         break;
     }
+    this.speedVal = val;
+    this.flightAnimationMs = flightAnimationMs;
   }
 }
 

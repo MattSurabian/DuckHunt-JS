@@ -95,5 +95,6 @@ gulp.task('deploy', function() {
   ]));
 });
 
-gulp.task('default', ['images', 'audio', 'jshint', 'jscs', 'modules']);
+gulp.task('js', ['jshint', 'jscs', 'modules']);
 gulp.task('dev', ['default', 'watch', 'serve']);
+gulp.task('default', ['images', 'audio', 'js']);

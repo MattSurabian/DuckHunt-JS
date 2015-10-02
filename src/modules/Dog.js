@@ -1,14 +1,22 @@
-const BPromise = require('bluebird');
-const TWEEN = require('tween.js');
-const Howler = require('howler');
-const audioSpriteSheet = require('../../dist/audio.json');
-const sound = new Howl(audioSpriteSheet);
-const _delay = require('lodash/function/delay');
-
+import 'gsap/src/uncompressed/TweenMax.js';
+import _delay from 'lodash/function/delay';
+import _noop from 'lodash/utility/noop';
+import _extend from 'lodash/object/assign';
+import Howler from 'howler';
+import audioSpriteSheet from '../../dist/audio.json';
 import Character from './Character';
 
+const sound = new Howl(audioSpriteSheet);
+
 class Dog extends Character {
-  constructor(resourceKey) {
+  /**
+   * Dog Constructor
+   * @param options
+   * @param {String} options.spritesheet The object property to ask PIXI's resource loader for
+   * @param {PIXI.Point} options.downPoint The point where the dog should sit at during active play
+   * @param {PIXI.Point} options.upPoint The point the dog should rise to when retrieving ducks
+   */
+  constructor(options) {
     let states = [
       {
         name: 'double',
@@ -36,155 +44,204 @@ class Dog extends Character {
         animationSpeed: 0.1
       }
     ];
-
-    super('dog', resourceKey, states);
-    this.tweenPromise = null;
-  }
-
-  sniffTween() {
-    let _this = this;
-    return new BPromise(function(resolve, reject) {
-      new TWEEN.Tween({
-        x: 0,
-        y: _this.parent.getHeight() - _this.height
-      })
-      .to({
-          x: _this.parent.getWidth() / 2 - _this.width / 2,
-          y: _this.parent.getHeight() - _this.height
-        }, 2000)
-      .onStart(function() {
-          _this.visible = true;
-          _this.parent.setChildIndex(_this, _this.parent.children.length - 1);
-          _this.setState('sniff');
-          sound.play('sniff');
-        })
-      .onUpdate(function() {
-          _this.setPosition(this.x, this.y);
-        })
-      .onComplete(function() {
-          sound.stop('sniff');
-          resolve();
-        })
-      .start();
-    });
-  }
-
-  jumpTween() {
-    let _this = this;
-    return new BPromise(function(resolve, reject) {
-      new TWEEN.Tween(_this.position)
-        .to({y: _this.position.y - _this.height / 1.2}, 5)
-        .onStart(_this.setState.bind(_this, 'jump'))
-        .onUpdate(function() {
-          _this.setPosition(this.x, this.y);
-        })
-        .onComplete(resolve)
-        .start();
-    });
-  }
-
-  upDownTween() {
-    let _this = this;
-
-    let start = {
-      x: _this.parent.getWidth() / 2 - _this.width / 2,
-      y: _this.parent.getHeight()
-    };
-
-    let end = {
-      y: _this.parent.getHeight() - 230
-    };
-
-    return new TWEEN.Tween(start)
-      .to(end, 400)
-      .onUpdate(function() {
-        _this.setPosition(this.x, this.y);
-      })
-      .repeat(1)
-      .delay(500)
-      .yoyo(true);
-  }
-
-  retrieveTween() {
-    let _this = this;
-    return new BPromise(function(resolve, reject) {
-      if (_this.toRetrieve <= 0) {
-        resolve();
-      }
-      let state, ducksFetched;
-
-      if (_this.toRetrieve >= 2) {
-        state = 'double';
-        ducksFetched = 2;
-      } else if (_this.toRetrieve == 1) {
-        state = 'single';
-        ducksFetched = 1;
-      } else {
-        resolve();
-        return;
-      }
-
-      _this.setState(state);
-
-      let tween = _this.upDownTween();
-      tween.onStart(function() {
-        _this.visible = true;
-        sound.play('ohYeah');
-      });
-      tween.onComplete(function() {
-        _this.toRetrieve -= ducksFetched;
-        resolve();
-      });
-      tween.start();
-    });
-  }
-
-  find() {
-    sound.play('barkDucks');
-    this.setState('find');
-  }
-
-  levelIntro() {
+    super('dog', options.spritesheet, states);
     this.toRetrieve = 0;
-    this.tweenPromise = this.sniffTween()
-      .then(this.find.bind(this))
-      .delay(600)
-      .then(this.jumpTween.bind(this))
-      .delay(300)
-      .then(this.hide.bind(this));
-
-    return this.tweenPromise;
+    this.anchor.set(0.5, 0);
+    this.options = options;
   }
 
-  hide() {
-    this.visible = false;
-    this.parent.setChildIndex(this, 0);
-    this.setPosition(this.parent.getWidth() / 2, this.parent.getHeight());
+  /**
+   * sniff
+   * @param opts
+   * @param {PIXI.Point} [opts.startPoint=this.position] Point the dog should start sniffing from
+   * @param {PIXI.Point} [opts.endPoint=this.position] Point the dog should sniff to
+   * @param {Function} [opts.onStart=_noop] Function to call at the start of the dog sniffing
+   * @param {Function} [opts.onComplete=_noop] Function to call once the dog has finished sniffing
+   * @returns {Dog}
+   */
+  sniff(opts) {
+    let _this = this;
+    let options = _extend({
+      startPoint: this.position,
+      endPoint: this.position,
+      onStart: _noop,
+      onComplete: _noop
+    }, opts);
+
+    this.sit({
+      point: options.startPoint,
+      pre: function() {
+        _this.visible = false;
+      }
+    });
+
+    this.timeline.to(_this.position, 2, {
+      x: options.endPoint.x,
+      y: options.endPoint.y,
+      ease: 'Linear.easeNone',
+      onStart: function() {
+        _this.visible = true;
+        _this.parent.setChildIndex(_this, _this.parent.children.length - 1);
+        _this.state = 'sniff';
+        sound.play('sniff');
+        options.onStart();
+      },
+      onComplete: function() {
+        sound.stop('sniff');
+        options.onComplete();
+      }
+    });
+
+    return this;
   }
 
+  /**
+   * upDownTween
+   * @param opts
+   * @param {PIXI.Point} [opts.startPoint] Lowest point the dog should go to, and where the animation starts
+   * @param {PIXI.Point} [opts.endPoint] Highest point the dog should go to
+   * @param {Function} [opts.onStart] Function to call at the start of the up/down animation
+   * @param {Function} [opts.onComplete] Function to call once the dog has completed an up/down cycle
+   * return {Dog}
+   */
+  upDownTween(opts) {
+    let _this = this;
+    let options = _extend({
+      startPoint: this.options.downPoint || this.position,
+      endPoint: this.options.upPoint || this.position,
+      onStart: _noop,
+      onComplete: _noop
+    }, opts);
+
+    this.sit({
+      point: options.startPoint
+    });
+
+   this.timeline.add(TweenMax.to(_this.position, 0.4, {
+      y: options.endPoint.y,
+      yoyo: true,
+      repeat: 1,
+      repeatDelay: 0.5,
+      ease: 'Linear.easeNone',
+      onStart: function() {
+        _this.visible = true;
+        options.onStart.call(this);
+      },
+      onComplete: options.onComplete
+    }));
+    return this;
+  }
+
+  /**
+   * find
+   * @param opts
+   * @param {Function} [opts.onStart] Function called at the start of the animation
+   * @param {Function} [opts.onComplete] Function called when the animation has completed
+   * @returns {Dog}
+   */
+  find(opts) {
+    let _this = this;
+    let options = _extend({
+      onStart: _noop,
+      onComplete: _noop
+    }, opts);
+
+    this.timeline.add(function() {
+      sound.play('barkDucks');
+      _this.state = 'find';
+      options.onStart();
+    });
+
+    this.timeline.to(_this.position, 0.2, {
+      y: '-=100',
+      ease: 'Strong.easeOut',
+      delay: 0.6,
+      onStart: function() {
+        _this.state = 'jump';
+      },
+      onComplete: function() {
+        _this.visible = false;
+        options.onComplete();
+      }
+    });
+
+    return this;
+  }
+
+  /**
+   * sit
+   * @param opts
+   * @param {PIXI.Point} [opts.point] Point the dog will go to without animation
+   * @param {Function} [opts.onStart] Function called before moving the dog
+   * @param {Function} [opts.onComplete] Function called after the dog has moved
+   * @returns {Dog}
+   */
+  sit(opts) {
+    let _this = this;
+    let options = _extend({
+      point: this.position,
+      onStart: _noop,
+      onComplete: _noop
+    }, opts);
+
+    this.timeline.add(function() {
+      options.onStart();
+      _this.position.set(options.point.x, options.point.y);
+      options.onComplete();
+    });
+    return this;
+  }
+
+  /**
+   * retrieve
+   * @retuns {Dog}
+   */
   retrieve() {
+    let _this = this;
     this.toRetrieve++;
-    this.tweenPromise = this.tweenPromise.then(this.retrieveTween.bind(this));
+
+    this.upDownTween({
+      onStart: function() {
+        if (_this.state === 'laugh') {
+          this.kill();
+        }
+        else if (_this.toRetrieve >= 2) {
+          _this.state = 'double';
+          _this.toRetrieve-=2;
+        } else if (_this.toRetrieve === 1) {
+          _this.state = 'single';
+          _this.toRetrieve-=1;
+        } else {
+          this.kill();
+        }
+      }
+    });
+    return this;
   }
 
+  /**
+   * laugh
+   * @returns {Dog}
+   */
   laugh() {
     let _this = this;
-    this.tweenPromise = this.tweenPromise.then(new BPromise(function(resolve, reject) {
-      let tween = _this.upDownTween();
-      tween.onStart(function() {
-        _this.toRetrieve = 0;
-        _this.setState('laugh');
+    this.upDownTween({
+      state: 'laugh',
+      onStart: function() {
+        _this.state = 'laugh';
         sound.play('laugh');
-      });
-      tween.onComplete(function() {
-        resolve();
-      });
-      tween.start();
-    }));
+      }
+    });
+
+    return this;
   }
 
+  /**
+   * isActive
+   * @returns {boolean}
+   */
   isActive() {
-    return !this.tweenPromise || !this.tweenPromise.isResolved() || this.toRetrieve > 0;
+    return super.isActive() && this.toRetrieve > 0;
   }
 }
 

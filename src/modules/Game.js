@@ -1,37 +1,140 @@
-const PIXI = require('pixi.js');
-const TWEEN = require('tween.js');
-const _noop = require('lodash/utility/noop');
-const levels = require('../data/levels.json');
-
-const DEFAULT_BACKGROUND_COLOR = 0x64b0ff;
-
+import PIXI from 'pixi.js';
+import _noop from 'lodash/utility/noop';
+import levels from '../data/levels.json';
 import Stage from './Stage';
-import Duck from './Duck';
-import Dog from './Dog';
-import Hud from './Hud';
+import audioSpriteSheet from '../../dist/audio.json';
 
-const STATUS_TEXT_STYLE = {
-  font: '40px Arial',
-  align: 'left',
-  fill: 'white'
-};
+const sound = new Howl(audioSpriteSheet);
 
+const BLUE_SKY_COLOR = 0x64b0ff;
+const PINK_SKY_COLOR = 0xfbb4d4;
 const SUCCESS_RATIO = 0.6;
 
 class Game {
+  /**
+   * Game Constructor
+   * @param opts
+   * @param {String} opts.spritesheet Path to the spritesheet file that PIXI's loader should load
+   * @returns {Game}
+   */
   constructor(opts) {
     this.spritesheet = opts.spritesheet;
     this.loader = PIXI.loader;
     this.renderer =  PIXI.autoDetectRenderer(window.innerWidth, window.innerHeight, {
-      backgroundColor: DEFAULT_BACKGROUND_COLOR
+      backgroundColor: BLUE_SKY_COLOR
     });
     this.levelIndex = 0;
 
     this.waveEnding = false;
-    this.waveOver = false;
     this.levels = levels.normal;
-    this.score = 0;
     return this;
+  }
+
+  /**
+   * score - getter
+   * @returns {Number}
+   */
+  get score() {
+    return this.scoreVal ? this.scoreVal : 0;
+  }
+
+  /**
+   * score - setter
+   * Setter for the score property of the game. Also in charge of updating the HUD. In the event
+   * the HUD doesn't know about displaying the score, the property and a corresponding text box
+   * will be created in HUD.
+   * @param {Number} val Score value to set
+   */
+  set score(val) {
+    this.scoreVal = val;
+
+    if (this.stage && this.stage.hud) {
+
+      if (!this.stage.hud.hasOwnProperty('score')) {
+        this.stage.hud.createTextBox('score', {
+          style: {
+            font: '18px Arial',
+            align: 'left',
+            fill: 'white'
+          },
+          location: Stage.scoreBoxLocation()
+        });
+      }
+
+      this.stage.hud.score = val;
+    }
+
+  }
+
+  /**
+   * wave - get
+   * @returns {Number}
+   */
+  get wave() {
+    return this.waveVal ? this.waveVal : 0;
+  }
+
+  /**
+   * wave - set
+   * Setter for the wave property of the game. Also in charge of updating the HUD. In the event
+   * the HUD doesn't know about displaying the wave, the property and a corresponding text box
+   * will be created in the HUD.
+   * @param {Number} val
+   */
+  set wave(val) {
+    this.waveVal = val;
+
+    if (this.stage && this.stage.hud) {
+
+      if (!this.stage.hud.hasOwnProperty('waveStatus')) {
+        this.stage.hud.createTextBox('waveStatus', {
+          style: {
+            font: '18px Arial',
+            align: 'left',
+            fill: 'white'
+          },
+          location: Stage.waveStatusBoxLocation()
+        });
+      }
+
+      if (!isNaN(val) && val > 0) {
+        this.stage.hud.waveStatus = 'Wave ' + val + ' of ' + this.level.waves;
+      }else {
+        this.stage.hud.waveStatus = '';
+      }
+    }
+  }
+
+  /**
+   * gameStatus - get
+   * @returns {String}
+   */
+  get gameStatus () {
+    return this.gameStatusVal ? this.gameStatusVal : '';
+  }
+
+  /**
+   * gameStatus - set
+   * @param {String} val
+   */
+  set gameStatus(val) {
+    this.gameStatusVal = val;
+
+    if (this.stage && this.stage.hud) {
+
+      if (!this.stage.hud.hasOwnProperty('gameStatus')) {
+        this.stage.hud.createTextBox('gameStatus', {
+          style: {
+            font: '40px Arial',
+            align: 'left',
+            fill: 'white'
+          },
+          location: Stage.gameStatusBoxLocation()
+        });
+      }
+
+      this.stage.hud.gameStatus = val;
+    }
   }
 
   load() {
@@ -44,19 +147,18 @@ class Game {
     document.body.appendChild(this.renderer.view);
 
     this.stage = new Stage({
-      sprites: this.spritesheet
+      spritesheet: this.spritesheet
     });
 
-    this.hud = new Hud();
-
-    this.stage.addChild(this.hud);
     this.scaleToWindow();
-
-    //bind events
-    window.addEventListener('resize', this.scaleToWindow.bind(this));
-
+    this.bindEvents();
     this.startLevel();
     this.animate();
+
+  }
+
+  bindEvents() {
+    window.addEventListener('resize', this.scaleToWindow.bind(this));
   }
 
   scaleToWindow() {
@@ -69,34 +171,42 @@ class Game {
 
     this.level = this.levels[this.levelIndex];
     this.ducksShotThisLevel = 0;
-
-    this.hud.setGameStatus(this.level.title);
     this.wave = 0;
 
+    this.gameStatus = this.level.title;
     this.stage.preLevelAnimation().then(function() {
-      _this.hud.clearGameStatus();
-      _this.stage.mousedown = _this.stage.touchstart = _this.handleClick.bind(_this);
+      _this.gameStatus = '';
+      _this.bindInteractions();
       _this.startWave();
     });
   }
 
   startWave() {
-    this.wave++;
-    this.hud.setWaveStatus('Wave ' + this.wave + ' of ' + this.level.waves);
+    sound.play('quacking');
+    this.wave += 1;
     this.waveStartTime = Date.now();
     this.shotsFired = 0;
     this.waveEnding = false;
-    this.waveOver = false;
+
     this.stage.addDucks(this.level.ducks, this.level.speed);
+    this.bindInteractions();
   }
 
   endWave() {
-    this.stage.cleanUpDucks();
-    this.goToNextWave();
+    this.waveEnding = true;
+
+    sound.stop('quacking');
+    if (this.stage.ducksAlive()) {
+      this.renderer.backgroundColor = PINK_SKY_COLOR;
+      this.stage.flyAway().then(this.goToNextWave.bind(this));
+    } else {
+      this.stage.cleanUpDucks();
+      this.goToNextWave();
+    }
   }
 
   goToNextWave() {
-    this.resetBackgroundColor();
+    this.renderer.backgroundColor = BLUE_SKY_COLOR;
     if (this.level.waves === this.wave) {
       this.endLevel();
     } else {
@@ -104,17 +214,29 @@ class Game {
     }
   }
 
-  isWaveTimeUp() {
-    return this.waveElapsedTime() >= this.level.time;
+  shouldWaveEnd() {
+    // evaluate pre-requisites for a wave to end
+    if (this.wave === 0 || this.waveEnding || this.stage.dogActive()) {
+      return false;
+    }
+
+    return this.isWaveTimeUp() || this.outOfAmmo() || !this.stage.ducksActive();
   }
 
-  shouldWaveEnd() {
-    return (this.isWaveTimeUp() || this.outOfAmmo() || !this.stage.ducksAlive()) && !this.waveEnding;
+  isWaveTimeUp() {
+    return this.level ? this.waveElapsedTime() >= this.level.time : false;
+  }
+
+  waveElapsedTime() {
+    return (Date.now() - this.waveStartTime) / 1000;
+  }
+
+  outOfAmmo() {
+    return this.level ? this.shotsFired >= this.level.bullets : false;
   }
 
   endLevel() {
-    this.hud.clearWaveStatus('');
-    this.stage.mousedown = this.stage.touchstart = _noop;
+    this.wave = 0;
     this.goToNextLevel();
   }
 
@@ -134,19 +256,18 @@ class Game {
   }
 
   win() {
-    this.hud.clearWaveStatus();
-    this.hud.setGameStatus('You Win!');
+    this.gameStatus = 'You Win!';
     this.stage.victoryScreen();
   }
 
   loss() {
-    this.hud.clearWaveStatus();
-    this.hud.setGameStatus('You Lose!');
+    this.gameStatus = 'You Lose!';
     this.stage.loserScreen();
   }
 
   handleClick(event) {
     if (!this.outOfAmmo()) {
+      sound.play('gunSound');
       this.shotsFired++;
       this.updateScore(this.stage.shotsFired({
         x: event.data.global.x,
@@ -155,43 +276,28 @@ class Game {
     }
   }
 
-  outOfAmmo() {
-    return this.shotsFired >= this.level.bullets;
-  }
-
-  waveElapsedTime() {
-    return (Date.now() - this.waveStartTime) / 1000;
-  }
-
-  resetBackgroundColor() {
-    this.renderer.backgroundColor = DEFAULT_BACKGROUND_COLOR; // light blue
-  }
-
   updateScore(ducksShot) {
     this.ducksShotThisLevel += ducksShot;
     this.score += ducksShot * this.level.pointsPerDuck;
-    this.hud.setScore(this.score);
   }
 
-  animate(time) {
-    // render the stage container
+  bindInteractions() {
+    this.stage.mousedown = this.stage.touchstart = this.handleClick.bind(this);
+  }
+
+  unbindInteractions() {
+    this.stage.mousedown = this.stage.touchstart = _noop;
+  }
+
+  animate() {
     this.renderer.render(this.stage);
-    TWEEN.update(time);
 
-
-    if (!this.stage.isActive() && !this.waveOver) {
-      this.waveOver = true;
-      this.endWave();
-    } else if (this.shouldWaveEnd()) {
-      this.waveEnding = true;
-      if (this.stage.ducksAlive()) {
-        this.stage.flyAway();
-        this.renderer.backgroundColor = 0xfbb4d4;
+      if (this.shouldWaveEnd()) {
+        this.unbindInteractions();
+        this.endWave();
       }
-    }
 
     requestAnimationFrame(this.animate.bind(this));
-
   }
 }
 
