@@ -86,5 +86,14 @@ gulp.task('images', function(){
     .pipe(connect.reload());
 });
 
+gulp.task('deploy', function() {
+  return gulp.src('', {read:false})
+    .pipe(shell([
+    'terraform plan',
+    'terraform apply',
+    'aws s3 sync dist/ s3://duckhuntjs.com --include \'*\' --acl \'public-read\''
+  ]));
+});
+
 gulp.task('default', ['images', 'audio', 'jshint', 'jscs', 'modules']);
 gulp.task('dev', ['default', 'watch', 'serve']);
