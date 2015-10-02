@@ -40,15 +40,17 @@ gulp.task('jscs', function() {
   ]).pipe(jscs())
 });
 
-gulp.task('watch-and-serve', function() {
+gulp.task('watch', function() {
   gulp.watch(['./src/modules/*.js', './src/data/*.json', 'main.js', 'libs/*.js'], ['jshint', 'jscs', 'modules']);
   gulp.watch(['./src/assets/images/**/*.png'], ['images']);
   gulp.watch(['./src/assets/sounds/**/*.mp3'], ['audio']);
+});
+
+gulp.task('serve', function() {
   connect.server({
     root: 'dist',
     livereload: true
   });
-
 });
 
 gulp.task('audio', function() {
@@ -85,4 +87,4 @@ gulp.task('images', function(){
 });
 
 gulp.task('default', ['images', 'audio', 'jshint', 'jscs', 'modules']);
-gulp.task('dev', ['default', 'watch-and-serve']);
+gulp.task('dev', ['default', 'watch', 'serve']);

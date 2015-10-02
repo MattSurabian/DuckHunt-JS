@@ -4,7 +4,7 @@
   "description": "Duckhunt implemented in JS",
   "main": "main.js",
   "scripts": {
-    "run": "",
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

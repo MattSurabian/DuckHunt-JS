@@ -18,10 +18,12 @@ The flow of this game is managed using Javascript. The main chunks of business l
 
 ## Working With This Repo
 
-1. Clone the repo into a directory of your choice
-1. `cd` into that directory and run `npm install`
-1. Use the `gulp dev` task to serve the built game on http://localhost:8080/. This task automatically builds all necessary JS files and triggers triggers livereload to reload the page when changes are detected in the `src` directory.
-1. If you want to manually cut a build of the JS, the default gulp task will run jshint, ensure code style compliance via JSCS, transpile to ES5 and browserify everything into a single `duckhunt.js` file. The default task also constructs new image and audio sprite sheets and their respecitve manifests.
+ - You must have [nodejs](https://nodejs.org/) installed. This project also uses `gulp`. Installing it globally with `npm install -g gulp` is optional, though if you choose not to install it globally you'll have to use `npm run gulp -- TASK` instead of just `gulp TASK` when following the rest of this README.
+ - Clone the repo into a directory of your choice
+ - `cd` into that directory and run `npm install`
+ - Use `gulp serve` to start a local webserver which will make the site available at http://localhost:8080/. Cross origin errors prevent this project from being accessed in the browser with the `file://` protocol.
+ - If you're interested in modifying the code, use the `gulp dev` task to serve the site on http://localhost:8080/ and trigger automatic builds and reloads of the page when changes are detected in the `src` directory.
+ - If you want to manually cut a build of the JS, the default gulp task will run jshint, ensure code style compliance via JSCS, transpile to ES5 and browserify everything into a single `duckhunt.js` file in the `dist` folder. The default task also constructs new image and audio sprite sheets and their respecitve manifests.
 
 ## Bugs
 Please report bugs as [issues](https://github.com/MattSurabian/DuckHunt-JS/issues).
