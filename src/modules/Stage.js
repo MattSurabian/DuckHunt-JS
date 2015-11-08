@@ -2,6 +2,7 @@ import PIXI from 'pixi.js';
 import BPromise from 'bluebird';
 import Howler from 'howler';
 import _some from 'lodash/collection/any';
+import _delay from 'lodash/function/delay';
 import Utils from '../libs/utils';
 import Duck from './Duck';
 import Dog from './Dog';
@@ -25,6 +26,14 @@ const HUD_TEXT_BOX_LOCATIONS = {
   GAME_STATUS: new PIXI.Point(MAX_X / 2, MAX_Y * 0.45)
 };
 
+const FLASH_MS = 60;
+const FLASH_SCREEN = new PIXI.Graphics();
+FLASH_SCREEN.beginFill(0xFFFFFF);
+FLASH_SCREEN.drawRect(0, 0, MAX_X, MAX_Y);
+FLASH_SCREEN.endFill();
+FLASH_SCREEN.position.x = 0;
+FLASH_SCREEN.position.y = 0;
+
 class Stage extends PIXI.Container {
 
   /**
@@ -44,6 +53,8 @@ class Stage extends PIXI.Container {
       upPoint: DOG_POINTS.UP
     });
     this.dog.visible = false;
+    this.flashScreen = FLASH_SCREEN;
+    this.flashScreen.visible = false;
     this.hud = new Hud();
 
     this._setStage();
@@ -86,6 +97,7 @@ class Stage extends PIXI.Container {
     this.addChild(tree);
     this.addChild(background);
     this.addChild(this.dog);
+    this.addChild(this.flashScreen);
     this.addChild(this.hud);
 
     return this;
@@ -156,6 +168,13 @@ class Stage extends PIXI.Container {
    */
   shotsFired(clickPoint) {
     let _this = this;
+
+    // flash the screen
+    this.flashScreen.visible = true;
+    _delay(function() {
+      _this.flashScreen.visible = false;
+    }, FLASH_MS);
+
     clickPoint.x /= this.scale.x;
     clickPoint.y /= this.scale.y;
     let ducksShot = 0;
