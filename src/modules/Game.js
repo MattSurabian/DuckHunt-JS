@@ -30,12 +30,53 @@ class Game {
     return this;
   }
 
+  get ducksMissed() {
+    return this.ducksMissedVal ? this.ducksMissedVal : 0;
+  }
+
+  set ducksMissed(val) {
+    this.ducksMissedVal = val;
+
+    if (this.stage && this.stage.hud) {
+
+      if (!this.stage.hud.hasOwnProperty('ducksMissed')) {
+        this.stage.hud.createTextureBasedCounter('ducksMissed', {
+          texture: 'hud/score-live/0.png',
+          spritesheet: this.spritesheet,
+          location: Stage.missedDuckStatusBoxLocation()
+        });
+      }
+
+      this.stage.hud.ducksMissed = val;
+    }
+  }
+
+  get ducksShot() {
+    return this.ducksShotVal ? this.ducksShotVal : 0;
+  }
+
+  set ducksShot(val) {
+    this.ducksShotVal = val;
+
+    if (this.stage && this.stage.hud) {
+
+      if (!this.stage.hud.hasOwnProperty('ducksShot')) {
+        this.stage.hud.createTextureBasedCounter('ducksShot', {
+          texture: 'hud/score-dead/0.png',
+          spritesheet: this.spritesheet,
+          location: Stage.deadDuckStatusBoxLocation()
+        });
+      }
+
+      this.stage.hud.ducksShot = val;
+    }
+  }
   /**
    * bullets - getter
    * @returns {Number}
    */
   get bullets() {
-    return this.bulletVal;
+    return this.bulletVal ? this.bulletVal : 0;
   }
 
   /**
@@ -90,7 +131,11 @@ class Game {
             align: 'left',
             fill: 'white'
           },
-          location: Stage.scoreBoxLocation()
+          location: Stage.scoreBoxLocation(),
+          anchor: {
+            x: 1,
+            y: 0
+          }
         });
       }
 
@@ -126,7 +171,11 @@ class Game {
             align: 'left',
             fill: 'white'
           },
-          location: Stage.waveStatusBoxLocation()
+          location: Stage.waveStatusBoxLocation(),
+          anchor: {
+            x: 1,
+            y: 1
+          }
         });
       }
 
@@ -203,7 +252,8 @@ class Game {
     let _this = this;
 
     this.level = this.levels[this.levelIndex];
-    this.ducksShotThisLevel = 0;
+    this.ducksShot = 0;
+    this.ducksMissed = 0;
     this.wave = 0;
 
     this.gameStatus = this.level.title;
@@ -219,6 +269,7 @@ class Game {
     this.wave += 1;
     this.waveStartTime = Date.now();
     this.bullets = this.level.bullets;
+    this.ducksShotThisWave = 0;
     this.waveEnding = false;
 
     this.stage.addDucks(this.level.ducks, this.level.speed);
@@ -230,6 +281,7 @@ class Game {
     this.bullets = 0;
     sound.stop('quacking');
     if (this.stage.ducksAlive()) {
+      this.ducksMissed += this.level.ducks - this.ducksShotThisWave;
       this.renderer.backgroundColor = PINK_SKY_COLOR;
       this.stage.flyAway().then(this.goToNextWave.bind(this));
     } else {
@@ -285,7 +337,7 @@ class Game {
   }
 
   levelWon() {
-    return this.ducksShotThisLevel > SUCCESS_RATIO * this.level.ducks * this.level.waves;
+    return this.ducksShot > SUCCESS_RATIO * this.level.ducks * this.level.waves;
   }
 
   win() {
@@ -308,7 +360,8 @@ class Game {
   }
 
   updateScore(ducksShot) {
-    this.ducksShotThisLevel += ducksShot;
+    this.ducksShot += ducksShot;
+    this.ducksShotThisWave += ducksShot;
     this.score += ducksShot * this.level.pointsPerDuck;
   }
 

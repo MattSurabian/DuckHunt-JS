@@ -21,10 +21,12 @@ const DOG_POINTS = {
   SNIFF_END: new PIXI.Point(MAX_X / 2, MAX_Y - 130)
 };
 const HUD_LOCATIONS = {
-  SCORE: new PIXI.Point(MAX_X - 105, 20),
-  WAVE_STATUS: new PIXI.Point(60, MAX_Y * 0.97 - 10),
+  SCORE: new PIXI.Point(MAX_X - 10, 10),
+  WAVE_STATUS: new PIXI.Point(MAX_X - 10, MAX_Y - 20),
   GAME_STATUS: new PIXI.Point(MAX_X / 2, MAX_Y * 0.45),
-  BULLET_STATUS: new PIXI.Point(10, 10)
+  BULLET_STATUS: new PIXI.Point(10, 10),
+  DEAD_DUCK_STATUS: new PIXI.Point(10, MAX_Y * 0.91),
+  MISSED_DUCK_STATUS: new PIXI.Point(10, MAX_Y * 0.95)
 };
 
 const FLASH_MS = 60;
@@ -78,6 +80,13 @@ class Stage extends PIXI.Container {
     return HUD_LOCATIONS.BULLET_STATUS;
   }
 
+  static deadDuckStatusBoxLocation() {
+    return HUD_LOCATIONS.DEAD_DUCK_STATUS;
+  }
+
+  static missedDuckStatusBoxLocation() {
+    return HUD_LOCATIONS.MISSED_DUCK_STATUS;
+  }
   /**
    * scaleToWindow
    * Helper method that scales the stage container to the window size

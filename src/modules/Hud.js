@@ -79,7 +79,7 @@ class Hud extends PIXI.Container {
             item.position.set(item.width * i, 0);
             container.addChild(item);
           }
-        } else {
+        } else if (val != childCount) {
           container.removeChildren(val, childCount);
         }
       }
