@@ -257,12 +257,10 @@ class Game {
 
   win() {
     this.gameStatus = 'You Win!';
-    this.stage.victoryScreen();
   }
 
   loss() {
     this.gameStatus = 'You Lose!';
-    this.stage.loserScreen();
   }
 
   handleClick(event) {
