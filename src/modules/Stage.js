@@ -20,10 +20,11 @@ const DOG_POINTS = {
   SNIFF_START: new PIXI.Point(0, MAX_Y - 130),
   SNIFF_END: new PIXI.Point(MAX_X / 2, MAX_Y - 130)
 };
-const HUD_TEXT_BOX_LOCATIONS = {
+const HUD_LOCATIONS = {
   SCORE: new PIXI.Point(MAX_X - 105, 20),
   WAVE_STATUS: new PIXI.Point(60, MAX_Y * 0.97 - 10),
-  GAME_STATUS: new PIXI.Point(MAX_X / 2, MAX_Y * 0.45)
+  GAME_STATUS: new PIXI.Point(MAX_X / 2, MAX_Y * 0.45),
+  BULLET_STATUS: new PIXI.Point(10, 10)
 };
 
 const FLASH_MS = 60;
@@ -62,15 +63,19 @@ class Stage extends PIXI.Container {
   }
 
   static scoreBoxLocation() {
-    return HUD_TEXT_BOX_LOCATIONS.SCORE;
+    return HUD_LOCATIONS.SCORE;
   }
 
   static waveStatusBoxLocation() {
-    return HUD_TEXT_BOX_LOCATIONS.WAVE_STATUS;
+    return HUD_LOCATIONS.WAVE_STATUS;
   }
 
   static gameStatusBoxLocation() {
-    return HUD_TEXT_BOX_LOCATIONS.GAME_STATUS;
+    return HUD_LOCATIONS.GAME_STATUS;
+  }
+
+  static bulletStatusBoxLocation() {
+    return HUD_LOCATIONS.BULLET_STATUS;
   }
 
   /**

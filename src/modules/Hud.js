@@ -56,6 +56,35 @@ class Hud extends PIXI.Container {
     });
   }
 
+  createTextureBasedCounter(name, opts) {
+    let options = _extend({
+      texture: '',
+      spritesheet: '',
+      location: new PIXI.Point(0, 0)
+    }, opts);
+
+    this[name + 'Container'] = new PIXI.Container();
+    let container = this[name + 'Container'];
+    container.position.set(options.location.x, options.location.y);
+    this.addChild(container);
+
+    Object.defineProperty(this, name, {
+      set: function(val) {
+        let gameTextures = PIXI.loader.resources[options.spritesheet].textures;
+        let texture = gameTextures[options.texture];
+        let childCount = container.children.length;
+        if (childCount < val) {
+          for (let i = childCount; i < val; i++) {
+            let item = new PIXI.extras.MovieClip([texture]);
+            item.position.set(item.width * i, 0);
+            container.addChild(item);
+          }
+        } else {
+          container.removeChildren(val, childCount);
+        }
+      }
+    });
+  }
 }
 
 export default Hud;

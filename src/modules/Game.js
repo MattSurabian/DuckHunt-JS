@@ -31,6 +31,39 @@ class Game {
   }
 
   /**
+   * bullets - getter
+   * @returns {Number}
+   */
+  get bullets() {
+    return this.bulletVal;
+  }
+
+  /**
+   * bullets - setter
+   * Setter for the bullets property of the game. Also in charge of updating the HUD. In the event
+   * the HUD doesn't know about displaying bullets, the property and a corresponding texture container
+   * will be created in HUD.
+   * @param {Number} val Number of bullets
+   */
+  set bullets(val) {
+    this.bulletVal = val;
+
+    if (this.stage && this.stage.hud) {
+
+      if (!this.stage.hud.hasOwnProperty('bullets')) {
+        this.stage.hud.createTextureBasedCounter('bullets', {
+          texture: 'hud/bullet/0.png',
+          spritesheet: this.spritesheet,
+          location: Stage.bulletStatusBoxLocation()
+        });
+      }
+
+      this.stage.hud.bullets = val;
+    }
+
+  }
+
+  /**
    * score - getter
    * @returns {Number}
    */
@@ -185,7 +218,7 @@ class Game {
     sound.play('quacking');
     this.wave += 1;
     this.waveStartTime = Date.now();
-    this.shotsFired = 0;
+    this.bullets = this.level.bullets;
     this.waveEnding = false;
 
     this.stage.addDucks(this.level.ducks, this.level.speed);
@@ -194,7 +227,7 @@ class Game {
 
   endWave() {
     this.waveEnding = true;
-
+    this.bullets = 0;
     sound.stop('quacking');
     if (this.stage.ducksAlive()) {
       this.renderer.backgroundColor = PINK_SKY_COLOR;
@@ -232,7 +265,7 @@ class Game {
   }
 
   outOfAmmo() {
-    return this.level ? this.shotsFired >= this.level.bullets : false;
+    return this.level && this.bullets === 0;
   }
 
   endLevel() {
@@ -266,7 +299,7 @@ class Game {
   handleClick(event) {
     if (!this.outOfAmmo()) {
       sound.play('gunSound');
-      this.shotsFired++;
+      this.bullets -= 1;
       this.updateScore(this.stage.shotsFired({
         x: event.data.global.x,
         y: event.data.global.y
