@@ -4,7 +4,6 @@ var browserify = require('browserify');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var source = require('vinyl-source-stream');
-var livereload = require('gulp-livereload');
 var audiosprite = require('audiosprite');
 var glob = require('glob');
 var shell = require('gulp-shell');
