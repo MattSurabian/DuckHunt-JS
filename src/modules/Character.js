@@ -1,8 +1,6 @@
 import PIXI from 'pixi.js';
 import TimelineLight from 'gsap/src/uncompressed/TimelineLite.js';
-import _noop from 'lodash/utility/noop';
 import _find from 'lodash/collection/find';
-import _result from 'lodash/object/result';
 
 class Character extends PIXI.extras.MovieClip {
   /**
