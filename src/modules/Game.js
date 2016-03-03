@@ -249,18 +249,16 @@ class Game {
   }
 
   startLevel() {
-    let _this = this;
-
     this.level = this.levels[this.levelIndex];
     this.ducksShot = 0;
     this.ducksMissed = 0;
     this.wave = 0;
 
     this.gameStatus = this.level.title;
-    this.stage.preLevelAnimation().then(function() {
-      _this.gameStatus = '';
-      _this.bindInteractions();
-      _this.startWave();
+    this.stage.preLevelAnimation().then(() => {
+      this.gameStatus = '';
+      this.bindInteractions();
+      this.startWave();
     });
   }
 

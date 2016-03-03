@@ -124,7 +124,6 @@ class Stage extends PIXI.Container {
    * @returns {Promise}
    */
   preLevelAnimation() {
-    let _this = this;
     let animationPromise = new BPromise.pending();
 
     this.cleanUpDucks();
@@ -135,8 +134,8 @@ class Stage extends PIXI.Container {
     };
 
     let findOpts = {
-      onComplete: function() {
-        _this.setChildIndex(_this.dog, 0);
+      onComplete: () => {
+        this.setChildIndex(this.dog, 0);
         animationPromise.resolve();
       }
     };
@@ -181,12 +180,10 @@ class Stage extends PIXI.Container {
    * @returns {Number} - The number of ducks hit with the shot
    */
   shotsFired(clickPoint) {
-    let _this = this;
-
     // flash the screen
     this.flashScreen.visible = true;
-    _delay(function() {
-      _this.flashScreen.visible = false;
+    _delay(() => {
+      this.flashScreen.visible = false;
     }, FLASH_MS);
 
     clickPoint.x /= this.scale.x;
@@ -197,8 +194,8 @@ class Stage extends PIXI.Container {
       if (duck.alive && Utils.pointDistance(duck.position, clickPoint) < 60) {
         ducksShot++;
         duck.shot();
-        duck.timeline.add(function() {
-          _this.dog.retrieve();
+        duck.timeline.add(() => {
+          this.dog.retrieve();
         });
       }
     }
@@ -249,7 +246,7 @@ class Stage extends PIXI.Container {
    * @returns {Boolean}
    */
   ducksAlive() {
-    return _some(this.ducks, function(duck) {
+    return _some(this.ducks, (duck) => {
       return duck.alive;
     });
   }
@@ -261,7 +258,7 @@ class Stage extends PIXI.Container {
    * @returns {Boolean}
    */
   ducksActive() {
-    return _some(this.ducks, function(duck) {
+    return _some(this.ducks, (duck) => {
       return duck.isActive();
     });
   }

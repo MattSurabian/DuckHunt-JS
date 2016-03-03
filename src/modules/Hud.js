@@ -47,10 +47,10 @@ class Hud extends PIXI.Container {
     this.addChild(textBox);
 
     Object.defineProperty(this, name, {
-      set: function(val) {
+      set: (val) => {
         textBox.text = val;
       },
-      get: function() {
+      get: () => {
         return textBox.text;
       }
     });
@@ -69,7 +69,7 @@ class Hud extends PIXI.Container {
     this.addChild(container);
 
     Object.defineProperty(this, name, {
-      set: function(val) {
+      set: (val) => {
         let gameTextures = PIXI.loader.resources[options.spritesheet].textures;
         let texture = gameTextures[options.texture];
         let childCount = container.children.length;

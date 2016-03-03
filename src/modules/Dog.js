@@ -60,7 +60,6 @@ class Dog extends Character {
    * @returns {Dog}
    */
   sniff(opts) {
-    let _this = this;
     let options = _extend({
       startPoint: this.position,
       endPoint: this.position,
@@ -70,23 +69,23 @@ class Dog extends Character {
 
     this.sit({
       point: options.startPoint,
-      pre: function() {
-        _this.visible = false;
+      pre: () => {
+        this.visible = false;
       }
     });
 
-    this.timeline.to(_this.position, 2, {
+    this.timeline.to(this.position, 2, {
       x: options.endPoint.x,
       y: options.endPoint.y,
       ease: 'Linear.easeNone',
-      onStart: function() {
-        _this.visible = true;
-        _this.parent.setChildIndex(_this, _this.parent.children.length - 1);
-        _this.state = 'sniff';
+      onStart: () => {
+        this.visible = true;
+        this.parent.setChildIndex(this, this.parent.children.length - 1);
+        this.state = 'sniff';
         sound.play('sniff');
         options.onStart();
       },
-      onComplete: function() {
+      onComplete: () => {
         sound.stop('sniff');
         options.onComplete();
       }
@@ -105,7 +104,6 @@ class Dog extends Character {
    * return {Dog}
    */
   upDownTween(opts) {
-    let _this = this;
     let options = _extend({
       startPoint: this.options.downPoint || this.position,
       endPoint: this.options.upPoint || this.position,
@@ -117,14 +115,14 @@ class Dog extends Character {
       point: options.startPoint
     });
 
-   this.timeline.add(TweenMax.to(_this.position, 0.4, {
+   this.timeline.add(TweenMax.to(this.position, 0.4, {
       y: options.endPoint.y,
       yoyo: true,
       repeat: 1,
       repeatDelay: 0.5,
       ease: 'Linear.easeNone',
-      onStart: function() {
-        _this.visible = true;
+      onStart: () => {
+        this.visible = true;
         options.onStart.call(this);
       },
       onComplete: options.onComplete
@@ -140,27 +138,27 @@ class Dog extends Character {
    * @returns {Dog}
    */
   find(opts) {
-    let _this = this;
     let options = _extend({
       onStart: _noop,
       onComplete: _noop
     }, opts);
 
-    this.timeline.add(function() {
+    this.timeline.add(() => {
+      sound.stop('sniff'); // stop gap for some race condition bug
       sound.play('barkDucks');
-      _this.state = 'find';
+      this.state = 'find';
       options.onStart();
     });
 
-    this.timeline.to(_this.position, 0.2, {
+    this.timeline.to(this.position, 0.2, {
       y: '-=100',
       ease: 'Strong.easeOut',
       delay: 0.6,
-      onStart: function() {
-        _this.state = 'jump';
+      onStart: () => {
+        this.state = 'jump';
       },
-      onComplete: function() {
-        _this.visible = false;
+      onComplete: () => {
+        this.visible = false;
         options.onComplete();
       }
     });
@@ -177,16 +175,15 @@ class Dog extends Character {
    * @returns {Dog}
    */
   sit(opts) {
-    let _this = this;
     let options = _extend({
       point: this.position,
       onStart: _noop,
       onComplete: _noop
     }, opts);
 
-    this.timeline.add(function() {
+    this.timeline.add(() => {
       options.onStart();
-      _this.position.set(options.point.x, options.point.y);
+      this.position.set(options.point.x, options.point.y);
       options.onComplete();
     });
     return this;
@@ -197,22 +194,16 @@ class Dog extends Character {
    * @retuns {Dog}
    */
   retrieve() {
-    let _this = this;
     this.toRetrieve++;
 
     this.upDownTween({
-      onStart: function() {
-        if (_this.state === 'laugh') {
-          this.kill();
-        }
-        else if (_this.toRetrieve >= 2) {
-          _this.state = 'double';
-          _this.toRetrieve-=2;
-        } else if (_this.toRetrieve === 1) {
-          _this.state = 'single';
-          _this.toRetrieve-=1;
-        } else {
-          this.kill();
+      onStart: () => {
+        if (this.toRetrieve >= 2) {
+          this.state = 'double';
+          this.toRetrieve-=2;
+        } else if (this.toRetrieve === 1) {
+          this.state = 'single';
+          this.toRetrieve-=1;
         }
       }
     });
@@ -224,11 +215,11 @@ class Dog extends Character {
    * @returns {Dog}
    */
   laugh() {
-    let _this = this;
     this.upDownTween({
       state: 'laugh',
-      onStart: function() {
-        _this.state = 'laugh';
+      onStart: () => {
+        this.toRetrieve = 0;
+        this.state = 'laugh';
         sound.play('laugh');
       }
     });

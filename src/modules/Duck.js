@@ -74,8 +74,6 @@ class Duck extends Character {
    * @param {Number} [opts.speed=1] Speed of travel on a scale of 0 (slow) to 10 (fast)
    */
   randomFlight(opts) {
-    let _this = this;
-
     let options = _extend({
       minX: 0,
       maxX: this.options.maxX || Infinity,
@@ -97,7 +95,7 @@ class Duck extends Character {
     this.flyTo({
       point: destination,
       speed: options.speed,
-      onComplete: _this.randomFlight.bind(_this, options)
+      onComplete: this.randomFlight.bind(this, options)
     });
   }
 
@@ -112,7 +110,6 @@ class Duck extends Character {
    * @returns {Duck}
    */
   flyTo(opts) {
-    let _this = this;
     let options = _extend({
       point: this.position,
       speed: this.speed,
@@ -125,16 +122,16 @@ class Duck extends Character {
     let direction = Utils.directionOfTravel(this.position, options.point);
     let tweenSeconds = (this.flightAnimationMs + _random(0, 300)) / 1000;
 
-    this.timeline.to(_this.position, tweenSeconds, {
+    this.timeline.to(this.position, tweenSeconds, {
       x: options.point.x,
       y: options.point.y,
       ease: 'Linear.easeNone',
-      onStart: function() {
-        if (!_this.alive) {
-          this.kill();
+      onStart: () => {
+        if (!this.alive) {
+          this.stopAndClearTimeline();
         }
-        _this.play();
-        _this.state = direction.replace('bottom', 'top');
+        this.play();
+        this.state = direction.replace('bottom', 'top');
         options.onStart();
       },
       onComplete: options.onComplete
@@ -148,29 +145,27 @@ class Duck extends Character {
    * Method that animates the duck when the player shoots it
    */
   shot() {
-    let _this = this;
-
     if (!this.alive) {
       return;
     }
     this.alive = false;
 
     this.stopAndClearTimeline();
-    this.timeline.add(function() {
-      _this.state = 'shot';
+    this.timeline.add(() => {
+      this.state = 'shot';
       sound.play('quak', _noop);
     });
 
-    this.timeline.to(_this.position, DEATH_ANIMATION_SECONDS, {
+    this.timeline.to(this.position, DEATH_ANIMATION_SECONDS, {
       y: this.options.maxY,
       ease: 'Linear.easeNone',
       delay: 0.3,
-      onStart: function() {
-        _this.state = 'dead';
+      onStart: () => {
+        this.state = 'dead';
       },
-      onComplete: function() {
+      onComplete: () => {
         sound.play('thud', _noop);
-        _this.visible = false;
+        this.visible = false;
       }
     });
 
