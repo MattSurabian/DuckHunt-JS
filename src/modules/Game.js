@@ -303,7 +303,7 @@ class Game {
       return false;
     }
 
-    return this.isWaveTimeUp() || this.outOfAmmo() || !this.stage.ducksActive();
+    return this.isWaveTimeUp() || (this.outOfAmmo() && this.stage.ducksAlive()) || !this.stage.ducksActive();
   }
 
   isWaveTimeUp() {
