@@ -339,10 +339,12 @@ class Game {
   }
 
   win() {
+    sound.play('champ');
     this.gameStatus = 'You Win!';
   }
 
   loss() {
+    sound.play('loserSound');
     this.gameStatus = 'You Lose!';
   }
 
