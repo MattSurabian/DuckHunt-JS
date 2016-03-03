@@ -4,6 +4,7 @@
   "description": "Duckhunt implemented in JS",
   "main": "main.js",
   "scripts": {
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,12 +21,23 @@
   "gitHead": "85a85bc6d7a26917cd37d981928ad01be2e06c99",
   "readmeFilename": "README",
   "devDependencies": {
+    "audiosprite": "^0.5.0",
+    "babelify": "^6.1.2",
+    "bluebird": "^2.9.32",
+    "browserify": "^10.2.4",
+    "glob": "^5.0.13",
+    "gsap": "^1.18.0",
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.5.2",
+    "gulp-babel": "^5.1.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-jscs": "^1.6.0",
     "gulp-jshint": "^1.11.0",
-    "gulp-livereload": "^3.8.0",
-    "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.5",
-    "yargs": "^3.10.0"
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.4.2",
+    "howler": "^1.1.26",
+    "lodash": "^3.10.0",
+    "pixi.js": "^3.0.0",
+    "tween.js": "^0.14.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
