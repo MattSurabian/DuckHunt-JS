@@ -1,8 +1,9 @@
+/*global Howl, TweenMax*/
+
 import 'gsap/src/uncompressed/TweenMax.js';
-import _delay from 'lodash/function/delay';
 import _noop from 'lodash/utility/noop';
 import _extend from 'lodash/object/assign';
-import Howler from 'howler';
+import 'howler';
 import audioSpriteSheet from '../../dist/audio.json';
 import Character from './Character';
 
@@ -17,7 +18,7 @@ class Dog extends Character {
    * @param {PIXI.Point} options.upPoint The point the dog should rise to when retrieving ducks
    */
   constructor(options) {
-    let states = [
+    const states = [
       {
         name: 'double',
         animationSpeed: 0.1
@@ -60,7 +61,7 @@ class Dog extends Character {
    * @returns {Dog}
    */
   sniff(opts) {
-    let options = _extend({
+    const options = _extend({
       startPoint: this.position,
       endPoint: this.position,
       onStart: _noop,
@@ -104,7 +105,7 @@ class Dog extends Character {
    * return {Dog}
    */
   upDownTween(opts) {
-    let options = _extend({
+    const options = _extend({
       startPoint: this.options.downPoint || this.position,
       endPoint: this.options.upPoint || this.position,
       onStart: _noop,
@@ -115,7 +116,7 @@ class Dog extends Character {
       point: options.startPoint
     });
 
-   this.timeline.add(TweenMax.to(this.position, 0.4, {
+    this.timeline.add(TweenMax.to(this.position, 0.4, {
       y: options.endPoint.y,
       yoyo: true,
       repeat: 1,
@@ -138,7 +139,7 @@ class Dog extends Character {
    * @returns {Dog}
    */
   find(opts) {
-    let options = _extend({
+    const options = _extend({
       onStart: _noop,
       onComplete: _noop
     }, opts);
@@ -175,7 +176,7 @@ class Dog extends Character {
    * @returns {Dog}
    */
   sit(opts) {
-    let options = _extend({
+    const options = _extend({
       point: this.position,
       onStart: _noop,
       onComplete: _noop

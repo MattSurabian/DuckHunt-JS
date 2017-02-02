@@ -1,3 +1,5 @@
+/*global Howl*/
+
 import PIXI from 'pixi.js';
 import _noop from 'lodash/utility/noop';
 import levels from '../data/levels.json';
@@ -181,7 +183,7 @@ class Game {
 
       if (!isNaN(val) && val > 0) {
         this.stage.hud.waveStatus = 'Wave ' + val + ' of ' + this.level.waves;
-      }else {
+      } else {
         this.stage.hud.waveStatus = '';
       }
     }
@@ -191,7 +193,7 @@ class Game {
    * gameStatus - get
    * @returns {String}
    */
-  get gameStatus () {
+  get gameStatus() {
     return this.gameStatusVal ? this.gameStatusVal : '';
   }
 
@@ -376,10 +378,10 @@ class Game {
   animate() {
     this.renderer.render(this.stage);
 
-      if (this.shouldWaveEnd()) {
-        this.unbindInteractions();
-        this.endWave();
-      }
+    if (this.shouldWaveEnd()) {
+      this.unbindInteractions();
+      this.endWave();
+    }
 
     requestAnimationFrame(this.animate.bind(this));
   }

@@ -1,14 +1,16 @@
 module.exports.pointDistance = function(point1, point2) {
-  return Math.sqrt((Math.pow((point1.x - point2.x), 2) + Math.pow((point1.y - point2.y), 2)))
+  return Math.sqrt(
+    (Math.pow((point1.x - point2.x), 2) + Math.pow((point1.y - point2.y), 2))
+  );
 };
 
 module.exports.directionOfTravel = function(pointStart, pointEnd) {
   let direction = '';
 
   //positive means down
-  let rise = pointEnd.y - pointStart.y;
+  const rise = pointEnd.y - pointStart.y;
   //positive means right
-  let run = pointEnd.x - pointStart.x;
+  const run = pointEnd.x - pointStart.x;
 
   if (run < 1 && rise < 1) {
     direction = 'top-left';
