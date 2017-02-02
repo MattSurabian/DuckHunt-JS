@@ -1,38 +1,8 @@
 var gulp = require('gulp');
-var babelify = require('babelify');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var audiosprite = require('audiosprite');
+var audiosprite = require('./vendor/audiosprite');
 var glob = require('glob');
 var shell = require('gulp-shell');
 var fs = require('fs');
-var rename = require('gulp-rename');
-var connect = require('gulp-connect');
-
-gulp.task('modules', function() {
-  browserify({
-    entries: './main.js',
-    debug: true
-  }).transform(babelify)
-    .bundle()
-    .pipe(source('main.js'))
-    .pipe(rename('duckhunt.js'))
-    .pipe(gulp.dest('./dist'))
-    .pipe(connect.reload());
-});
-
-gulp.task('watch', function() {
-  gulp.watch(['./src/modules/*.js', './src/data/*.json', 'main.js', 'libs/*.js'], ['modules']);
-  gulp.watch(['./src/assets/images/**/*.png'], ['images']);
-  gulp.watch(['./src/assets/sounds/**/*.mp3'], ['audio']);
-});
-
-gulp.task('serve', function() {
-  connect.server({
-    root: 'dist',
-    livereload: true
-  });
-});
 
 gulp.task('audio', function() {
   var files = glob.sync('./src/assets/sounds/*.mp3');
@@ -40,7 +10,7 @@ gulp.task('audio', function() {
   var opts = {
     output: outputPath,
     path: './',
-    format: 'howler',
+    format: 'howler2',
     'export': 'ogg,mp3',
     loop: ['quacking', 'sniff']
   };
@@ -76,6 +46,4 @@ gulp.task('deploy', function() {
   ]));
 });
 
-gulp.task('js', ['modules']);
-gulp.task('dev', ['default', 'watch', 'serve']);
-gulp.task('default', ['images', 'audio', 'js']);
+gulp.task('default', ['images', 'audio']);

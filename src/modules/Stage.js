@@ -1,8 +1,7 @@
-import PIXI from 'pixi.js';
+import {Point, Graphics, Container, loader, extras} from 'pixi.js';
 import BPromise from 'bluebird';
-import 'howler';
-import _some from 'lodash/collection/any';
-import _delay from 'lodash/function/delay';
+import {some as _some} from 'lodash/collection';
+import {delay as _delay} from 'lodash/function';
 import Utils from '../libs/utils';
 import Duck from './Duck';
 import Dog from './Dog';
@@ -12,32 +11,32 @@ const MAX_X = 800;
 const MAX_Y = 600;
 
 const DUCK_POINTS = {
-  ORIGIN: new PIXI.Point(MAX_X / 2, MAX_Y)
+  ORIGIN: new Point(MAX_X / 2, MAX_Y)
 };
 const DOG_POINTS = {
-  DOWN: new PIXI.Point(MAX_X / 2, MAX_Y),
-  UP: new PIXI.Point(MAX_X / 2, MAX_Y - 230),
-  SNIFF_START: new PIXI.Point(0, MAX_Y - 130),
-  SNIFF_END: new PIXI.Point(MAX_X / 2, MAX_Y - 130)
+  DOWN: new Point(MAX_X / 2, MAX_Y),
+  UP: new Point(MAX_X / 2, MAX_Y - 230),
+  SNIFF_START: new Point(0, MAX_Y - 130),
+  SNIFF_END: new Point(MAX_X / 2, MAX_Y - 130)
 };
 const HUD_LOCATIONS = {
-  SCORE: new PIXI.Point(MAX_X - 10, 10),
-  WAVE_STATUS: new PIXI.Point(MAX_X - 10, MAX_Y - 20),
-  GAME_STATUS: new PIXI.Point(MAX_X / 2, MAX_Y * 0.45),
-  BULLET_STATUS: new PIXI.Point(10, 10),
-  DEAD_DUCK_STATUS: new PIXI.Point(10, MAX_Y * 0.91),
-  MISSED_DUCK_STATUS: new PIXI.Point(10, MAX_Y * 0.95)
+  SCORE: new Point(MAX_X - 10, 10),
+  WAVE_STATUS: new Point(MAX_X - 10, MAX_Y - 20),
+  GAME_STATUS: new Point(MAX_X / 2, MAX_Y * 0.45),
+  BULLET_STATUS: new Point(10, 10),
+  DEAD_DUCK_STATUS: new Point(10, MAX_Y * 0.91),
+  MISSED_DUCK_STATUS: new Point(10, MAX_Y * 0.95)
 };
 
 const FLASH_MS = 60;
-const FLASH_SCREEN = new PIXI.Graphics();
+const FLASH_SCREEN = new Graphics();
 FLASH_SCREEN.beginFill(0xFFFFFF);
 FLASH_SCREEN.drawRect(0, 0, MAX_X, MAX_Y);
 FLASH_SCREEN.endFill();
 FLASH_SCREEN.position.x = 0;
 FLASH_SCREEN.position.y = 0;
 
-class Stage extends PIXI.Container {
+class Stage extends Container {
 
   /**
    * Stage Constructor
@@ -102,12 +101,12 @@ class Stage extends PIXI.Container {
    * @private
    */
   _setStage() {
-    const background = new PIXI.extras.MovieClip([
-      PIXI.loader.resources[this.spritesheet].textures['scene/back/0.png']
+    const background = new extras.AnimatedSprite([
+      loader.resources[this.spritesheet].textures['scene/back/0.png']
     ]);
     background.position.set(0, 0);
 
-    const tree = new PIXI.extras.MovieClip([PIXI.loader.resources[this.spritesheet].textures['scene/tree/0.png']]);
+    const tree = new extras.AnimatedSprite([loader.resources[this.spritesheet].textures['scene/tree/0.png']]);
     tree.position.set(100, 237);
 
     this.addChild(tree);
@@ -126,25 +125,23 @@ class Stage extends PIXI.Container {
    * @returns {Promise}
    */
   preLevelAnimation() {
-    const animationPromise = new BPromise.pending();
+    return new BPromise((resolve) => {
+      this.cleanUpDucks();
 
-    this.cleanUpDucks();
+      const sniffOpts = {
+        startPoint: DOG_POINTS.SNIFF_START,
+        endPoint: DOG_POINTS.SNIFF_END
+      };
 
-    const sniffOpts = {
-      startPoint: DOG_POINTS.SNIFF_START,
-      endPoint: DOG_POINTS.SNIFF_END
-    };
+      const findOpts = {
+        onComplete: () => {
+          this.setChildIndex(this.dog, 0);
+          resolve();
+        }
+      };
 
-    const findOpts = {
-      onComplete: () => {
-        this.setChildIndex(this.dog, 0);
-        animationPromise.resolve();
-      }
-    };
-
-    this.dog.sniff(sniffOpts).find(findOpts);
-
-    return animationPromise.promise;
+      this.dog.sniff(sniffOpts).find(findOpts);
+    });
   }
 
   /**
@@ -217,13 +214,13 @@ class Stage extends PIXI.Container {
     for (let i = 0; i < this.ducks.length; i++) {
       const duck = this.ducks[i];
       if (duck.alive) {
-        const duckAnimation = new BPromise.pending();
-        duck.stopAndClearTimeline();
-        duck.flyTo({
-          point: new PIXI.Point(MAX_X / 2, -500),
-          onComplete: duckAnimation.resolve.bind(duckAnimation)
-        });
-        duckPromises.push(duckAnimation.promise);
+        duckPromises.push(new BPromise((resolve) => {
+          duck.stopAndClearTimeline();
+          duck.flyTo({
+            point: new Point(MAX_X / 2, -500),
+            onComplete: resolve
+          });
+        }));
       }
     }
 

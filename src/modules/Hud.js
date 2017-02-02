@@ -1,5 +1,5 @@
-import PIXI from 'pixi.js';
-import _extend from 'lodash/object/assign';
+import {Container, Point, Text, loader, extras} from 'pixi.js';
+import {assign as _extend} from 'lodash/object';
 
 /**
  * Hud
@@ -10,7 +10,7 @@ import _extend from 'lodash/object/assign';
  * The instantiator of this class is responsible for displaying it at the proper
  * depth in it's parent container.
  */
-class Hud extends PIXI.Container {
+class Hud extends Container {
   constructor() {
     super();
   }
@@ -28,18 +28,19 @@ class Hud extends PIXI.Container {
     // set defaults, and allow them to be overwritten
     const options = _extend({
       style: {
-        font: '18px Arial',
+        fontFamily: 'Arial',
+        fontSize: '18px',
         align: 'left',
         fill: 'white'
       },
-      location: new PIXI.Point(0, 0),
+      location: new Point(0, 0),
       anchor: {
         x: 0.5,
         y: 0.5
       }
     }, opts);
 
-    this[name + 'TextBox'] = new PIXI.Text('', options.style);
+    this[name + 'TextBox'] = new Text('', options.style);
     const textBox = this[name + 'TextBox'];
     textBox.position.set(options.location.x, options.location.y);
     textBox.anchor.set(options.anchor.x, options.anchor.y);
@@ -59,22 +60,22 @@ class Hud extends PIXI.Container {
     const options = _extend({
       texture: '',
       spritesheet: '',
-      location: new PIXI.Point(0, 0)
+      location: new Point(0, 0)
     }, opts);
 
-    this[name + 'Container'] = new PIXI.Container();
+    this[name + 'Container'] = new Container();
     const container = this[name + 'Container'];
     container.position.set(options.location.x, options.location.y);
     this.addChild(container);
 
     Object.defineProperty(this, name, {
       set: (val) => {
-        const gameTextures = PIXI.loader.resources[options.spritesheet].textures;
+        const gameTextures = loader.resources[options.spritesheet].textures;
         const texture = gameTextures[options.texture];
         const childCount = container.children.length;
         if (childCount < val) {
           for (let i = childCount; i < val; i++) {
-            const item = new PIXI.extras.MovieClip([texture]);
+            const item = new extras.AnimatedSprite([texture]);
             item.position.set(item.width * i, 0);
             container.addChild(item);
           }

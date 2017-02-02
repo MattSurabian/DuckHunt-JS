@@ -23,7 +23,7 @@ The flow of this game is managed using Javascript. The main chunks of business l
  - `cd` into that directory and run `npm install`
  - Use `gulp serve` to start a local webserver which will make the site available at http://localhost:8080/. Cross origin errors prevent this project from being accessed in the browser with the `file://` protocol.
  - If you're interested in modifying the code, use the `gulp dev` task to serve the site on http://localhost:8080/ and trigger automatic builds and reloads of the page when changes are detected in the `src` directory.
- - If you want to manually cut a build of the JS, the default gulp task will transpile to ES5 and browserify everything into a single `duckhunt.js` file in the `dist` folder. The default task also constructs new image and audio sprite sheets and their respecitve manifests.
+ - If you want to manually cut a build of the JS, the default gulp task will transpile to ES5 and browserify everything into a single `main.js` file in the `dist` folder. The default task also constructs new image and audio sprite sheets and their respecitve manifests.
 
 ## Bugs
 Please report bugs as [issues](https://github.com/MattSurabian/DuckHunt-JS/issues).

@@ -1,8 +1,8 @@
-import PIXI from 'pixi.js';
-import TimelineLight from 'gsap/src/uncompressed/TimelineLite.js';
-import _find from 'lodash/collection/find';
+import {extras, loader} from 'pixi.js';
+import {TimelineLite} from 'gsap';
+import {find as _find} from 'lodash/collection';
 
-class Character extends PIXI.extras.MovieClip {
+class Character extends extras.AnimatedSprite {
   /**
    * Character Constructor
    * @param {String} spriteId The leading id of this Character's resources in the spritesheet
@@ -11,7 +11,7 @@ class Character extends PIXI.extras.MovieClip {
    *   given sprite id.
    */
   constructor(spriteId, spritesheet, states) {
-    const gameTextures = PIXI.loader.resources[spritesheet].textures;
+    const gameTextures = loader.resources[spritesheet].textures;
     for (const textureKey in gameTextures) {
       if (!gameTextures.hasOwnProperty(textureKey) || textureKey.indexOf(spriteId) === -1) {
         continue;
@@ -43,7 +43,7 @@ class Character extends PIXI.extras.MovieClip {
     super(states[0].textures);
     this.states = states;
     this.animationSpeed = this.states[0].animationSpeed;
-    this.timeline = new TimelineLight({
+    this.timeline = new TimelineLite({
       autoRemoveChildren:true
     });
     return this;
@@ -98,7 +98,13 @@ class Character extends PIXI.extras.MovieClip {
       throw new Error('The requested state (' + value + ') is not availble for this Character.');
     }
     this.stateVal = value;
-    this._textures = stateObj.textures;
+    // animation is jacked when there's only one texture in latest pixi
+    // this hack is gross, prolly better to render two identical frames
+    // or fix general jank
+    if (stateObj.textures.length === 1) {
+      stateObj.textures = stateObj.textures.concat(stateObj.textures);
+    }
+    this.textures = stateObj.textures;
     this.animationSpeed = stateObj.animationSpeed;
     this.loop = stateObj.hasOwnProperty('loop') ? stateObj.loop : true;
     this.play();

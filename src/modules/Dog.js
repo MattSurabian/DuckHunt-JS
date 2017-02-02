@@ -1,13 +1,9 @@
-/*global Howl, TweenMax*/
-
-import 'gsap/src/uncompressed/TweenMax.js';
-import _noop from 'lodash/utility/noop';
-import _extend from 'lodash/object/assign';
-import 'howler';
-import audioSpriteSheet from '../../dist/audio.json';
+import {TweenMax} from 'gsap';
+import {noop as _noop} from 'lodash/util';
+import {assign as _extend} from 'lodash/object';
+import sound from './Sound';
 import Character from './Character';
 
-const sound = new Howl(audioSpriteSheet);
 
 class Dog extends Character {
   /**
@@ -49,6 +45,7 @@ class Dog extends Character {
     this.toRetrieve = 0;
     this.anchor.set(0.5, 0);
     this.options = options;
+    this.sniffSoundId = null;
   }
 
   /**
@@ -83,11 +80,11 @@ class Dog extends Character {
         this.visible = true;
         this.parent.setChildIndex(this, this.parent.children.length - 1);
         this.state = 'sniff';
-        sound.play('sniff');
+        this.sniffSoundId = sound.play('sniff');
         options.onStart();
       },
       onComplete: () => {
-        sound.stop('sniff');
+        sound.stop(this.sniffSoundId);
         options.onComplete();
       }
     });
@@ -145,16 +142,15 @@ class Dog extends Character {
     }, opts);
 
     this.timeline.add(() => {
-      sound.stop('sniff'); // stop gap for some race condition bug
       sound.play('barkDucks');
       this.state = 'find';
       options.onStart();
     });
 
-    this.timeline.to(this.position, 0.2, {
+    this.timeline.add(TweenMax.to(this.position, 0.2, {
       y: '-=100',
       ease: 'Strong.easeOut',
-      delay: 0.6,
+      delay: 0.4,
       onStart: () => {
         this.state = 'jump';
       },
@@ -162,7 +158,7 @@ class Dog extends Character {
         this.visible = false;
         options.onComplete();
       }
-    });
+    }));
 
     return this;
   }
