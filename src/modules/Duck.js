@@ -1,4 +1,6 @@
-import Howler from 'howler';
+/*global Howl*/
+
+import 'howler';
 import _random from 'lodash/number/random';
 import _extend from 'lodash/object/assign';
 import _noop from 'lodash/utility/noop';
@@ -22,8 +24,8 @@ class Duck extends Character {
    * @param {Number} [options.randomFlightDelta] The minimum distance the duck must travel when randomly flying
    */
   constructor(options) {
-    let spriteId = 'duck/' + options.colorProfile;
-    let states = [
+    const spriteId = 'duck/' + options.colorProfile;
+    const states = [
       {
         name: 'left',
         animationSpeed: 0.18
@@ -74,7 +76,7 @@ class Duck extends Character {
    * @param {Number} [opts.speed=1] Speed of travel on a scale of 0 (slow) to 10 (fast)
    */
   randomFlight(opts) {
-    let options = _extend({
+    const options = _extend({
       minX: 0,
       maxX: this.options.maxX || Infinity,
       minY: 0,
@@ -110,7 +112,7 @@ class Duck extends Character {
    * @returns {Duck}
    */
   flyTo(opts) {
-    let options = _extend({
+    const options = _extend({
       point: this.position,
       speed: this.speed,
       onStart: _noop,
@@ -119,8 +121,8 @@ class Duck extends Character {
 
     this.speed = options.speed;
 
-    let direction = Utils.directionOfTravel(this.position, options.point);
-    let tweenSeconds = (this.flightAnimationMs + _random(0, 300)) / 1000;
+    const direction = Utils.directionOfTravel(this.position, options.point);
+    const tweenSeconds = (this.flightAnimationMs + _random(0, 300)) / 1000;
 
     this.timeline.to(this.position, tweenSeconds, {
       x: options.point.x,

@@ -11,19 +11,19 @@ class Character extends PIXI.extras.MovieClip {
    *   given sprite id.
    */
   constructor(spriteId, spritesheet, states) {
-    let gameTextures = PIXI.loader.resources[spritesheet].textures;
-    for (let textureKey in gameTextures) {
+    const gameTextures = PIXI.loader.resources[spritesheet].textures;
+    for (const textureKey in gameTextures) {
       if (!gameTextures.hasOwnProperty(textureKey) || textureKey.indexOf(spriteId) === -1) {
         continue;
       }
 
-      let parts = textureKey.split('/');
+      const parts = textureKey.split('/');
       parts.length -= 1; //truncate to remove media file
 
-      let state = parts.join('/').replace(spriteId + '/', '');
+      const state = parts.join('/').replace(spriteId + '/', '');
 
       // Only add textures if the state is supported by the class
-      let stateObj = _find(states, {name: state});
+      const stateObj = _find(states, {name: state});
       if (!stateObj) {
         continue;
       }
@@ -57,7 +57,7 @@ class Character extends PIXI.extras.MovieClip {
    */
   stopAndClearTimeline() {
     this.timeline.pause();
-    let timelineItem = this.timeline.getChildren();
+    const timelineItem = this.timeline.getChildren();
     for (let i = 0; i < timelineItem.length; i++) {
       timelineItem[i].kill();
     }
@@ -93,9 +93,9 @@ class Character extends PIXI.extras.MovieClip {
    * @throws {Error} In order for a state to be set, a texture must be specified in the spritesheet
    */
   set state(value) {
-    let stateObj = _find(this.states, {name: value});
+    const stateObj = _find(this.states, {name: value});
     if (!stateObj) {
-      throw new Error('The requested state (' + state + ') is not availble for this Character.');
+      throw new Error('The requested state (' + value + ') is not availble for this Character.');
     }
     this.stateVal = value;
     this._textures = stateObj.textures;

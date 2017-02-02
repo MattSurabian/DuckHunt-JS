@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "./eslint/eslint-defaults.json",
+    "./eslint/eslint-babel.json"
+  ],
+  "env" : {
+    "browser": true
+  }
+}

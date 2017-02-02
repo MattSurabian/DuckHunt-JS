@@ -1,8 +1,6 @@
 var gulp = require('gulp');
 var babelify = require('babelify');
 var browserify = require('browserify');
-var jshint = require('gulp-jshint');
-var jscs = require('gulp-jscs');
 var source = require('vinyl-source-stream');
 var audiosprite = require('audiosprite');
 var glob = require('glob');
@@ -23,24 +21,8 @@ gulp.task('modules', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('jshint', function() {
-  return gulp.src([
-    'src/modules/**',
-    'duckhunt.js'
-  ]).pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(jshint.reporter('fail'))
-});
-
-gulp.task('jscs', function() {
-  return gulp.src([
-    'src/modules/*.js',
-    'duckhunt.js'
-  ]).pipe(jscs())
-});
-
 gulp.task('watch', function() {
-  gulp.watch(['./src/modules/*.js', './src/data/*.json', 'main.js', 'libs/*.js'], ['jshint', 'jscs', 'modules']);
+  gulp.watch(['./src/modules/*.js', './src/data/*.json', 'main.js', 'libs/*.js'], ['modules']);
   gulp.watch(['./src/assets/images/**/*.png'], ['images']);
   gulp.watch(['./src/assets/sounds/**/*.mp3'], ['audio']);
 });
@@ -94,6 +76,6 @@ gulp.task('deploy', function() {
   ]));
 });
 
-gulp.task('js', ['jshint', 'jscs', 'modules']);
+gulp.task('js', ['modules']);
 gulp.task('dev', ['default', 'watch', 'serve']);
 gulp.task('default', ['images', 'audio', 'js']);

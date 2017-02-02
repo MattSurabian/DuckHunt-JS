@@ -1,6 +1,6 @@
 import PIXI from 'pixi.js';
 import BPromise from 'bluebird';
-import Howler from 'howler';
+import 'howler';
 import _some from 'lodash/collection/any';
 import _delay from 'lodash/function/delay';
 import Utils from '../libs/utils';
@@ -102,10 +102,12 @@ class Stage extends PIXI.Container {
    * @private
    */
   _setStage() {
-    let background = new PIXI.extras.MovieClip([PIXI.loader.resources[this.spritesheet].textures['scene/back/0.png']]);
+    const background = new PIXI.extras.MovieClip([
+      PIXI.loader.resources[this.spritesheet].textures['scene/back/0.png']
+    ]);
     background.position.set(0, 0);
 
-    let tree = new PIXI.extras.MovieClip([PIXI.loader.resources[this.spritesheet].textures['scene/tree/0.png']]);
+    const tree = new PIXI.extras.MovieClip([PIXI.loader.resources[this.spritesheet].textures['scene/tree/0.png']]);
     tree.position.set(100, 237);
 
     this.addChild(tree);
@@ -124,16 +126,16 @@ class Stage extends PIXI.Container {
    * @returns {Promise}
    */
   preLevelAnimation() {
-    let animationPromise = new BPromise.pending();
+    const animationPromise = new BPromise.pending();
 
     this.cleanUpDucks();
 
-    let sniffOpts = {
+    const sniffOpts = {
       startPoint: DOG_POINTS.SNIFF_START,
       endPoint: DOG_POINTS.SNIFF_END
     };
 
-    let findOpts = {
+    const findOpts = {
       onComplete: () => {
         this.setChildIndex(this.dog, 0);
         animationPromise.resolve();
@@ -153,10 +155,10 @@ class Stage extends PIXI.Container {
    */
   addDucks(numDucks, speed) {
     for (let i = 0; i < numDucks; i++) {
-      let duckColor = i % 2 === 0 ? 'red' : 'black';
+      const duckColor = i % 2 === 0 ? 'red' : 'black';
 
       // Al was here.
-      let newDuck = new Duck({
+      const newDuck = new Duck({
         spritesheet: this.spritesheet,
         colorProfile: duckColor,
         maxX: MAX_X,
@@ -165,7 +167,7 @@ class Stage extends PIXI.Container {
       newDuck.position.set(DUCK_POINTS.ORIGIN.x, DUCK_POINTS.ORIGIN.y);
       this.addChildAt(newDuck, 0);
       newDuck.randomFlight({
-        speed: speed
+        speed
       });
 
       this.ducks.push(newDuck);
@@ -190,7 +192,7 @@ class Stage extends PIXI.Container {
     clickPoint.y /= this.scale.y;
     let ducksShot = 0;
     for (let i = 0; i < this.ducks.length; i++) {
-      let duck = this.ducks[i];
+      const duck = this.ducks[i];
       if (duck.alive && Utils.pointDistance(duck.position, clickPoint) < 60) {
         ducksShot++;
         duck.shot();
@@ -210,12 +212,12 @@ class Stage extends PIXI.Container {
   flyAway() {
     this.dog.laugh();
 
-    let duckPromises = [];
+    const duckPromises = [];
 
     for (let i = 0; i < this.ducks.length; i++) {
-      let duck = this.ducks[i];
+      const duck = this.ducks[i];
       if (duck.alive) {
-        let duckAnimation = new BPromise.pending();
+        const duckAnimation = new BPromise.pending();
         duck.stopAndClearTimeline();
         duck.flyTo({
           point: new PIXI.Point(MAX_X / 2, -500),

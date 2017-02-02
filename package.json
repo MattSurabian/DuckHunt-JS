@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "gulp": "gulp",
+    "lint": "eslint src/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,13 +26,12 @@
     "babelify": "^7.3.0",
     "bluebird": "^3.4.7",
     "browserify": "^14.0.0",
+    "eslint": "^3.14.1",
     "glob": "^7.1.1",
     "gsap": "^1.18.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.2",
     "gulp-connect": "^5.0.0",
-    "gulp-jscs": "^4.0.0",
-    "gulp-jshint": "^2.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-shell": "^0.5.2",
     "howler": "^2.0.2",
