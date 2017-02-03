@@ -10,7 +10,7 @@ module.exports = {
     duckhunt: './main.js',
   },
   output: {
-    path: 'dist',
+    path: path.join(__dirname, 'dist'),
     filename: '[name].js',
   },
   devtool: 'source-map',
