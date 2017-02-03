@@ -1,12 +1,8 @@
-/*global Howl*/
-
-import PIXI from 'pixi.js';
-import _noop from 'lodash/utility/noop';
+import {loader, autoDetectRenderer} from 'pixi.js';
+import {noop as _noop} from 'lodash/util';
 import levels from '../data/levels.json';
 import Stage from './Stage';
-import audioSpriteSheet from '../../dist/audio.json';
-
-const sound = new Howl(audioSpriteSheet);
+import sound from'./Sound';
 
 const BLUE_SKY_COLOR = 0x64b0ff;
 const PINK_SKY_COLOR = 0xfbb4d4;
@@ -21,13 +17,14 @@ class Game {
    */
   constructor(opts) {
     this.spritesheet = opts.spritesheet;
-    this.loader = PIXI.loader;
-    this.renderer =  PIXI.autoDetectRenderer(window.innerWidth, window.innerHeight, {
+    this.loader = loader;
+    this.renderer =  autoDetectRenderer(window.innerWidth, window.innerHeight, {
       backgroundColor: BLUE_SKY_COLOR
     });
     this.levelIndex = 0;
 
     this.waveEnding = false;
+    this.quackingSoundId = null;
     this.levels = levels.normal;
     return this;
   }
@@ -129,7 +126,8 @@ class Game {
       if (!this.stage.hud.hasOwnProperty('score')) {
         this.stage.hud.createTextBox('score', {
           style: {
-            font: '18px Arial',
+            fontFamily: 'Arial',
+            fontSize: '18px',
             align: 'left',
             fill: 'white'
           },
@@ -169,7 +167,8 @@ class Game {
       if (!this.stage.hud.hasOwnProperty('waveStatus')) {
         this.stage.hud.createTextBox('waveStatus', {
           style: {
-            font: '18px Arial',
+            fontFamily: 'Arial',
+            fontSize: '18px',
             align: 'left',
             fill: 'white'
           },
@@ -209,7 +208,8 @@ class Game {
       if (!this.stage.hud.hasOwnProperty('gameStatus')) {
         this.stage.hud.createTextBox('gameStatus', {
           style: {
-            font: '40px Arial',
+            fontFamily: 'Arial',
+            fontSize: '40px',
             align: 'left',
             fill: 'white'
           },
@@ -265,7 +265,7 @@ class Game {
   }
 
   startWave() {
-    sound.play('quacking');
+    this.quackingSoundId = sound.play('quacking');
     this.wave += 1;
     this.waveStartTime = Date.now();
     this.bullets = this.level.bullets;
@@ -279,7 +279,7 @@ class Game {
   endWave() {
     this.waveEnding = true;
     this.bullets = 0;
-    sound.stop('quacking');
+    sound.stop(this.quackingSoundId);
     if (this.stage.ducksAlive()) {
       this.ducksMissed += this.level.ducks - this.ducksShotThisWave;
       this.renderer.backgroundColor = PINK_SKY_COLOR;

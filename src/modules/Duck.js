@@ -1,14 +1,10 @@
-/*global Howl*/
-
-import 'howler';
-import _random from 'lodash/number/random';
-import _extend from 'lodash/object/assign';
-import _noop from 'lodash/utility/noop';
-import audioSpriteSheet from '../../dist/audio.json';
+import {random as _random} from 'lodash/number';
+import {assign as _extend} from 'lodash/object';
+import {noop as _noop} from 'lodash/util';
 import Utils from '../libs/utils';
 import Character from './Character';
+import sound from './Sound';
 
-const sound = new Howl(audioSpriteSheet);
 const DEATH_ANIMATION_SECONDS = 0.6;
 const RANDOM_FLIGHT_DELTA = 300;
 

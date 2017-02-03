@@ -1,11 +1,14 @@
 {
   "name": "DuckHunt-JS",
-  "version": "2.0.0",
+  "version": "3.1.0",
   "description": "Duckhunt implemented in JS",
-  "main": "main.js",
   "scripts": {
     "gulp": "gulp",
     "lint": "eslint src/**/*.js",
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "audio": "gulp audio",
+    "images": "gulp images",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,25 +22,25 @@
   ],
   "author": "Matt Surabian",
   "license": "MIT",
-  "gitHead": "85a85bc6d7a26917cd37d981928ad01be2e06c99",
-  "readmeFilename": "README",
   "devDependencies": {
     "audiosprite": "^0.6.0",
-    "babelify": "^7.3.0",
+    "babel-loader": "^6.2.10",
     "bluebird": "^3.4.7",
-    "browserify": "^14.0.0",
     "eslint": "^3.14.1",
+    "eslint-plugin-import": "^2.2.0",
+    "exports-loader": "^0.6.3",
+    "file-loader": "^0.10.0",
     "glob": "^7.1.1",
     "gsap": "^1.18.0",
     "gulp": "^3.9.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-connect": "^5.0.0",
-    "gulp-rename": "^1.2.2",
     "gulp-shell": "^0.5.2",
     "howler": "^2.0.2",
+    "json-loader": "^0.5.4",
     "lodash": "^4.17.4",
     "pixi.js": "^4.3.4",
+    "script-loader": "^0.7.0",
     "tween.js": "^16.6.0",
-    "vinyl-source-stream": "^1.1.0"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^1.16.3"
   }
 }
