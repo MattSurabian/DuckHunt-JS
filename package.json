@@ -7,6 +7,8 @@
     "lint": "eslint src/**/*.js",
     "start": "webpack-dev-server",
     "build": "webpack",
+    "audio": "gulp audio",
+    "images": "gulp images",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
