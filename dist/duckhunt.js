@@ -8630,19 +8630,26 @@ module.exports = function(module) {
 
 /***/ }),
 /* 87 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_howler__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_howler___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_howler__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dist_audio_json__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dist_audio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__dist_audio_json__);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-const sound = new __WEBPACK_IMPORTED_MODULE_0_howler__["Howl"](__WEBPACK_IMPORTED_MODULE_1__dist_audio_json___default.a);
+var _howler = __webpack_require__(279);
 
-/* harmony default export */ __webpack_exports__["a"] = sound;
+var _audio = __webpack_require__(280);
+
+var _audio2 = _interopRequireDefault(_audio);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var sound = new _howler.Howl(_audio2.default);
+
+exports.default = sound;
 
 /***/ }),
 /* 88 */
@@ -14141,19 +14148,22 @@ function reqType(xhr) {
 
 /***/ }),
 /* 136 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 module.exports.pointDistance = function (point1, point2) {
   return Math.sqrt(Math.pow(point1.x - point2.x, 2) + Math.pow(point1.y - point2.y, 2));
 };
 
 module.exports.directionOfTravel = function (pointStart, pointEnd) {
-  let direction = '';
+  var direction = '';
 
   //positive means down
-  const rise = pointEnd.y - pointStart.y;
+  var rise = pointEnd.y - pointStart.y;
   //positive means right
-  const run = pointEnd.x - pointStart.x;
+  var run = pointEnd.x - pointStart.x;
 
   if (run < 1 && rise < 1) {
     direction = 'top-left';
@@ -14178,20 +14188,32 @@ module.exports.directionOfTravel = function (pointStart, pointEnd) {
 
 /***/ }),
 /* 137 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_gsap__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_gsap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_gsap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_collection__);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-class Character extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["extras"].AnimatedSprite {
+var _pixi = __webpack_require__(85);
+
+var _gsap = __webpack_require__(139);
+
+var _collection = __webpack_require__(207);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Character = function (_extras$AnimatedSprit) {
+  _inherits(Character, _extras$AnimatedSprit);
+
   /**
    * Character Constructor
    * @param {String} spriteId The leading id of this Character's resources in the spritesheet
@@ -14199,20 +14221,24 @@ class Character extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["extras"].Animated
    * @param {{name:String, animationSpeed:Number}[]} states The states that can be found in the spritesheet for the
    *   given sprite id.
    */
-  constructor(spriteId, spritesheet, states) {
-    const gameTextures = __WEBPACK_IMPORTED_MODULE_0_pixi_js__["loader"].resources[spritesheet].textures;
-    for (const textureKey in gameTextures) {
+  function Character(spriteId, spritesheet, states) {
+    var _ret;
+
+    _classCallCheck(this, Character);
+
+    var gameTextures = _pixi.loader.resources[spritesheet].textures;
+    for (var textureKey in gameTextures) {
       if (!gameTextures.hasOwnProperty(textureKey) || textureKey.indexOf(spriteId) === -1) {
         continue;
       }
 
-      const parts = textureKey.split('/');
+      var parts = textureKey.split('/');
       parts.length -= 1; //truncate to remove media file
 
-      const state = parts.join('/').replace(spriteId + '/', '');
+      var state = parts.join('/').replace(spriteId + '/', '');
 
       // Only add textures if the state is supported by the class
-      const stateObj = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_collection__["find"])(states, { name: state });
+      var stateObj = (0, _collection.find)(states, { name: state });
       if (!stateObj) {
         continue;
       }
@@ -14229,13 +14255,14 @@ class Character extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["extras"].Animated
       }
     }
 
-    super(states[0].textures);
-    this.states = states;
-    this.animationSpeed = this.states[0].animationSpeed;
-    this.timeline = new __WEBPACK_IMPORTED_MODULE_1_gsap__["TimelineLite"]({
+    var _this = _possibleConstructorReturn(this, (Character.__proto__ || Object.getPrototypeOf(Character)).call(this, states[0].textures));
+
+    _this.states = states;
+    _this.animationSpeed = _this.states[0].animationSpeed;
+    _this.timeline = new _gsap.TimelineLite({
       autoRemoveChildren: true
     });
-    return this;
+    return _ret = _this, _possibleConstructorReturn(_this, _ret);
   }
 
   /**
@@ -14244,73 +14271,89 @@ class Character extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["extras"].Animated
    * that are scheduled to run in the Character's timeline.
    * @returns {Character}
    */
-  stopAndClearTimeline() {
-    this.timeline.pause();
-    const timelineItem = this.timeline.getChildren();
-    for (let i = 0; i < timelineItem.length; i++) {
-      timelineItem[i].kill();
+
+
+  _createClass(Character, [{
+    key: 'stopAndClearTimeline',
+    value: function stopAndClearTimeline() {
+      this.timeline.pause();
+      var timelineItem = this.timeline.getChildren();
+      for (var i = 0; i < timelineItem.length; i++) {
+        timelineItem[i].kill();
+      }
+      this.timeline.play();
+      return this;
     }
-    this.timeline.play();
-    return this;
-  }
 
-  /**
-   * isActive
-   * Helper method that determines whether the Character's timeline is active
-   * @returns {Boolean}
-   */
-  isActive() {
-    return this.timeline.isActive();
-  }
+    /**
+     * isActive
+     * Helper method that determines whether the Character's timeline is active
+     * @returns {Boolean}
+     */
 
-  /**
-   * addToTimeline
-   * Adds any valid item to the timeline, typically this will be a function or a tween
-   * @param {Function|PIXI.Tween} item
-   * @returns {Character}
-   */
-  addToTimeline(item) {
-    this.timeline.add(item);
-    return this;
-  }
-
-  /**
-   * state - setter
-   * Helper method that sets the state on the character and adjusts the object's texture if possible
-   * @param {String} value Name of the state to set on the character which should match a texture
-   *   specified in the spritesheet
-   * @throws {Error} In order for a state to be set, a texture must be specified in the spritesheet
-   */
-  set state(value) {
-    const stateObj = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_collection__["find"])(this.states, { name: value });
-    if (!stateObj) {
-      throw new Error('The requested state (' + value + ') is not availble for this Character.');
+  }, {
+    key: 'isActive',
+    value: function isActive() {
+      return this.timeline.isActive();
     }
-    this.stateVal = value;
-    // animation is jacked when there's only one texture in latest pixi
-    // this hack is gross, prolly better to render two identical frames
-    // or fix general jank
-    if (stateObj.textures.length === 1) {
-      stateObj.textures = stateObj.textures.concat(stateObj.textures);
+
+    /**
+     * addToTimeline
+     * Adds any valid item to the timeline, typically this will be a function or a tween
+     * @param {Function|PIXI.Tween} item
+     * @returns {Character}
+     */
+
+  }, {
+    key: 'addToTimeline',
+    value: function addToTimeline(item) {
+      this.timeline.add(item);
+      return this;
     }
-    this.textures = stateObj.textures;
-    this.animationSpeed = stateObj.animationSpeed;
-    this.loop = stateObj.hasOwnProperty('loop') ? stateObj.loop : true;
-    this.play();
-  }
 
-  /**
-   * state - get
-   * Helper methods that returns the existin
-   * @returns {String}
-   */
-  get state() {
-    return this.stateVal ? this.stateVal : '';
-  }
+    /**
+     * state - setter
+     * Helper method that sets the state on the character and adjusts the object's texture if possible
+     * @param {String} value Name of the state to set on the character which should match a texture
+     *   specified in the spritesheet
+     * @throws {Error} In order for a state to be set, a texture must be specified in the spritesheet
+     */
 
-}
+  }, {
+    key: 'state',
+    set: function set(value) {
+      var stateObj = (0, _collection.find)(this.states, { name: value });
+      if (!stateObj) {
+        throw new Error('The requested state (' + value + ') is not availble for this Character.');
+      }
+      this.stateVal = value;
+      // animation is jacked when there's only one texture in latest pixi
+      // this hack is gross, prolly better to render two identical frames
+      // or fix general jank
+      if (stateObj.textures.length === 1) {
+        stateObj.textures = stateObj.textures.concat(stateObj.textures);
+      }
+      this.textures = stateObj.textures;
+      this.animationSpeed = stateObj.animationSpeed;
+      this.loop = stateObj.hasOwnProperty('loop') ? stateObj.loop : true;
+      this.play();
+    }
 
-/* harmony default export */ __webpack_exports__["a"] = Character;
+    /**
+     * state - get
+     * Helper methods that returns the existin
+     * @returns {String}
+     */
+    ,
+    get: function get() {
+      return this.stateVal ? this.stateVal : '';
+    }
+  }]);
+
+  return Character;
+}(_pixi.extras.AnimatedSprite);
+
+exports.default = Character;
 
 /***/ }),
 /* 138 */
@@ -32908,423 +32951,503 @@ function encodeBinary(input) {
 
 /***/ }),
 /* 273 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_util__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_util__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_levels_json__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_levels_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__data_levels_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Stage__ = __webpack_require__(277);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Sound__ = __webpack_require__(87);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _pixi = __webpack_require__(85);
 
+var _util = __webpack_require__(121);
 
-const BLUE_SKY_COLOR = 0x64b0ff;
-const PINK_SKY_COLOR = 0xfbb4d4;
-const SUCCESS_RATIO = 0.6;
+var _levels = __webpack_require__(281);
 
-class Game {
+var _levels2 = _interopRequireDefault(_levels);
+
+var _Stage = __webpack_require__(277);
+
+var _Stage2 = _interopRequireDefault(_Stage);
+
+var _Sound = __webpack_require__(87);
+
+var _Sound2 = _interopRequireDefault(_Sound);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var BLUE_SKY_COLOR = 0x64b0ff;
+var PINK_SKY_COLOR = 0xfbb4d4;
+var SUCCESS_RATIO = 0.6;
+
+var Game = function () {
   /**
    * Game Constructor
    * @param opts
    * @param {String} opts.spritesheet Path to the spritesheet file that PIXI's loader should load
    * @returns {Game}
    */
-  constructor(opts) {
+  function Game(opts) {
+    _classCallCheck(this, Game);
+
     this.spritesheet = opts.spritesheet;
-    this.loader = __WEBPACK_IMPORTED_MODULE_0_pixi_js__["loader"];
-    this.renderer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["autoDetectRenderer"])(window.innerWidth, window.innerHeight, {
+    this.loader = _pixi.loader;
+    this.renderer = (0, _pixi.autoDetectRenderer)(window.innerWidth, window.innerHeight, {
       backgroundColor: BLUE_SKY_COLOR
     });
     this.levelIndex = 0;
 
     this.waveEnding = false;
     this.quackingSoundId = null;
-    this.levels = __WEBPACK_IMPORTED_MODULE_2__data_levels_json___default.a.normal;
+    this.levels = _levels2.default.normal;
     return this;
   }
 
-  get ducksMissed() {
-    return this.ducksMissedVal ? this.ducksMissedVal : 0;
-  }
-
-  set ducksMissed(val) {
-    this.ducksMissedVal = val;
-
-    if (this.stage && this.stage.hud) {
-
-      if (!this.stage.hud.hasOwnProperty('ducksMissed')) {
-        this.stage.hud.createTextureBasedCounter('ducksMissed', {
-          texture: 'hud/score-live/0.png',
-          spritesheet: this.spritesheet,
-          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].missedDuckStatusBoxLocation()
-        });
-      }
-
-      this.stage.hud.ducksMissed = val;
+  _createClass(Game, [{
+    key: 'load',
+    value: function load() {
+      this.loader.add(this.spritesheet).load(this.onLoad.bind(this));
     }
-  }
+  }, {
+    key: 'onLoad',
+    value: function onLoad() {
+      document.body.appendChild(this.renderer.view);
 
-  get ducksShot() {
-    return this.ducksShotVal ? this.ducksShotVal : 0;
-  }
+      this.stage = new _Stage2.default({
+        spritesheet: this.spritesheet
+      });
 
-  set ducksShot(val) {
-    this.ducksShotVal = val;
-
-    if (this.stage && this.stage.hud) {
-
-      if (!this.stage.hud.hasOwnProperty('ducksShot')) {
-        this.stage.hud.createTextureBasedCounter('ducksShot', {
-          texture: 'hud/score-dead/0.png',
-          spritesheet: this.spritesheet,
-          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].deadDuckStatusBoxLocation()
-        });
-      }
-
-      this.stage.hud.ducksShot = val;
-    }
-  }
-  /**
-   * bullets - getter
-   * @returns {Number}
-   */
-  get bullets() {
-    return this.bulletVal ? this.bulletVal : 0;
-  }
-
-  /**
-   * bullets - setter
-   * Setter for the bullets property of the game. Also in charge of updating the HUD. In the event
-   * the HUD doesn't know about displaying bullets, the property and a corresponding texture container
-   * will be created in HUD.
-   * @param {Number} val Number of bullets
-   */
-  set bullets(val) {
-    this.bulletVal = val;
-
-    if (this.stage && this.stage.hud) {
-
-      if (!this.stage.hud.hasOwnProperty('bullets')) {
-        this.stage.hud.createTextureBasedCounter('bullets', {
-          texture: 'hud/bullet/0.png',
-          spritesheet: this.spritesheet,
-          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].bulletStatusBoxLocation()
-        });
-      }
-
-      this.stage.hud.bullets = val;
-    }
-  }
-
-  /**
-   * score - getter
-   * @returns {Number}
-   */
-  get score() {
-    return this.scoreVal ? this.scoreVal : 0;
-  }
-
-  /**
-   * score - setter
-   * Setter for the score property of the game. Also in charge of updating the HUD. In the event
-   * the HUD doesn't know about displaying the score, the property and a corresponding text box
-   * will be created in HUD.
-   * @param {Number} val Score value to set
-   */
-  set score(val) {
-    this.scoreVal = val;
-
-    if (this.stage && this.stage.hud) {
-
-      if (!this.stage.hud.hasOwnProperty('score')) {
-        this.stage.hud.createTextBox('score', {
-          style: {
-            fontFamily: 'Arial',
-            fontSize: '18px',
-            align: 'left',
-            fill: 'white'
-          },
-          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].scoreBoxLocation(),
-          anchor: {
-            x: 1,
-            y: 0
-          }
-        });
-      }
-
-      this.stage.hud.score = val;
-    }
-  }
-
-  /**
-   * wave - get
-   * @returns {Number}
-   */
-  get wave() {
-    return this.waveVal ? this.waveVal : 0;
-  }
-
-  /**
-   * wave - set
-   * Setter for the wave property of the game. Also in charge of updating the HUD. In the event
-   * the HUD doesn't know about displaying the wave, the property and a corresponding text box
-   * will be created in the HUD.
-   * @param {Number} val
-   */
-  set wave(val) {
-    this.waveVal = val;
-
-    if (this.stage && this.stage.hud) {
-
-      if (!this.stage.hud.hasOwnProperty('waveStatus')) {
-        this.stage.hud.createTextBox('waveStatus', {
-          style: {
-            fontFamily: 'Arial',
-            fontSize: '18px',
-            align: 'left',
-            fill: 'white'
-          },
-          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].waveStatusBoxLocation(),
-          anchor: {
-            x: 1,
-            y: 1
-          }
-        });
-      }
-
-      if (!isNaN(val) && val > 0) {
-        this.stage.hud.waveStatus = 'Wave ' + val + ' of ' + this.level.waves;
-      } else {
-        this.stage.hud.waveStatus = '';
-      }
-    }
-  }
-
-  /**
-   * gameStatus - get
-   * @returns {String}
-   */
-  get gameStatus() {
-    return this.gameStatusVal ? this.gameStatusVal : '';
-  }
-
-  /**
-   * gameStatus - set
-   * @param {String} val
-   */
-  set gameStatus(val) {
-    this.gameStatusVal = val;
-
-    if (this.stage && this.stage.hud) {
-
-      if (!this.stage.hud.hasOwnProperty('gameStatus')) {
-        this.stage.hud.createTextBox('gameStatus', {
-          style: {
-            fontFamily: 'Arial',
-            fontSize: '40px',
-            align: 'left',
-            fill: 'white'
-          },
-          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].gameStatusBoxLocation()
-        });
-      }
-
-      this.stage.hud.gameStatus = val;
-    }
-  }
-
-  load() {
-    this.loader.add(this.spritesheet).load(this.onLoad.bind(this));
-  }
-
-  onLoad() {
-    document.body.appendChild(this.renderer.view);
-
-    this.stage = new __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */]({
-      spritesheet: this.spritesheet
-    });
-
-    this.scaleToWindow();
-    this.bindEvents();
-    this.startLevel();
-    this.animate();
-  }
-
-  bindEvents() {
-    window.addEventListener('resize', this.scaleToWindow.bind(this));
-  }
-
-  scaleToWindow() {
-    this.renderer.resize(window.innerWidth, window.innerHeight);
-    this.stage.scaleToWindow();
-  }
-
-  startLevel() {
-    this.level = this.levels[this.levelIndex];
-    this.ducksShot = 0;
-    this.ducksMissed = 0;
-    this.wave = 0;
-
-    this.gameStatus = this.level.title;
-    this.stage.preLevelAnimation().then(() => {
-      this.gameStatus = '';
-      this.bindInteractions();
-      this.startWave();
-    });
-  }
-
-  startWave() {
-    this.quackingSoundId = __WEBPACK_IMPORTED_MODULE_4__Sound__["a" /* default */].play('quacking');
-    this.wave += 1;
-    this.waveStartTime = Date.now();
-    this.bullets = this.level.bullets;
-    this.ducksShotThisWave = 0;
-    this.waveEnding = false;
-
-    this.stage.addDucks(this.level.ducks, this.level.speed);
-    this.bindInteractions();
-  }
-
-  endWave() {
-    this.waveEnding = true;
-    this.bullets = 0;
-    __WEBPACK_IMPORTED_MODULE_4__Sound__["a" /* default */].stop(this.quackingSoundId);
-    if (this.stage.ducksAlive()) {
-      this.ducksMissed += this.level.ducks - this.ducksShotThisWave;
-      this.renderer.backgroundColor = PINK_SKY_COLOR;
-      this.stage.flyAway().then(this.goToNextWave.bind(this));
-    } else {
-      this.stage.cleanUpDucks();
-      this.goToNextWave();
-    }
-  }
-
-  goToNextWave() {
-    this.renderer.backgroundColor = BLUE_SKY_COLOR;
-    if (this.level.waves === this.wave) {
-      this.endLevel();
-    } else {
-      this.startWave();
-    }
-  }
-
-  shouldWaveEnd() {
-    // evaluate pre-requisites for a wave to end
-    if (this.wave === 0 || this.waveEnding || this.stage.dogActive()) {
-      return false;
-    }
-
-    return this.isWaveTimeUp() || this.outOfAmmo() && this.stage.ducksAlive() || !this.stage.ducksActive();
-  }
-
-  isWaveTimeUp() {
-    return this.level ? this.waveElapsedTime() >= this.level.time : false;
-  }
-
-  waveElapsedTime() {
-    return (Date.now() - this.waveStartTime) / 1000;
-  }
-
-  outOfAmmo() {
-    return this.level && this.bullets === 0;
-  }
-
-  endLevel() {
-    this.wave = 0;
-    this.goToNextLevel();
-  }
-
-  goToNextLevel() {
-    this.levelIndex++;
-    if (!this.levelWon()) {
-      this.loss();
-    } else if (this.levelIndex < this.levels.length) {
+      this.scaleToWindow();
+      this.bindEvents();
       this.startLevel();
-    } else {
-      this.win();
+      this.animate();
     }
-  }
-
-  levelWon() {
-    return this.ducksShot > SUCCESS_RATIO * this.level.ducks * this.level.waves;
-  }
-
-  win() {
-    __WEBPACK_IMPORTED_MODULE_4__Sound__["a" /* default */].play('champ');
-    this.gameStatus = 'You Win!';
-  }
-
-  loss() {
-    __WEBPACK_IMPORTED_MODULE_4__Sound__["a" /* default */].play('loserSound');
-    this.gameStatus = 'You Lose!';
-  }
-
-  handleClick(event) {
-    if (!this.outOfAmmo()) {
-      __WEBPACK_IMPORTED_MODULE_4__Sound__["a" /* default */].play('gunSound');
-      this.bullets -= 1;
-      this.updateScore(this.stage.shotsFired({
-        x: event.data.global.x,
-        y: event.data.global.y
-      }));
+  }, {
+    key: 'bindEvents',
+    value: function bindEvents() {
+      window.addEventListener('resize', this.scaleToWindow.bind(this));
     }
-  }
+  }, {
+    key: 'scaleToWindow',
+    value: function scaleToWindow() {
+      this.renderer.resize(window.innerWidth, window.innerHeight);
+      this.stage.scaleToWindow();
+    }
+  }, {
+    key: 'startLevel',
+    value: function startLevel() {
+      var _this = this;
 
-  updateScore(ducksShot) {
-    this.ducksShot += ducksShot;
-    this.ducksShotThisWave += ducksShot;
-    this.score += ducksShot * this.level.pointsPerDuck;
-  }
+      this.level = this.levels[this.levelIndex];
+      this.ducksShot = 0;
+      this.ducksMissed = 0;
+      this.wave = 0;
 
-  bindInteractions() {
-    this.stage.mousedown = this.stage.touchstart = this.handleClick.bind(this);
-  }
+      this.gameStatus = this.level.title;
+      this.stage.preLevelAnimation().then(function () {
+        _this.gameStatus = '';
+        _this.bindInteractions();
+        _this.startWave();
+      });
+    }
+  }, {
+    key: 'startWave',
+    value: function startWave() {
+      this.quackingSoundId = _Sound2.default.play('quacking');
+      this.wave += 1;
+      this.waveStartTime = Date.now();
+      this.bullets = this.level.bullets;
+      this.ducksShotThisWave = 0;
+      this.waveEnding = false;
 
-  unbindInteractions() {
-    this.stage.mousedown = this.stage.touchstart = __WEBPACK_IMPORTED_MODULE_1_lodash_util__["noop"];
-  }
+      this.stage.addDucks(this.level.ducks, this.level.speed);
+      this.bindInteractions();
+    }
+  }, {
+    key: 'endWave',
+    value: function endWave() {
+      this.waveEnding = true;
+      this.bullets = 0;
+      _Sound2.default.stop(this.quackingSoundId);
+      if (this.stage.ducksAlive()) {
+        this.ducksMissed += this.level.ducks - this.ducksShotThisWave;
+        this.renderer.backgroundColor = PINK_SKY_COLOR;
+        this.stage.flyAway().then(this.goToNextWave.bind(this));
+      } else {
+        this.stage.cleanUpDucks();
+        this.goToNextWave();
+      }
+    }
+  }, {
+    key: 'goToNextWave',
+    value: function goToNextWave() {
+      this.renderer.backgroundColor = BLUE_SKY_COLOR;
+      if (this.level.waves === this.wave) {
+        this.endLevel();
+      } else {
+        this.startWave();
+      }
+    }
+  }, {
+    key: 'shouldWaveEnd',
+    value: function shouldWaveEnd() {
+      // evaluate pre-requisites for a wave to end
+      if (this.wave === 0 || this.waveEnding || this.stage.dogActive()) {
+        return false;
+      }
 
-  animate() {
-    this.renderer.render(this.stage);
+      return this.isWaveTimeUp() || this.outOfAmmo() && this.stage.ducksAlive() || !this.stage.ducksActive();
+    }
+  }, {
+    key: 'isWaveTimeUp',
+    value: function isWaveTimeUp() {
+      return this.level ? this.waveElapsedTime() >= this.level.time : false;
+    }
+  }, {
+    key: 'waveElapsedTime',
+    value: function waveElapsedTime() {
+      return (Date.now() - this.waveStartTime) / 1000;
+    }
+  }, {
+    key: 'outOfAmmo',
+    value: function outOfAmmo() {
+      return this.level && this.bullets === 0;
+    }
+  }, {
+    key: 'endLevel',
+    value: function endLevel() {
+      this.wave = 0;
+      this.goToNextLevel();
+    }
+  }, {
+    key: 'goToNextLevel',
+    value: function goToNextLevel() {
+      this.levelIndex++;
+      if (!this.levelWon()) {
+        this.loss();
+      } else if (this.levelIndex < this.levels.length) {
+        this.startLevel();
+      } else {
+        this.win();
+      }
+    }
+  }, {
+    key: 'levelWon',
+    value: function levelWon() {
+      return this.ducksShot > SUCCESS_RATIO * this.level.ducks * this.level.waves;
+    }
+  }, {
+    key: 'win',
+    value: function win() {
+      _Sound2.default.play('champ');
+      this.gameStatus = 'You Win!';
+    }
+  }, {
+    key: 'loss',
+    value: function loss() {
+      _Sound2.default.play('loserSound');
+      this.gameStatus = 'You Lose!';
+    }
+  }, {
+    key: 'handleClick',
+    value: function handleClick(event) {
+      if (!this.outOfAmmo()) {
+        _Sound2.default.play('gunSound');
+        this.bullets -= 1;
+        this.updateScore(this.stage.shotsFired({
+          x: event.data.global.x,
+          y: event.data.global.y
+        }));
+      }
+    }
+  }, {
+    key: 'updateScore',
+    value: function updateScore(ducksShot) {
+      this.ducksShot += ducksShot;
+      this.ducksShotThisWave += ducksShot;
+      this.score += ducksShot * this.level.pointsPerDuck;
+    }
+  }, {
+    key: 'bindInteractions',
+    value: function bindInteractions() {
+      this.stage.mousedown = this.stage.touchstart = this.handleClick.bind(this);
+    }
+  }, {
+    key: 'unbindInteractions',
+    value: function unbindInteractions() {
+      this.stage.mousedown = this.stage.touchstart = _util.noop;
+    }
+  }, {
+    key: 'animate',
+    value: function animate() {
+      this.renderer.render(this.stage);
 
-    if (this.shouldWaveEnd()) {
-      this.unbindInteractions();
-      this.endWave();
+      if (this.shouldWaveEnd()) {
+        this.unbindInteractions();
+        this.endWave();
+      }
+
+      requestAnimationFrame(this.animate.bind(this));
+    }
+  }, {
+    key: 'ducksMissed',
+    get: function get() {
+      return this.ducksMissedVal ? this.ducksMissedVal : 0;
+    },
+    set: function set(val) {
+      this.ducksMissedVal = val;
+
+      if (this.stage && this.stage.hud) {
+
+        if (!this.stage.hud.hasOwnProperty('ducksMissed')) {
+          this.stage.hud.createTextureBasedCounter('ducksMissed', {
+            texture: 'hud/score-live/0.png',
+            spritesheet: this.spritesheet,
+            location: _Stage2.default.missedDuckStatusBoxLocation()
+          });
+        }
+
+        this.stage.hud.ducksMissed = val;
+      }
+    }
+  }, {
+    key: 'ducksShot',
+    get: function get() {
+      return this.ducksShotVal ? this.ducksShotVal : 0;
+    },
+    set: function set(val) {
+      this.ducksShotVal = val;
+
+      if (this.stage && this.stage.hud) {
+
+        if (!this.stage.hud.hasOwnProperty('ducksShot')) {
+          this.stage.hud.createTextureBasedCounter('ducksShot', {
+            texture: 'hud/score-dead/0.png',
+            spritesheet: this.spritesheet,
+            location: _Stage2.default.deadDuckStatusBoxLocation()
+          });
+        }
+
+        this.stage.hud.ducksShot = val;
+      }
+    }
+    /**
+     * bullets - getter
+     * @returns {Number}
+     */
+
+  }, {
+    key: 'bullets',
+    get: function get() {
+      return this.bulletVal ? this.bulletVal : 0;
     }
 
-    requestAnimationFrame(this.animate.bind(this));
-  }
-}
+    /**
+     * bullets - setter
+     * Setter for the bullets property of the game. Also in charge of updating the HUD. In the event
+     * the HUD doesn't know about displaying bullets, the property and a corresponding texture container
+     * will be created in HUD.
+     * @param {Number} val Number of bullets
+     */
+    ,
+    set: function set(val) {
+      this.bulletVal = val;
 
-/* harmony default export */ __webpack_exports__["a"] = Game;
+      if (this.stage && this.stage.hud) {
+
+        if (!this.stage.hud.hasOwnProperty('bullets')) {
+          this.stage.hud.createTextureBasedCounter('bullets', {
+            texture: 'hud/bullet/0.png',
+            spritesheet: this.spritesheet,
+            location: _Stage2.default.bulletStatusBoxLocation()
+          });
+        }
+
+        this.stage.hud.bullets = val;
+      }
+    }
+
+    /**
+     * score - getter
+     * @returns {Number}
+     */
+
+  }, {
+    key: 'score',
+    get: function get() {
+      return this.scoreVal ? this.scoreVal : 0;
+    }
+
+    /**
+     * score - setter
+     * Setter for the score property of the game. Also in charge of updating the HUD. In the event
+     * the HUD doesn't know about displaying the score, the property and a corresponding text box
+     * will be created in HUD.
+     * @param {Number} val Score value to set
+     */
+    ,
+    set: function set(val) {
+      this.scoreVal = val;
+
+      if (this.stage && this.stage.hud) {
+
+        if (!this.stage.hud.hasOwnProperty('score')) {
+          this.stage.hud.createTextBox('score', {
+            style: {
+              fontFamily: 'Arial',
+              fontSize: '18px',
+              align: 'left',
+              fill: 'white'
+            },
+            location: _Stage2.default.scoreBoxLocation(),
+            anchor: {
+              x: 1,
+              y: 0
+            }
+          });
+        }
+
+        this.stage.hud.score = val;
+      }
+    }
+
+    /**
+     * wave - get
+     * @returns {Number}
+     */
+
+  }, {
+    key: 'wave',
+    get: function get() {
+      return this.waveVal ? this.waveVal : 0;
+    }
+
+    /**
+     * wave - set
+     * Setter for the wave property of the game. Also in charge of updating the HUD. In the event
+     * the HUD doesn't know about displaying the wave, the property and a corresponding text box
+     * will be created in the HUD.
+     * @param {Number} val
+     */
+    ,
+    set: function set(val) {
+      this.waveVal = val;
+
+      if (this.stage && this.stage.hud) {
+
+        if (!this.stage.hud.hasOwnProperty('waveStatus')) {
+          this.stage.hud.createTextBox('waveStatus', {
+            style: {
+              fontFamily: 'Arial',
+              fontSize: '18px',
+              align: 'left',
+              fill: 'white'
+            },
+            location: _Stage2.default.waveStatusBoxLocation(),
+            anchor: {
+              x: 1,
+              y: 1
+            }
+          });
+        }
+
+        if (!isNaN(val) && val > 0) {
+          this.stage.hud.waveStatus = 'Wave ' + val + ' of ' + this.level.waves;
+        } else {
+          this.stage.hud.waveStatus = '';
+        }
+      }
+    }
+
+    /**
+     * gameStatus - get
+     * @returns {String}
+     */
+
+  }, {
+    key: 'gameStatus',
+    get: function get() {
+      return this.gameStatusVal ? this.gameStatusVal : '';
+    }
+
+    /**
+     * gameStatus - set
+     * @param {String} val
+     */
+    ,
+    set: function set(val) {
+      this.gameStatusVal = val;
+
+      if (this.stage && this.stage.hud) {
+
+        if (!this.stage.hud.hasOwnProperty('gameStatus')) {
+          this.stage.hud.createTextBox('gameStatus', {
+            style: {
+              fontFamily: 'Arial',
+              fontSize: '40px',
+              align: 'left',
+              fill: 'white'
+            },
+            location: _Stage2.default.gameStatusBoxLocation()
+          });
+        }
+
+        this.stage.hud.gameStatus = val;
+      }
+    }
+  }]);
+
+  return Game;
+}();
+
+exports.default = Game;
 
 /***/ }),
 /* 274 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_gsap__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_gsap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_gsap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_util__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_util__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_object__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Sound__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Character__ = __webpack_require__(137);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
+var _gsap = __webpack_require__(139);
 
-class Dog extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
+var _util = __webpack_require__(121);
+
+var _object = __webpack_require__(118);
+
+var _Sound = __webpack_require__(87);
+
+var _Sound2 = _interopRequireDefault(_Sound);
+
+var _Character2 = __webpack_require__(137);
+
+var _Character3 = _interopRequireDefault(_Character2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Dog = function (_Character) {
+  _inherits(Dog, _Character);
+
   /**
    * Dog Constructor
    * @param options
@@ -33332,8 +33455,10 @@ class Dog extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
    * @param {PIXI.Point} options.downPoint The point where the dog should sit at during active play
    * @param {PIXI.Point} options.upPoint The point the dog should rise to when retrieving ducks
    */
-  constructor(options) {
-    const states = [{
+  function Dog(options) {
+    _classCallCheck(this, Dog);
+
+    var states = [{
       name: 'double',
       animationSpeed: 0.1
     }, {
@@ -33353,11 +33478,14 @@ class Dog extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
       name: 'sniff',
       animationSpeed: 0.1
     }];
-    super('dog', options.spritesheet, states);
-    this.toRetrieve = 0;
-    this.anchor.set(0.5, 0);
-    this.options = options;
-    this.sniffSoundId = null;
+
+    var _this = _possibleConstructorReturn(this, (Dog.__proto__ || Object.getPrototypeOf(Dog)).call(this, 'dog', options.spritesheet, states));
+
+    _this.toRetrieve = 0;
+    _this.anchor.set(0.5, 0);
+    _this.options = options;
+    _this.sniffSoundId = null;
+    return _this;
   }
 
   /**
@@ -33369,210 +33497,268 @@ class Dog extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
    * @param {Function} [opts.onComplete=_noop] Function to call once the dog has finished sniffing
    * @returns {Dog}
    */
-  sniff(opts) {
-    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_object__["assign"])({
-      startPoint: this.position,
-      endPoint: this.position,
-      onStart: __WEBPACK_IMPORTED_MODULE_1_lodash_util__["noop"],
-      onComplete: __WEBPACK_IMPORTED_MODULE_1_lodash_util__["noop"]
-    }, opts);
 
-    this.sit({
-      point: options.startPoint,
-      pre: () => {
-        this.visible = false;
-      }
-    });
 
-    this.timeline.to(this.position, 2, {
-      x: options.endPoint.x,
-      y: options.endPoint.y,
-      ease: 'Linear.easeNone',
-      onStart: () => {
-        this.visible = true;
-        this.parent.setChildIndex(this, this.parent.children.length - 1);
-        this.state = 'sniff';
-        this.sniffSoundId = __WEBPACK_IMPORTED_MODULE_3__Sound__["a" /* default */].play('sniff');
-        options.onStart();
-      },
-      onComplete: () => {
-        __WEBPACK_IMPORTED_MODULE_3__Sound__["a" /* default */].stop(this.sniffSoundId);
-        options.onComplete();
-      }
-    });
+  _createClass(Dog, [{
+    key: 'sniff',
+    value: function sniff(opts) {
+      var _this2 = this;
 
-    return this;
-  }
+      var options = (0, _object.assign)({
+        startPoint: this.position,
+        endPoint: this.position,
+        onStart: _util.noop,
+        onComplete: _util.noop
+      }, opts);
 
-  /**
-   * upDownTween
-   * @param opts
-   * @param {PIXI.Point} [opts.startPoint] Lowest point the dog should go to, and where the animation starts
-   * @param {PIXI.Point} [opts.endPoint] Highest point the dog should go to
-   * @param {Function} [opts.onStart] Function to call at the start of the up/down animation
-   * @param {Function} [opts.onComplete] Function to call once the dog has completed an up/down cycle
-   * return {Dog}
-   */
-  upDownTween(opts) {
-    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_object__["assign"])({
-      startPoint: this.options.downPoint || this.position,
-      endPoint: this.options.upPoint || this.position,
-      onStart: __WEBPACK_IMPORTED_MODULE_1_lodash_util__["noop"],
-      onComplete: __WEBPACK_IMPORTED_MODULE_1_lodash_util__["noop"]
-    }, opts);
-
-    this.sit({
-      point: options.startPoint
-    });
-
-    this.timeline.add(__WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].to(this.position, 0.4, {
-      y: options.endPoint.y,
-      yoyo: true,
-      repeat: 1,
-      repeatDelay: 0.5,
-      ease: 'Linear.easeNone',
-      onStart: () => {
-        this.visible = true;
-        options.onStart.call(this);
-      },
-      onComplete: options.onComplete
-    }));
-    return this;
-  }
-
-  /**
-   * find
-   * @param opts
-   * @param {Function} [opts.onStart] Function called at the start of the animation
-   * @param {Function} [opts.onComplete] Function called when the animation has completed
-   * @returns {Dog}
-   */
-  find(opts) {
-    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_object__["assign"])({
-      onStart: __WEBPACK_IMPORTED_MODULE_1_lodash_util__["noop"],
-      onComplete: __WEBPACK_IMPORTED_MODULE_1_lodash_util__["noop"]
-    }, opts);
-
-    this.timeline.add(() => {
-      __WEBPACK_IMPORTED_MODULE_3__Sound__["a" /* default */].play('barkDucks');
-      this.state = 'find';
-      options.onStart();
-    });
-
-    this.timeline.add(__WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].to(this.position, 0.2, {
-      y: '-=100',
-      ease: 'Strong.easeOut',
-      delay: 0.4,
-      onStart: () => {
-        this.state = 'jump';
-      },
-      onComplete: () => {
-        this.visible = false;
-        options.onComplete();
-      }
-    }));
-
-    return this;
-  }
-
-  /**
-   * sit
-   * @param opts
-   * @param {PIXI.Point} [opts.point] Point the dog will go to without animation
-   * @param {Function} [opts.onStart] Function called before moving the dog
-   * @param {Function} [opts.onComplete] Function called after the dog has moved
-   * @returns {Dog}
-   */
-  sit(opts) {
-    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_object__["assign"])({
-      point: this.position,
-      onStart: __WEBPACK_IMPORTED_MODULE_1_lodash_util__["noop"],
-      onComplete: __WEBPACK_IMPORTED_MODULE_1_lodash_util__["noop"]
-    }, opts);
-
-    this.timeline.add(() => {
-      options.onStart();
-      this.position.set(options.point.x, options.point.y);
-      options.onComplete();
-    });
-    return this;
-  }
-
-  /**
-   * retrieve
-   * @retuns {Dog}
-   */
-  retrieve() {
-    this.toRetrieve++;
-
-    this.upDownTween({
-      onStart: () => {
-        if (this.toRetrieve >= 2) {
-          this.state = 'double';
-          this.toRetrieve -= 2;
-        } else if (this.toRetrieve === 1) {
-          this.state = 'single';
-          this.toRetrieve -= 1;
+      this.sit({
+        point: options.startPoint,
+        pre: function pre() {
+          _this2.visible = false;
         }
-      }
-    });
-    return this;
-  }
+      });
 
-  /**
-   * laugh
-   * @returns {Dog}
-   */
-  laugh() {
-    this.upDownTween({
-      state: 'laugh',
-      onStart: () => {
-        this.toRetrieve = 0;
-        this.state = 'laugh';
-        __WEBPACK_IMPORTED_MODULE_3__Sound__["a" /* default */].play('laugh');
-      }
-    });
+      this.timeline.to(this.position, 2, {
+        x: options.endPoint.x,
+        y: options.endPoint.y,
+        ease: 'Linear.easeNone',
+        onStart: function onStart() {
+          _this2.visible = true;
+          _this2.parent.setChildIndex(_this2, _this2.parent.children.length - 1);
+          _this2.state = 'sniff';
+          _this2.sniffSoundId = _Sound2.default.play('sniff');
+          options.onStart();
+        },
+        onComplete: function onComplete() {
+          _Sound2.default.stop(_this2.sniffSoundId);
+          options.onComplete();
+        }
+      });
 
-    return this;
-  }
+      return this;
+    }
 
-  /**
-   * isActive
-   * @returns {boolean}
-   */
-  isActive() {
-    return super.isActive() && this.toRetrieve > 0;
-  }
-}
+    /**
+     * upDownTween
+     * @param opts
+     * @param {PIXI.Point} [opts.startPoint] Lowest point the dog should go to, and where the animation starts
+     * @param {PIXI.Point} [opts.endPoint] Highest point the dog should go to
+     * @param {Function} [opts.onStart] Function to call at the start of the up/down animation
+     * @param {Function} [opts.onComplete] Function to call once the dog has completed an up/down cycle
+     * return {Dog}
+     */
 
-/* harmony default export */ __webpack_exports__["a"] = Dog;
+  }, {
+    key: 'upDownTween',
+    value: function upDownTween(opts) {
+      var _this3 = this;
+
+      var options = (0, _object.assign)({
+        startPoint: this.options.downPoint || this.position,
+        endPoint: this.options.upPoint || this.position,
+        onStart: _util.noop,
+        onComplete: _util.noop
+      }, opts);
+
+      this.sit({
+        point: options.startPoint
+      });
+
+      this.timeline.add(_gsap.TweenMax.to(this.position, 0.4, {
+        y: options.endPoint.y,
+        yoyo: true,
+        repeat: 1,
+        repeatDelay: 0.5,
+        ease: 'Linear.easeNone',
+        onStart: function onStart() {
+          _this3.visible = true;
+          options.onStart.call(_this3);
+        },
+        onComplete: options.onComplete
+      }));
+      return this;
+    }
+
+    /**
+     * find
+     * @param opts
+     * @param {Function} [opts.onStart] Function called at the start of the animation
+     * @param {Function} [opts.onComplete] Function called when the animation has completed
+     * @returns {Dog}
+     */
+
+  }, {
+    key: 'find',
+    value: function find(opts) {
+      var _this4 = this;
+
+      var options = (0, _object.assign)({
+        onStart: _util.noop,
+        onComplete: _util.noop
+      }, opts);
+
+      this.timeline.add(function () {
+        _Sound2.default.play('barkDucks');
+        _this4.state = 'find';
+        options.onStart();
+      });
+
+      this.timeline.add(_gsap.TweenMax.to(this.position, 0.2, {
+        y: '-=100',
+        ease: 'Strong.easeOut',
+        delay: 0.4,
+        onStart: function onStart() {
+          _this4.state = 'jump';
+        },
+        onComplete: function onComplete() {
+          _this4.visible = false;
+          options.onComplete();
+        }
+      }));
+
+      return this;
+    }
+
+    /**
+     * sit
+     * @param opts
+     * @param {PIXI.Point} [opts.point] Point the dog will go to without animation
+     * @param {Function} [opts.onStart] Function called before moving the dog
+     * @param {Function} [opts.onComplete] Function called after the dog has moved
+     * @returns {Dog}
+     */
+
+  }, {
+    key: 'sit',
+    value: function sit(opts) {
+      var _this5 = this;
+
+      var options = (0, _object.assign)({
+        point: this.position,
+        onStart: _util.noop,
+        onComplete: _util.noop
+      }, opts);
+
+      this.timeline.add(function () {
+        options.onStart();
+        _this5.position.set(options.point.x, options.point.y);
+        options.onComplete();
+      });
+      return this;
+    }
+
+    /**
+     * retrieve
+     * @retuns {Dog}
+     */
+
+  }, {
+    key: 'retrieve',
+    value: function retrieve() {
+      var _this6 = this;
+
+      this.toRetrieve++;
+
+      this.upDownTween({
+        onStart: function onStart() {
+          if (_this6.toRetrieve >= 2) {
+            _this6.state = 'double';
+            _this6.toRetrieve -= 2;
+          } else if (_this6.toRetrieve === 1) {
+            _this6.state = 'single';
+            _this6.toRetrieve -= 1;
+          }
+        }
+      });
+      return this;
+    }
+
+    /**
+     * laugh
+     * @returns {Dog}
+     */
+
+  }, {
+    key: 'laugh',
+    value: function laugh() {
+      var _this7 = this;
+
+      this.upDownTween({
+        state: 'laugh',
+        onStart: function onStart() {
+          _this7.toRetrieve = 0;
+          _this7.state = 'laugh';
+          _Sound2.default.play('laugh');
+        }
+      });
+
+      return this;
+    }
+
+    /**
+     * isActive
+     * @returns {boolean}
+     */
+
+  }, {
+    key: 'isActive',
+    value: function isActive() {
+      return _get(Dog.prototype.__proto__ || Object.getPrototypeOf(Dog.prototype), 'isActive', this).call(this) && this.toRetrieve > 0;
+    }
+  }]);
+
+  return Dog;
+}(_Character3.default);
+
+exports.default = Dog;
 
 /***/ }),
 /* 275 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_number__ = __webpack_require__(464);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_number__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_object__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_util__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_util__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__libs_utils__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__libs_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__libs_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Character__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Sound__ = __webpack_require__(87);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
+var _number = __webpack_require__(464);
 
+var _object = __webpack_require__(118);
 
-const DEATH_ANIMATION_SECONDS = 0.6;
-const RANDOM_FLIGHT_DELTA = 300;
+var _util = __webpack_require__(121);
 
-class Duck extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
+var _utils = __webpack_require__(136);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+var _Character2 = __webpack_require__(137);
+
+var _Character3 = _interopRequireDefault(_Character2);
+
+var _Sound = __webpack_require__(87);
+
+var _Sound2 = _interopRequireDefault(_Sound);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DEATH_ANIMATION_SECONDS = 0.6;
+var RANDOM_FLIGHT_DELTA = 300;
+
+var Duck = function (_Character) {
+  _inherits(Duck, _Character);
+
   /**
    * Duck constructor
    * Method to instantiate a new Duck character
@@ -33583,9 +33769,11 @@ class Duck extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
    * @param {Number} [options.maxY] When randomly flying, imposes an upper bound on the Y coordinate
    * @param {Number} [options.randomFlightDelta] The minimum distance the duck must travel when randomly flying
    */
-  constructor(options) {
-    const spriteId = 'duck/' + options.colorProfile;
-    const states = [{
+  function Duck(options) {
+    _classCallCheck(this, Duck);
+
+    var spriteId = 'duck/' + options.colorProfile;
+    var states = [{
       name: 'left',
       animationSpeed: 0.18
 
@@ -33610,11 +33798,14 @@ class Duck extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
       animationSpeed: 0.18
 
     }];
-    super(spriteId, options.spritesheet, states);
-    this.alive = true;
-    this.visible = true;
-    this.options = options;
-    this.anchor.set(0.5, 0.5);
+
+    var _this = _possibleConstructorReturn(this, (Duck.__proto__ || Object.getPrototypeOf(Duck)).call(this, spriteId, options.spritesheet, states));
+
+    _this.alive = true;
+    _this.visible = true;
+    _this.options = options;
+    _this.anchor.set(0.5, 0.5);
+    return _this;
   }
 
   /**
@@ -33628,187 +33819,223 @@ class Duck extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
    * @param {Number} [opts.randomFlightDelta=300] Minimum distance to the next destination
    * @param {Number} [opts.speed=1] Speed of travel on a scale of 0 (slow) to 10 (fast)
    */
-  randomFlight(opts) {
-    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash_object__["assign"])({
-      minX: 0,
-      maxX: this.options.maxX || Infinity,
-      minY: 0,
-      maxY: this.options.maxY || Infinity,
-      randomFlightDelta: this.options.randomFilghtDelta || RANDOM_FLIGHT_DELTA,
-      speed: 1
-    }, opts);
 
-    let distance, destination;
-    do {
-      destination = {
-        x: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_lodash_number__["random"])(options.minX, options.maxX),
-        y: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_lodash_number__["random"])(options.minY, options.maxY)
-      };
-      distance = __WEBPACK_IMPORTED_MODULE_3__libs_utils___default.a.pointDistance(this.position, destination);
-    } while (distance < options.randomFlightDelta);
 
-    this.flyTo({
-      point: destination,
-      speed: options.speed,
-      onComplete: this.randomFlight.bind(this, options)
-    });
-  }
+  _createClass(Duck, [{
+    key: 'randomFlight',
+    value: function randomFlight(opts) {
+      var options = (0, _object.assign)({
+        minX: 0,
+        maxX: this.options.maxX || Infinity,
+        minY: 0,
+        maxY: this.options.maxY || Infinity,
+        randomFlightDelta: this.options.randomFilghtDelta || RANDOM_FLIGHT_DELTA,
+        speed: 1
+      }, opts);
 
-  /**
-   * flyTo
-   * Method that adds an animation to the ducks timeline for flying to a specified point.
-   * @param opts
-   * @param {PIXI.Point} [opts.point] Location the duck should go to
-   * @param {Number} [opts.speed] Integer from 0 to 10 which determines how fast the duck flys
-   * @param {Function} [opts.onStart=_noop] Method to call when the duck begins flying to the destination
-   * @param {Function} [opts.onComplete_noop] Method to call when the duck has arrived at the destination
-   * @returns {Duck}
-   */
-  flyTo(opts) {
-    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash_object__["assign"])({
-      point: this.position,
-      speed: this.speed,
-      onStart: __WEBPACK_IMPORTED_MODULE_2_lodash_util__["noop"],
-      onComplete: __WEBPACK_IMPORTED_MODULE_2_lodash_util__["noop"]
-    }, opts);
+      var distance = void 0,
+          destination = void 0;
+      do {
+        destination = {
+          x: (0, _number.random)(options.minX, options.maxX),
+          y: (0, _number.random)(options.minY, options.maxY)
+        };
+        distance = _utils2.default.pointDistance(this.position, destination);
+      } while (distance < options.randomFlightDelta);
 
-    this.speed = options.speed;
-
-    const direction = __WEBPACK_IMPORTED_MODULE_3__libs_utils___default.a.directionOfTravel(this.position, options.point);
-    const tweenSeconds = (this.flightAnimationMs + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_lodash_number__["random"])(0, 300)) / 1000;
-
-    this.timeline.to(this.position, tweenSeconds, {
-      x: options.point.x,
-      y: options.point.y,
-      ease: 'Linear.easeNone',
-      onStart: () => {
-        if (!this.alive) {
-          this.stopAndClearTimeline();
-        }
-        this.play();
-        this.state = direction.replace('bottom', 'top');
-        options.onStart();
-      },
-      onComplete: options.onComplete
-    });
-
-    return this;
-  }
-
-  /**
-   * shot
-   * Method that animates the duck when the player shoots it
-   */
-  shot() {
-    if (!this.alive) {
-      return;
+      this.flyTo({
+        point: destination,
+        speed: options.speed,
+        onComplete: this.randomFlight.bind(this, options)
+      });
     }
-    this.alive = false;
 
-    this.stopAndClearTimeline();
-    this.timeline.add(() => {
-      this.state = 'shot';
-      __WEBPACK_IMPORTED_MODULE_5__Sound__["a" /* default */].play('quak', __WEBPACK_IMPORTED_MODULE_2_lodash_util__["noop"]);
-    });
+    /**
+     * flyTo
+     * Method that adds an animation to the ducks timeline for flying to a specified point.
+     * @param opts
+     * @param {PIXI.Point} [opts.point] Location the duck should go to
+     * @param {Number} [opts.speed] Integer from 0 to 10 which determines how fast the duck flys
+     * @param {Function} [opts.onStart=_noop] Method to call when the duck begins flying to the destination
+     * @param {Function} [opts.onComplete_noop] Method to call when the duck has arrived at the destination
+     * @returns {Duck}
+     */
 
-    this.timeline.to(this.position, DEATH_ANIMATION_SECONDS, {
-      y: this.options.maxY,
-      ease: 'Linear.easeNone',
-      delay: 0.3,
-      onStart: () => {
-        this.state = 'dead';
-      },
-      onComplete: () => {
-        __WEBPACK_IMPORTED_MODULE_5__Sound__["a" /* default */].play('thud', __WEBPACK_IMPORTED_MODULE_2_lodash_util__["noop"]);
-        this.visible = false;
+  }, {
+    key: 'flyTo',
+    value: function flyTo(opts) {
+      var _this2 = this;
+
+      var options = (0, _object.assign)({
+        point: this.position,
+        speed: this.speed,
+        onStart: _util.noop,
+        onComplete: _util.noop
+      }, opts);
+
+      this.speed = options.speed;
+
+      var direction = _utils2.default.directionOfTravel(this.position, options.point);
+      var tweenSeconds = (this.flightAnimationMs + (0, _number.random)(0, 300)) / 1000;
+
+      this.timeline.to(this.position, tweenSeconds, {
+        x: options.point.x,
+        y: options.point.y,
+        ease: 'Linear.easeNone',
+        onStart: function onStart() {
+          if (!_this2.alive) {
+            _this2.stopAndClearTimeline();
+          }
+          _this2.play();
+          _this2.state = direction.replace('bottom', 'top');
+          options.onStart();
+        },
+        onComplete: options.onComplete
+      });
+
+      return this;
+    }
+
+    /**
+     * shot
+     * Method that animates the duck when the player shoots it
+     */
+
+  }, {
+    key: 'shot',
+    value: function shot() {
+      var _this3 = this;
+
+      if (!this.alive) {
+        return;
       }
-    });
-  }
+      this.alive = false;
 
-  /**
-   * isActive
-   * Helper that tells whether the duck is currently or is able to be animated.
-   * Because ducks have a complex death sequence, this method checks if a duck is visible
-   * in addition to the standard timeline animation check. This avoids potential race conditions
-   * since in Duckhunt, if you can see the duck, it's beind animated in some way even if it's
-   * technically "dead"
-   * @returns {*|boolean}
-   */
-  isActive() {
-    return this.visible || super.isActive();
-  }
+      this.stopAndClearTimeline();
+      this.timeline.add(function () {
+        _this3.state = 'shot';
+        _Sound2.default.play('quak', _util.noop);
+      });
 
-  /**
-   * speed - getter
-   * This method returns the
-   * @returns {Number} Returns the speed level, a number from 0 to 10
-   */
-  get speed() {
-    return this.speedVal;
-  }
-
-  /**
-   * speed - setter
-   * Method that determines how fast the duck should fly. Uses a 0-10 scale for ease and since
-   * it technically "goes to 11"
-   * @see https://www.youtube.com/watch?v=KOO5S4vxi0o.
-   * @param {Number} val A number from 0 (slow) to 10 (fast) that sets the length of the flight tween
-   */
-  set speed(val) {
-    let flightAnimationMs;
-    switch (val) {
-      case 0:
-        flightAnimationMs = 3000;
-        break;
-      case 1:
-        flightAnimationMs = 2800;
-        break;
-      case 2:
-        flightAnimationMs = 2500;
-        break;
-      case 3:
-        flightAnimationMs = 2000;
-        break;
-      case 4:
-        flightAnimationMs = 1800;
-        break;
-      case 5:
-        flightAnimationMs = 1500;
-        break;
-      case 6:
-        flightAnimationMs = 1300;
-        break;
-      case 7:
-        flightAnimationMs = 1200;
-        break;
-      case 8:
-        flightAnimationMs = 800;
-        break;
-      case 9:
-        flightAnimationMs = 600;
-        break;
-      case 10:
-        flightAnimationMs = 500;
-        break;
+      this.timeline.to(this.position, DEATH_ANIMATION_SECONDS, {
+        y: this.options.maxY,
+        ease: 'Linear.easeNone',
+        delay: 0.3,
+        onStart: function onStart() {
+          _this3.state = 'dead';
+        },
+        onComplete: function onComplete() {
+          _Sound2.default.play('thud', _util.noop);
+          _this3.visible = false;
+        }
+      });
     }
-    this.speedVal = val;
-    this.flightAnimationMs = flightAnimationMs;
-  }
-}
 
-/* harmony default export */ __webpack_exports__["a"] = Duck;
+    /**
+     * isActive
+     * Helper that tells whether the duck is currently or is able to be animated.
+     * Because ducks have a complex death sequence, this method checks if a duck is visible
+     * in addition to the standard timeline animation check. This avoids potential race conditions
+     * since in Duckhunt, if you can see the duck, it's beind animated in some way even if it's
+     * technically "dead"
+     * @returns {*|boolean}
+     */
+
+  }, {
+    key: 'isActive',
+    value: function isActive() {
+      return this.visible || _get(Duck.prototype.__proto__ || Object.getPrototypeOf(Duck.prototype), 'isActive', this).call(this);
+    }
+
+    /**
+     * speed - getter
+     * This method returns the
+     * @returns {Number} Returns the speed level, a number from 0 to 10
+     */
+
+  }, {
+    key: 'speed',
+    get: function get() {
+      return this.speedVal;
+    }
+
+    /**
+     * speed - setter
+     * Method that determines how fast the duck should fly. Uses a 0-10 scale for ease and since
+     * it technically "goes to 11"
+     * @see https://www.youtube.com/watch?v=KOO5S4vxi0o.
+     * @param {Number} val A number from 0 (slow) to 10 (fast) that sets the length of the flight tween
+     */
+    ,
+    set: function set(val) {
+      var flightAnimationMs = void 0;
+      switch (val) {
+        case 0:
+          flightAnimationMs = 3000;
+          break;
+        case 1:
+          flightAnimationMs = 2800;
+          break;
+        case 2:
+          flightAnimationMs = 2500;
+          break;
+        case 3:
+          flightAnimationMs = 2000;
+          break;
+        case 4:
+          flightAnimationMs = 1800;
+          break;
+        case 5:
+          flightAnimationMs = 1500;
+          break;
+        case 6:
+          flightAnimationMs = 1300;
+          break;
+        case 7:
+          flightAnimationMs = 1200;
+          break;
+        case 8:
+          flightAnimationMs = 800;
+          break;
+        case 9:
+          flightAnimationMs = 600;
+          break;
+        case 10:
+          flightAnimationMs = 500;
+          break;
+      }
+      this.speedVal = val;
+      this.flightAnimationMs = flightAnimationMs;
+    }
+  }]);
+
+  return Duck;
+}(_Character3.default);
+
+exports.default = Duck;
 
 /***/ }),
 /* 276 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_object__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_object__);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _pixi = __webpack_require__(85);
+
+var _object = __webpack_require__(118);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
  * Hud
@@ -33819,9 +34046,13 @@ class Duck extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
  * The instantiator of this class is responsible for displaying it at the proper
  * depth in it's parent container.
  */
-class Hud extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"] {
-  constructor() {
-    super();
+var Hud = function (_Container) {
+  _inherits(Hud, _Container);
+
+  function Hud() {
+    _classCallCheck(this, Hud);
+
+    return _possibleConstructorReturn(this, (Hud.__proto__ || Object.getPrototypeOf(Hud)).call(this));
   }
 
   /**
@@ -33833,128 +34064,157 @@ class Hud extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"] {
    *   modifying it will update the textBox automatically.
    * @param opts object - Object to convey style, location, anchor point, etc of the text box
    */
-  createTextBox(name, opts) {
-    // set defaults, and allow them to be overwritten
-    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash_object__["assign"])({
-      style: {
-        fontFamily: 'Arial',
-        fontSize: '18px',
-        align: 'left',
-        fill: 'white'
-      },
-      location: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](0, 0),
-      anchor: {
-        x: 0.5,
-        y: 0.5
-      }
-    }, opts);
 
-    this[name + 'TextBox'] = new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Text"]('', options.style);
-    const textBox = this[name + 'TextBox'];
-    textBox.position.set(options.location.x, options.location.y);
-    textBox.anchor.set(options.anchor.x, options.anchor.y);
-    this.addChild(textBox);
 
-    Object.defineProperty(this, name, {
-      set: val => {
-        textBox.text = val;
-      },
-      get: () => {
-        return textBox.text;
-      }
-    });
-  }
-
-  createTextureBasedCounter(name, opts) {
-    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash_object__["assign"])({
-      texture: '',
-      spritesheet: '',
-      location: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](0, 0)
-    }, opts);
-
-    this[name + 'Container'] = new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"]();
-    const container = this[name + 'Container'];
-    container.position.set(options.location.x, options.location.y);
-    this.addChild(container);
-
-    Object.defineProperty(this, name, {
-      set: val => {
-        const gameTextures = __WEBPACK_IMPORTED_MODULE_0_pixi_js__["loader"].resources[options.spritesheet].textures;
-        const texture = gameTextures[options.texture];
-        const childCount = container.children.length;
-        if (childCount < val) {
-          for (let i = childCount; i < val; i++) {
-            const item = new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["extras"].AnimatedSprite([texture]);
-            item.position.set(item.width * i, 0);
-            container.addChild(item);
-          }
-        } else if (val != childCount) {
-          container.removeChildren(val, childCount);
+  _createClass(Hud, [{
+    key: 'createTextBox',
+    value: function createTextBox(name, opts) {
+      // set defaults, and allow them to be overwritten
+      var options = (0, _object.assign)({
+        style: {
+          fontFamily: 'Arial',
+          fontSize: '18px',
+          align: 'left',
+          fill: 'white'
+        },
+        location: new _pixi.Point(0, 0),
+        anchor: {
+          x: 0.5,
+          y: 0.5
         }
-      }
-    });
-  }
-}
+      }, opts);
 
-/* harmony default export */ __webpack_exports__["a"] = Hud;
+      this[name + 'TextBox'] = new _pixi.Text('', options.style);
+      var textBox = this[name + 'TextBox'];
+      textBox.position.set(options.location.x, options.location.y);
+      textBox.anchor.set(options.anchor.x, options.anchor.y);
+      this.addChild(textBox);
+
+      Object.defineProperty(this, name, {
+        set: function set(val) {
+          textBox.text = val;
+        },
+        get: function get() {
+          return textBox.text;
+        }
+      });
+    }
+  }, {
+    key: 'createTextureBasedCounter',
+    value: function createTextureBasedCounter(name, opts) {
+      var options = (0, _object.assign)({
+        texture: '',
+        spritesheet: '',
+        location: new _pixi.Point(0, 0)
+      }, opts);
+
+      this[name + 'Container'] = new _pixi.Container();
+      var container = this[name + 'Container'];
+      container.position.set(options.location.x, options.location.y);
+      this.addChild(container);
+
+      Object.defineProperty(this, name, {
+        set: function set(val) {
+          var gameTextures = _pixi.loader.resources[options.spritesheet].textures;
+          var texture = gameTextures[options.texture];
+          var childCount = container.children.length;
+          if (childCount < val) {
+            for (var i = childCount; i < val; i++) {
+              var item = new _pixi.extras.AnimatedSprite([texture]);
+              item.position.set(item.width * i, 0);
+              container.addChild(item);
+            }
+          } else if (val != childCount) {
+            container.removeChildren(val, childCount);
+          }
+        }
+      });
+    }
+  }]);
+
+  return Hud;
+}(_pixi.Container);
+
+exports.default = Hud;
 
 /***/ }),
 /* 277 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bluebird__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bluebird___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bluebird__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_collection__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_function__ = __webpack_require__(439);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__libs_utils__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__libs_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__libs_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Duck__ = __webpack_require__(275);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Dog__ = __webpack_require__(274);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Hud__ = __webpack_require__(276);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _pixi = __webpack_require__(85);
 
+var _bluebird = __webpack_require__(278);
 
+var _bluebird2 = _interopRequireDefault(_bluebird);
 
+var _collection = __webpack_require__(207);
 
+var _function = __webpack_require__(439);
 
-const MAX_X = 800;
-const MAX_Y = 600;
+var _utils = __webpack_require__(136);
 
-const DUCK_POINTS = {
-  ORIGIN: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](MAX_X / 2, MAX_Y)
+var _utils2 = _interopRequireDefault(_utils);
+
+var _Duck = __webpack_require__(275);
+
+var _Duck2 = _interopRequireDefault(_Duck);
+
+var _Dog = __webpack_require__(274);
+
+var _Dog2 = _interopRequireDefault(_Dog);
+
+var _Hud = __webpack_require__(276);
+
+var _Hud2 = _interopRequireDefault(_Hud);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MAX_X = 800;
+var MAX_Y = 600;
+
+var DUCK_POINTS = {
+  ORIGIN: new _pixi.Point(MAX_X / 2, MAX_Y)
 };
-const DOG_POINTS = {
-  DOWN: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](MAX_X / 2, MAX_Y),
-  UP: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](MAX_X / 2, MAX_Y - 230),
-  SNIFF_START: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](0, MAX_Y - 130),
-  SNIFF_END: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](MAX_X / 2, MAX_Y - 130)
+var DOG_POINTS = {
+  DOWN: new _pixi.Point(MAX_X / 2, MAX_Y),
+  UP: new _pixi.Point(MAX_X / 2, MAX_Y - 230),
+  SNIFF_START: new _pixi.Point(0, MAX_Y - 130),
+  SNIFF_END: new _pixi.Point(MAX_X / 2, MAX_Y - 130)
 };
-const HUD_LOCATIONS = {
-  SCORE: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](MAX_X - 10, 10),
-  WAVE_STATUS: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](MAX_X - 10, MAX_Y - 20),
-  GAME_STATUS: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](MAX_X / 2, MAX_Y * 0.45),
-  BULLET_STATUS: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](10, 10),
-  DEAD_DUCK_STATUS: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](10, MAX_Y * 0.91),
-  MISSED_DUCK_STATUS: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](10, MAX_Y * 0.95)
+var HUD_LOCATIONS = {
+  SCORE: new _pixi.Point(MAX_X - 10, 10),
+  WAVE_STATUS: new _pixi.Point(MAX_X - 10, MAX_Y - 20),
+  GAME_STATUS: new _pixi.Point(MAX_X / 2, MAX_Y * 0.45),
+  BULLET_STATUS: new _pixi.Point(10, 10),
+  DEAD_DUCK_STATUS: new _pixi.Point(10, MAX_Y * 0.91),
+  MISSED_DUCK_STATUS: new _pixi.Point(10, MAX_Y * 0.95)
 };
 
-const FLASH_MS = 60;
-const FLASH_SCREEN = new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Graphics"]();
+var FLASH_MS = 60;
+var FLASH_SCREEN = new _pixi.Graphics();
 FLASH_SCREEN.beginFill(0xFFFFFF);
 FLASH_SCREEN.drawRect(0, 0, MAX_X, MAX_Y);
 FLASH_SCREEN.endFill();
 FLASH_SCREEN.position.x = 0;
 FLASH_SCREEN.position.y = 0;
 
-class Stage extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"] {
+var Stage = function (_Container) {
+  _inherits(Stage, _Container);
 
   /**
    * Stage Constructor
@@ -33962,242 +34222,299 @@ class Stage extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"] {
    * @param opts
    * @param opts.spritesheet - String representing the path to the spritesheet file
    */
-  constructor(opts) {
-    super();
-    this.spritesheet = opts.spritesheet;
-    this.interactive = true;
-    this.ducks = [];
-    this.dog = new __WEBPACK_IMPORTED_MODULE_6__Dog__["a" /* default */]({
+  function Stage(opts) {
+    _classCallCheck(this, Stage);
+
+    var _this = _possibleConstructorReturn(this, (Stage.__proto__ || Object.getPrototypeOf(Stage)).call(this));
+
+    _this.spritesheet = opts.spritesheet;
+    _this.interactive = true;
+    _this.ducks = [];
+    _this.dog = new _Dog2.default({
       spritesheet: opts.spritesheet,
       downPoint: DOG_POINTS.DOWN,
       upPoint: DOG_POINTS.UP
     });
-    this.dog.visible = false;
-    this.flashScreen = FLASH_SCREEN;
-    this.flashScreen.visible = false;
-    this.hud = new __WEBPACK_IMPORTED_MODULE_7__Hud__["a" /* default */]();
+    _this.dog.visible = false;
+    _this.flashScreen = FLASH_SCREEN;
+    _this.flashScreen.visible = false;
+    _this.hud = new _Hud2.default();
 
-    this._setStage();
-    this.scaleToWindow();
+    _this._setStage();
+    _this.scaleToWindow();
+    return _this;
   }
 
-  static scoreBoxLocation() {
-    return HUD_LOCATIONS.SCORE;
-  }
+  _createClass(Stage, [{
+    key: 'scaleToWindow',
 
-  static waveStatusBoxLocation() {
-    return HUD_LOCATIONS.WAVE_STATUS;
-  }
+    /**
+     * scaleToWindow
+     * Helper method that scales the stage container to the window size
+     */
+    value: function scaleToWindow() {
+      this.scale.set(window.innerWidth / MAX_X, window.innerHeight / MAX_Y);
+    }
 
-  static gameStatusBoxLocation() {
-    return HUD_LOCATIONS.GAME_STATUS;
-  }
+    /**
+     * _setStage
+     * Private method that adds all of the main pieces to the scene
+     * @returns {Stage}
+     * @private
+     */
 
-  static bulletStatusBoxLocation() {
-    return HUD_LOCATIONS.BULLET_STATUS;
-  }
+  }, {
+    key: '_setStage',
+    value: function _setStage() {
+      var background = new _pixi.extras.AnimatedSprite([_pixi.loader.resources[this.spritesheet].textures['scene/back/0.png']]);
+      background.position.set(0, 0);
 
-  static deadDuckStatusBoxLocation() {
-    return HUD_LOCATIONS.DEAD_DUCK_STATUS;
-  }
+      var tree = new _pixi.extras.AnimatedSprite([_pixi.loader.resources[this.spritesheet].textures['scene/tree/0.png']]);
+      tree.position.set(100, 237);
 
-  static missedDuckStatusBoxLocation() {
-    return HUD_LOCATIONS.MISSED_DUCK_STATUS;
-  }
-  /**
-   * scaleToWindow
-   * Helper method that scales the stage container to the window size
-   */
-  scaleToWindow() {
-    this.scale.set(window.innerWidth / MAX_X, window.innerHeight / MAX_Y);
-  }
+      this.addChild(tree);
+      this.addChild(background);
+      this.addChild(this.dog);
+      this.addChild(this.flashScreen);
+      this.addChild(this.hud);
 
-  /**
-   * _setStage
-   * Private method that adds all of the main pieces to the scene
-   * @returns {Stage}
-   * @private
-   */
-  _setStage() {
-    const background = new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["extras"].AnimatedSprite([__WEBPACK_IMPORTED_MODULE_0_pixi_js__["loader"].resources[this.spritesheet].textures['scene/back/0.png']]);
-    background.position.set(0, 0);
+      return this;
+    }
 
-    const tree = new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["extras"].AnimatedSprite([__WEBPACK_IMPORTED_MODULE_0_pixi_js__["loader"].resources[this.spritesheet].textures['scene/tree/0.png']]);
-    tree.position.set(100, 237);
+    /**
+     * preLevelAnimation
+     * Helper method that runs the level intro animation with the dog and returns a promise that resolves
+     * when it's complete.
+     * @returns {Promise}
+     */
 
-    this.addChild(tree);
-    this.addChild(background);
-    this.addChild(this.dog);
-    this.addChild(this.flashScreen);
-    this.addChild(this.hud);
+  }, {
+    key: 'preLevelAnimation',
+    value: function preLevelAnimation() {
+      var _this2 = this;
 
-    return this;
-  }
+      return new _bluebird2.default(function (resolve) {
+        _this2.cleanUpDucks();
 
-  /**
-   * preLevelAnimation
-   * Helper method that runs the level intro animation with the dog and returns a promise that resolves
-   * when it's complete.
-   * @returns {Promise}
-   */
-  preLevelAnimation() {
-    return new __WEBPACK_IMPORTED_MODULE_1_bluebird___default.a(resolve => {
-      this.cleanUpDucks();
+        var sniffOpts = {
+          startPoint: DOG_POINTS.SNIFF_START,
+          endPoint: DOG_POINTS.SNIFF_END
+        };
 
-      const sniffOpts = {
-        startPoint: DOG_POINTS.SNIFF_START,
-        endPoint: DOG_POINTS.SNIFF_END
-      };
+        var findOpts = {
+          onComplete: function onComplete() {
+            _this2.setChildIndex(_this2.dog, 0);
+            resolve();
+          }
+        };
 
-      const findOpts = {
-        onComplete: () => {
-          this.setChildIndex(this.dog, 0);
-          resolve();
+        _this2.dog.sniff(sniffOpts).find(findOpts);
+      });
+    }
+
+    /**
+     * addDucks
+     * Helper method that adds ducks to the container and causes them to fly around randomly.
+     * @param {Number} numDucks - How many ducks to add to the stage
+     * @param {Number} speed - Value from 0 (slow) to 10 (fast) that determines how fast the ducks will fly
+     */
+
+  }, {
+    key: 'addDucks',
+    value: function addDucks(numDucks, speed) {
+      for (var i = 0; i < numDucks; i++) {
+        var duckColor = i % 2 === 0 ? 'red' : 'black';
+
+        // Al was here.
+        var newDuck = new _Duck2.default({
+          spritesheet: this.spritesheet,
+          colorProfile: duckColor,
+          maxX: MAX_X,
+          maxY: MAX_Y
+        });
+        newDuck.position.set(DUCK_POINTS.ORIGIN.x, DUCK_POINTS.ORIGIN.y);
+        this.addChildAt(newDuck, 0);
+        newDuck.randomFlight({
+          speed: speed
+        });
+
+        this.ducks.push(newDuck);
+      }
+    }
+
+    /**
+     * shotsFired
+     * Click handler for the stage, scale's the location of the click to ensure coordinate system
+     * alignment and then calculates if any of the ducks were hit and should be shot.
+     * @param {{x:Number, y:Number}} clickPoint - Point where the container was clicked in real coordinates
+     * @returns {Number} - The number of ducks hit with the shot
+     */
+
+  }, {
+    key: 'shotsFired',
+    value: function shotsFired(clickPoint) {
+      var _this3 = this;
+
+      // flash the screen
+      this.flashScreen.visible = true;
+      (0, _function.delay)(function () {
+        _this3.flashScreen.visible = false;
+      }, FLASH_MS);
+
+      clickPoint.x /= this.scale.x;
+      clickPoint.y /= this.scale.y;
+      var ducksShot = 0;
+      for (var i = 0; i < this.ducks.length; i++) {
+        var duck = this.ducks[i];
+        if (duck.alive && _utils2.default.pointDistance(duck.position, clickPoint) < 60) {
+          ducksShot++;
+          duck.shot();
+          duck.timeline.add(function () {
+            _this3.dog.retrieve();
+          });
+        }
+      }
+      return ducksShot;
+    }
+
+    /**
+     * flyAway
+     * Helper method that causes the sky to change color and the ducks to fly away
+     * @returns {Promise} - This promise is resolved when all the ducks have flown away
+     */
+
+  }, {
+    key: 'flyAway',
+    value: function flyAway() {
+      var _this4 = this;
+
+      this.dog.laugh();
+
+      var duckPromises = [];
+
+      var _loop = function _loop(i) {
+        var duck = _this4.ducks[i];
+        if (duck.alive) {
+          duckPromises.push(new _bluebird2.default(function (resolve) {
+            duck.stopAndClearTimeline();
+            duck.flyTo({
+              point: new _pixi.Point(MAX_X / 2, -500),
+              onComplete: resolve
+            });
+          }));
         }
       };
 
-      this.dog.sniff(sniffOpts).find(findOpts);
-    });
-  }
-
-  /**
-   * addDucks
-   * Helper method that adds ducks to the container and causes them to fly around randomly.
-   * @param {Number} numDucks - How many ducks to add to the stage
-   * @param {Number} speed - Value from 0 (slow) to 10 (fast) that determines how fast the ducks will fly
-   */
-  addDucks(numDucks, speed) {
-    for (let i = 0; i < numDucks; i++) {
-      const duckColor = i % 2 === 0 ? 'red' : 'black';
-
-      // Al was here.
-      const newDuck = new __WEBPACK_IMPORTED_MODULE_5__Duck__["a" /* default */]({
-        spritesheet: this.spritesheet,
-        colorProfile: duckColor,
-        maxX: MAX_X,
-        maxY: MAX_Y
-      });
-      newDuck.position.set(DUCK_POINTS.ORIGIN.x, DUCK_POINTS.ORIGIN.y);
-      this.addChildAt(newDuck, 0);
-      newDuck.randomFlight({
-        speed
-      });
-
-      this.ducks.push(newDuck);
-    }
-  }
-
-  /**
-   * shotsFired
-   * Click handler for the stage, scale's the location of the click to ensure coordinate system
-   * alignment and then calculates if any of the ducks were hit and should be shot.
-   * @param {{x:Number, y:Number}} clickPoint - Point where the container was clicked in real coordinates
-   * @returns {Number} - The number of ducks hit with the shot
-   */
-  shotsFired(clickPoint) {
-    // flash the screen
-    this.flashScreen.visible = true;
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_lodash_function__["delay"])(() => {
-      this.flashScreen.visible = false;
-    }, FLASH_MS);
-
-    clickPoint.x /= this.scale.x;
-    clickPoint.y /= this.scale.y;
-    let ducksShot = 0;
-    for (let i = 0; i < this.ducks.length; i++) {
-      const duck = this.ducks[i];
-      if (duck.alive && __WEBPACK_IMPORTED_MODULE_4__libs_utils___default.a.pointDistance(duck.position, clickPoint) < 60) {
-        ducksShot++;
-        duck.shot();
-        duck.timeline.add(() => {
-          this.dog.retrieve();
-        });
+      for (var i = 0; i < this.ducks.length; i++) {
+        _loop(i);
       }
+
+      return _bluebird2.default.all(duckPromises).then(this.cleanUpDucks.bind(this));
     }
-    return ducksShot;
-  }
 
-  /**
-   * flyAway
-   * Helper method that causes the sky to change color and the ducks to fly away
-   * @returns {Promise} - This promise is resolved when all the ducks have flown away
-   */
-  flyAway() {
-    this.dog.laugh();
+    /**
+     * cleanUpDucks
+     * Helper that removes all ducks from the container and object
+     */
 
-    const duckPromises = [];
-
-    for (let i = 0; i < this.ducks.length; i++) {
-      const duck = this.ducks[i];
-      if (duck.alive) {
-        duckPromises.push(new __WEBPACK_IMPORTED_MODULE_1_bluebird___default.a(resolve => {
-          duck.stopAndClearTimeline();
-          duck.flyTo({
-            point: new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](MAX_X / 2, -500),
-            onComplete: resolve
-          });
-        }));
+  }, {
+    key: 'cleanUpDucks',
+    value: function cleanUpDucks() {
+      for (var i = 0; i < this.ducks.length; i++) {
+        this.removeChild(this.ducks[i]);
       }
+      this.ducks = [];
     }
 
-    return __WEBPACK_IMPORTED_MODULE_1_bluebird___default.a.all(duckPromises).then(this.cleanUpDucks.bind(this));
-  }
+    /**
+     * ducksAlive
+     * Helper that returns a boolean value depending on whether or not ducks are alive. The distinction
+     * is that even dead ducks may be animating and still "active"
+     * @returns {Boolean}
+     */
 
-  /**
-   * cleanUpDucks
-   * Helper that removes all ducks from the container and object
-   */
-  cleanUpDucks() {
-    for (let i = 0; i < this.ducks.length; i++) {
-      this.removeChild(this.ducks[i]);
+  }, {
+    key: 'ducksAlive',
+    value: function ducksAlive() {
+      return (0, _collection.some)(this.ducks, function (duck) {
+        return duck.alive;
+      });
     }
-    this.ducks = [];
-  }
 
-  /**
-   * ducksAlive
-   * Helper that returns a boolean value depending on whether or not ducks are alive. The distinction
-   * is that even dead ducks may be animating and still "active"
-   * @returns {Boolean}
-   */
-  ducksAlive() {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_collection__["some"])(this.ducks, duck => {
-      return duck.alive;
-    });
-  }
+    /**
+     * ducksActive
+     * Helper that returns a boolean value depending on whether or not ducks are animating. Both live
+     * and dead ducks may be animating.
+     * @returns {Boolean}
+     */
 
-  /**
-   * ducksActive
-   * Helper that returns a boolean value depending on whether or not ducks are animating. Both live
-   * and dead ducks may be animating.
-   * @returns {Boolean}
-   */
-  ducksActive() {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_collection__["some"])(this.ducks, duck => {
-      return duck.isActive();
-    });
-  }
+  }, {
+    key: 'ducksActive',
+    value: function ducksActive() {
+      return (0, _collection.some)(this.ducks, function (duck) {
+        return duck.isActive();
+      });
+    }
 
-  /**
-   * dogActive
-   * Helper proxy method that returns a boolean depending on whether the dog is animating
-   * @returns {boolean}
-   */
-  dogActive() {
-    return this.dog.isActive();
-  }
+    /**
+     * dogActive
+     * Helper proxy method that returns a boolean depending on whether the dog is animating
+     * @returns {boolean}
+     */
 
-  /**
-   * isActive
-   * High level helper to determine if things are animating on the stage
-   * @returns {boolean|Boolean}
-   */
-  isActive() {
-    return this.dogActive() || this.ducksAlive() || this.ducksActive();
-  }
-}
+  }, {
+    key: 'dogActive',
+    value: function dogActive() {
+      return this.dog.isActive();
+    }
 
-/* harmony default export */ __webpack_exports__["a"] = Stage;
+    /**
+     * isActive
+     * High level helper to determine if things are animating on the stage
+     * @returns {boolean|Boolean}
+     */
+
+  }, {
+    key: 'isActive',
+    value: function isActive() {
+      return this.dogActive() || this.ducksAlive() || this.ducksActive();
+    }
+  }], [{
+    key: 'scoreBoxLocation',
+    value: function scoreBoxLocation() {
+      return HUD_LOCATIONS.SCORE;
+    }
+  }, {
+    key: 'waveStatusBoxLocation',
+    value: function waveStatusBoxLocation() {
+      return HUD_LOCATIONS.WAVE_STATUS;
+    }
+  }, {
+    key: 'gameStatusBoxLocation',
+    value: function gameStatusBoxLocation() {
+      return HUD_LOCATIONS.GAME_STATUS;
+    }
+  }, {
+    key: 'bulletStatusBoxLocation',
+    value: function bulletStatusBoxLocation() {
+      return HUD_LOCATIONS.BULLET_STATUS;
+    }
+  }, {
+    key: 'deadDuckStatusBoxLocation',
+    value: function deadDuckStatusBoxLocation() {
+      return HUD_LOCATIONS.DEAD_DUCK_STATUS;
+    }
+  }, {
+    key: 'missedDuckStatusBoxLocation',
+    value: function missedDuckStatusBoxLocation() {
+      return HUD_LOCATIONS.MISSED_DUCK_STATUS;
+    }
+  }]);
+
+  return Stage;
+}(_pixi.Container);
+
+exports.default = Stage;
 
 /***/ }),
 /* 278 */
@@ -71033,16 +71350,20 @@ module.exports = __webpack_amd_options__;
 
 /***/ }),
 /* 605 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_modules_Game__ = __webpack_require__(273);
 
+
+var _Game = __webpack_require__(273);
+
+var _Game2 = _interopRequireDefault(_Game);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  let game = new __WEBPACK_IMPORTED_MODULE_0__src_modules_Game__["a" /* default */]({
+  var game = new _Game2.default({
     spritesheet: 'sprites.json'
   }).load();
 }, false);

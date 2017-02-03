@@ -1,6 +1,5 @@
 'use strict';
 
-// var HtmlWepbackPlugin = require('html-webpack-plugin');
 var path = require('path');
 var webpack = require('webpack');
 
@@ -17,9 +16,10 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel-loader?cacheDirectory',
+        options: { presets: ['es2015'] },
       },
       {
         test: /\.png$/,
@@ -46,17 +46,5 @@ module.exports = {
     port: 8080
   },
   plugins: [
-    // new HtmlWepbackPlugin({
-    //   filename: 'index.html',
-    //   template: './src/index.html',
-    //   inject: 'body',
-    //   chunks: ['main'],
-    // }),
-    // new HtmlWepbackPlugin({
-    //   filename: 'animated-preview.html',
-    //   template: './tools/animated-preview/index.html',
-    //   inject: 'body',
-    //   chunks: ['animated-preview'],
-    // }),
   ],
 };
