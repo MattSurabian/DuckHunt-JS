@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 604);
+/******/ 	return __webpack_require__(__webpack_require__.s = 605);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -109,7 +109,7 @@ Object.defineProperty(exports, 'glCore', {
   }
 });
 
-var _Bounds = __webpack_require__(124);
+var _Bounds = __webpack_require__(123);
 
 Object.defineProperty(exports, 'Bounds', {
   enumerable: true,
@@ -118,7 +118,7 @@ Object.defineProperty(exports, 'Bounds', {
   }
 });
 
-var _DisplayObject = __webpack_require__(236);
+var _DisplayObject = __webpack_require__(235);
 
 Object.defineProperty(exports, 'DisplayObject', {
   enumerable: true,
@@ -136,7 +136,7 @@ Object.defineProperty(exports, 'Container', {
   }
 });
 
-var _Transform = __webpack_require__(237);
+var _Transform = __webpack_require__(236);
 
 Object.defineProperty(exports, 'Transform', {
   enumerable: true,
@@ -145,7 +145,7 @@ Object.defineProperty(exports, 'Transform', {
   }
 });
 
-var _TransformStatic = __webpack_require__(238);
+var _TransformStatic = __webpack_require__(237);
 
 Object.defineProperty(exports, 'TransformStatic', {
   enumerable: true,
@@ -154,7 +154,7 @@ Object.defineProperty(exports, 'TransformStatic', {
   }
 });
 
-var _TransformBase = __webpack_require__(125);
+var _TransformBase = __webpack_require__(124);
 
 Object.defineProperty(exports, 'TransformBase', {
   enumerable: true,
@@ -163,7 +163,7 @@ Object.defineProperty(exports, 'TransformBase', {
   }
 });
 
-var _Sprite = __webpack_require__(129);
+var _Sprite = __webpack_require__(128);
 
 Object.defineProperty(exports, 'Sprite', {
   enumerable: true,
@@ -172,7 +172,7 @@ Object.defineProperty(exports, 'Sprite', {
   }
 });
 
-var _CanvasSpriteRenderer = __webpack_require__(549);
+var _CanvasSpriteRenderer = __webpack_require__(550);
 
 Object.defineProperty(exports, 'CanvasSpriteRenderer', {
   enumerable: true,
@@ -181,7 +181,7 @@ Object.defineProperty(exports, 'CanvasSpriteRenderer', {
   }
 });
 
-var _CanvasTinter = __webpack_require__(130);
+var _CanvasTinter = __webpack_require__(129);
 
 Object.defineProperty(exports, 'CanvasTinter', {
   enumerable: true,
@@ -190,7 +190,7 @@ Object.defineProperty(exports, 'CanvasTinter', {
   }
 });
 
-var _SpriteRenderer = __webpack_require__(551);
+var _SpriteRenderer = __webpack_require__(552);
 
 Object.defineProperty(exports, 'SpriteRenderer', {
   enumerable: true,
@@ -199,7 +199,7 @@ Object.defineProperty(exports, 'SpriteRenderer', {
   }
 });
 
-var _Text = __webpack_require__(553);
+var _Text = __webpack_require__(554);
 
 Object.defineProperty(exports, 'Text', {
   enumerable: true,
@@ -208,7 +208,7 @@ Object.defineProperty(exports, 'Text', {
   }
 });
 
-var _TextStyle = __webpack_require__(248);
+var _TextStyle = __webpack_require__(247);
 
 Object.defineProperty(exports, 'TextStyle', {
   enumerable: true,
@@ -217,7 +217,7 @@ Object.defineProperty(exports, 'TextStyle', {
   }
 });
 
-var _Graphics = __webpack_require__(521);
+var _Graphics = __webpack_require__(522);
 
 Object.defineProperty(exports, 'Graphics', {
   enumerable: true,
@@ -226,7 +226,7 @@ Object.defineProperty(exports, 'Graphics', {
   }
 });
 
-var _GraphicsData = __webpack_require__(239);
+var _GraphicsData = __webpack_require__(238);
 
 Object.defineProperty(exports, 'GraphicsData', {
   enumerable: true,
@@ -235,7 +235,7 @@ Object.defineProperty(exports, 'GraphicsData', {
   }
 });
 
-var _GraphicsRenderer = __webpack_require__(524);
+var _GraphicsRenderer = __webpack_require__(525);
 
 Object.defineProperty(exports, 'GraphicsRenderer', {
   enumerable: true,
@@ -244,7 +244,7 @@ Object.defineProperty(exports, 'GraphicsRenderer', {
   }
 });
 
-var _CanvasGraphicsRenderer = __webpack_require__(522);
+var _CanvasGraphicsRenderer = __webpack_require__(523);
 
 Object.defineProperty(exports, 'CanvasGraphicsRenderer', {
   enumerable: true,
@@ -271,7 +271,7 @@ Object.defineProperty(exports, 'BaseTexture', {
   }
 });
 
-var _RenderTexture = __webpack_require__(131);
+var _RenderTexture = __webpack_require__(130);
 
 Object.defineProperty(exports, 'RenderTexture', {
   enumerable: true,
@@ -280,7 +280,7 @@ Object.defineProperty(exports, 'RenderTexture', {
   }
 });
 
-var _BaseRenderTexture = __webpack_require__(249);
+var _BaseRenderTexture = __webpack_require__(248);
 
 Object.defineProperty(exports, 'BaseRenderTexture', {
   enumerable: true,
@@ -289,7 +289,7 @@ Object.defineProperty(exports, 'BaseRenderTexture', {
   }
 });
 
-var _VideoBaseTexture = __webpack_require__(251);
+var _VideoBaseTexture = __webpack_require__(250);
 
 Object.defineProperty(exports, 'VideoBaseTexture', {
   enumerable: true,
@@ -298,7 +298,7 @@ Object.defineProperty(exports, 'VideoBaseTexture', {
   }
 });
 
-var _TextureUvs = __webpack_require__(250);
+var _TextureUvs = __webpack_require__(249);
 
 Object.defineProperty(exports, 'TextureUvs', {
   enumerable: true,
@@ -307,7 +307,7 @@ Object.defineProperty(exports, 'TextureUvs', {
   }
 });
 
-var _CanvasRenderTarget = __webpack_require__(243);
+var _CanvasRenderTarget = __webpack_require__(242);
 
 Object.defineProperty(exports, 'CanvasRenderTarget', {
   enumerable: true,
@@ -352,7 +352,7 @@ Object.defineProperty(exports, 'RenderTarget', {
   }
 });
 
-var _Quad = __webpack_require__(247);
+var _Quad = __webpack_require__(246);
 
 Object.defineProperty(exports, 'Quad', {
   enumerable: true,
@@ -361,7 +361,7 @@ Object.defineProperty(exports, 'Quad', {
   }
 });
 
-var _SpriteMaskFilter = __webpack_require__(246);
+var _SpriteMaskFilter = __webpack_require__(245);
 
 Object.defineProperty(exports, 'SpriteMaskFilter', {
   enumerable: true,
@@ -370,7 +370,7 @@ Object.defineProperty(exports, 'SpriteMaskFilter', {
   }
 });
 
-var _Filter = __webpack_require__(245);
+var _Filter = __webpack_require__(244);
 
 Object.defineProperty(exports, 'Filter', {
   enumerable: true,
@@ -379,7 +379,7 @@ Object.defineProperty(exports, 'Filter', {
   }
 });
 
-var _Application = __webpack_require__(520);
+var _Application = __webpack_require__(521);
 
 Object.defineProperty(exports, 'Application', {
   enumerable: true,
@@ -388,7 +388,7 @@ Object.defineProperty(exports, 'Application', {
   }
 });
 
-var _autoDetectRenderer = __webpack_require__(235);
+var _autoDetectRenderer = __webpack_require__(234);
 
 Object.defineProperty(exports, 'autoDetectRenderer', {
   enumerable: true,
@@ -401,7 +401,7 @@ var _utils = __webpack_require__(5);
 
 var utils = _interopRequireWildcard(_utils);
 
-var _ticker = __webpack_require__(253);
+var _ticker = __webpack_require__(252);
 
 var ticker = _interopRequireWildcard(_ticker);
 
@@ -787,11 +787,11 @@ var TEXT_GRADIENT = exports.TEXT_GRADIENT = {
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMatches = __webpack_require__(158),
-    baseMatchesProperty = __webpack_require__(159),
+var baseMatches = __webpack_require__(157),
+    baseMatchesProperty = __webpack_require__(158),
     identity = __webpack_require__(29),
     isArray = __webpack_require__(1),
-    property = __webpack_require__(219);
+    property = __webpack_require__(218);
 
 /**
  * The base implementation of `_.iteratee`.
@@ -825,8 +825,8 @@ module.exports = baseIteratee;
 /***/ (function(module, exports, __webpack_require__) {
 
 var identity = __webpack_require__(29),
-    overRest = __webpack_require__(196),
-    setToString = __webpack_require__(111);
+    overRest = __webpack_require__(195),
+    setToString = __webpack_require__(110);
 
 /**
  * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -876,7 +876,7 @@ var _eventemitter = __webpack_require__(24);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _pluginTarget = __webpack_require__(557);
+var _pluginTarget = __webpack_require__(558);
 
 var _pluginTarget2 = _interopRequireDefault(_pluginTarget);
 
@@ -1232,7 +1232,7 @@ module.exports = isObject;
 
 exports.__esModule = true;
 
-var _Point = __webpack_require__(127);
+var _Point = __webpack_require__(126);
 
 Object.defineProperty(exports, 'Point', {
   enumerable: true,
@@ -1241,7 +1241,7 @@ Object.defineProperty(exports, 'Point', {
   }
 });
 
-var _ObservablePoint = __webpack_require__(241);
+var _ObservablePoint = __webpack_require__(240);
 
 Object.defineProperty(exports, 'ObservablePoint', {
   enumerable: true,
@@ -1250,7 +1250,7 @@ Object.defineProperty(exports, 'ObservablePoint', {
   }
 });
 
-var _Matrix = __webpack_require__(126);
+var _Matrix = __webpack_require__(125);
 
 Object.defineProperty(exports, 'Matrix', {
   enumerable: true,
@@ -1259,7 +1259,7 @@ Object.defineProperty(exports, 'Matrix', {
   }
 });
 
-var _GroupD = __webpack_require__(240);
+var _GroupD = __webpack_require__(239);
 
 Object.defineProperty(exports, 'GroupD8', {
   enumerable: true,
@@ -1268,7 +1268,7 @@ Object.defineProperty(exports, 'GroupD8', {
   }
 });
 
-var _Circle = __webpack_require__(531);
+var _Circle = __webpack_require__(532);
 
 Object.defineProperty(exports, 'Circle', {
   enumerable: true,
@@ -1277,7 +1277,7 @@ Object.defineProperty(exports, 'Circle', {
   }
 });
 
-var _Ellipse = __webpack_require__(532);
+var _Ellipse = __webpack_require__(533);
 
 Object.defineProperty(exports, 'Ellipse', {
   enumerable: true,
@@ -1286,7 +1286,7 @@ Object.defineProperty(exports, 'Ellipse', {
   }
 });
 
-var _Polygon = __webpack_require__(533);
+var _Polygon = __webpack_require__(534);
 
 Object.defineProperty(exports, 'Polygon', {
   enumerable: true,
@@ -1295,7 +1295,7 @@ Object.defineProperty(exports, 'Polygon', {
   }
 });
 
-var _Rectangle = __webpack_require__(128);
+var _Rectangle = __webpack_require__(127);
 
 Object.defineProperty(exports, 'Rectangle', {
   enumerable: true,
@@ -1304,7 +1304,7 @@ Object.defineProperty(exports, 'Rectangle', {
   }
 });
 
-var _RoundedRectangle = __webpack_require__(534);
+var _RoundedRectangle = __webpack_require__(535);
 
 Object.defineProperty(exports, 'RoundedRectangle', {
   enumerable: true,
@@ -1320,7 +1320,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(185);
+var freeGlobal = __webpack_require__(184);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -1335,8 +1335,8 @@ module.exports = root;
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(144),
-    baseKeys = __webpack_require__(156),
+var arrayLikeKeys = __webpack_require__(143),
+    baseKeys = __webpack_require__(155),
     isArrayLike = __webpack_require__(16);
 
 /**
@@ -1383,11 +1383,11 @@ module.exports = keys;
 
 exports.__esModule = true;
 
-var _maxRecommendedTextures = __webpack_require__(556);
+var _maxRecommendedTextures = __webpack_require__(557);
 
 var _maxRecommendedTextures2 = _interopRequireDefault(_maxRecommendedTextures);
 
-var _canUploadSameBuffer = __webpack_require__(554);
+var _canUploadSameBuffer = __webpack_require__(555);
 
 var _canUploadSameBuffer2 = _interopRequireDefault(_canUploadSameBuffer);
 
@@ -1647,8 +1647,8 @@ module.exports = arrayMap;
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(144),
-    baseKeysIn = __webpack_require__(311),
+var arrayLikeKeys = __webpack_require__(143),
+    baseKeysIn = __webpack_require__(312),
     isArrayLike = __webpack_require__(16);
 
 /**
@@ -1728,14 +1728,14 @@ module.exports = toInteger;
 /***/ (function(module, exports, __webpack_require__) {
 
 var gl = {
-    createContext:          __webpack_require__(516),
-    setVertexAttribArrays:  __webpack_require__(226),
-    GLBuffer:               __webpack_require__(512),
-    GLFramebuffer:          __webpack_require__(513),
-    GLShader:               __webpack_require__(514),
-    GLTexture:              __webpack_require__(225),
-    VertexArrayObject:      __webpack_require__(515),
-    shader:                 __webpack_require__(517)
+    createContext:          __webpack_require__(517),
+    setVertexAttribArrays:  __webpack_require__(225),
+    GLBuffer:               __webpack_require__(513),
+    GLFramebuffer:          __webpack_require__(514),
+    GLShader:               __webpack_require__(515),
+    GLTexture:              __webpack_require__(224),
+    VertexArrayObject:      __webpack_require__(516),
+    shader:                 __webpack_require__(518)
 };
 
 // Export for Node-compatible environments
@@ -1759,7 +1759,7 @@ if (typeof window !== 'undefined')
 /***/ (function(module, exports, __webpack_require__) {
 
 var isFunction = __webpack_require__(36),
-    isLength = __webpack_require__(116);
+    isLength = __webpack_require__(115);
 
 /**
  * Checks if `value` is array-like. A value is considered array-like if it's
@@ -2022,7 +2022,7 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(135)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(134)))
 
 /***/ }),
 /* 18 */
@@ -2156,7 +2156,7 @@ module.exports = isObjectLike;
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var defineProperty = __webpack_require__(183);
+var defineProperty = __webpack_require__(182);
 
 /**
  * The base implementation of `assignValue` and `assignMergeValue` without
@@ -2187,15 +2187,15 @@ module.exports = baseAssignValue;
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSetData = __webpack_require__(164),
-    createBind = __webpack_require__(339),
-    createCurry = __webpack_require__(340),
-    createHybrid = __webpack_require__(178),
-    createPartial = __webpack_require__(341),
-    getData = __webpack_require__(107),
-    mergeData = __webpack_require__(374),
-    setData = __webpack_require__(198),
-    setWrapToString = __webpack_require__(200),
+var baseSetData = __webpack_require__(163),
+    createBind = __webpack_require__(340),
+    createCurry = __webpack_require__(341),
+    createHybrid = __webpack_require__(177),
+    createPartial = __webpack_require__(342),
+    getData = __webpack_require__(106),
+    mergeData = __webpack_require__(375),
+    setData = __webpack_require__(197),
+    setWrapToString = __webpack_require__(199),
     toInteger = __webpack_require__(14);
 
 /** Error message constants. */
@@ -2618,7 +2618,7 @@ if (true) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseForOwn = __webpack_require__(31),
-    createBaseEach = __webpack_require__(174);
+    createBaseEach = __webpack_require__(173);
 
 /**
  * The base implementation of `_.forEach` without support for iteratee shorthands.
@@ -2638,8 +2638,8 @@ module.exports = baseEach;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(37),
-    getRawTag = __webpack_require__(348),
-    objectToString = __webpack_require__(378);
+    getRawTag = __webpack_require__(349),
+    objectToString = __webpack_require__(379);
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
@@ -2672,9 +2672,9 @@ module.exports = baseGetTag;
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1),
-    isKey = __webpack_require__(109),
-    stringToPath = __webpack_require__(202),
-    toString = __webpack_require__(121);
+    isKey = __webpack_require__(108),
+    stringToPath = __webpack_require__(201),
+    toString = __webpack_require__(120);
 
 /**
  * Casts `value` to a path array if it's not one.
@@ -2778,7 +2778,7 @@ module.exports = g;
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFor = __webpack_require__(98),
+var baseFor = __webpack_require__(97),
     keys = __webpack_require__(9);
 
 /**
@@ -2800,9 +2800,9 @@ module.exports = baseForOwn;
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var flatten = __webpack_require__(430),
-    overRest = __webpack_require__(196),
-    setToString = __webpack_require__(111);
+var flatten = __webpack_require__(431),
+    overRest = __webpack_require__(195),
+    setToString = __webpack_require__(110);
 
 /**
  * A specialized version of `baseRest` which flattens the rest array.
@@ -2822,8 +2822,8 @@ module.exports = flatRest;
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsNative = __webpack_require__(309),
-    getValue = __webpack_require__(349);
+var baseIsNative = __webpack_require__(310),
+    getValue = __webpack_require__(350);
 
 /**
  * Gets the native function at `key` of `object`.
@@ -3036,7 +3036,7 @@ module.exports = baseCreate;
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(47),
-    isFlattenable = __webpack_require__(360);
+    isFlattenable = __webpack_require__(361);
 
 /**
  * The base implementation of `_.flatten` with support for restricting flattening.
@@ -3306,18 +3306,18 @@ module.exports = arrayPush;
 var Stack = __webpack_require__(62),
     arrayEach = __webpack_require__(38),
     assignValue = __webpack_require__(64),
-    baseAssign = __webpack_require__(147),
-    baseAssignIn = __webpack_require__(296),
-    cloneBuffer = __webpack_require__(170),
+    baseAssign = __webpack_require__(146),
+    baseAssignIn = __webpack_require__(297),
+    cloneBuffer = __webpack_require__(169),
     copyArray = __webpack_require__(28),
-    copySymbols = __webpack_require__(335),
-    copySymbolsIn = __webpack_require__(336),
-    getAllKeys = __webpack_require__(186),
-    getAllKeysIn = __webpack_require__(106),
+    copySymbols = __webpack_require__(336),
+    copySymbolsIn = __webpack_require__(337),
+    getAllKeys = __webpack_require__(185),
+    getAllKeysIn = __webpack_require__(105),
     getTag = __webpack_require__(73),
-    initCloneArray = __webpack_require__(357),
-    initCloneByTag = __webpack_require__(358),
-    initCloneObject = __webpack_require__(190),
+    initCloneArray = __webpack_require__(358),
+    initCloneByTag = __webpack_require__(359),
+    initCloneObject = __webpack_require__(189),
     isArray = __webpack_require__(1),
     isBuffer = __webpack_require__(49),
     isObject = __webpack_require__(6),
@@ -3463,7 +3463,7 @@ module.exports = baseClone;
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(8),
-    stubFalse = __webpack_require__(220);
+    stubFalse = __webpack_require__(219);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -3579,7 +3579,7 @@ module.exports = toNumber;
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseValues = __webpack_require__(169),
+var baseValues = __webpack_require__(168),
     keys = __webpack_require__(9);
 
 /**
@@ -3700,7 +3700,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _utils = __webpack_require__(5);
 
-var _DisplayObject2 = __webpack_require__(236);
+var _DisplayObject2 = __webpack_require__(235);
 
 var _DisplayObject3 = _interopRequireDefault(_DisplayObject2);
 
@@ -4301,19 +4301,19 @@ Container.prototype.containerUpdateTransform = Container.prototype.updateTransfo
 
 exports.__esModule = true;
 
-var _SystemRenderer2 = __webpack_require__(242);
+var _SystemRenderer2 = __webpack_require__(241);
 
 var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
 
-var _CanvasMaskManager = __webpack_require__(535);
+var _CanvasMaskManager = __webpack_require__(536);
 
 var _CanvasMaskManager2 = _interopRequireDefault(_CanvasMaskManager);
 
-var _CanvasRenderTarget = __webpack_require__(243);
+var _CanvasRenderTarget = __webpack_require__(242);
 
 var _CanvasRenderTarget2 = _interopRequireDefault(_CanvasRenderTarget);
 
-var _mapCanvasBlendModesToPixi = __webpack_require__(536);
+var _mapCanvasBlendModesToPixi = __webpack_require__(537);
 
 var _mapCanvasBlendModesToPixi2 = _interopRequireDefault(_mapCanvasBlendModesToPixi);
 
@@ -4688,11 +4688,11 @@ var _eventemitter = __webpack_require__(24);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _determineCrossOrigin = __webpack_require__(555);
+var _determineCrossOrigin = __webpack_require__(556);
 
 var _determineCrossOrigin2 = _interopRequireDefault(_determineCrossOrigin);
 
-var _bitTwiddle = __webpack_require__(87);
+var _bitTwiddle = __webpack_require__(88);
 
 var _bitTwiddle2 = _interopRequireDefault(_bitTwiddle);
 
@@ -5390,11 +5390,11 @@ var _BaseTexture = __webpack_require__(56);
 
 var _BaseTexture2 = _interopRequireDefault(_BaseTexture);
 
-var _VideoBaseTexture = __webpack_require__(251);
+var _VideoBaseTexture = __webpack_require__(250);
 
 var _VideoBaseTexture2 = _interopRequireDefault(_VideoBaseTexture);
 
-var _TextureUvs = __webpack_require__(250);
+var _TextureUvs = __webpack_require__(249);
 
 var _TextureUvs2 = _interopRequireDefault(_TextureUvs);
 
@@ -6258,19 +6258,19 @@ Mesh.DRAW_MODES = {
 
 exports.__esModule = true;
 
-var _Loader = __webpack_require__(598);
+var _Loader = __webpack_require__(599);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
-var _Resource = __webpack_require__(136);
+var _Resource = __webpack_require__(135);
 
 var _Resource2 = _interopRequireDefault(_Resource);
 
-var _async = __webpack_require__(272);
+var _async = __webpack_require__(271);
 
 var async = _interopRequireWildcard(_async);
 
-var _b = __webpack_require__(273);
+var _b = __webpack_require__(272);
 
 var b64 = _interopRequireWildcard(_b);
 
@@ -6437,11 +6437,11 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var listCacheClear = __webpack_require__(363),
-    listCacheDelete = __webpack_require__(364),
-    listCacheGet = __webpack_require__(365),
-    listCacheHas = __webpack_require__(366),
-    listCacheSet = __webpack_require__(367);
+var listCacheClear = __webpack_require__(364),
+    listCacheDelete = __webpack_require__(365),
+    listCacheGet = __webpack_require__(366),
+    listCacheHas = __webpack_require__(367),
+    listCacheSet = __webpack_require__(368);
 
 /**
  * Creates an list cache object.
@@ -6476,11 +6476,11 @@ module.exports = ListCache;
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(61),
-    stackClear = __webpack_require__(384),
-    stackDelete = __webpack_require__(385),
-    stackGet = __webpack_require__(386),
-    stackHas = __webpack_require__(387),
-    stackSet = __webpack_require__(388);
+    stackClear = __webpack_require__(385),
+    stackDelete = __webpack_require__(386),
+    stackGet = __webpack_require__(387),
+    stackHas = __webpack_require__(388),
+    stackSet = __webpack_require__(389);
 
 /**
  * Creates a stack cache object to store key-value pairs.
@@ -6602,8 +6602,8 @@ module.exports = assocIndexOf;
 
 var apply = __webpack_require__(11),
     castPath = __webpack_require__(27),
-    last = __webpack_require__(213),
-    parent = __webpack_require__(197),
+    last = __webpack_require__(212),
+    parent = __webpack_require__(196),
     toKey = __webpack_require__(20);
 
 /**
@@ -6703,8 +6703,8 @@ module.exports = baseUnary;
 /* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayAggregator = __webpack_require__(288),
-    baseAggregator = __webpack_require__(295),
+var arrayAggregator = __webpack_require__(289),
+    baseAggregator = __webpack_require__(296),
     baseIteratee = __webpack_require__(3),
     isArray = __webpack_require__(1);
 
@@ -6775,7 +6775,7 @@ module.exports = createCtor;
 /* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isKeyable = __webpack_require__(361);
+var isKeyable = __webpack_require__(362);
 
 /**
  * Gets the data for `map`.
@@ -6799,7 +6799,7 @@ module.exports = getMapData;
 /* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(195);
+var overArg = __webpack_require__(194);
 
 /** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
@@ -6811,13 +6811,13 @@ module.exports = getPrototype;
 /* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DataView = __webpack_require__(281),
-    Map = __webpack_require__(92),
-    Promise = __webpack_require__(283),
-    Set = __webpack_require__(284),
-    WeakMap = __webpack_require__(142),
+var DataView = __webpack_require__(282),
+    Map = __webpack_require__(91),
+    Promise = __webpack_require__(284),
+    Set = __webpack_require__(285),
+    WeakMap = __webpack_require__(141),
     baseGetTag = __webpack_require__(26),
-    toSource = __webpack_require__(203);
+    toSource = __webpack_require__(202);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -6911,7 +6911,7 @@ module.exports = nativeCreate;
 /* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseRandom = __webpack_require__(103);
+var baseRandom = __webpack_require__(102);
 
 /**
  * A specialized version of `_.shuffle` which mutates and sets the size of `array`.
@@ -6945,7 +6945,7 @@ module.exports = shuffleSelf;
 /* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsArguments = __webpack_require__(305),
+var baseIsArguments = __webpack_require__(306),
     isObjectLike = __webpack_require__(21);
 
 /** Used for built-in method references. */
@@ -6987,9 +6987,9 @@ module.exports = isArguments;
 /* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsTypedArray = __webpack_require__(310),
+var baseIsTypedArray = __webpack_require__(311),
     baseUnary = __webpack_require__(68),
-    nodeUtil = __webpack_require__(377);
+    nodeUtil = __webpack_require__(378);
 
 /* Node.js helper references. */
 var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
@@ -7022,7 +7022,7 @@ module.exports = isTypedArray;
 
 var arrayMap = __webpack_require__(12),
     baseIteratee = __webpack_require__(3),
-    baseMap = __webpack_require__(157),
+    baseMap = __webpack_require__(156),
     isArray = __webpack_require__(1);
 
 /**
@@ -7346,19 +7346,19 @@ function buildLine(graphicsData, webGLData) {
 
 exports.__esModule = true;
 
-var _SystemRenderer2 = __webpack_require__(242);
+var _SystemRenderer2 = __webpack_require__(241);
 
 var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
 
-var _MaskManager = __webpack_require__(543);
+var _MaskManager = __webpack_require__(544);
 
 var _MaskManager2 = _interopRequireDefault(_MaskManager);
 
-var _StencilManager = __webpack_require__(544);
+var _StencilManager = __webpack_require__(545);
 
 var _StencilManager2 = _interopRequireDefault(_StencilManager);
 
-var _FilterManager = __webpack_require__(542);
+var _FilterManager = __webpack_require__(543);
 
 var _FilterManager2 = _interopRequireDefault(_FilterManager);
 
@@ -7370,7 +7370,7 @@ var _ObjectRenderer = __webpack_require__(83);
 
 var _ObjectRenderer2 = _interopRequireDefault(_ObjectRenderer);
 
-var _TextureManager = __webpack_require__(538);
+var _TextureManager = __webpack_require__(539);
 
 var _TextureManager2 = _interopRequireDefault(_TextureManager);
 
@@ -7378,19 +7378,19 @@ var _BaseTexture = __webpack_require__(56);
 
 var _BaseTexture2 = _interopRequireDefault(_BaseTexture);
 
-var _TextureGarbageCollector = __webpack_require__(537);
+var _TextureGarbageCollector = __webpack_require__(538);
 
 var _TextureGarbageCollector2 = _interopRequireDefault(_TextureGarbageCollector);
 
-var _WebGLState = __webpack_require__(539);
+var _WebGLState = __webpack_require__(540);
 
 var _WebGLState2 = _interopRequireDefault(_WebGLState);
 
-var _mapWebGLDrawModesToPixi = __webpack_require__(547);
+var _mapWebGLDrawModesToPixi = __webpack_require__(548);
 
 var _mapWebGLDrawModesToPixi2 = _interopRequireDefault(_mapWebGLDrawModesToPixi);
 
-var _validateContext = __webpack_require__(548);
+var _validateContext = __webpack_require__(549);
 
 var _validateContext2 = _interopRequireDefault(_validateContext);
 
@@ -8491,7 +8491,7 @@ exports.default = RenderTarget;
 exports.__esModule = true;
 exports.loader = exports.prepare = exports.particles = exports.mesh = exports.loaders = exports.interaction = exports.filters = exports.extras = exports.extract = exports.accessibility = undefined;
 
-var _polyfill = __webpack_require__(589);
+var _polyfill = __webpack_require__(590);
 
 Object.keys(_polyfill).forEach(function (key) {
     if (key === "default" || key === "__esModule") return;
@@ -8503,7 +8503,7 @@ Object.keys(_polyfill).forEach(function (key) {
     });
 });
 
-var _deprecation = __webpack_require__(558);
+var _deprecation = __webpack_require__(559);
 
 Object.keys(_deprecation).forEach(function (key) {
     if (key === "default" || key === "__esModule") return;
@@ -8527,39 +8527,39 @@ Object.keys(_core).forEach(function (key) {
     });
 });
 
-var _accessibility = __webpack_require__(519);
+var _accessibility = __webpack_require__(520);
 
 var accessibility = _interopRequireWildcard(_accessibility);
 
-var _extract = __webpack_require__(560);
+var _extract = __webpack_require__(561);
 
 var extract = _interopRequireWildcard(_extract);
 
-var _extras = __webpack_require__(133);
+var _extras = __webpack_require__(132);
 
 var extras = _interopRequireWildcard(_extras);
 
-var _filters = __webpack_require__(260);
+var _filters = __webpack_require__(259);
 
 var filters = _interopRequireWildcard(_filters);
 
-var _interaction = __webpack_require__(577);
+var _interaction = __webpack_require__(578);
 
 var interaction = _interopRequireWildcard(_interaction);
 
-var _loaders = __webpack_require__(264);
+var _loaders = __webpack_require__(263);
 
 var loaders = _interopRequireWildcard(_loaders);
 
-var _mesh = __webpack_require__(268);
+var _mesh = __webpack_require__(267);
 
 var mesh = _interopRequireWildcard(_mesh);
 
-var _particles = __webpack_require__(269);
+var _particles = __webpack_require__(268);
 
 var particles = _interopRequireWildcard(_particles);
 
-var _prepare = __webpack_require__(270);
+var _prepare = __webpack_require__(269);
 
 var prepare = _interopRequireWildcard(_prepare);
 
@@ -8630,6 +8630,22 @@ module.exports = function(module) {
 
 /***/ }),
 /* 87 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_howler__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_howler___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_howler__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dist_audio_json__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dist_audio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__dist_audio_json__);
+
+
+
+const sound = new __WEBPACK_IMPORTED_MODULE_0_howler__["Howl"](__WEBPACK_IMPORTED_MODULE_1__dist_audio_json___default.a);
+
+/* harmony default export */ __webpack_exports__["a"] = sound;
+
+/***/ }),
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8840,2844 +8856,11 @@ exports.nextCombination = function(v) {
 
 
 /***/ }),
-/* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- *  howler.js v2.0.2
- *  howlerjs.com
- *
- *  (c) 2013-2016, James Simpson of GoldFire Studios
- *  goldfirestudios.com
- *
- *  MIT License
- */
-
-(function() {
-
-  'use strict';
-
-  /** Global Methods **/
-  /***************************************************************************/
-
-  /**
-   * Create the global controller. All contained methods and properties apply
-   * to all sounds that are currently playing or will be in the future.
-   */
-  var HowlerGlobal = function() {
-    this.init();
-  };
-  HowlerGlobal.prototype = {
-    /**
-     * Initialize the global Howler object.
-     * @return {Howler}
-     */
-    init: function() {
-      var self = this || Howler;
-
-      // Internal properties.
-      self._codecs = {};
-      self._howls = [];
-      self._muted = false;
-      self._volume = 1;
-      self._canPlayEvent = 'canplaythrough';
-      self._navigator = (typeof window !== 'undefined' && window.navigator) ? window.navigator : null;
-
-      // Public properties.
-      self.masterGain = null;
-      self.noAudio = false;
-      self.usingWebAudio = true;
-      self.autoSuspend = true;
-      self.ctx = null;
-
-      // Set to false to disable the auto iOS enabler.
-      self.mobileAutoEnable = true;
-
-      // Setup the various state values for global tracking.
-      self._setup();
-
-      return self;
-    },
-
-    /**
-     * Get/set the global volume for all sounds.
-     * @param  {Float} vol Volume from 0.0 to 1.0.
-     * @return {Howler/Float}     Returns self or current volume.
-     */
-    volume: function(vol) {
-      var self = this || Howler;
-      vol = parseFloat(vol);
-
-      // If we don't have an AudioContext created yet, run the setup.
-      if (!self.ctx) {
-        setupAudioContext();
-      }
-
-      if (typeof vol !== 'undefined' && vol >= 0 && vol <= 1) {
-        self._volume = vol;
-
-        // Don't update any of the nodes if we are muted.
-        if (self._muted) {
-          return self;
-        }
-
-        // When using Web Audio, we just need to adjust the master gain.
-        if (self.usingWebAudio) {
-          self.masterGain.gain.value = vol;
-        }
-
-        // Loop through and change volume for all HTML5 audio nodes.
-        for (var i=0; i<self._howls.length; i++) {
-          if (!self._howls[i]._webAudio) {
-            // Get all of the sounds in this Howl group.
-            var ids = self._howls[i]._getSoundIds();
-
-            // Loop through all sounds and change the volumes.
-            for (var j=0; j<ids.length; j++) {
-              var sound = self._howls[i]._soundById(ids[j]);
-
-              if (sound && sound._node) {
-                sound._node.volume = sound._volume * vol;
-              }
-            }
-          }
-        }
-
-        return self;
-      }
-
-      return self._volume;
-    },
-
-    /**
-     * Handle muting and unmuting globally.
-     * @param  {Boolean} muted Is muted or not.
-     */
-    mute: function(muted) {
-      var self = this || Howler;
-
-      // If we don't have an AudioContext created yet, run the setup.
-      if (!self.ctx) {
-        setupAudioContext();
-      }
-
-      self._muted = muted;
-
-      // With Web Audio, we just need to mute the master gain.
-      if (self.usingWebAudio) {
-        self.masterGain.gain.value = muted ? 0 : self._volume;
-      }
-
-      // Loop through and mute all HTML5 Audio nodes.
-      for (var i=0; i<self._howls.length; i++) {
-        if (!self._howls[i]._webAudio) {
-          // Get all of the sounds in this Howl group.
-          var ids = self._howls[i]._getSoundIds();
-
-          // Loop through all sounds and mark the audio node as muted.
-          for (var j=0; j<ids.length; j++) {
-            var sound = self._howls[i]._soundById(ids[j]);
-
-            if (sound && sound._node) {
-              sound._node.muted = (muted) ? true : sound._muted;
-            }
-          }
-        }
-      }
-
-      return self;
-    },
-
-    /**
-     * Unload and destroy all currently loaded Howl objects.
-     * @return {Howler}
-     */
-    unload: function() {
-      var self = this || Howler;
-
-      for (var i=self._howls.length-1; i>=0; i--) {
-        self._howls[i].unload();
-      }
-
-      // Create a new AudioContext to make sure it is fully reset.
-      if (self.usingWebAudio && self.ctx && typeof self.ctx.close !== 'undefined') {
-        self.ctx.close();
-        self.ctx = null;
-        setupAudioContext();
-      }
-
-      return self;
-    },
-
-    /**
-     * Check for codec support of specific extension.
-     * @param  {String} ext Audio file extention.
-     * @return {Boolean}
-     */
-    codecs: function(ext) {
-      return (this || Howler)._codecs[ext.replace(/^x-/, '')];
-    },
-
-    /**
-     * Setup various state values for global tracking.
-     * @return {Howler}
-     */
-    _setup: function() {
-      var self = this || Howler;
-
-      // Keeps track of the suspend/resume state of the AudioContext.
-      self.state = self.ctx ? self.ctx.state || 'running' : 'running';
-
-      // Automatically begin the 30-second suspend process
-      self._autoSuspend();
-
-      // Check if audio is available.
-      if (!self.usingWebAudio) {
-        // No audio is available on this system if noAudio is set to true.
-        if (typeof Audio !== 'undefined') {
-          try {
-            var test = new Audio();
-
-            // Check if the canplaythrough event is available.
-            if (typeof test.oncanplaythrough === 'undefined') {
-              self._canPlayEvent = 'canplay';
-            }
-          } catch(e) {
-            self.noAudio = true;
-          }
-        } else {
-          self.noAudio = true;
-        }
-      }
-
-      // Test to make sure audio isn't disabled in Internet Explorer.
-      try {
-        var test = new Audio();
-        if (test.muted) {
-          self.noAudio = true;
-        }
-      } catch (e) {}
-
-      // Check for supported codecs.
-      if (!self.noAudio) {
-        self._setupCodecs();
-      }
-
-      return self;
-    },
-
-    /**
-     * Check for browser support for various codecs and cache the results.
-     * @return {Howler}
-     */
-    _setupCodecs: function() {
-      var self = this || Howler;
-      var audioTest = null;
-
-      // Must wrap in a try/catch because IE11 in server mode throws an error.
-      try {
-        audioTest = (typeof Audio !== 'undefined') ? new Audio() : null;
-      } catch (err) {
-        return self;
-      }
-
-      if (!audioTest || typeof audioTest.canPlayType !== 'function') {
-        return self;
-      }
-
-      var mpegTest = audioTest.canPlayType('audio/mpeg;').replace(/^no$/, '');
-
-      // Opera version <33 has mixed MP3 support, so we need to check for and block it.
-      var checkOpera = self._navigator && self._navigator.userAgent.match(/OPR\/([0-6].)/g);
-      var isOldOpera = (checkOpera && parseInt(checkOpera[0].split('/')[1], 10) < 33);
-
-      self._codecs = {
-        mp3: !!(!isOldOpera && (mpegTest || audioTest.canPlayType('audio/mp3;').replace(/^no$/, ''))),
-        mpeg: !!mpegTest,
-        opus: !!audioTest.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ''),
-        ogg: !!audioTest.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ''),
-        oga: !!audioTest.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ''),
-        wav: !!audioTest.canPlayType('audio/wav; codecs="1"').replace(/^no$/, ''),
-        aac: !!audioTest.canPlayType('audio/aac;').replace(/^no$/, ''),
-        caf: !!audioTest.canPlayType('audio/x-caf;').replace(/^no$/, ''),
-        m4a: !!(audioTest.canPlayType('audio/x-m4a;') || audioTest.canPlayType('audio/m4a;') || audioTest.canPlayType('audio/aac;')).replace(/^no$/, ''),
-        mp4: !!(audioTest.canPlayType('audio/x-mp4;') || audioTest.canPlayType('audio/mp4;') || audioTest.canPlayType('audio/aac;')).replace(/^no$/, ''),
-        weba: !!audioTest.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, ''),
-        webm: !!audioTest.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, ''),
-        dolby: !!audioTest.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ''),
-        flac: !!(audioTest.canPlayType('audio/x-flac;') || audioTest.canPlayType('audio/flac;')).replace(/^no$/, '')
-      };
-
-      return self;
-    },
-
-    /**
-     * Mobile browsers will only allow audio to be played after a user interaction.
-     * Attempt to automatically unlock audio on the first user interaction.
-     * Concept from: http://paulbakaus.com/tutorials/html5/web-audio-on-ios/
-     * @return {Howler}
-     */
-    _enableMobileAudio: function() {
-      var self = this || Howler;
-
-      // Only run this on mobile devices if audio isn't already eanbled.
-      var isMobile = /iPhone|iPad|iPod|Android|BlackBerry|BB10|Silk|Mobi/i.test(self._navigator && self._navigator.userAgent);
-      var isTouch = !!(('ontouchend' in window) || (self._navigator && self._navigator.maxTouchPoints > 0) || (self._navigator && self._navigator.msMaxTouchPoints > 0));
-      if (self._mobileEnabled || !self.ctx || (!isMobile && !isTouch)) {
-        return;
-      }
-
-      self._mobileEnabled = false;
-
-      // Some mobile devices/platforms have distortion issues when opening/closing tabs and/or web views.
-      // Bugs in the browser (especially Mobile Safari) can cause the sampleRate to change from 44100 to 48000.
-      // By calling Howler.unload(), we create a new AudioContext with the correct sampleRate.
-      if (!self._mobileUnloaded && self.ctx.sampleRate !== 44100) {
-        self._mobileUnloaded = true;
-        self.unload();
-      }
-
-      // Scratch buffer for enabling iOS to dispose of web audio buffers correctly, as per:
-      // http://stackoverflow.com/questions/24119684
-      self._scratchBuffer = self.ctx.createBuffer(1, 1, 22050);
-
-      // Call this method on touch start to create and play a buffer,
-      // then check if the audio actually played to determine if
-      // audio has now been unlocked on iOS, Android, etc.
-      var unlock = function() {
-        // Create an empty buffer.
-        var source = self.ctx.createBufferSource();
-        source.buffer = self._scratchBuffer;
-        source.connect(self.ctx.destination);
-
-        // Play the empty buffer.
-        if (typeof source.start === 'undefined') {
-          source.noteOn(0);
-        } else {
-          source.start(0);
-        }
-
-        // Setup a timeout to check that we are unlocked on the next event loop.
-        source.onended = function() {
-          source.disconnect(0);
-
-          // Update the unlocked state and prevent this check from happening again.
-          self._mobileEnabled = true;
-          self.mobileAutoEnable = false;
-
-          // Remove the touch start listener.
-          document.removeEventListener('touchend', unlock, true);
-        };
-      };
-
-      // Setup a touch start listener to attempt an unlock in.
-      document.addEventListener('touchend', unlock, true);
-
-      return self;
-    },
-
-    /**
-     * Automatically suspend the Web Audio AudioContext after no sound has played for 30 seconds.
-     * This saves processing/energy and fixes various browser-specific bugs with audio getting stuck.
-     * @return {Howler}
-     */
-    _autoSuspend: function() {
-      var self = this;
-
-      if (!self.autoSuspend || !self.ctx || typeof self.ctx.suspend === 'undefined' || !Howler.usingWebAudio) {
-        return;
-      }
-
-      // Check if any sounds are playing.
-      for (var i=0; i<self._howls.length; i++) {
-        if (self._howls[i]._webAudio) {
-          for (var j=0; j<self._howls[i]._sounds.length; j++) {
-            if (!self._howls[i]._sounds[j]._paused) {
-              return self;
-            }
-          }
-        }
-      }
-
-      if (self._suspendTimer) {
-        clearTimeout(self._suspendTimer);
-      }
-
-      // If no sound has played after 30 seconds, suspend the context.
-      self._suspendTimer = setTimeout(function() {
-        if (!self.autoSuspend) {
-          return;
-        }
-
-        self._suspendTimer = null;
-        self.state = 'suspending';
-        self.ctx.suspend().then(function() {
-          self.state = 'suspended';
-
-          if (self._resumeAfterSuspend) {
-            delete self._resumeAfterSuspend;
-            self._autoResume();
-          }
-        });
-      }, 30000);
-
-      return self;
-    },
-
-    /**
-     * Automatically resume the Web Audio AudioContext when a new sound is played.
-     * @return {Howler}
-     */
-    _autoResume: function() {
-      var self = this;
-
-      if (!self.ctx || typeof self.ctx.resume === 'undefined' || !Howler.usingWebAudio) {
-        return;
-      }
-
-      if (self.state === 'running' && self._suspendTimer) {
-        clearTimeout(self._suspendTimer);
-        self._suspendTimer = null;
-      } else if (self.state === 'suspended') {
-        self.state = 'resuming';
-        self.ctx.resume().then(function() {
-          self.state = 'running';
-
-          // Emit to all Howls that the audio has resumed.
-          for (var i=0; i<self._howls.length; i++) {
-            self._howls[i]._emit('resume');
-          }
-        });
-
-        if (self._suspendTimer) {
-          clearTimeout(self._suspendTimer);
-          self._suspendTimer = null;
-        }
-      } else if (self.state === 'suspending') {
-        self._resumeAfterSuspend = true;
-      }
-
-      return self;
-    }
-  };
-
-  // Setup the global audio controller.
-  var Howler = new HowlerGlobal();
-
-  /** Group Methods **/
-  /***************************************************************************/
-
-  /**
-   * Create an audio group controller.
-   * @param {Object} o Passed in properties for this group.
-   */
-  var Howl = function(o) {
-    var self = this;
-
-    // Throw an error if no source is provided.
-    if (!o.src || o.src.length === 0) {
-      console.error('An array of source files must be passed with any new Howl.');
-      return;
-    }
-
-    self.init(o);
-  };
-  Howl.prototype = {
-    /**
-     * Initialize a new Howl group object.
-     * @param  {Object} o Passed in properties for this group.
-     * @return {Howl}
-     */
-    init: function(o) {
-      var self = this;
-
-      // If we don't have an AudioContext created yet, run the setup.
-      if (!Howler.ctx) {
-        setupAudioContext();
-      }
-
-      // Setup user-defined default properties.
-      self._autoplay = o.autoplay || false;
-      self._format = (typeof o.format !== 'string') ? o.format : [o.format];
-      self._html5 = o.html5 || false;
-      self._muted = o.mute || false;
-      self._loop = o.loop || false;
-      self._pool = o.pool || 5;
-      self._preload = (typeof o.preload === 'boolean') ? o.preload : true;
-      self._rate = o.rate || 1;
-      self._sprite = o.sprite || {};
-      self._src = (typeof o.src !== 'string') ? o.src : [o.src];
-      self._volume = o.volume !== undefined ? o.volume : 1;
-
-      // Setup all other default properties.
-      self._duration = 0;
-      self._state = 'unloaded';
-      self._sounds = [];
-      self._endTimers = {};
-      self._queue = [];
-
-      // Setup event listeners.
-      self._onend = o.onend ? [{fn: o.onend}] : [];
-      self._onfade = o.onfade ? [{fn: o.onfade}] : [];
-      self._onload = o.onload ? [{fn: o.onload}] : [];
-      self._onloaderror = o.onloaderror ? [{fn: o.onloaderror}] : [];
-      self._onpause = o.onpause ? [{fn: o.onpause}] : [];
-      self._onplay = o.onplay ? [{fn: o.onplay}] : [];
-      self._onstop = o.onstop ? [{fn: o.onstop}] : [];
-      self._onmute = o.onmute ? [{fn: o.onmute}] : [];
-      self._onvolume = o.onvolume ? [{fn: o.onvolume}] : [];
-      self._onrate = o.onrate ? [{fn: o.onrate}] : [];
-      self._onseek = o.onseek ? [{fn: o.onseek}] : [];
-      self._onresume = [];
-
-      // Web Audio or HTML5 Audio?
-      self._webAudio = Howler.usingWebAudio && !self._html5;
-
-      // Automatically try to enable audio on iOS.
-      if (typeof Howler.ctx !== 'undefined' && Howler.ctx && Howler.mobileAutoEnable) {
-        Howler._enableMobileAudio();
-      }
-
-      // Keep track of this Howl group in the global controller.
-      Howler._howls.push(self);
-
-      // If they selected autoplay, add a play event to the load queue.
-      if (self._autoplay) {
-        self._queue.push({
-          event: 'play',
-          action: function() {
-            self.play();
-          }
-        });
-      }
-
-      // Load the source file unless otherwise specified.
-      if (self._preload) {
-        self.load();
-      }
-
-      return self;
-    },
-
-    /**
-     * Load the audio file.
-     * @return {Howler}
-     */
-    load: function() {
-      var self = this;
-      var url = null;
-
-      // If no audio is available, quit immediately.
-      if (Howler.noAudio) {
-        self._emit('loaderror', null, 'No audio support.');
-        return;
-      }
-
-      // Make sure our source is in an array.
-      if (typeof self._src === 'string') {
-        self._src = [self._src];
-      }
-
-      // Loop through the sources and pick the first one that is compatible.
-      for (var i=0; i<self._src.length; i++) {
-        var ext, str;
-
-        if (self._format && self._format[i]) {
-          // If an extension was specified, use that instead.
-          ext = self._format[i];
-        } else {
-          // Make sure the source is a string.
-          str = self._src[i];
-          if (typeof str !== 'string') {
-            self._emit('loaderror', null, 'Non-string found in selected audio sources - ignoring.');
-            continue;
-          }
-
-          // Extract the file extension from the URL or base64 data URI.
-          ext = /^data:audio\/([^;,]+);/i.exec(str);
-          if (!ext) {
-            ext = /\.([^.]+)$/.exec(str.split('?', 1)[0]);
-          }
-
-          if (ext) {
-            ext = ext[1].toLowerCase();
-          }
-        }
-
-        // Check if this extension is available.
-        if (Howler.codecs(ext)) {
-          url = self._src[i];
-          break;
-        }
-      }
-
-      if (!url) {
-        self._emit('loaderror', null, 'No codec support for selected audio sources.');
-        return;
-      }
-
-      self._src = url;
-      self._state = 'loading';
-
-      // If the hosting page is HTTPS and the source isn't,
-      // drop down to HTML5 Audio to avoid Mixed Content errors.
-      if (window.location.protocol === 'https:' && url.slice(0, 5) === 'http:') {
-        self._html5 = true;
-        self._webAudio = false;
-      }
-
-      // Create a new sound object and add it to the pool.
-      new Sound(self);
-
-      // Load and decode the audio data for playback.
-      if (self._webAudio) {
-        loadBuffer(self);
-      }
-
-      return self;
-    },
-
-    /**
-     * Play a sound or resume previous playback.
-     * @param  {String/Number} sprite   Sprite name for sprite playback or sound id to continue previous.
-     * @param  {Boolean} internal Internal Use: true prevents event firing.
-     * @return {Number}          Sound ID.
-     */
-    play: function(sprite, internal) {
-      var self = this;
-      var id = null;
-
-      // Determine if a sprite, sound id or nothing was passed
-      if (typeof sprite === 'number') {
-        id = sprite;
-        sprite = null;
-      } else if (typeof sprite === 'string' && self._state === 'loaded' && !self._sprite[sprite]) {
-        // If the passed sprite doesn't exist, do nothing.
-        return null;
-      } else if (typeof sprite === 'undefined') {
-        // Use the default sound sprite (plays the full audio length).
-        sprite = '__default';
-
-        // Check if there is a single paused sound that isn't ended.
-        // If there is, play that sound. If not, continue as usual.
-        var num = 0;
-        for (var i=0; i<self._sounds.length; i++) {
-          if (self._sounds[i]._paused && !self._sounds[i]._ended) {
-            num++;
-            id = self._sounds[i]._id;
-          }
-        }
-
-        if (num === 1) {
-          sprite = null;
-        } else {
-          id = null;
-        }
-      }
-
-      // Get the selected node, or get one from the pool.
-      var sound = id ? self._soundById(id) : self._inactiveSound();
-
-      // If the sound doesn't exist, do nothing.
-      if (!sound) {
-        return null;
-      }
-
-      // Select the sprite definition.
-      if (id && !sprite) {
-        sprite = sound._sprite || '__default';
-      }
-
-      // If we have no sprite and the sound hasn't loaded, we must wait
-      // for the sound to load to get our audio's duration.
-      if (self._state !== 'loaded' && !self._sprite[sprite]) {
-        self._queue.push({
-          event: 'play',
-          action: function() {
-            self.play(self._soundById(sound._id) ? sound._id : undefined);
-          }
-        });
-
-        return sound._id;
-      }
-
-      // Don't play the sound if an id was passed and it is already playing.
-      if (id && !sound._paused) {
-        // Trigger the play event, in order to keep iterating through queue.
-        if (!internal) {
-          setTimeout(function() {
-            self._emit('play', sound._id);
-          }, 0);
-        }
-
-        return sound._id;
-      }
-
-      // Make sure the AudioContext isn't suspended, and resume it if it is.
-      if (self._webAudio) {
-        Howler._autoResume();
-      }
-
-      // Determine how long to play for and where to start playing.
-      var seek = Math.max(0, sound._seek > 0 ? sound._seek : self._sprite[sprite][0] / 1000);
-      var duration = Math.max(0, ((self._sprite[sprite][0] + self._sprite[sprite][1]) / 1000) - seek);
-      var timeout = (duration * 1000) / Math.abs(sound._rate);
-
-      // Update the parameters of the sound
-      sound._paused = false;
-      sound._ended = false;
-      sound._sprite = sprite;
-      sound._seek = seek;
-      sound._start = self._sprite[sprite][0] / 1000;
-      sound._stop = (self._sprite[sprite][0] + self._sprite[sprite][1]) / 1000;
-      sound._loop = !!(sound._loop || self._sprite[sprite][2]);
-
-      // Begin the actual playback.
-      var node = sound._node;
-      if (self._webAudio) {
-        // Fire this when the sound is ready to play to begin Web Audio playback.
-        var playWebAudio = function() {
-          self._refreshBuffer(sound);
-
-          // Setup the playback params.
-          var vol = (sound._muted || self._muted) ? 0 : sound._volume;
-          node.gain.setValueAtTime(vol, Howler.ctx.currentTime);
-          sound._playStart = Howler.ctx.currentTime;
-
-          // Play the sound using the supported method.
-          if (typeof node.bufferSource.start === 'undefined') {
-            sound._loop ? node.bufferSource.noteGrainOn(0, seek, 86400) : node.bufferSource.noteGrainOn(0, seek, duration);
-          } else {
-            sound._loop ? node.bufferSource.start(0, seek, 86400) : node.bufferSource.start(0, seek, duration);
-          }
-
-          // Start a new timer if none is present.
-          if (timeout !== Infinity) {
-            self._endTimers[sound._id] = setTimeout(self._ended.bind(self, sound), timeout);
-          }
-
-          if (!internal) {
-            setTimeout(function() {
-              self._emit('play', sound._id);
-            }, 0);
-          }
-        };
-
-        var isRunning = (Howler.state === 'running');
-        if (self._state === 'loaded' && isRunning) {
-          playWebAudio();
-        } else {
-          // Wait for the audio to load and then begin playback.
-          self.once(isRunning ? 'load' : 'resume', playWebAudio, isRunning ? sound._id : null);
-
-          // Cancel the end timer.
-          self._clearTimer(sound._id);
-        }
-      } else {
-        // Fire this when the sound is ready to play to begin HTML5 Audio playback.
-        var playHtml5 = function() {
-          node.currentTime = seek;
-          node.muted = sound._muted || self._muted || Howler._muted || node.muted;
-          node.volume = sound._volume * Howler.volume();
-          node.playbackRate = sound._rate;
-
-          setTimeout(function() {
-            node.play();
-
-            // Setup the new end timer.
-            if (timeout !== Infinity) {
-              self._endTimers[sound._id] = setTimeout(self._ended.bind(self, sound), timeout);
-            }
-
-            if (!internal) {
-              self._emit('play', sound._id);
-            }
-          }, 0);
-        };
-
-        // Play immediately if ready, or wait for the 'canplaythrough'e vent.
-        var loadedNoReadyState = (self._state === 'loaded' && (window && window.ejecta || !node.readyState && Howler._navigator.isCocoonJS));
-        if (node.readyState === 4 || loadedNoReadyState) {
-          playHtml5();
-        } else {
-          var listener = function() {
-            // Begin playback.
-            playHtml5();
-
-            // Clear this listener.
-            node.removeEventListener(Howler._canPlayEvent, listener, false);
-          };
-          node.addEventListener(Howler._canPlayEvent, listener, false);
-
-          // Cancel the end timer.
-          self._clearTimer(sound._id);
-        }
-      }
-
-      return sound._id;
-    },
-
-    /**
-     * Pause playback and save current position.
-     * @param  {Number} id The sound ID (empty to pause all in group).
-     * @return {Howl}
-     */
-    pause: function(id) {
-      var self = this;
-
-      // If the sound hasn't loaded, add it to the load queue to pause when capable.
-      if (self._state !== 'loaded') {
-        self._queue.push({
-          event: 'pause',
-          action: function() {
-            self.pause(id);
-          }
-        });
-
-        return self;
-      }
-
-      // If no id is passed, get all ID's to be paused.
-      var ids = self._getSoundIds(id);
-
-      for (var i=0; i<ids.length; i++) {
-        // Clear the end timer.
-        self._clearTimer(ids[i]);
-
-        // Get the sound.
-        var sound = self._soundById(ids[i]);
-
-        if (sound && !sound._paused) {
-          // Reset the seek position.
-          sound._seek = self.seek(ids[i]);
-          sound._rateSeek = 0;
-          sound._paused = true;
-
-          // Stop currently running fades.
-          self._stopFade(ids[i]);
-
-          if (sound._node) {
-            if (self._webAudio) {
-              // make sure the sound has been created
-              if (!sound._node.bufferSource) {
-                return self;
-              }
-
-              if (typeof sound._node.bufferSource.stop === 'undefined') {
-                sound._node.bufferSource.noteOff(0);
-              } else {
-                sound._node.bufferSource.stop(0);
-              }
-
-              // Clean up the buffer source.
-              self._cleanBuffer(sound._node);
-            } else if (!isNaN(sound._node.duration) || sound._node.duration === Infinity) {
-              sound._node.pause();
-            }
-          }
-        }
-
-        // Fire the pause event, unless `true` is passed as the 2nd argument.
-        if (!arguments[1]) {
-          self._emit('pause', sound ? sound._id : null);
-        }
-      }
-
-      return self;
-    },
-
-    /**
-     * Stop playback and reset to start.
-     * @param  {Number} id The sound ID (empty to stop all in group).
-     * @param  {Boolean} internal Internal Use: true prevents event firing.
-     * @return {Howl}
-     */
-    stop: function(id, internal) {
-      var self = this;
-
-      // If the sound hasn't loaded, add it to the load queue to stop when capable.
-      if (self._state !== 'loaded') {
-        self._queue.push({
-          event: 'stop',
-          action: function() {
-            self.stop(id);
-          }
-        });
-
-        return self;
-      }
-
-      // If no id is passed, get all ID's to be stopped.
-      var ids = self._getSoundIds(id);
-
-      for (var i=0; i<ids.length; i++) {
-        // Clear the end timer.
-        self._clearTimer(ids[i]);
-
-        // Get the sound.
-        var sound = self._soundById(ids[i]);
-
-        if (sound) {
-          // Reset the seek position.
-          sound._seek = sound._start || 0;
-          sound._rateSeek = 0;
-          sound._paused = true;
-          sound._ended = true;
-
-          // Stop currently running fades.
-          self._stopFade(ids[i]);
-
-          if (sound._node) {
-            if (self._webAudio) {
-              // make sure the sound has been created
-              if (!sound._node.bufferSource) {
-                if (!internal) {
-                  self._emit('stop', sound._id);
-                }
-
-                return self;
-              }
-
-              if (typeof sound._node.bufferSource.stop === 'undefined') {
-                sound._node.bufferSource.noteOff(0);
-              } else {
-                sound._node.bufferSource.stop(0);
-              }
-
-              // Clean up the buffer source.
-              self._cleanBuffer(sound._node);
-            } else if (!isNaN(sound._node.duration) || sound._node.duration === Infinity) {
-              sound._node.currentTime = sound._start || 0;
-              sound._node.pause();
-            }
-          }
-        }
-
-        if (sound && !internal) {
-          self._emit('stop', sound._id);
-        }
-      }
-
-      return self;
-    },
-
-    /**
-     * Mute/unmute a single sound or all sounds in this Howl group.
-     * @param  {Boolean} muted Set to true to mute and false to unmute.
-     * @param  {Number} id    The sound ID to update (omit to mute/unmute all).
-     * @return {Howl}
-     */
-    mute: function(muted, id) {
-      var self = this;
-
-      // If the sound hasn't loaded, add it to the load queue to mute when capable.
-      if (self._state !== 'loaded') {
-        self._queue.push({
-          event: 'mute',
-          action: function() {
-            self.mute(muted, id);
-          }
-        });
-
-        return self;
-      }
-
-      // If applying mute/unmute to all sounds, update the group's value.
-      if (typeof id === 'undefined') {
-        if (typeof muted === 'boolean') {
-          self._muted = muted;
-        } else {
-          return self._muted;
-        }
-      }
-
-      // If no id is passed, get all ID's to be muted.
-      var ids = self._getSoundIds(id);
-
-      for (var i=0; i<ids.length; i++) {
-        // Get the sound.
-        var sound = self._soundById(ids[i]);
-
-        if (sound) {
-          sound._muted = muted;
-
-          if (self._webAudio && sound._node) {
-            sound._node.gain.setValueAtTime(muted ? 0 : sound._volume, Howler.ctx.currentTime);
-          } else if (sound._node) {
-            sound._node.muted = Howler._muted ? true : muted;
-          }
-
-          self._emit('mute', sound._id);
-        }
-      }
-
-      return self;
-    },
-
-    /**
-     * Get/set the volume of this sound or of the Howl group. This method can optionally take 0, 1 or 2 arguments.
-     *   volume() -> Returns the group's volume value.
-     *   volume(id) -> Returns the sound id's current volume.
-     *   volume(vol) -> Sets the volume of all sounds in this Howl group.
-     *   volume(vol, id) -> Sets the volume of passed sound id.
-     * @return {Howl/Number} Returns self or current volume.
-     */
-    volume: function() {
-      var self = this;
-      var args = arguments;
-      var vol, id;
-
-      // Determine the values based on arguments.
-      if (args.length === 0) {
-        // Return the value of the groups' volume.
-        return self._volume;
-      } else if (args.length === 1 || args.length === 2 && typeof args[1] === 'undefined') {
-        // First check if this is an ID, and if not, assume it is a new volume.
-        var ids = self._getSoundIds();
-        var index = ids.indexOf(args[0]);
-        if (index >= 0) {
-          id = parseInt(args[0], 10);
-        } else {
-          vol = parseFloat(args[0]);
-        }
-      } else if (args.length >= 2) {
-        vol = parseFloat(args[0]);
-        id = parseInt(args[1], 10);
-      }
-
-      // Update the volume or return the current volume.
-      var sound;
-      if (typeof vol !== 'undefined' && vol >= 0 && vol <= 1) {
-        // If the sound hasn't loaded, add it to the load queue to change volume when capable.
-        if (self._state !== 'loaded') {
-          self._queue.push({
-            event: 'volume',
-            action: function() {
-              self.volume.apply(self, args);
-            }
-          });
-
-          return self;
-        }
-
-        // Set the group volume.
-        if (typeof id === 'undefined') {
-          self._volume = vol;
-        }
-
-        // Update one or all volumes.
-        id = self._getSoundIds(id);
-        for (var i=0; i<id.length; i++) {
-          // Get the sound.
-          sound = self._soundById(id[i]);
-
-          if (sound) {
-            sound._volume = vol;
-
-            // Stop currently running fades.
-            if (!args[2]) {
-              self._stopFade(id[i]);
-            }
-
-            if (self._webAudio && sound._node && !sound._muted) {
-              sound._node.gain.setValueAtTime(vol, Howler.ctx.currentTime);
-            } else if (sound._node && !sound._muted) {
-              sound._node.volume = vol * Howler.volume();
-            }
-
-            self._emit('volume', sound._id);
-          }
-        }
-      } else {
-        sound = id ? self._soundById(id) : self._sounds[0];
-        return sound ? sound._volume : 0;
-      }
-
-      return self;
-    },
-
-    /**
-     * Fade a currently playing sound between two volumes (if no id is passsed, all sounds will fade).
-     * @param  {Number} from The value to fade from (0.0 to 1.0).
-     * @param  {Number} to   The volume to fade to (0.0 to 1.0).
-     * @param  {Number} len  Time in milliseconds to fade.
-     * @param  {Number} id   The sound id (omit to fade all sounds).
-     * @return {Howl}
-     */
-    fade: function(from, to, len, id) {
-      var self = this;
-      var diff = Math.abs(from - to);
-      var dir = from > to ? 'out' : 'in';
-      var steps = diff / 0.01;
-      var stepLen = (steps > 0) ? len / steps : len;
-
-      // Since browsers clamp timeouts to 4ms, we need to clamp our steps to that too.
-      if (stepLen < 4) {
-        steps = Math.ceil(steps / (4 / stepLen));
-        stepLen = 4;
-      }
-
-      // If the sound hasn't loaded, add it to the load queue to fade when capable.
-      if (self._state !== 'loaded') {
-        self._queue.push({
-          event: 'fade',
-          action: function() {
-            self.fade(from, to, len, id);
-          }
-        });
-
-        return self;
-      }
-
-      // Set the volume to the start position.
-      self.volume(from, id);
-
-      // Fade the volume of one or all sounds.
-      var ids = self._getSoundIds(id);
-      for (var i=0; i<ids.length; i++) {
-        // Get the sound.
-        var sound = self._soundById(ids[i]);
-
-        // Create a linear fade or fall back to timeouts with HTML5 Audio.
-        if (sound) {
-          // Stop the previous fade if no sprite is being used (otherwise, volume handles this).
-          if (!id) {
-            self._stopFade(ids[i]);
-          }
-
-          // If we are using Web Audio, let the native methods do the actual fade.
-          if (self._webAudio && !sound._muted) {
-            var currentTime = Howler.ctx.currentTime;
-            var end = currentTime + (len / 1000);
-            sound._volume = from;
-            sound._node.gain.setValueAtTime(from, currentTime);
-            sound._node.gain.linearRampToValueAtTime(to, end);
-          }
-
-          var vol = from;
-          sound._interval = setInterval(function(soundId, sound) {
-            // Update the volume amount, but only if the volume should change.
-            if (steps > 0) {
-              vol += (dir === 'in' ? 0.01 : -0.01);
-            }
-
-            // Make sure the volume is in the right bounds.
-            vol = Math.max(0, vol);
-            vol = Math.min(1, vol);
-
-            // Round to within 2 decimal points.
-            vol = Math.round(vol * 100) / 100;
-
-            // Change the volume.
-            if (self._webAudio) {
-              if (typeof id === 'undefined') {
-                self._volume = vol;
-              }
-
-              sound._volume = vol;
-            } else {
-              self.volume(vol, soundId, true);
-            }
-
-            // When the fade is complete, stop it and fire event.
-            if (vol === to) {
-              clearInterval(sound._interval);
-              sound._interval = null;
-              self.volume(vol, soundId);
-              self._emit('fade', soundId);
-            }
-          }.bind(self, ids[i], sound), stepLen);
-        }
-      }
-
-      return self;
-    },
-
-    /**
-     * Internal method that stops the currently playing fade when
-     * a new fade starts, volume is changed or the sound is stopped.
-     * @param  {Number} id The sound id.
-     * @return {Howl}
-     */
-    _stopFade: function(id) {
-      var self = this;
-      var sound = self._soundById(id);
-
-      if (sound && sound._interval) {
-        if (self._webAudio) {
-          sound._node.gain.cancelScheduledValues(Howler.ctx.currentTime);
-        }
-
-        clearInterval(sound._interval);
-        sound._interval = null;
-        self._emit('fade', id);
-      }
-
-      return self;
-    },
-
-    /**
-     * Get/set the loop parameter on a sound. This method can optionally take 0, 1 or 2 arguments.
-     *   loop() -> Returns the group's loop value.
-     *   loop(id) -> Returns the sound id's loop value.
-     *   loop(loop) -> Sets the loop value for all sounds in this Howl group.
-     *   loop(loop, id) -> Sets the loop value of passed sound id.
-     * @return {Howl/Boolean} Returns self or current loop value.
-     */
-    loop: function() {
-      var self = this;
-      var args = arguments;
-      var loop, id, sound;
-
-      // Determine the values for loop and id.
-      if (args.length === 0) {
-        // Return the grou's loop value.
-        return self._loop;
-      } else if (args.length === 1) {
-        if (typeof args[0] === 'boolean') {
-          loop = args[0];
-          self._loop = loop;
-        } else {
-          // Return this sound's loop value.
-          sound = self._soundById(parseInt(args[0], 10));
-          return sound ? sound._loop : false;
-        }
-      } else if (args.length === 2) {
-        loop = args[0];
-        id = parseInt(args[1], 10);
-      }
-
-      // If no id is passed, get all ID's to be looped.
-      var ids = self._getSoundIds(id);
-      for (var i=0; i<ids.length; i++) {
-        sound = self._soundById(ids[i]);
-
-        if (sound) {
-          sound._loop = loop;
-          if (self._webAudio && sound._node && sound._node.bufferSource) {
-            sound._node.bufferSource.loop = loop;
-            if (loop) {
-              sound._node.bufferSource.loopStart = sound._start || 0;
-              sound._node.bufferSource.loopEnd = sound._stop;
-            }
-          }
-        }
-      }
-
-      return self;
-    },
-
-    /**
-     * Get/set the playback rate of a sound. This method can optionally take 0, 1 or 2 arguments.
-     *   rate() -> Returns the first sound node's current playback rate.
-     *   rate(id) -> Returns the sound id's current playback rate.
-     *   rate(rate) -> Sets the playback rate of all sounds in this Howl group.
-     *   rate(rate, id) -> Sets the playback rate of passed sound id.
-     * @return {Howl/Number} Returns self or the current playback rate.
-     */
-    rate: function() {
-      var self = this;
-      var args = arguments;
-      var rate, id;
-
-      // Determine the values based on arguments.
-      if (args.length === 0) {
-        // We will simply return the current rate of the first node.
-        id = self._sounds[0]._id;
-      } else if (args.length === 1) {
-        // First check if this is an ID, and if not, assume it is a new rate value.
-        var ids = self._getSoundIds();
-        var index = ids.indexOf(args[0]);
-        if (index >= 0) {
-          id = parseInt(args[0], 10);
-        } else {
-          rate = parseFloat(args[0]);
-        }
-      } else if (args.length === 2) {
-        rate = parseFloat(args[0]);
-        id = parseInt(args[1], 10);
-      }
-
-      // Update the playback rate or return the current value.
-      var sound;
-      if (typeof rate === 'number') {
-        // If the sound hasn't loaded, add it to the load queue to change playback rate when capable.
-        if (self._state !== 'loaded') {
-          self._queue.push({
-            event: 'rate',
-            action: function() {
-              self.rate.apply(self, args);
-            }
-          });
-
-          return self;
-        }
-
-        // Set the group rate.
-        if (typeof id === 'undefined') {
-          self._rate = rate;
-        }
-
-        // Update one or all volumes.
-        id = self._getSoundIds(id);
-        for (var i=0; i<id.length; i++) {
-          // Get the sound.
-          sound = self._soundById(id[i]);
-
-          if (sound) {
-            // Keep track of our position when the rate changed and update the playback
-            // start position so we can properly adjust the seek position for time elapsed.
-            sound._rateSeek = self.seek(id[i]);
-            sound._playStart = self._webAudio ? Howler.ctx.currentTime : sound._playStart;
-            sound._rate = rate;
-
-            // Change the playback rate.
-            if (self._webAudio && sound._node && sound._node.bufferSource) {
-              sound._node.bufferSource.playbackRate.value = rate;
-            } else if (sound._node) {
-              sound._node.playbackRate = rate;
-            }
-
-            // Reset the timers.
-            var seek = self.seek(id[i]);
-            var duration = ((self._sprite[sound._sprite][0] + self._sprite[sound._sprite][1]) / 1000) - seek;
-            var timeout = (duration * 1000) / Math.abs(sound._rate);
-
-            // Start a new end timer if sound is already playing.
-            if (self._endTimers[id[i]] || !sound._paused) {
-              self._clearTimer(id[i]);
-              self._endTimers[id[i]] = setTimeout(self._ended.bind(self, sound), timeout);
-            }
-
-            self._emit('rate', sound._id);
-          }
-        }
-      } else {
-        sound = self._soundById(id);
-        return sound ? sound._rate : self._rate;
-      }
-
-      return self;
-    },
-
-    /**
-     * Get/set the seek position of a sound. This method can optionally take 0, 1 or 2 arguments.
-     *   seek() -> Returns the first sound node's current seek position.
-     *   seek(id) -> Returns the sound id's current seek position.
-     *   seek(seek) -> Sets the seek position of the first sound node.
-     *   seek(seek, id) -> Sets the seek position of passed sound id.
-     * @return {Howl/Number} Returns self or the current seek position.
-     */
-    seek: function() {
-      var self = this;
-      var args = arguments;
-      var seek, id;
-
-      // Determine the values based on arguments.
-      if (args.length === 0) {
-        // We will simply return the current position of the first node.
-        id = self._sounds[0]._id;
-      } else if (args.length === 1) {
-        // First check if this is an ID, and if not, assume it is a new seek position.
-        var ids = self._getSoundIds();
-        var index = ids.indexOf(args[0]);
-        if (index >= 0) {
-          id = parseInt(args[0], 10);
-        } else {
-          id = self._sounds[0]._id;
-          seek = parseFloat(args[0]);
-        }
-      } else if (args.length === 2) {
-        seek = parseFloat(args[0]);
-        id = parseInt(args[1], 10);
-      }
-
-      // If there is no ID, bail out.
-      if (typeof id === 'undefined') {
-        return self;
-      }
-
-      // If the sound hasn't loaded, add it to the load queue to seek when capable.
-      if (self._state !== 'loaded') {
-        self._queue.push({
-          event: 'seek',
-          action: function() {
-            self.seek.apply(self, args);
-          }
-        });
-
-        return self;
-      }
-
-      // Get the sound.
-      var sound = self._soundById(id);
-
-      if (sound) {
-        if (typeof seek === 'number' && seek >= 0) {
-          // Pause the sound and update position for restarting playback.
-          var playing = self.playing(id);
-          if (playing) {
-            self.pause(id, true);
-          }
-
-          // Move the position of the track and cancel timer.
-          sound._seek = seek;
-          sound._ended = false;
-          self._clearTimer(id);
-
-          // Restart the playback if the sound was playing.
-          if (playing) {
-            self.play(id, true);
-          }
-
-          // Update the seek position for HTML5 Audio.
-          if (!self._webAudio && sound._node) {
-            sound._node.currentTime = seek;
-          }
-
-          self._emit('seek', id);
-        } else {
-          if (self._webAudio) {
-            var realTime = self.playing(id) ? Howler.ctx.currentTime - sound._playStart : 0;
-            var rateSeek = sound._rateSeek ? sound._rateSeek - sound._seek : 0;
-            return sound._seek + (rateSeek + realTime * Math.abs(sound._rate));
-          } else {
-            return sound._node.currentTime;
-          }
-        }
-      }
-
-      return self;
-    },
-
-    /**
-     * Check if a specific sound is currently playing or not (if id is provided), or check if at least one of the sounds in the group is playing or not.
-     * @param  {Number}  id The sound id to check. If none is passed, the whole sound group is checked.
-     * @return {Boolean} True if playing and false if not.
-     */
-    playing: function(id) {
-      var self = this;
-
-      // Check the passed sound ID (if any).
-      if (typeof id === 'number') {
-        var sound = self._soundById(id);
-        return sound ? !sound._paused : false;
-      }
-
-      // Otherwise, loop through all sounds and check if any are playing.
-      for (var i=0; i<self._sounds.length; i++) {
-        if (!self._sounds[i]._paused) {
-          return true;
-        }
-      }
-
-      return false;
-    },
-
-    /**
-     * Get the duration of this sound. Passing a sound id will return the sprite duration.
-     * @param  {Number} id The sound id to check. If none is passed, return full source duration.
-     * @return {Number} Audio duration in seconds.
-     */
-    duration: function(id) {
-      var self = this;
-      var duration = self._duration;
-
-      // If we pass an ID, get the sound and return the sprite length.
-      var sound = self._soundById(id);
-      if (sound) {
-        duration = self._sprite[sound._sprite][1] / 1000;
-      }
-
-      return duration;
-    },
-
-    /**
-     * Returns the current loaded state of this Howl.
-     * @return {String} 'unloaded', 'loading', 'loaded'
-     */
-    state: function() {
-      return this._state;
-    },
-
-    /**
-     * Unload and destroy the current Howl object.
-     * This will immediately stop all sound instances attached to this group.
-     */
-    unload: function() {
-      var self = this;
-
-      // Stop playing any active sounds.
-      var sounds = self._sounds;
-      for (var i=0; i<sounds.length; i++) {
-        // Stop the sound if it is currently playing.
-        if (!sounds[i]._paused) {
-          self.stop(sounds[i]._id);
-          self._emit('end', sounds[i]._id);
-        }
-
-        // Remove the source or disconnect.
-        if (!self._webAudio) {
-          // Set the source to 0-second silence to stop any downloading.
-          sounds[i]._node.src = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=';
-
-          // Remove any event listeners.
-          sounds[i]._node.removeEventListener('error', sounds[i]._errorFn, false);
-          sounds[i]._node.removeEventListener(Howler._canPlayEvent, sounds[i]._loadFn, false);
-        }
-
-        // Empty out all of the nodes.
-        delete sounds[i]._node;
-
-        // Make sure all timers are cleared out.
-        self._clearTimer(sounds[i]._id);
-
-        // Remove the references in the global Howler object.
-        var index = Howler._howls.indexOf(self);
-        if (index >= 0) {
-          Howler._howls.splice(index, 1);
-        }
-      }
-
-      // Delete this sound from the cache (if no other Howl is using it).
-      var remCache = true;
-      for (i=0; i<Howler._howls.length; i++) {
-        if (Howler._howls[i]._src === self._src) {
-          remCache = false;
-          break;
-        }
-      }
-
-      if (cache && remCache) {
-        delete cache[self._src];
-      }
-
-      // Clear global errors.
-      Howler.noAudio = false;
-
-      // Clear out `self`.
-      self._state = 'unloaded';
-      self._sounds = [];
-      self = null;
-
-      return null;
-    },
-
-    /**
-     * Listen to a custom event.
-     * @param  {String}   event Event name.
-     * @param  {Function} fn    Listener to call.
-     * @param  {Number}   id    (optional) Only listen to events for this sound.
-     * @param  {Number}   once  (INTERNAL) Marks event to fire only once.
-     * @return {Howl}
-     */
-    on: function(event, fn, id, once) {
-      var self = this;
-      var events = self['_on' + event];
-
-      if (typeof fn === 'function') {
-        events.push(once ? {id: id, fn: fn, once: once} : {id: id, fn: fn});
-      }
-
-      return self;
-    },
-
-    /**
-     * Remove a custom event. Call without parameters to remove all events.
-     * @param  {String}   event Event name.
-     * @param  {Function} fn    Listener to remove. Leave empty to remove all.
-     * @param  {Number}   id    (optional) Only remove events for this sound.
-     * @return {Howl}
-     */
-    off: function(event, fn, id) {
-      var self = this;
-      var events = self['_on' + event];
-      var i = 0;
-
-      if (fn) {
-        // Loop through event store and remove the passed function.
-        for (i=0; i<events.length; i++) {
-          if (fn === events[i].fn && id === events[i].id) {
-            events.splice(i, 1);
-            break;
-          }
-        }
-      } else if (event) {
-        // Clear out all events of this type.
-        self['_on' + event] = [];
-      } else {
-        // Clear out all events of every type.
-        var keys = Object.keys(self);
-        for (i=0; i<keys.length; i++) {
-          if ((keys[i].indexOf('_on') === 0) && Array.isArray(self[keys[i]])) {
-            self[keys[i]] = [];
-          }
-        }
-      }
-
-      return self;
-    },
-
-    /**
-     * Listen to a custom event and remove it once fired.
-     * @param  {String}   event Event name.
-     * @param  {Function} fn    Listener to call.
-     * @param  {Number}   id    (optional) Only listen to events for this sound.
-     * @return {Howl}
-     */
-    once: function(event, fn, id) {
-      var self = this;
-
-      // Setup the event listener.
-      self.on(event, fn, id, 1);
-
-      return self;
-    },
-
-    /**
-     * Emit all events of a specific type and pass the sound id.
-     * @param  {String} event Event name.
-     * @param  {Number} id    Sound ID.
-     * @param  {Number} msg   Message to go with event.
-     * @return {Howl}
-     */
-    _emit: function(event, id, msg) {
-      var self = this;
-      var events = self['_on' + event];
-
-      // Loop through event store and fire all functions.
-      for (var i=events.length-1; i>=0; i--) {
-        if (!events[i].id || events[i].id === id || event === 'load') {
-          setTimeout(function(fn) {
-            fn.call(this, id, msg);
-          }.bind(self, events[i].fn), 0);
-
-          // If this event was setup with `once`, remove it.
-          if (events[i].once) {
-            self.off(event, events[i].fn, events[i].id);
-          }
-        }
-      }
-
-      return self;
-    },
-
-    /**
-     * Queue of actions initiated before the sound has loaded.
-     * These will be called in sequence, with the next only firing
-     * after the previous has finished executing (even if async like play).
-     * @return {Howl}
-     */
-    _loadQueue: function() {
-      var self = this;
-
-      if (self._queue.length > 0) {
-        var task = self._queue[0];
-
-        // don't move onto the next task until this one is done
-        self.once(task.event, function() {
-          self._queue.shift();
-          self._loadQueue();
-        });
-
-        task.action();
-      }
-
-      return self;
-    },
-
-    /**
-     * Fired when playback ends at the end of the duration.
-     * @param  {Sound} sound The sound object to work with.
-     * @return {Howl}
-     */
-    _ended: function(sound) {
-      var self = this;
-      var sprite = sound._sprite;
-
-      // Should this sound loop?
-      var loop = !!(sound._loop || self._sprite[sprite][2]);
-
-      // Fire the ended event.
-      self._emit('end', sound._id);
-
-      // Restart the playback for HTML5 Audio loop.
-      if (!self._webAudio && loop) {
-        self.stop(sound._id, true).play(sound._id);
-      }
-
-      // Restart this timer if on a Web Audio loop.
-      if (self._webAudio && loop) {
-        self._emit('play', sound._id);
-        sound._seek = sound._start || 0;
-        sound._rateSeek = 0;
-        sound._playStart = Howler.ctx.currentTime;
-
-        var timeout = ((sound._stop - sound._start) * 1000) / Math.abs(sound._rate);
-        self._endTimers[sound._id] = setTimeout(self._ended.bind(self, sound), timeout);
-      }
-
-      // Mark the node as paused.
-      if (self._webAudio && !loop) {
-        sound._paused = true;
-        sound._ended = true;
-        sound._seek = sound._start || 0;
-        sound._rateSeek = 0;
-        self._clearTimer(sound._id);
-
-        // Clean up the buffer source.
-        self._cleanBuffer(sound._node);
-
-        // Attempt to auto-suspend AudioContext if no sounds are still playing.
-        Howler._autoSuspend();
-      }
-
-      // When using a sprite, end the track.
-      if (!self._webAudio && !loop) {
-        self.stop(sound._id);
-      }
-
-      return self;
-    },
-
-    /**
-     * Clear the end timer for a sound playback.
-     * @param  {Number} id The sound ID.
-     * @return {Howl}
-     */
-    _clearTimer: function(id) {
-      var self = this;
-
-      if (self._endTimers[id]) {
-        clearTimeout(self._endTimers[id]);
-        delete self._endTimers[id];
-      }
-
-      return self;
-    },
-
-    /**
-     * Return the sound identified by this ID, or return null.
-     * @param  {Number} id Sound ID
-     * @return {Object}    Sound object or null.
-     */
-    _soundById: function(id) {
-      var self = this;
-
-      // Loop through all sounds and find the one with this ID.
-      for (var i=0; i<self._sounds.length; i++) {
-        if (id === self._sounds[i]._id) {
-          return self._sounds[i];
-        }
-      }
-
-      return null;
-    },
-
-    /**
-     * Return an inactive sound from the pool or create a new one.
-     * @return {Sound} Sound playback object.
-     */
-    _inactiveSound: function() {
-      var self = this;
-
-      self._drain();
-
-      // Find the first inactive node to recycle.
-      for (var i=0; i<self._sounds.length; i++) {
-        if (self._sounds[i]._ended) {
-          return self._sounds[i].reset();
-        }
-      }
-
-      // If no inactive node was found, create a new one.
-      return new Sound(self);
-    },
-
-    /**
-     * Drain excess inactive sounds from the pool.
-     */
-    _drain: function() {
-      var self = this;
-      var limit = self._pool;
-      var cnt = 0;
-      var i = 0;
-
-      // If there are less sounds than the max pool size, we are done.
-      if (self._sounds.length < limit) {
-        return;
-      }
-
-      // Count the number of inactive sounds.
-      for (i=0; i<self._sounds.length; i++) {
-        if (self._sounds[i]._ended) {
-          cnt++;
-        }
-      }
-
-      // Remove excess inactive sounds, going in reverse order.
-      for (i=self._sounds.length - 1; i>=0; i--) {
-        if (cnt <= limit) {
-          return;
-        }
-
-        if (self._sounds[i]._ended) {
-          // Disconnect the audio source when using Web Audio.
-          if (self._webAudio && self._sounds[i]._node) {
-            self._sounds[i]._node.disconnect(0);
-          }
-
-          // Remove sounds until we have the pool size.
-          self._sounds.splice(i, 1);
-          cnt--;
-        }
-      }
-    },
-
-    /**
-     * Get all ID's from the sounds pool.
-     * @param  {Number} id Only return one ID if one is passed.
-     * @return {Array}    Array of IDs.
-     */
-    _getSoundIds: function(id) {
-      var self = this;
-
-      if (typeof id === 'undefined') {
-        var ids = [];
-        for (var i=0; i<self._sounds.length; i++) {
-          ids.push(self._sounds[i]._id);
-        }
-
-        return ids;
-      } else {
-        return [id];
-      }
-    },
-
-    /**
-     * Load the sound back into the buffer source.
-     * @param  {Sound} sound The sound object to work with.
-     * @return {Howl}
-     */
-    _refreshBuffer: function(sound) {
-      var self = this;
-
-      // Setup the buffer source for playback.
-      sound._node.bufferSource = Howler.ctx.createBufferSource();
-      sound._node.bufferSource.buffer = cache[self._src];
-
-      // Connect to the correct node.
-      if (sound._panner) {
-        sound._node.bufferSource.connect(sound._panner);
-      } else {
-        sound._node.bufferSource.connect(sound._node);
-      }
-
-      // Setup looping and playback rate.
-      sound._node.bufferSource.loop = sound._loop;
-      if (sound._loop) {
-        sound._node.bufferSource.loopStart = sound._start || 0;
-        sound._node.bufferSource.loopEnd = sound._stop;
-      }
-      sound._node.bufferSource.playbackRate.value = sound._rate;
-
-      return self;
-    },
-
-    /**
-     * Prevent memory leaks by cleaning up the buffer source after playback.
-     * @param  {Object} node Sound's audio node containing the buffer source.
-     * @return {Howl}
-     */
-    _cleanBuffer: function(node) {
-      var self = this;
-
-      if (self._scratchBuffer) {
-        node.bufferSource.onended = null;
-        node.bufferSource.disconnect(0);
-        try { node.bufferSource.buffer = self._scratchBuffer; } catch(e) {}
-      }
-      node.bufferSource = null;
-
-      return self;
-    }
-  };
-
-  /** Single Sound Methods **/
-  /***************************************************************************/
-
-  /**
-   * Setup the sound object, which each node attached to a Howl group is contained in.
-   * @param {Object} howl The Howl parent group.
-   */
-  var Sound = function(howl) {
-    this._parent = howl;
-    this.init();
-  };
-  Sound.prototype = {
-    /**
-     * Initialize a new Sound object.
-     * @return {Sound}
-     */
-    init: function() {
-      var self = this;
-      var parent = self._parent;
-
-      // Setup the default parameters.
-      self._muted = parent._muted;
-      self._loop = parent._loop;
-      self._volume = parent._volume;
-      self._muted = parent._muted;
-      self._rate = parent._rate;
-      self._seek = 0;
-      self._paused = true;
-      self._ended = true;
-      self._sprite = '__default';
-
-      // Generate a unique ID for this sound.
-      self._id = Math.round(Date.now() * Math.random());
-
-      // Add itself to the parent's pool.
-      parent._sounds.push(self);
-
-      // Create the new node.
-      self.create();
-
-      return self;
-    },
-
-    /**
-     * Create and setup a new sound object, whether HTML5 Audio or Web Audio.
-     * @return {Sound}
-     */
-    create: function() {
-      var self = this;
-      var parent = self._parent;
-      var volume = (Howler._muted || self._muted || self._parent._muted) ? 0 : self._volume;
-
-      if (parent._webAudio) {
-        // Create the gain node for controlling volume (the source will connect to this).
-        self._node = (typeof Howler.ctx.createGain === 'undefined') ? Howler.ctx.createGainNode() : Howler.ctx.createGain();
-        self._node.gain.setValueAtTime(volume, Howler.ctx.currentTime);
-        self._node.paused = true;
-        self._node.connect(Howler.masterGain);
-      } else {
-        self._node = new Audio();
-
-        // Listen for errors (http://dev.w3.org/html5/spec-author-view/spec.html#mediaerror).
-        self._errorFn = self._errorListener.bind(self);
-        self._node.addEventListener('error', self._errorFn, false);
-
-        // Listen for 'canplaythrough' event to let us know the sound is ready.
-        self._loadFn = self._loadListener.bind(self);
-        self._node.addEventListener(Howler._canPlayEvent, self._loadFn, false);
-
-        // Setup the new audio node.
-        self._node.src = parent._src;
-        self._node.preload = 'auto';
-        self._node.volume = volume * Howler.volume();
-
-        // Begin loading the source.
-        self._node.load();
-      }
-
-      return self;
-    },
-
-    /**
-     * Reset the parameters of this sound to the original state (for recycle).
-     * @return {Sound}
-     */
-    reset: function() {
-      var self = this;
-      var parent = self._parent;
-
-      // Reset all of the parameters of this sound.
-      self._muted = parent._muted;
-      self._loop = parent._loop;
-      self._volume = parent._volume;
-      self._muted = parent._muted;
-      self._rate = parent._rate;
-      self._seek = 0;
-      self._rateSeek = 0;
-      self._paused = true;
-      self._ended = true;
-      self._sprite = '__default';
-
-      // Generate a new ID so that it isn't confused with the previous sound.
-      self._id = Math.round(Date.now() * Math.random());
-
-      return self;
-    },
-
-    /**
-     * HTML5 Audio error listener callback.
-     */
-    _errorListener: function() {
-      var self = this;
-
-      // Fire an error event and pass back the code.
-      self._parent._emit('loaderror', self._id, self._node.error ? self._node.error.code : 0);
-
-      // Clear the event listener.
-      self._node.removeEventListener('error', self._errorListener, false);
-    },
-
-    /**
-     * HTML5 Audio canplaythrough listener callback.
-     */
-    _loadListener: function() {
-      var self = this;
-      var parent = self._parent;
-
-      // Round up the duration to account for the lower precision in HTML5 Audio.
-      parent._duration = Math.ceil(self._node.duration * 10) / 10;
-
-      // Setup a sprite if none is defined.
-      if (Object.keys(parent._sprite).length === 0) {
-        parent._sprite = {__default: [0, parent._duration * 1000]};
-      }
-
-      if (parent._state !== 'loaded') {
-        parent._state = 'loaded';
-        parent._emit('load');
-        parent._loadQueue();
-      }
-
-      // Clear the event listener.
-      self._node.removeEventListener(Howler._canPlayEvent, self._loadFn, false);
-    }
-  };
-
-  /** Helper Methods **/
-  /***************************************************************************/
-
-  var cache = {};
-
-  /**
-   * Buffer a sound from URL, Data URI or cache and decode to audio source (Web Audio API).
-   * @param  {Howl} self
-   */
-  var loadBuffer = function(self) {
-    var url = self._src;
-
-    // Check if the buffer has already been cached and use it instead.
-    if (cache[url]) {
-      // Set the duration from the cache.
-      self._duration = cache[url].duration;
-
-      // Load the sound into this Howl.
-      loadSound(self);
-
-      return;
-    }
-
-    if (/^data:[^;]+;base64,/.test(url)) {
-      // Decode the base64 data URI without XHR, since some browsers don't support it.
-      var data = atob(url.split(',')[1]);
-      var dataView = new Uint8Array(data.length);
-      for (var i=0; i<data.length; ++i) {
-        dataView[i] = data.charCodeAt(i);
-      }
-
-      decodeAudioData(dataView.buffer, self);
-    } else {
-      // Load the buffer from the URL.
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', url, true);
-      xhr.responseType = 'arraybuffer';
-      xhr.onload = function() {
-        // Make sure we get a successful response back.
-        var code = (xhr.status + '')[0];
-        if (code !== '0' && code !== '2' && code !== '3') {
-          self._emit('loaderror', null, 'Failed loading audio file with status: ' + xhr.status + '.');
-          return;
-        }
-
-        decodeAudioData(xhr.response, self);
-      };
-      xhr.onerror = function() {
-        // If there is an error, switch to HTML5 Audio.
-        if (self._webAudio) {
-          self._html5 = true;
-          self._webAudio = false;
-          self._sounds = [];
-          delete cache[url];
-          self.load();
-        }
-      };
-      safeXhrSend(xhr);
-    }
-  };
-
-  /**
-   * Send the XHR request wrapped in a try/catch.
-   * @param  {Object} xhr XHR to send.
-   */
-  var safeXhrSend = function(xhr) {
-    try {
-      xhr.send();
-    } catch (e) {
-      xhr.onerror();
-    }
-  };
-
-  /**
-   * Decode audio data from an array buffer.
-   * @param  {ArrayBuffer} arraybuffer The audio data.
-   * @param  {Howl}        self
-   */
-  var decodeAudioData = function(arraybuffer, self) {
-    // Decode the buffer into an audio source.
-    Howler.ctx.decodeAudioData(arraybuffer, function(buffer) {
-      if (buffer && self._sounds.length > 0) {
-        cache[self._src] = buffer;
-        loadSound(self, buffer);
-      }
-    }, function() {
-      self._emit('loaderror', null, 'Decoding audio data failed.');
-    });
-  };
-
-  /**
-   * Sound is now loaded, so finish setting everything up and fire the loaded event.
-   * @param  {Howl} self
-   * @param  {Object} buffer The decoded buffer sound source.
-   */
-  var loadSound = function(self, buffer) {
-    // Set the duration.
-    if (buffer && !self._duration) {
-      self._duration = buffer.duration;
-    }
-
-    // Setup a sprite if none is defined.
-    if (Object.keys(self._sprite).length === 0) {
-      self._sprite = {__default: [0, self._duration * 1000]};
-    }
-
-    // Fire the loaded event.
-    if (self._state !== 'loaded') {
-      self._state = 'loaded';
-      self._emit('load');
-      self._loadQueue();
-    }
-  };
-
-  /**
-   * Setup the audio context when available, or switch to HTML5 Audio mode.
-   */
-  var setupAudioContext = function() {
-    // Check if we are using Web Audio and setup the AudioContext if we are.
-    try {
-      if (typeof AudioContext !== 'undefined') {
-        Howler.ctx = new AudioContext();
-      } else if (typeof webkitAudioContext !== 'undefined') {
-        Howler.ctx = new webkitAudioContext();
-      } else {
-        Howler.usingWebAudio = false;
-      }
-    } catch(e) {
-      Howler.usingWebAudio = false;
-    }
-
-    // Check if a webview is being used on iOS8 or earlier (rather than the browser).
-    // If it is, disable Web Audio as it causes crashing.
-    var iOS = (/iP(hone|od|ad)/.test(Howler._navigator && Howler._navigator.platform));
-    var appVersion = Howler._navigator && Howler._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/);
-    var version = appVersion ? parseInt(appVersion[1], 10) : null;
-    if (iOS && version && version < 9) {
-      var safari = /safari/.test(Howler._navigator && Howler._navigator.userAgent.toLowerCase());
-      if (Howler._navigator && Howler._navigator.standalone && !safari || Howler._navigator && !Howler._navigator.standalone && !safari) {
-        Howler.usingWebAudio = false;
-      }
-    }
-
-    // Create and expose the master GainNode when using Web Audio (useful for plugins or advanced usage).
-    if (Howler.usingWebAudio) {
-      Howler.masterGain = (typeof Howler.ctx.createGain === 'undefined') ? Howler.ctx.createGainNode() : Howler.ctx.createGain();
-      Howler.masterGain.gain.value = 1;
-      Howler.masterGain.connect(Howler.ctx.destination);
-    }
-
-    // Re-run the setup on Howler.
-    Howler._setup();
-  };
-
-  // Add support for AMD (Asynchronous Module Definition) libraries such as require.js.
-  if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
-      return {
-        Howler: Howler,
-        Howl: Howl
-      };
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  }
-
-  // Add support for CommonJS libraries such as browserify.
-  if (true) {
-    exports.Howler = Howler;
-    exports.Howl = Howl;
-  }
-
-  // Define globally in case AMD is not available or unused.
-  if (typeof window !== 'undefined') {
-    window.HowlerGlobal = HowlerGlobal;
-    window.Howler = Howler;
-    window.Howl = Howl;
-    window.Sound = Sound;
-  } else if (typeof global !== 'undefined') { // Add to global in Node.js (for testing, etc).
-    global.HowlerGlobal = HowlerGlobal;
-    global.Howler = Howler;
-    global.Howl = Howl;
-    global.Sound = Sound;
-  }
-})();
-
-
-/*!
- *  Spatial Plugin - Adds support for stereo and 3D audio where Web Audio is supported.
- *  
- *  howler.js v2.0.2
- *  howlerjs.com
- *
- *  (c) 2013-2016, James Simpson of GoldFire Studios
- *  goldfirestudios.com
- *
- *  MIT License
- */
-
-(function() {
-
-  'use strict';
-
-  // Setup default properties.
-  HowlerGlobal.prototype._pos = [0, 0, 0];
-  HowlerGlobal.prototype._orientation = [0, 0, -1, 0, 1, 0];
-  
-  /** Global Methods **/
-  /***************************************************************************/
-
-  /**
-   * Helper method to update the stereo panning position of all current Howls.
-   * Future Howls will not use this value unless explicitly set.
-   * @param  {Number} pan A value of -1.0 is all the way left and 1.0 is all the way right.
-   * @return {Howler/Number}     Self or current stereo panning value.
-   */
-  HowlerGlobal.prototype.stereo = function(pan) {
-    var self = this;
-
-    // Stop right here if not using Web Audio.
-    if (!self.ctx || !self.ctx.listener) {
-      return self;
-    }
-
-    // Loop through all Howls and update their stereo panning.
-    for (var i=self._howls.length-1; i>=0; i--) {
-      self._howls[i].stereo(pan);
-    }
-
-    return self;
-  };
-
-  /**
-   * Get/set the position of the listener in 3D cartesian space. Sounds using
-   * 3D position will be relative to the listener's position.
-   * @param  {Number} x The x-position of the listener.
-   * @param  {Number} y The y-position of the listener.
-   * @param  {Number} z The z-position of the listener.
-   * @return {Howler/Array}   Self or current listener position.
-   */
-  HowlerGlobal.prototype.pos = function(x, y, z) {
-    var self = this;
-
-    // Stop right here if not using Web Audio.
-    if (!self.ctx || !self.ctx.listener) {
-      return self;
-    }
-
-    // Set the defaults for optional 'y' & 'z'.
-    y = (typeof y !== 'number') ? self._pos[1] : y;
-    z = (typeof z !== 'number') ? self._pos[2] : z;
-
-    if (typeof x === 'number') {
-      self._pos = [x, y, z];
-      self.ctx.listener.setPosition(self._pos[0], self._pos[1], self._pos[2]);
-    } else {
-      return self._pos;
-    }
-
-    return self;
-  };
-
-  /**
-   * Get/set the direction the listener is pointing in the 3D cartesian space.
-   * A front and up vector must be provided. The front is the direction the
-   * face of the listener is pointing, and up is the direction the top of the
-   * listener is pointing. Thus, these values are expected to be at right angles
-   * from each other.
-   * @param  {Number} x   The x-orientation of the listener.
-   * @param  {Number} y   The y-orientation of the listener.
-   * @param  {Number} z   The z-orientation of the listener.
-   * @param  {Number} xUp The x-orientation of the top of the listener.
-   * @param  {Number} yUp The y-orientation of the top of the listener.
-   * @param  {Number} zUp The z-orientation of the top of the listener.
-   * @return {Howler/Array}     Returns self or the current orientation vectors.
-   */
-  HowlerGlobal.prototype.orientation = function(x, y, z, xUp, yUp, zUp) {
-    var self = this;
-
-    // Stop right here if not using Web Audio.
-    if (!self.ctx || !self.ctx.listener) {
-      return self;
-    }
-
-    // Set the defaults for optional 'y' & 'z'.
-    var or = self._orientation;
-    y = (typeof y !== 'number') ? or[1] : y;
-    z = (typeof z !== 'number') ? or[2] : z;
-    xUp = (typeof xUp !== 'number') ? or[3] : xUp;
-    yUp = (typeof yUp !== 'number') ? or[4] : yUp;
-    zUp = (typeof zUp !== 'number') ? or[5] : zUp;
-
-    if (typeof x === 'number') {
-      self._orientation = [x, y, z, xUp, yUp, zUp];
-      self.ctx.listener.setOrientation(x, y, z, xUp, yUp, zUp);
-    } else {
-      return or;
-    }
-
-    return self;
-  };
-
-  /** Group Methods **/
-  /***************************************************************************/
-
-  /**
-   * Add new properties to the core init.
-   * @param  {Function} _super Core init method.
-   * @return {Howl}
-   */
-  Howl.prototype.init = (function(_super) {
-    return function(o) {
-      var self = this;
-
-      // Setup user-defined default properties.
-      self._orientation = o.orientation || [1, 0, 0];
-      self._stereo = o.stereo || null;
-      self._pos = o.pos || null;
-      self._pannerAttr = {
-        coneInnerAngle: typeof o.coneInnerAngle !== 'undefined' ? o.coneInnerAngle : 360,
-        coneOuterAngle: typeof o.coneOuterAngle !== 'undefined' ? o.coneOuterAngle : 360,
-        coneOuterGain: typeof o.coneOuterGain !== 'undefined' ? o.coneOuterGain : 0,
-        distanceModel: typeof o.distanceModel !== 'undefined' ? o.distanceModel : 'inverse',
-        maxDistance: typeof o.maxDistance !== 'undefined' ? o.maxDistance : 10000,
-        panningModel: typeof o.panningModel !== 'undefined' ? o.panningModel : 'HRTF',
-        refDistance: typeof o.refDistance !== 'undefined' ? o.refDistance : 1,
-        rolloffFactor: typeof o.rolloffFactor !== 'undefined' ? o.rolloffFactor : 1
-      };
-
-      // Setup event listeners.
-      self._onstereo = o.onstereo ? [{fn: o.onstereo}] : [];
-      self._onpos = o.onpos ? [{fn: o.onpos}] : [];
-      self._onorientation = o.onorientation ? [{fn: o.onorientation}] : [];
-
-      // Complete initilization with howler.js core's init function.
-      return _super.call(this, o);
-    };
-  })(Howl.prototype.init);
-
-  /**
-   * Get/set the stereo panning of the audio source for this sound or all in the group.
-   * @param  {Number} pan  A value of -1.0 is all the way left and 1.0 is all the way right.
-   * @param  {Number} id (optional) The sound ID. If none is passed, all in group will be updated.
-   * @return {Howl/Number}    Returns self or the current stereo panning value.
-   */
-  Howl.prototype.stereo = function(pan, id) {
-    var self = this;
-
-    // Stop right here if not using Web Audio.
-    if (!self._webAudio) {
-      return self;
-    }
-
-    // If the sound hasn't loaded, add it to the load queue to change stereo pan when capable.
-    if (self._state !== 'loaded') {
-      self._queue.push({
-        event: 'stereo',
-        action: function() {
-          self.stereo(pan, id);
-        }
-      });
-
-      return self;
-    }
-
-    // Check for PannerStereoNode support and fallback to PannerNode if it doesn't exist.
-    var pannerType = (typeof Howler.ctx.createStereoPanner === 'undefined') ? 'spatial' : 'stereo';
-
-    // Setup the group's stereo panning if no ID is passed.
-    if (typeof id === 'undefined') {
-      // Return the group's stereo panning if no parameters are passed.
-      if (typeof pan === 'number') {
-        self._stereo = pan;
-        self._pos = [pan, 0, 0];
-      } else {
-        return self._stereo;
-      }
-    }
-
-    // Change the streo panning of one or all sounds in group.
-    var ids = self._getSoundIds(id);
-    for (var i=0; i<ids.length; i++) {
-      // Get the sound.
-      var sound = self._soundById(ids[i]);
-
-      if (sound) {
-        if (typeof pan === 'number') {
-          sound._stereo = pan;
-          sound._pos = [pan, 0, 0];
-
-          if (sound._node) {
-            // If we are falling back, make sure the panningModel is equalpower.
-            sound._pannerAttr.panningModel = 'equalpower';
-
-            // Check if there is a panner setup and create a new one if not.
-            if (!sound._panner || !sound._panner.pan) {
-              setupPanner(sound, pannerType);
-            }
-
-            if (pannerType === 'spatial') {
-              sound._panner.setPosition(pan, 0, 0);
-            } else {
-              sound._panner.pan.value = pan;
-            }
-          }
-
-          self._emit('stereo', sound._id);
-        } else {
-          return sound._stereo;
-        }
-      }
-    }
-
-    return self;
-  };
-
-  /**
-   * Get/set the 3D spatial position of the audio source for this sound or
-   * all in the group. The most common usage is to set the 'x' position for
-   * left/right panning. Setting any value higher than 1.0 will begin to
-   * decrease the volume of the sound as it moves further away.
-   * @param  {Number} x  The x-position of the audio from -1000.0 to 1000.0.
-   * @param  {Number} y  The y-position of the audio from -1000.0 to 1000.0.
-   * @param  {Number} z  The z-position of the audio from -1000.0 to 1000.0.
-   * @param  {Number} id (optional) The sound ID. If none is passed, all in group will be updated.
-   * @return {Howl/Array}    Returns self or the current 3D spatial position: [x, y, z].
-   */
-  Howl.prototype.pos = function(x, y, z, id) {
-    var self = this;
-
-    // Stop right here if not using Web Audio.
-    if (!self._webAudio) {
-      return self;
-    }
-
-    // If the sound hasn't loaded, add it to the load queue to change position when capable.
-    if (self._state !== 'loaded') {
-      self._queue.push({
-        event: 'pos',
-        action: function() {
-          self.pos(x, y, z, id);
-        }
-      });
-
-      return self;
-    }
-
-    // Set the defaults for optional 'y' & 'z'.
-    y = (typeof y !== 'number') ? 0 : y;
-    z = (typeof z !== 'number') ? -0.5 : z;
-
-    // Setup the group's spatial position if no ID is passed.
-    if (typeof id === 'undefined') {
-      // Return the group's spatial position if no parameters are passed.
-      if (typeof x === 'number') {
-        self._pos = [x, y, z];
-      } else {
-        return self._pos;
-      }
-    }
-
-    // Change the spatial position of one or all sounds in group.
-    var ids = self._getSoundIds(id);
-    for (var i=0; i<ids.length; i++) {
-      // Get the sound.
-      var sound = self._soundById(ids[i]);
-
-      if (sound) {
-        if (typeof x === 'number') {
-          sound._pos = [x, y, z];
-
-          if (sound._node) {
-            // Check if there is a panner setup and create a new one if not.
-            if (!sound._panner || sound._panner.pan) {
-              setupPanner(sound, 'spatial');
-            }
-
-            sound._panner.setPosition(x, y, z);
-          }
-
-          self._emit('pos', sound._id);
-        } else {
-          return sound._pos;
-        }
-      }
-    }
-
-    return self;
-  };
-
-  /**
-   * Get/set the direction the audio source is pointing in the 3D cartesian coordinate
-   * space. Depending on how direction the sound is, based on the `cone` attributes,
-   * a sound pointing away from the listener can be quiet or silent.
-   * @param  {Number} x  The x-orientation of the source.
-   * @param  {Number} y  The y-orientation of the source.
-   * @param  {Number} z  The z-orientation of the source.
-   * @param  {Number} id (optional) The sound ID. If none is passed, all in group will be updated.
-   * @return {Howl/Array}    Returns self or the current 3D spatial orientation: [x, y, z].
-   */
-  Howl.prototype.orientation = function(x, y, z, id) {
-    var self = this;
-
-    // Stop right here if not using Web Audio.
-    if (!self._webAudio) {
-      return self;
-    }
-
-    // If the sound hasn't loaded, add it to the load queue to change orientation when capable.
-    if (self._state !== 'loaded') {
-      self._queue.push({
-        event: 'orientation',
-        action: function() {
-          self.orientation(x, y, z, id);
-        }
-      });
-
-      return self;
-    }
-
-    // Set the defaults for optional 'y' & 'z'.
-    y = (typeof y !== 'number') ? self._orientation[1] : y;
-    z = (typeof z !== 'number') ? self._orientation[2] : z;
-
-    // Setup the group's spatial orientation if no ID is passed.
-    if (typeof id === 'undefined') {
-      // Return the group's spatial orientation if no parameters are passed.
-      if (typeof x === 'number') {
-        self._orientation = [x, y, z];
-      } else {
-        return self._orientation;
-      }
-    }
-
-    // Change the spatial orientation of one or all sounds in group.
-    var ids = self._getSoundIds(id);
-    for (var i=0; i<ids.length; i++) {
-      // Get the sound.
-      var sound = self._soundById(ids[i]);
-
-      if (sound) {
-        if (typeof x === 'number') {
-          sound._orientation = [x, y, z];
-
-          if (sound._node) {
-            // Check if there is a panner setup and create a new one if not.
-            if (!sound._panner) {
-              // Make sure we have a position to setup the node with.
-              if (!sound._pos) {
-                sound._pos = self._pos || [0, 0, -0.5];
-              }
-
-              setupPanner(sound, 'spatial');
-            }
-
-            sound._panner.setOrientation(x, y, z);
-          }
-
-          self._emit('orientation', sound._id);
-        } else {
-          return sound._orientation;
-        }
-      }
-    }
-
-    return self;
-  };
-
-  /**
-   * Get/set the panner node's attributes for a sound or group of sounds.
-   * This method can optionall take 0, 1 or 2 arguments.
-   *   pannerAttr() -> Returns the group's values.
-   *   pannerAttr(id) -> Returns the sound id's values.
-   *   pannerAttr(o) -> Set's the values of all sounds in this Howl group.
-   *   pannerAttr(o, id) -> Set's the values of passed sound id.
-   *
-   *   Attributes:
-   *     coneInnerAngle - (360 by default) There will be no volume reduction inside this angle.
-   *     coneOuterAngle - (360 by default) The volume will be reduced to a constant value of
-   *                      `coneOuterGain` outside this angle.
-   *     coneOuterGain - (0 by default) The amount of volume reduction outside of `coneOuterAngle`.
-   *     distanceModel - ('inverse' by default) Determines algorithm to use to reduce volume as audio moves
-   *                      away from listener. Can be `linear`, `inverse` or `exponential`.
-   *     maxDistance - (10000 by default) Volume won't reduce between source/listener beyond this distance.
-   *     panningModel - ('HRTF' by default) Determines which spatialization algorithm is used to position audio.
-   *                     Can be `HRTF` or `equalpower`.
-   *     refDistance - (1 by default) A reference distance for reducing volume as the source
-   *                    moves away from the listener.
-   *     rolloffFactor - (1 by default) How quickly the volume reduces as source moves from listener.
-   * 
-   * @return {Howl/Object} Returns self or current panner attributes.
-   */
-  Howl.prototype.pannerAttr = function() {
-    var self = this;
-    var args = arguments;
-    var o, id, sound;
-
-    // Stop right here if not using Web Audio.
-    if (!self._webAudio) {
-      return self;
-    }
-
-    // Determine the values based on arguments.
-    if (args.length === 0) {
-      // Return the group's panner attribute values.
-      return self._pannerAttr;
-    } else if (args.length === 1) {
-      if (typeof args[0] === 'object') {
-        o = args[0];
-
-        // Set the grou's panner attribute values.
-        if (typeof id === 'undefined') {
-          self._pannerAttr = {
-            coneInnerAngle: typeof o.coneInnerAngle !== 'undefined' ? o.coneInnerAngle : self._coneInnerAngle,
-            coneOuterAngle: typeof o.coneOuterAngle !== 'undefined' ? o.coneOuterAngle : self._coneOuterAngle,
-            coneOuterGain: typeof o.coneOuterGain !== 'undefined' ? o.coneOuterGain : self._coneOuterGain,
-            distanceModel: typeof o.distanceModel !== 'undefined' ? o.distanceModel : self._distanceModel,
-            maxDistance: typeof o.maxDistance !== 'undefined' ? o.maxDistance : self._maxDistance,
-            panningModel: typeof o.panningModel !== 'undefined' ? o.panningModel : self._panningModel,
-            refDistance: typeof o.refDistance !== 'undefined' ? o.refDistance : self._refDistance,
-            rolloffFactor: typeof o.rolloffFactor !== 'undefined' ? o.rolloffFactor : self._rolloffFactor
-          };
-        }
-      } else {
-        // Return this sound's panner attribute values.
-        sound = self._soundById(parseInt(args[0], 10));
-        return sound ? sound._pannerAttr : self._pannerAttr;
-      }
-    } else if (args.length === 2) {
-      o = args[0];
-      id = parseInt(args[1], 10);
-    }
-
-    // Update the values of the specified sounds.
-    var ids = self._getSoundIds(id);
-    for (var i=0; i<ids.length; i++) {
-      sound = self._soundById(ids[i]);
-
-      if (sound) {
-        // Merge the new values into the sound.
-        var pa = sound._pannerAttr;
-        pa = {
-          coneInnerAngle: typeof o.coneInnerAngle !== 'undefined' ? o.coneInnerAngle : pa.coneInnerAngle,
-          coneOuterAngle: typeof o.coneOuterAngle !== 'undefined' ? o.coneOuterAngle : pa.coneOuterAngle,
-          coneOuterGain: typeof o.coneOuterGain !== 'undefined' ? o.coneOuterGain : pa.coneOuterGain,
-          distanceModel: typeof o.distanceModel !== 'undefined' ? o.distanceModel : pa.distanceModel,
-          maxDistance: typeof o.maxDistance !== 'undefined' ? o.maxDistance : pa.maxDistance,
-          panningModel: typeof o.panningModel !== 'undefined' ? o.panningModel : pa.panningModel,
-          refDistance: typeof o.refDistance !== 'undefined' ? o.refDistance : pa.refDistance,
-          rolloffFactor: typeof o.rolloffFactor !== 'undefined' ? o.rolloffFactor : pa.rolloffFactor
-        };
-
-        // Update the panner values or create a new panner if none exists.
-        var panner = sound._panner;
-        if (panner) {
-          panner.coneInnerAngle = pa.coneInnerAngle;
-          panner.coneOuterAngle = pa.coneOuterAngle;
-          panner.coneOuterGain = pa.coneOuterGain;
-          panner.distanceModel = pa.distanceModel;
-          panner.maxDistance = pa.maxDistance;
-          panner.panningModel = pa.panningModel;
-          panner.refDistance = pa.refDistance;
-          panner.rolloffFactor = pa.rolloffFactor;
-        } else {
-          // Make sure we have a position to setup the node with.
-          if (!sound._pos) {
-            sound._pos = self._pos || [0, 0, -0.5];
-          }
-
-          // Create a new panner node.
-          setupPanner(sound, 'spatial');
-        }
-      }
-    }
-
-    return self;
-  };
-
-  /** Single Sound Methods **/
-  /***************************************************************************/
-
-  /**
-   * Add new properties to the core Sound init.
-   * @param  {Function} _super Core Sound init method.
-   * @return {Sound}
-   */
-  Sound.prototype.init = (function(_super) {
-    return function() {
-      var self = this;
-      var parent = self._parent;
-
-      // Setup user-defined default properties.
-      self._orientation = parent._orientation;
-      self._stereo = parent._stereo;
-      self._pos = parent._pos;
-      self._pannerAttr = parent._pannerAttr;
-
-      // Complete initilization with howler.js core Sound's init function.
-      _super.call(this);
-
-      // If a stereo or position was specified, set it up.
-      if (self._stereo) {
-        parent.stereo(self._stereo);
-      } else if (self._pos) {
-        parent.pos(self._pos[0], self._pos[1], self._pos[2], self._id);
-      }
-    };
-  })(Sound.prototype.init);
-
-  /**
-   * Override the Sound.reset method to clean up properties from the spatial plugin.
-   * @param  {Function} _super Sound reset method.
-   * @return {Sound}
-   */
-  Sound.prototype.reset = (function(_super) {
-    return function() {
-      var self = this;
-      var parent = self._parent;
-
-      // Reset all spatial plugin properties on this sound.
-      self._orientation = parent._orientation;
-      self._pos = parent._pos;
-      self._pannerAttr = parent._pannerAttr;
-
-      // Complete resetting of the sound.
-      return _super.call(this);
-    };
-  })(Sound.prototype.reset);
-
-  /** Helper Methods **/
-  /***************************************************************************/
-
-  /**
-   * Create a new panner node and save it on the sound.
-   * @param  {Sound} sound Specific sound to setup panning on.
-   * @param {String} type Type of panner to create: 'stereo' or 'spatial'.
-   */
-  var setupPanner = function(sound, type) {
-    type = type || 'spatial';
-
-    // Create the new panner node.
-    if (type === 'spatial') {
-      sound._panner = Howler.ctx.createPanner();
-      sound._panner.coneInnerAngle = sound._pannerAttr.coneInnerAngle;
-      sound._panner.coneOuterAngle = sound._pannerAttr.coneOuterAngle;
-      sound._panner.coneOuterGain = sound._pannerAttr.coneOuterGain;
-      sound._panner.distanceModel = sound._pannerAttr.distanceModel;
-      sound._panner.maxDistance = sound._pannerAttr.maxDistance;
-      sound._panner.panningModel = sound._pannerAttr.panningModel;
-      sound._panner.refDistance = sound._pannerAttr.refDistance;
-      sound._panner.rolloffFactor = sound._pannerAttr.rolloffFactor;
-      sound._panner.setPosition(sound._pos[0], sound._pos[1], sound._pos[2]);
-      sound._panner.setOrientation(sound._orientation[0], sound._orientation[1], sound._orientation[2]);
-    } else {
-      sound._panner = Howler.ctx.createStereoPanner();
-      sound._panner.pan.value = sound._stereo;
-    }
-
-    sound._panner.connect(sound._node);
-
-    // Update the connections.
-    if (!sound._paused) {
-      sound._parent.pause(sound._id, true).play(sound._id);
-    }
-  };
-})();
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
-
-/***/ }),
 /* 89 */
-/***/ (function(module, exports) {
-
-module.exports = {
-	"src": [
-		"audio.ogg",
-		"audio.mp3"
-	],
-	"sprite": {
-		"barkDucks": [
-			0,
-			2403.265306122449
-		],
-		"champ": [
-			4000,
-			9639.183673469388
-		],
-		"gunSound": [
-			15000,
-			504.01360544217687
-		],
-		"laugh": [
-			17000,
-			1368.0045351473923
-		],
-		"loserSound": [
-			20000,
-			3631.0204081632664
-		],
-		"ohYeah": [
-			25000,
-			1071.020408163264
-		],
-		"quacking": [
-			28000,
-			6817.959183673466,
-			true
-		],
-		"quak": [
-			36000,
-			783.6734693877575
-		],
-		"sniff": [
-			38000,
-			1985.306122448982,
-			true
-		],
-		"thud": [
-			41000,
-			548.571428571428
-		]
-	}
-};
-
-/***/ }),
-/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseCreate = __webpack_require__(39),
-    baseLodash = __webpack_require__(101);
+    baseLodash = __webpack_require__(100);
 
 /** Used as references for the maximum length and index of an array. */
 var MAX_ARRAY_LENGTH = 4294967295;
@@ -11707,11 +8890,11 @@ module.exports = LazyWrapper;
 
 
 /***/ }),
-/* 91 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseCreate = __webpack_require__(39),
-    baseLodash = __webpack_require__(101);
+    baseLodash = __webpack_require__(100);
 
 /**
  * The base constructor for creating `lodash` wrapper objects.
@@ -11735,7 +8918,7 @@ module.exports = LodashWrapper;
 
 
 /***/ }),
-/* 92 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(33),
@@ -11748,14 +8931,14 @@ module.exports = Map;
 
 
 /***/ }),
-/* 93 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mapCacheClear = __webpack_require__(368),
-    mapCacheDelete = __webpack_require__(369),
-    mapCacheGet = __webpack_require__(370),
-    mapCacheHas = __webpack_require__(371),
-    mapCacheSet = __webpack_require__(372);
+var mapCacheClear = __webpack_require__(369),
+    mapCacheDelete = __webpack_require__(370),
+    mapCacheGet = __webpack_require__(371),
+    mapCacheHas = __webpack_require__(372),
+    mapCacheSet = __webpack_require__(373);
 
 /**
  * Creates a map cache object to store key-value pairs.
@@ -11786,7 +8969,7 @@ module.exports = MapCache;
 
 
 /***/ }),
-/* 94 */
+/* 93 */
 /***/ (function(module, exports) {
 
 /**
@@ -11818,7 +9001,7 @@ module.exports = arrayReduce;
 
 
 /***/ }),
-/* 95 */
+/* 94 */
 /***/ (function(module, exports) {
 
 /**
@@ -11847,7 +9030,7 @@ module.exports = arraySome;
 
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, exports) {
 
 /**
@@ -11875,7 +9058,7 @@ module.exports = baseClamp;
 
 
 /***/ }),
-/* 97 */
+/* 96 */
 /***/ (function(module, exports) {
 
 /**
@@ -11905,10 +9088,10 @@ module.exports = baseFindIndex;
 
 
 /***/ }),
-/* 98 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createBaseFor = __webpack_require__(175);
+var createBaseFor = __webpack_require__(174);
 
 /**
  * The base implementation of `baseForOwn` which iterates over `object`
@@ -11927,10 +9110,10 @@ module.exports = baseFor;
 
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseForRight = __webpack_require__(152),
+var baseForRight = __webpack_require__(151),
     keys = __webpack_require__(9);
 
 /**
@@ -11949,7 +9132,7 @@ module.exports = baseForOwnRight;
 
 
 /***/ }),
-/* 100 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayFilter = __webpack_require__(63),
@@ -11974,7 +9157,7 @@ module.exports = baseFunctions;
 
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, exports) {
 
 /**
@@ -11990,13 +9173,13 @@ module.exports = baseLodash;
 
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Stack = __webpack_require__(62),
-    assignMergeValue = __webpack_require__(146),
-    baseFor = __webpack_require__(98),
-    baseMergeDeep = __webpack_require__(312),
+    assignMergeValue = __webpack_require__(145),
+    baseFor = __webpack_require__(97),
+    baseMergeDeep = __webpack_require__(313),
     isObject = __webpack_require__(6),
     keysIn = __webpack_require__(13);
 
@@ -12037,7 +9220,7 @@ module.exports = baseMerge;
 
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports) {
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -12061,10 +9244,10 @@ module.exports = baseRandom;
 
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Uint8Array = __webpack_require__(141);
+var Uint8Array = __webpack_require__(140);
 
 /**
  * Creates a clone of `arrayBuffer`.
@@ -12083,7 +9266,7 @@ module.exports = cloneArrayBuffer;
 
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11),
@@ -12116,11 +9299,11 @@ module.exports = createOver;
 
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(153),
-    getSymbolsIn = __webpack_require__(188),
+var baseGetAllKeys = __webpack_require__(152),
+    getSymbolsIn = __webpack_require__(187),
     keysIn = __webpack_require__(13);
 
 /**
@@ -12139,11 +9322,11 @@ module.exports = getAllKeysIn;
 
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var metaMap = __webpack_require__(194),
-    noop = __webpack_require__(216);
+var metaMap = __webpack_require__(193),
+    noop = __webpack_require__(215);
 
 /**
  * Gets metadata for `func`.
@@ -12160,11 +9343,11 @@ module.exports = getData;
 
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayFilter = __webpack_require__(63),
-    stubArray = __webpack_require__(120);
+    stubArray = __webpack_require__(119);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -12196,7 +9379,7 @@ module.exports = getSymbols;
 
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1),
@@ -12231,7 +9414,7 @@ module.exports = isKey;
 
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports) {
 
 /**
@@ -12255,11 +9438,11 @@ module.exports = mapToArray;
 
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSetToString = __webpack_require__(319),
-    shortOut = __webpack_require__(201);
+var baseSetToString = __webpack_require__(320),
+    shortOut = __webpack_require__(200);
 
 /**
  * Sets the `toString` method of `func` to return `string`.
@@ -12275,7 +9458,7 @@ module.exports = setToString;
 
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(19),
@@ -12319,7 +9502,7 @@ module.exports = assignInWith;
 
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, exports) {
 
 /**
@@ -12351,7 +9534,7 @@ module.exports = constant;
 
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(41);
@@ -12390,11 +9573,11 @@ module.exports = get;
 
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseHasIn = __webpack_require__(302),
-    hasPath = __webpack_require__(189);
+var baseHasIn = __webpack_require__(303),
+    hasPath = __webpack_require__(188);
 
 /**
  * Checks if `path` is a direct or inherited property of `object`.
@@ -12430,7 +9613,7 @@ module.exports = hasIn;
 
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
@@ -12471,7 +9654,7 @@ module.exports = isLength;
 
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(26),
@@ -12539,7 +9722,7 @@ module.exports = isPlainObject;
 
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports) {
 
 /** Error message constants. */
@@ -12585,62 +9768,62 @@ module.exports = negate;
 
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'assign': __webpack_require__(395),
-  'assignIn': __webpack_require__(205),
-  'assignInWith': __webpack_require__(112),
-  'assignWith': __webpack_require__(396),
-  'at': __webpack_require__(397),
-  'create': __webpack_require__(405),
-  'defaults': __webpack_require__(409),
-  'defaultsDeep': __webpack_require__(410),
-  'entries': __webpack_require__(415),
-  'entriesIn': __webpack_require__(416),
-  'extend': __webpack_require__(418),
-  'extendWith': __webpack_require__(419),
-  'findKey': __webpack_require__(423),
-  'findLastKey': __webpack_require__(426),
-  'forIn': __webpack_require__(434),
-  'forInRight': __webpack_require__(435),
-  'forOwn': __webpack_require__(436),
-  'forOwnRight': __webpack_require__(437),
-  'functions': __webpack_require__(439),
-  'functionsIn': __webpack_require__(440),
-  'get': __webpack_require__(114),
-  'has': __webpack_require__(442),
-  'hasIn': __webpack_require__(115),
-  'invert': __webpack_require__(445),
-  'invertBy': __webpack_require__(446),
-  'invoke': __webpack_require__(447),
+  'assign': __webpack_require__(396),
+  'assignIn': __webpack_require__(204),
+  'assignInWith': __webpack_require__(111),
+  'assignWith': __webpack_require__(397),
+  'at': __webpack_require__(398),
+  'create': __webpack_require__(406),
+  'defaults': __webpack_require__(410),
+  'defaultsDeep': __webpack_require__(411),
+  'entries': __webpack_require__(416),
+  'entriesIn': __webpack_require__(417),
+  'extend': __webpack_require__(419),
+  'extendWith': __webpack_require__(420),
+  'findKey': __webpack_require__(424),
+  'findLastKey': __webpack_require__(427),
+  'forIn': __webpack_require__(435),
+  'forInRight': __webpack_require__(436),
+  'forOwn': __webpack_require__(437),
+  'forOwnRight': __webpack_require__(438),
+  'functions': __webpack_require__(440),
+  'functionsIn': __webpack_require__(441),
+  'get': __webpack_require__(113),
+  'has': __webpack_require__(443),
+  'hasIn': __webpack_require__(114),
+  'invert': __webpack_require__(446),
+  'invertBy': __webpack_require__(447),
+  'invoke': __webpack_require__(448),
   'keys': __webpack_require__(9),
   'keysIn': __webpack_require__(13),
-  'mapKeys': __webpack_require__(453),
-  'mapValues': __webpack_require__(454),
-  'merge': __webpack_require__(457),
-  'mergeWith': __webpack_require__(215),
-  'omit': __webpack_require__(464),
-  'omitBy': __webpack_require__(465),
-  'pick': __webpack_require__(474),
-  'pickBy': __webpack_require__(218),
-  'result': __webpack_require__(484),
-  'set': __webpack_require__(487),
-  'setWith': __webpack_require__(488),
-  'toPairs': __webpack_require__(221),
-  'toPairsIn': __webpack_require__(222),
-  'transform': __webpack_require__(501),
-  'unset': __webpack_require__(504),
-  'update': __webpack_require__(505),
-  'updateWith': __webpack_require__(506),
+  'mapKeys': __webpack_require__(454),
+  'mapValues': __webpack_require__(455),
+  'merge': __webpack_require__(458),
+  'mergeWith': __webpack_require__(214),
+  'omit': __webpack_require__(465),
+  'omitBy': __webpack_require__(466),
+  'pick': __webpack_require__(475),
+  'pickBy': __webpack_require__(217),
+  'result': __webpack_require__(485),
+  'set': __webpack_require__(488),
+  'setWith': __webpack_require__(489),
+  'toPairs': __webpack_require__(220),
+  'toPairsIn': __webpack_require__(221),
+  'transform': __webpack_require__(502),
+  'unset': __webpack_require__(505),
+  'update': __webpack_require__(506),
+  'updateWith': __webpack_require__(507),
   'values': __webpack_require__(51),
-  'valuesIn': __webpack_require__(507)
+  'valuesIn': __webpack_require__(508)
 };
 
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports) {
 
 /**
@@ -12669,10 +9852,10 @@ module.exports = stubArray;
 
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseToString = __webpack_require__(324);
+var baseToString = __webpack_require__(325);
 
 /**
  * Converts `value` to a string. An empty string is returned for `null`
@@ -12703,47 +9886,47 @@ module.exports = toString;
 
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'attempt': __webpack_require__(398),
-  'bindAll': __webpack_require__(399),
-  'cond': __webpack_require__(402),
-  'conforms': __webpack_require__(403),
-  'constant': __webpack_require__(113),
-  'defaultTo': __webpack_require__(408),
-  'flow': __webpack_require__(432),
-  'flowRight': __webpack_require__(433),
+  'attempt': __webpack_require__(399),
+  'bindAll': __webpack_require__(400),
+  'cond': __webpack_require__(403),
+  'conforms': __webpack_require__(404),
+  'constant': __webpack_require__(112),
+  'defaultTo': __webpack_require__(409),
+  'flow': __webpack_require__(433),
+  'flowRight': __webpack_require__(434),
   'identity': __webpack_require__(29),
-  'iteratee': __webpack_require__(451),
-  'matches': __webpack_require__(455),
-  'matchesProperty': __webpack_require__(456),
-  'method': __webpack_require__(458),
-  'methodOf': __webpack_require__(459),
-  'mixin': __webpack_require__(460),
-  'noop': __webpack_require__(216),
-  'nthArg': __webpack_require__(462),
-  'over': __webpack_require__(468),
-  'overEvery': __webpack_require__(470),
-  'overSome': __webpack_require__(471),
-  'property': __webpack_require__(219),
-  'propertyOf': __webpack_require__(475),
-  'range': __webpack_require__(477),
-  'rangeRight': __webpack_require__(478),
-  'stubArray': __webpack_require__(120),
-  'stubFalse': __webpack_require__(220),
-  'stubObject': __webpack_require__(494),
-  'stubString': __webpack_require__(495),
-  'stubTrue': __webpack_require__(496),
-  'times': __webpack_require__(498),
-  'toPath': __webpack_require__(499),
-  'uniqueId': __webpack_require__(503)
+  'iteratee': __webpack_require__(452),
+  'matches': __webpack_require__(456),
+  'matchesProperty': __webpack_require__(457),
+  'method': __webpack_require__(459),
+  'methodOf': __webpack_require__(460),
+  'mixin': __webpack_require__(461),
+  'noop': __webpack_require__(215),
+  'nthArg': __webpack_require__(463),
+  'over': __webpack_require__(469),
+  'overEvery': __webpack_require__(471),
+  'overSome': __webpack_require__(472),
+  'property': __webpack_require__(218),
+  'propertyOf': __webpack_require__(476),
+  'range': __webpack_require__(478),
+  'rangeRight': __webpack_require__(479),
+  'stubArray': __webpack_require__(119),
+  'stubFalse': __webpack_require__(219),
+  'stubObject': __webpack_require__(495),
+  'stubString': __webpack_require__(496),
+  'stubTrue': __webpack_require__(497),
+  'times': __webpack_require__(499),
+  'toPath': __webpack_require__(500),
+  'uniqueId': __webpack_require__(504)
 };
 
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports) {
 
 
@@ -12795,7 +9978,7 @@ module.exports = mapSize;
 
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13143,7 +10326,7 @@ exports.default = Bounds;
 //# sourceMappingURL=Bounds.js.map
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13235,7 +10418,7 @@ TransformBase.IDENTITY = new TransformBase();
 //# sourceMappingURL=TransformBase.js.map
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13245,7 +10428,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Point = __webpack_require__(127);
+var _Point = __webpack_require__(126);
 
 var _Point2 = _interopRequireDefault(_Point);
 
@@ -13759,7 +10942,7 @@ exports.default = Matrix;
 //# sourceMappingURL=Matrix.js.map
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13855,7 +11038,7 @@ exports.default = Point;
 //# sourceMappingURL=Point.js.map
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14123,7 +11306,7 @@ exports.default = Rectangle;
 //# sourceMappingURL=Rectangle.js.map
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14750,7 +11933,7 @@ exports.default = Sprite;
 //# sourceMappingURL=Sprite.js.map
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14760,7 +11943,7 @@ exports.__esModule = true;
 
 var _utils = __webpack_require__(5);
 
-var _canUseNewCanvasBlendModes = __webpack_require__(244);
+var _canUseNewCanvasBlendModes = __webpack_require__(243);
 
 var _canUseNewCanvasBlendModes2 = _interopRequireDefault(_canUseNewCanvasBlendModes);
 
@@ -14992,7 +12175,7 @@ exports.default = CanvasTinter;
 //# sourceMappingURL=CanvasTinter.js.map
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15000,7 +12183,7 @@ exports.default = CanvasTinter;
 
 exports.__esModule = true;
 
-var _BaseRenderTexture = __webpack_require__(249);
+var _BaseRenderTexture = __webpack_require__(248);
 
 var _BaseRenderTexture2 = _interopRequireDefault(_BaseRenderTexture);
 
@@ -15148,7 +12331,7 @@ exports.default = RenderTexture;
 //# sourceMappingURL=RenderTexture.js.map
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15187,7 +12370,7 @@ function createIndicesForQuads(size) {
 //# sourceMappingURL=createIndicesForQuads.js.map
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15196,7 +12379,7 @@ function createIndicesForQuads(size) {
 exports.__esModule = true;
 exports.BitmapText = exports.TilingSpriteRenderer = exports.TilingSprite = exports.AnimatedSprite = exports.TextureTransform = undefined;
 
-var _TextureTransform = __webpack_require__(254);
+var _TextureTransform = __webpack_require__(253);
 
 Object.defineProperty(exports, 'TextureTransform', {
   enumerable: true,
@@ -15205,7 +12388,7 @@ Object.defineProperty(exports, 'TextureTransform', {
   }
 });
 
-var _AnimatedSprite = __webpack_require__(562);
+var _AnimatedSprite = __webpack_require__(563);
 
 Object.defineProperty(exports, 'AnimatedSprite', {
   enumerable: true,
@@ -15214,7 +12397,7 @@ Object.defineProperty(exports, 'AnimatedSprite', {
   }
 });
 
-var _TilingSprite = __webpack_require__(564);
+var _TilingSprite = __webpack_require__(565);
 
 Object.defineProperty(exports, 'TilingSprite', {
   enumerable: true,
@@ -15223,7 +12406,7 @@ Object.defineProperty(exports, 'TilingSprite', {
   }
 });
 
-var _TilingSpriteRenderer = __webpack_require__(568);
+var _TilingSpriteRenderer = __webpack_require__(569);
 
 Object.defineProperty(exports, 'TilingSpriteRenderer', {
   enumerable: true,
@@ -15232,7 +12415,7 @@ Object.defineProperty(exports, 'TilingSpriteRenderer', {
   }
 });
 
-var _BitmapText = __webpack_require__(563);
+var _BitmapText = __webpack_require__(564);
 
 Object.defineProperty(exports, 'BitmapText', {
   enumerable: true,
@@ -15241,11 +12424,11 @@ Object.defineProperty(exports, 'BitmapText', {
   }
 });
 
-__webpack_require__(565);
-
 __webpack_require__(566);
 
 __webpack_require__(567);
+
+__webpack_require__(568);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15253,7 +12436,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15265,7 +12448,7 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _CountLimiter = __webpack_require__(271);
+var _CountLimiter = __webpack_require__(270);
 
 var _CountLimiter2 = _interopRequireDefault(_CountLimiter);
 
@@ -15643,7 +12826,7 @@ function findTextStyle(item, queue) {
 //# sourceMappingURL=BasePrepare.js.map
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -15829,7 +13012,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15839,11 +13022,11 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _parseUri = __webpack_require__(224);
+var _parseUri = __webpack_require__(223);
 
 var _parseUri2 = _interopRequireDefault(_parseUri);
 
-var _miniSignals = __webpack_require__(223);
+var _miniSignals = __webpack_require__(222);
 
 var _miniSignals2 = _interopRequireDefault(_miniSignals);
 
@@ -16957,7 +14140,7 @@ function reqType(xhr) {
 //# sourceMappingURL=Resource.js.map
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, exports) {
 
 module.exports.pointDistance = function (point1, point2) {
@@ -16994,15 +14177,15 @@ module.exports.directionOfTravel = function (pointStart, pointEnd) {
 };
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_gsap__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_gsap__ = __webpack_require__(139);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_gsap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_gsap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_collection__);
 
 
@@ -17030,7 +14213,6 @@ class Character extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["extras"].Animated
 
       // Only add textures if the state is supported by the class
       const stateObj = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_collection__["find"])(states, { name: state });
-      console.dir(stateObj);
       if (!stateObj) {
         continue;
       }
@@ -17105,7 +14287,13 @@ class Character extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["extras"].Animated
       throw new Error('The requested state (' + value + ') is not availble for this Character.');
     }
     this.stateVal = value;
-    this._textures = stateObj.textures;
+    // animation is jacked when there's only one texture in latest pixi
+    // this hack is gross, prolly better to render two identical frames
+    // or fix general jank
+    if (stateObj.textures.length === 1) {
+      stateObj.textures = stateObj.textures.concat(stateObj.textures);
+    }
+    this.textures = stateObj.textures;
     this.animationSpeed = stateObj.animationSpeed;
     this.loop = stateObj.hasOwnProperty('loop') ? stateObj.loop : true;
     this.play();
@@ -17125,7 +14313,7 @@ class Character extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["extras"].Animated
 /* harmony default export */ __webpack_exports__["a"] = Character;
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17776,7 +14964,7 @@ earcut.flatten = function (data) {
 
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23822,7 +21010,7 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 						if (global) {
 							_globals[n] = _exports[n] = cl; //provides a way to avoid global namespace pollution. By default, the main classes like TweenLite, Power1, Strong, etc. are added to window unless a GreenSockGlobals is defined. So if you want to have things added to a custom object instead, just do something like window.GreenSockGlobals = {} before loading any GreenSock files. You can even set up an alias like window.GreenSockGlobals = windows.gs = {} so that you can access everything like gs.TweenLite. Also remember that ALL classes are added to the window.com.greensock object (in their respective packages, like com.greensock.easing.Power1, com.greensock.TweenLite, etc.)
 							hasModule = (typeof(module) !== "undefined" && module.exports);
-							if (!hasModule && "function" === "function" && __webpack_require__(603)){ //AMD
+							if (!hasModule && "function" === "function" && __webpack_require__(604)){ //AMD
 								!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() { return cl; }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 							} else if (hasModule){ //node
@@ -25640,7 +22828,7 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(8);
@@ -25652,7 +22840,7 @@ module.exports = Uint8Array;
 
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(33),
@@ -25665,7 +22853,7 @@ module.exports = WeakMap;
 
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, exports) {
 
 /**
@@ -25694,10 +22882,10 @@ module.exports = arrayEvery;
 
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseTimes = __webpack_require__(166),
+var baseTimes = __webpack_require__(165),
     isArguments = __webpack_require__(77),
     isArray = __webpack_require__(1),
     isBuffer = __webpack_require__(49),
@@ -25749,10 +22937,10 @@ module.exports = arrayLikeKeys;
 
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseRandom = __webpack_require__(103);
+var baseRandom = __webpack_require__(102);
 
 /**
  * A specialized version of `_.sample` for arrays.
@@ -25770,7 +22958,7 @@ module.exports = arraySample;
 
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(22),
@@ -25796,7 +22984,7 @@ module.exports = assignMergeValue;
 
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(19),
@@ -25819,7 +23007,7 @@ module.exports = baseAssign;
 
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports) {
 
 /** Error message constants. */
@@ -25846,11 +23034,11 @@ module.exports = baseDelay;
 
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseForOwnRight = __webpack_require__(99),
-    createBaseEach = __webpack_require__(174);
+var baseForOwnRight = __webpack_require__(98),
+    createBaseEach = __webpack_require__(173);
 
 /**
  * The base implementation of `_.forEachRight` without support for iteratee shorthands.
@@ -25866,7 +23054,7 @@ module.exports = baseEachRight;
 
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseEach = __webpack_require__(25);
@@ -25893,7 +23081,7 @@ module.exports = baseFilter;
 
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports) {
 
 /**
@@ -25922,10 +23110,10 @@ module.exports = baseFindKey;
 
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createBaseFor = __webpack_require__(175);
+var createBaseFor = __webpack_require__(174);
 
 /**
  * This function is like `baseFor` except that it iterates over properties
@@ -25943,7 +23131,7 @@ module.exports = baseForRight;
 
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(47),
@@ -25969,12 +23157,12 @@ module.exports = baseGetAllKeys;
 
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFindIndex = __webpack_require__(97),
-    baseIsNaN = __webpack_require__(308),
-    strictIndexOf = __webpack_require__(389);
+var baseFindIndex = __webpack_require__(96),
+    baseIsNaN = __webpack_require__(309),
+    strictIndexOf = __webpack_require__(390);
 
 /**
  * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
@@ -25995,10 +23183,10 @@ module.exports = baseIndexOf;
 
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqualDeep = __webpack_require__(306),
+var baseIsEqualDeep = __webpack_require__(307),
     isObjectLike = __webpack_require__(21);
 
 /**
@@ -26029,11 +23217,11 @@ module.exports = baseIsEqual;
 
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isPrototype = __webpack_require__(74),
-    nativeKeys = __webpack_require__(375);
+    nativeKeys = __webpack_require__(376);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -26065,7 +23253,7 @@ module.exports = baseKeys;
 
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseEach = __webpack_require__(25),
@@ -26093,12 +23281,12 @@ module.exports = baseMap;
 
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsMatch = __webpack_require__(307),
-    getMatchData = __webpack_require__(347),
-    matchesStrictComparable = __webpack_require__(193);
+var baseIsMatch = __webpack_require__(308),
+    getMatchData = __webpack_require__(348),
+    matchesStrictComparable = __webpack_require__(192);
 
 /**
  * The base implementation of `_.matches` which doesn't clone `source`.
@@ -26121,15 +23309,15 @@ module.exports = baseMatches;
 
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqual = __webpack_require__(155),
-    get = __webpack_require__(114),
-    hasIn = __webpack_require__(115),
-    isKey = __webpack_require__(109),
-    isStrictComparable = __webpack_require__(192),
-    matchesStrictComparable = __webpack_require__(193),
+var baseIsEqual = __webpack_require__(154),
+    get = __webpack_require__(113),
+    hasIn = __webpack_require__(114),
+    isKey = __webpack_require__(108),
+    isStrictComparable = __webpack_require__(191),
+    matchesStrictComparable = __webpack_require__(192),
     toKey = __webpack_require__(20);
 
 /** Used to compose bitmasks for value comparisons. */
@@ -26160,15 +23348,15 @@ module.exports = baseMatchesProperty;
 
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(12),
     baseIteratee = __webpack_require__(3),
-    baseMap = __webpack_require__(157),
-    baseSortBy = __webpack_require__(322),
+    baseMap = __webpack_require__(156),
+    baseSortBy = __webpack_require__(323),
     baseUnary = __webpack_require__(68),
-    compareMultiple = __webpack_require__(334),
+    compareMultiple = __webpack_require__(335),
     identity = __webpack_require__(29);
 
 /**
@@ -26200,7 +23388,7 @@ module.exports = baseOrderBy;
 
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(41),
@@ -26236,7 +23424,7 @@ module.exports = basePickBy;
 
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports) {
 
 /**
@@ -26256,7 +23444,7 @@ module.exports = baseProperty;
 
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports) {
 
 /**
@@ -26285,11 +23473,11 @@ module.exports = baseReduce;
 
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var identity = __webpack_require__(29),
-    metaMap = __webpack_require__(194);
+    metaMap = __webpack_require__(193);
 
 /**
  * The base implementation of `setData` without support for hot loop shorting.
@@ -26308,7 +23496,7 @@ module.exports = baseSetData;
 
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports) {
 
 /**
@@ -26345,7 +23533,7 @@ module.exports = baseSlice;
 
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports) {
 
 /**
@@ -26371,12 +23559,12 @@ module.exports = baseTimes;
 
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var castPath = __webpack_require__(27),
-    last = __webpack_require__(213),
-    parent = __webpack_require__(197),
+    last = __webpack_require__(212),
+    parent = __webpack_require__(196),
     toKey = __webpack_require__(20);
 
 /**
@@ -26397,7 +23585,7 @@ module.exports = baseUnset;
 
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(41),
@@ -26421,7 +23609,7 @@ module.exports = baseUpdate;
 
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(12);
@@ -26446,7 +23634,7 @@ module.exports = baseValues;
 
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(8);
@@ -26488,10 +23676,10 @@ module.exports = cloneBuffer;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(86)(module)))
 
 /***/ }),
-/* 171 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(104);
+var cloneArrayBuffer = __webpack_require__(103);
 
 /**
  * Creates a clone of `typedArray`.
@@ -26510,7 +23698,7 @@ module.exports = cloneTypedArray;
 
 
 /***/ }),
-/* 172 */
+/* 171 */
 /***/ (function(module, exports) {
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -26555,7 +23743,7 @@ module.exports = composeArgs;
 
 
 /***/ }),
-/* 173 */
+/* 172 */
 /***/ (function(module, exports) {
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -26602,7 +23790,7 @@ module.exports = composeArgsRight;
 
 
 /***/ }),
-/* 174 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArrayLike = __webpack_require__(16);
@@ -26640,7 +23828,7 @@ module.exports = createBaseEach;
 
 
 /***/ }),
-/* 175 */
+/* 174 */
 /***/ (function(module, exports) {
 
 /**
@@ -26671,7 +23859,7 @@ module.exports = createBaseFor;
 
 
 /***/ }),
-/* 176 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIteratee = __webpack_require__(3),
@@ -26702,15 +23890,15 @@ module.exports = createFind;
 
 
 /***/ }),
-/* 177 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LodashWrapper = __webpack_require__(91),
+var LodashWrapper = __webpack_require__(90),
     flatRest = __webpack_require__(32),
-    getData = __webpack_require__(107),
-    getFuncName = __webpack_require__(187),
+    getData = __webpack_require__(106),
+    getFuncName = __webpack_require__(186),
     isArray = __webpack_require__(1),
-    isLaziable = __webpack_require__(191);
+    isLaziable = __webpack_require__(190);
 
 /** Error message constants. */
 var FUNC_ERROR_TEXT = 'Expected a function';
@@ -26786,16 +23974,16 @@ module.exports = createFlow;
 
 
 /***/ }),
-/* 178 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var composeArgs = __webpack_require__(172),
-    composeArgsRight = __webpack_require__(173),
-    countHolders = __webpack_require__(338),
+var composeArgs = __webpack_require__(171),
+    composeArgsRight = __webpack_require__(172),
+    countHolders = __webpack_require__(339),
     createCtor = __webpack_require__(70),
-    createRecurry = __webpack_require__(181),
+    createRecurry = __webpack_require__(180),
     getHolder = __webpack_require__(43),
-    reorder = __webpack_require__(380),
+    reorder = __webpack_require__(381),
     replaceHolders = __webpack_require__(35),
     root = __webpack_require__(8);
 
@@ -26884,10 +24072,10 @@ module.exports = createHybrid;
 
 
 /***/ }),
-/* 179 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseInverter = __webpack_require__(304);
+var baseInverter = __webpack_require__(305);
 
 /**
  * Creates a function like `_.invertBy`.
@@ -26907,10 +24095,10 @@ module.exports = createInverter;
 
 
 /***/ }),
-/* 180 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseRange = __webpack_require__(316),
+var baseRange = __webpack_require__(317),
     isIterateeCall = __webpack_require__(34),
     toFinite = __webpack_require__(80);
 
@@ -26943,12 +24131,12 @@ module.exports = createRange;
 
 
 /***/ }),
-/* 181 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isLaziable = __webpack_require__(191),
-    setData = __webpack_require__(198),
-    setWrapToString = __webpack_require__(200);
+var isLaziable = __webpack_require__(190),
+    setData = __webpack_require__(197),
+    setWrapToString = __webpack_require__(199);
 
 /** Used to compose bitmasks for function metadata. */
 var WRAP_BIND_FLAG = 1,
@@ -27005,13 +24193,13 @@ module.exports = createRecurry;
 
 
 /***/ }),
-/* 182 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseToPairs = __webpack_require__(323),
+var baseToPairs = __webpack_require__(324),
     getTag = __webpack_require__(73),
-    mapToArray = __webpack_require__(110),
-    setToPairs = __webpack_require__(383);
+    mapToArray = __webpack_require__(109),
+    setToPairs = __webpack_require__(384);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -27041,7 +24229,7 @@ module.exports = createToPairs;
 
 
 /***/ }),
-/* 183 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(33);
@@ -27058,12 +24246,12 @@ module.exports = defineProperty;
 
 
 /***/ }),
-/* 184 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var SetCache = __webpack_require__(285),
-    arraySome = __webpack_require__(95),
-    cacheHas = __webpack_require__(325);
+var SetCache = __webpack_require__(286),
+    arraySome = __webpack_require__(94),
+    cacheHas = __webpack_require__(326);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -27147,7 +24335,7 @@ module.exports = equalArrays;
 
 
 /***/ }),
-/* 185 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -27158,11 +24346,11 @@ module.exports = freeGlobal;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
 
 /***/ }),
-/* 186 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(153),
-    getSymbols = __webpack_require__(108),
+var baseGetAllKeys = __webpack_require__(152),
+    getSymbols = __webpack_require__(107),
     keys = __webpack_require__(9);
 
 /**
@@ -27180,10 +24368,10 @@ module.exports = getAllKeys;
 
 
 /***/ }),
-/* 187 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var realNames = __webpack_require__(379);
+var realNames = __webpack_require__(380);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -27217,13 +24405,13 @@ module.exports = getFuncName;
 
 
 /***/ }),
-/* 188 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(47),
     getPrototype = __webpack_require__(72),
-    getSymbols = __webpack_require__(108),
-    stubArray = __webpack_require__(120);
+    getSymbols = __webpack_require__(107),
+    stubArray = __webpack_require__(119);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeGetSymbols = Object.getOwnPropertySymbols;
@@ -27248,14 +24436,14 @@ module.exports = getSymbolsIn;
 
 
 /***/ }),
-/* 189 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var castPath = __webpack_require__(27),
     isArguments = __webpack_require__(77),
     isArray = __webpack_require__(1),
     isIndex = __webpack_require__(44),
-    isLength = __webpack_require__(116),
+    isLength = __webpack_require__(115),
     toKey = __webpack_require__(20);
 
 /**
@@ -27293,7 +24481,7 @@ module.exports = hasPath;
 
 
 /***/ }),
-/* 190 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseCreate = __webpack_require__(39),
@@ -27317,13 +24505,13 @@ module.exports = initCloneObject;
 
 
 /***/ }),
-/* 191 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LazyWrapper = __webpack_require__(90),
-    getData = __webpack_require__(107),
-    getFuncName = __webpack_require__(187),
-    lodash = __webpack_require__(509);
+var LazyWrapper = __webpack_require__(89),
+    getData = __webpack_require__(106),
+    getFuncName = __webpack_require__(186),
+    lodash = __webpack_require__(510);
 
 /**
  * Checks if `func` has a lazy counterpart.
@@ -27351,7 +24539,7 @@ module.exports = isLaziable;
 
 
 /***/ }),
-/* 192 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(6);
@@ -27372,7 +24560,7 @@ module.exports = isStrictComparable;
 
 
 /***/ }),
-/* 193 */
+/* 192 */
 /***/ (function(module, exports) {
 
 /**
@@ -27398,10 +24586,10 @@ module.exports = matchesStrictComparable;
 
 
 /***/ }),
-/* 194 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var WeakMap = __webpack_require__(142);
+var WeakMap = __webpack_require__(141);
 
 /** Used to store function metadata. */
 var metaMap = WeakMap && new WeakMap;
@@ -27410,7 +24598,7 @@ module.exports = metaMap;
 
 
 /***/ }),
-/* 195 */
+/* 194 */
 /***/ (function(module, exports) {
 
 /**
@@ -27431,7 +24619,7 @@ module.exports = overArg;
 
 
 /***/ }),
-/* 196 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11);
@@ -27473,11 +24661,11 @@ module.exports = overRest;
 
 
 /***/ }),
-/* 197 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(41),
-    baseSlice = __webpack_require__(165);
+    baseSlice = __webpack_require__(164);
 
 /**
  * Gets the parent value at `path` of `object`.
@@ -27495,11 +24683,11 @@ module.exports = parent;
 
 
 /***/ }),
-/* 198 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSetData = __webpack_require__(164),
-    shortOut = __webpack_require__(201);
+var baseSetData = __webpack_require__(163),
+    shortOut = __webpack_require__(200);
 
 /**
  * Sets metadata for `func`.
@@ -27521,7 +24709,7 @@ module.exports = setData;
 
 
 /***/ }),
-/* 199 */
+/* 198 */
 /***/ (function(module, exports) {
 
 /**
@@ -27545,13 +24733,13 @@ module.exports = setToArray;
 
 
 /***/ }),
-/* 200 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getWrapDetails = __webpack_require__(350),
-    insertWrapDetails = __webpack_require__(359),
-    setToString = __webpack_require__(111),
-    updateWrapDetails = __webpack_require__(392);
+var getWrapDetails = __webpack_require__(351),
+    insertWrapDetails = __webpack_require__(360),
+    setToString = __webpack_require__(110),
+    updateWrapDetails = __webpack_require__(393);
 
 /**
  * Sets the `toString` method of `wrapper` to mimic the source of `reference`
@@ -27572,7 +24760,7 @@ module.exports = setWrapToString;
 
 
 /***/ }),
-/* 201 */
+/* 200 */
 /***/ (function(module, exports) {
 
 /** Used to detect hot functions by number of calls within a span of milliseconds. */
@@ -27615,10 +24803,10 @@ module.exports = shortOut;
 
 
 /***/ }),
-/* 202 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoizeCapped = __webpack_require__(373);
+var memoizeCapped = __webpack_require__(374);
 
 /** Used to match property names within property paths. */
 var reLeadingDot = /^\./,
@@ -27649,7 +24837,7 @@ module.exports = stringToPath;
 
 
 /***/ }),
-/* 203 */
+/* 202 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -27681,7 +24869,7 @@ module.exports = toSource;
 
 
 /***/ }),
-/* 204 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var createWrap = __webpack_require__(23);
@@ -27716,7 +24904,7 @@ module.exports = ary;
 
 
 /***/ }),
-/* 205 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(19),
@@ -27762,7 +24950,7 @@ module.exports = assignIn;
 
 
 /***/ }),
-/* 206 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(14);
@@ -27808,7 +24996,7 @@ module.exports = before;
 
 
 /***/ }),
-/* 207 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseRest = __webpack_require__(4),
@@ -27871,47 +25059,47 @@ module.exports = bind;
 
 
 /***/ }),
-/* 208 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'countBy': __webpack_require__(404),
-  'each': __webpack_require__(413),
-  'eachRight': __webpack_require__(414),
-  'every': __webpack_require__(417),
-  'filter': __webpack_require__(420),
-  'find': __webpack_require__(421),
-  'findLast': __webpack_require__(424),
-  'flatMap': __webpack_require__(427),
-  'flatMapDeep': __webpack_require__(428),
-  'flatMapDepth': __webpack_require__(429),
-  'forEach': __webpack_require__(210),
-  'forEachRight': __webpack_require__(211),
-  'groupBy': __webpack_require__(441),
-  'includes': __webpack_require__(444),
-  'invokeMap': __webpack_require__(448),
-  'keyBy': __webpack_require__(452),
+  'countBy': __webpack_require__(405),
+  'each': __webpack_require__(414),
+  'eachRight': __webpack_require__(415),
+  'every': __webpack_require__(418),
+  'filter': __webpack_require__(421),
+  'find': __webpack_require__(422),
+  'findLast': __webpack_require__(425),
+  'flatMap': __webpack_require__(428),
+  'flatMapDeep': __webpack_require__(429),
+  'flatMapDepth': __webpack_require__(430),
+  'forEach': __webpack_require__(209),
+  'forEachRight': __webpack_require__(210),
+  'groupBy': __webpack_require__(442),
+  'includes': __webpack_require__(445),
+  'invokeMap': __webpack_require__(449),
+  'keyBy': __webpack_require__(453),
   'map': __webpack_require__(79),
-  'orderBy': __webpack_require__(467),
-  'partition': __webpack_require__(473),
-  'reduce': __webpack_require__(480),
-  'reduceRight': __webpack_require__(481),
-  'reject': __webpack_require__(482),
-  'sample': __webpack_require__(485),
-  'sampleSize': __webpack_require__(486),
-  'shuffle': __webpack_require__(489),
-  'size': __webpack_require__(490),
-  'some': __webpack_require__(491),
-  'sortBy': __webpack_require__(492)
+  'orderBy': __webpack_require__(468),
+  'partition': __webpack_require__(474),
+  'reduce': __webpack_require__(481),
+  'reduceRight': __webpack_require__(482),
+  'reject': __webpack_require__(483),
+  'sample': __webpack_require__(486),
+  'sampleSize': __webpack_require__(487),
+  'shuffle': __webpack_require__(490),
+  'size': __webpack_require__(491),
+  'some': __webpack_require__(492),
+  'sortBy': __webpack_require__(493)
 };
 
 
 /***/ }),
-/* 209 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(6),
-    now = __webpack_require__(461),
+    now = __webpack_require__(462),
     toNumber = __webpack_require__(50);
 
 /** Error message constants. */
@@ -28101,7 +25289,7 @@ module.exports = debounce;
 
 
 /***/ }),
-/* 210 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayEach = __webpack_require__(38),
@@ -28148,11 +25336,11 @@ module.exports = forEach;
 
 
 /***/ }),
-/* 211 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayEachRight = __webpack_require__(289),
-    baseEachRight = __webpack_require__(149),
+var arrayEachRight = __webpack_require__(290),
+    baseEachRight = __webpack_require__(148),
     castFunction = __webpack_require__(18),
     isArray = __webpack_require__(1);
 
@@ -28185,7 +25373,7 @@ module.exports = forEachRight;
 
 
 /***/ }),
-/* 212 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(26),
@@ -28221,7 +25409,7 @@ module.exports = isString;
 
 
 /***/ }),
-/* 213 */
+/* 212 */
 /***/ (function(module, exports) {
 
 /**
@@ -28247,10 +25435,10 @@ module.exports = last;
 
 
 /***/ }),
-/* 214 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var MapCache = __webpack_require__(93);
+var MapCache = __webpack_require__(92);
 
 /** Error message constants. */
 var FUNC_ERROR_TEXT = 'Expected a function';
@@ -28326,10 +25514,10 @@ module.exports = memoize;
 
 
 /***/ }),
-/* 215 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMerge = __webpack_require__(102),
+var baseMerge = __webpack_require__(101),
     createAssigner = __webpack_require__(42);
 
 /**
@@ -28371,7 +25559,7 @@ module.exports = mergeWith;
 
 
 /***/ }),
-/* 216 */
+/* 215 */
 /***/ (function(module, exports) {
 
 /**
@@ -28394,7 +25582,7 @@ module.exports = noop;
 
 
 /***/ }),
-/* 217 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseRest = __webpack_require__(4),
@@ -28450,13 +25638,13 @@ module.exports = partial;
 
 
 /***/ }),
-/* 218 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(12),
     baseIteratee = __webpack_require__(3),
-    basePickBy = __webpack_require__(161),
-    getAllKeysIn = __webpack_require__(106);
+    basePickBy = __webpack_require__(160),
+    getAllKeysIn = __webpack_require__(105);
 
 /**
  * Creates an object composed of the `object` properties `predicate` returns
@@ -28493,12 +25681,12 @@ module.exports = pickBy;
 
 
 /***/ }),
-/* 219 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseProperty = __webpack_require__(162),
-    basePropertyDeep = __webpack_require__(315),
-    isKey = __webpack_require__(109),
+var baseProperty = __webpack_require__(161),
+    basePropertyDeep = __webpack_require__(316),
+    isKey = __webpack_require__(108),
     toKey = __webpack_require__(20);
 
 /**
@@ -28531,7 +25719,7 @@ module.exports = property;
 
 
 /***/ }),
-/* 220 */
+/* 219 */
 /***/ (function(module, exports) {
 
 /**
@@ -28555,10 +25743,10 @@ module.exports = stubFalse;
 
 
 /***/ }),
-/* 221 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createToPairs = __webpack_require__(182),
+var createToPairs = __webpack_require__(181),
     keys = __webpack_require__(9);
 
 /**
@@ -28591,10 +25779,10 @@ module.exports = toPairs;
 
 
 /***/ }),
-/* 222 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createToPairs = __webpack_require__(182),
+var createToPairs = __webpack_require__(181),
     keysIn = __webpack_require__(13);
 
 /**
@@ -28627,7 +25815,7 @@ module.exports = toPairsIn;
 
 
 /***/ }),
-/* 223 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28799,7 +25987,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 224 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28836,7 +26024,7 @@ module.exports = function parseURI (str, opts) {
 
 
 /***/ }),
-/* 225 */
+/* 224 */
 /***/ (function(module, exports) {
 
 
@@ -29175,7 +26363,7 @@ module.exports = Texture;
 
 
 /***/ }),
-/* 226 */
+/* 225 */
 /***/ (function(module, exports) {
 
 // var GL_MAP = {};
@@ -29236,7 +26424,7 @@ module.exports = setVertexAttribArrays;
 
 
 /***/ }),
-/* 227 */
+/* 226 */
 /***/ (function(module, exports) {
 
 
@@ -29322,7 +26510,7 @@ module.exports = compileProgram;
 
 
 /***/ }),
-/* 228 */
+/* 227 */
 /***/ (function(module, exports) {
 
 /**
@@ -29406,12 +26594,12 @@ module.exports = defaultValue;
 
 
 /***/ }),
-/* 229 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var mapType = __webpack_require__(123);
-var mapSize = __webpack_require__(232);
+var mapType = __webpack_require__(122);
+var mapSize = __webpack_require__(231);
 
 /**
  * Extracts the attributes
@@ -29453,11 +26641,11 @@ module.exports = extractAttributes;
 
 
 /***/ }),
-/* 230 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mapType = __webpack_require__(123);
-var defaultValue = __webpack_require__(228);
+var mapType = __webpack_require__(122);
+var defaultValue = __webpack_require__(227);
 
 /**
  * Extracts the uniforms
@@ -29494,7 +26682,7 @@ module.exports = extractUniforms;
 
 
 /***/ }),
-/* 231 */
+/* 230 */
 /***/ (function(module, exports) {
 
 /**
@@ -29641,7 +26829,7 @@ module.exports = generateUniformAccessObject;
 
 
 /***/ }),
-/* 232 */
+/* 231 */
 /***/ (function(module, exports) {
 
 /**
@@ -29683,7 +26871,7 @@ module.exports = mapSize;
 
 
 /***/ }),
-/* 233 */
+/* 232 */
 /***/ (function(module, exports) {
 
 /**
@@ -29707,7 +26895,7 @@ module.exports = setPrecision;
 
 
 /***/ }),
-/* 234 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29770,7 +26958,7 @@ exports.default = {
 //# sourceMappingURL=accessibleTarget.js.map
 
 /***/ }),
-/* 235 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29829,7 +27017,7 @@ function autoDetectRenderer() {
 //# sourceMappingURL=autoDetectRenderer.js.map
 
 /***/ }),
-/* 236 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29849,15 +27037,15 @@ var _settings = __webpack_require__(10);
 
 var _settings2 = _interopRequireDefault(_settings);
 
-var _TransformStatic = __webpack_require__(238);
+var _TransformStatic = __webpack_require__(237);
 
 var _TransformStatic2 = _interopRequireDefault(_TransformStatic);
 
-var _Transform = __webpack_require__(237);
+var _Transform = __webpack_require__(236);
 
 var _Transform2 = _interopRequireDefault(_Transform);
 
-var _Bounds = __webpack_require__(124);
+var _Bounds = __webpack_require__(123);
 
 var _Bounds2 = _interopRequireDefault(_Bounds);
 
@@ -30502,7 +27690,7 @@ DisplayObject.prototype.displayObjectUpdateTransform = DisplayObject.prototype.u
 //# sourceMappingURL=DisplayObject.js.map
 
 /***/ }),
-/* 237 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30514,7 +27702,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _math = __webpack_require__(7);
 
-var _TransformBase2 = __webpack_require__(125);
+var _TransformBase2 = __webpack_require__(124);
 
 var _TransformBase3 = _interopRequireDefault(_TransformBase2);
 
@@ -30688,7 +27876,7 @@ exports.default = Transform;
 //# sourceMappingURL=Transform.js.map
 
 /***/ }),
-/* 238 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30700,7 +27888,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _math = __webpack_require__(7);
 
-var _TransformBase2 = __webpack_require__(125);
+var _TransformBase2 = __webpack_require__(124);
 
 var _TransformBase3 = _interopRequireDefault(_TransformBase2);
 
@@ -30903,7 +28091,7 @@ exports.default = TransformStatic;
 //# sourceMappingURL=TransformStatic.js.map
 
 /***/ }),
-/* 239 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31025,7 +28213,7 @@ exports.default = GraphicsData;
 //# sourceMappingURL=GraphicsData.js.map
 
 /***/ }),
-/* 240 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31033,7 +28221,7 @@ exports.default = GraphicsData;
 
 exports.__esModule = true;
 
-var _Matrix = __webpack_require__(126);
+var _Matrix = __webpack_require__(125);
 
 var _Matrix2 = _interopRequireDefault(_Matrix);
 
@@ -31222,7 +28410,7 @@ exports.default = GroupD8;
 //# sourceMappingURL=GroupD8.js.map
 
 /***/ }),
-/* 241 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31344,7 +28532,7 @@ exports.default = ObservablePoint;
 //# sourceMappingURL=ObservablePoint.js.map
 
 /***/ }),
-/* 242 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31368,7 +28556,7 @@ var _Container = __webpack_require__(53);
 
 var _Container2 = _interopRequireDefault(_Container);
 
-var _RenderTexture = __webpack_require__(131);
+var _RenderTexture = __webpack_require__(130);
 
 var _RenderTexture2 = _interopRequireDefault(_RenderTexture);
 
@@ -31681,7 +28869,7 @@ exports.default = SystemRenderer;
 //# sourceMappingURL=SystemRenderer.js.map
 
 /***/ }),
-/* 243 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31813,7 +29001,7 @@ exports.default = CanvasRenderTarget;
 //# sourceMappingURL=CanvasRenderTarget.js.map
 
 /***/ }),
-/* 244 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31879,7 +29067,7 @@ function canUseNewCanvasBlendModes() {
 //# sourceMappingURL=canUseNewCanvasBlendModes.js.map
 
 /***/ }),
-/* 245 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31889,7 +29077,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _extractUniformsFromSrc = __webpack_require__(540);
+var _extractUniformsFromSrc = __webpack_require__(541);
 
 var _extractUniformsFromSrc2 = _interopRequireDefault(_extractUniformsFromSrc);
 
@@ -32046,7 +29234,7 @@ exports.default = Filter;
 //# sourceMappingURL=Filter.js.map
 
 /***/ }),
-/* 246 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32054,7 +29242,7 @@ exports.default = Filter;
 
 exports.__esModule = true;
 
-var _Filter2 = __webpack_require__(245);
+var _Filter2 = __webpack_require__(244);
 
 var _Filter3 = _interopRequireDefault(_Filter2);
 
@@ -32123,7 +29311,7 @@ exports.default = SpriteMaskFilter;
 //# sourceMappingURL=SpriteMaskFilter.js.map
 
 /***/ }),
-/* 247 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32135,7 +29323,7 @@ var _pixiGlCore = __webpack_require__(15);
 
 var _pixiGlCore2 = _interopRequireDefault(_pixiGlCore);
 
-var _createIndicesForQuads = __webpack_require__(132);
+var _createIndicesForQuads = __webpack_require__(131);
 
 var _createIndicesForQuads2 = _interopRequireDefault(_createIndicesForQuads);
 
@@ -32301,7 +29489,7 @@ exports.default = Quad;
 //# sourceMappingURL=Quad.js.map
 
 /***/ }),
-/* 248 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32743,7 +29931,7 @@ function getColor(color) {
 //# sourceMappingURL=TextStyle.js.map
 
 /***/ }),
-/* 249 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32911,7 +30099,7 @@ exports.default = BaseRenderTexture;
 //# sourceMappingURL=BaseRenderTexture.js.map
 
 /***/ }),
-/* 250 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32919,7 +30107,7 @@ exports.default = BaseRenderTexture;
 
 exports.__esModule = true;
 
-var _GroupD = __webpack_require__(240);
+var _GroupD = __webpack_require__(239);
 
 var _GroupD2 = _interopRequireDefault(_GroupD);
 
@@ -33021,7 +30209,7 @@ exports.default = TextureUvs;
 //# sourceMappingURL=TextureUvs.js.map
 
 /***/ }),
-/* 251 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33037,7 +30225,7 @@ var _BaseTexture3 = _interopRequireDefault(_BaseTexture2);
 
 var _utils = __webpack_require__(5);
 
-var _ticker = __webpack_require__(253);
+var _ticker = __webpack_require__(252);
 
 var ticker = _interopRequireWildcard(_ticker);
 
@@ -33353,7 +30541,7 @@ function createSource(path, type) {
 //# sourceMappingURL=VideoBaseTexture.js.map
 
 /***/ }),
-/* 252 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33754,7 +30942,7 @@ exports.default = Ticker;
 //# sourceMappingURL=Ticker.js.map
 
 /***/ }),
-/* 253 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33763,7 +30951,7 @@ exports.default = Ticker;
 exports.__esModule = true;
 exports.Ticker = exports.shared = undefined;
 
-var _Ticker = __webpack_require__(252);
+var _Ticker = __webpack_require__(251);
 
 var _Ticker2 = _interopRequireDefault(_Ticker);
 
@@ -33823,7 +31011,7 @@ exports.Ticker = _Ticker2.default;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 254 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33833,7 +31021,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Matrix = __webpack_require__(126);
+var _Matrix = __webpack_require__(125);
 
 var _Matrix2 = _interopRequireDefault(_Matrix);
 
@@ -33958,7 +31146,7 @@ exports.default = TextureTransform;
 //# sourceMappingURL=TextureTransform.js.map
 
 /***/ }),
-/* 255 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33972,15 +31160,15 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _generateBlurVertSource = __webpack_require__(258);
+var _generateBlurVertSource = __webpack_require__(257);
 
 var _generateBlurVertSource2 = _interopRequireDefault(_generateBlurVertSource);
 
-var _generateBlurFragSource = __webpack_require__(257);
+var _generateBlurFragSource = __webpack_require__(256);
 
 var _generateBlurFragSource2 = _interopRequireDefault(_generateBlurFragSource);
 
-var _getMaxBlurKernelSize = __webpack_require__(259);
+var _getMaxBlurKernelSize = __webpack_require__(258);
 
 var _getMaxBlurKernelSize2 = _interopRequireDefault(_getMaxBlurKernelSize);
 
@@ -34129,7 +31317,7 @@ exports.default = BlurXFilter;
 //# sourceMappingURL=BlurXFilter.js.map
 
 /***/ }),
-/* 256 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34143,15 +31331,15 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _generateBlurVertSource = __webpack_require__(258);
+var _generateBlurVertSource = __webpack_require__(257);
 
 var _generateBlurVertSource2 = _interopRequireDefault(_generateBlurVertSource);
 
-var _generateBlurFragSource = __webpack_require__(257);
+var _generateBlurFragSource = __webpack_require__(256);
 
 var _generateBlurFragSource2 = _interopRequireDefault(_generateBlurFragSource);
 
-var _getMaxBlurKernelSize = __webpack_require__(259);
+var _getMaxBlurKernelSize = __webpack_require__(258);
 
 var _getMaxBlurKernelSize2 = _interopRequireDefault(_getMaxBlurKernelSize);
 
@@ -34299,7 +31487,7 @@ exports.default = BlurYFilter;
 //# sourceMappingURL=BlurYFilter.js.map
 
 /***/ }),
-/* 257 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34351,7 +31539,7 @@ function generateFragBlurSource(kernelSize) {
 //# sourceMappingURL=generateBlurFragSource.js.map
 
 /***/ }),
-/* 258 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34400,7 +31588,7 @@ function generateVertBlurSource(kernelSize, x) {
 //# sourceMappingURL=generateBlurVertSource.js.map
 
 /***/ }),
-/* 259 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34421,7 +31609,7 @@ function getMaxKernelSize(gl) {
 //# sourceMappingURL=getMaxBlurKernelSize.js.map
 
 /***/ }),
-/* 260 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34429,7 +31617,7 @@ function getMaxKernelSize(gl) {
 
 exports.__esModule = true;
 
-var _FXAAFilter = __webpack_require__(572);
+var _FXAAFilter = __webpack_require__(573);
 
 Object.defineProperty(exports, 'FXAAFilter', {
   enumerable: true,
@@ -34438,7 +31626,7 @@ Object.defineProperty(exports, 'FXAAFilter', {
   }
 });
 
-var _NoiseFilter = __webpack_require__(573);
+var _NoiseFilter = __webpack_require__(574);
 
 Object.defineProperty(exports, 'NoiseFilter', {
   enumerable: true,
@@ -34447,7 +31635,7 @@ Object.defineProperty(exports, 'NoiseFilter', {
   }
 });
 
-var _DisplacementFilter = __webpack_require__(571);
+var _DisplacementFilter = __webpack_require__(572);
 
 Object.defineProperty(exports, 'DisplacementFilter', {
   enumerable: true,
@@ -34456,7 +31644,7 @@ Object.defineProperty(exports, 'DisplacementFilter', {
   }
 });
 
-var _BlurFilter = __webpack_require__(569);
+var _BlurFilter = __webpack_require__(570);
 
 Object.defineProperty(exports, 'BlurFilter', {
   enumerable: true,
@@ -34465,7 +31653,7 @@ Object.defineProperty(exports, 'BlurFilter', {
   }
 });
 
-var _BlurXFilter = __webpack_require__(255);
+var _BlurXFilter = __webpack_require__(254);
 
 Object.defineProperty(exports, 'BlurXFilter', {
   enumerable: true,
@@ -34474,7 +31662,7 @@ Object.defineProperty(exports, 'BlurXFilter', {
   }
 });
 
-var _BlurYFilter = __webpack_require__(256);
+var _BlurYFilter = __webpack_require__(255);
 
 Object.defineProperty(exports, 'BlurYFilter', {
   enumerable: true,
@@ -34483,7 +31671,7 @@ Object.defineProperty(exports, 'BlurYFilter', {
   }
 });
 
-var _ColorMatrixFilter = __webpack_require__(570);
+var _ColorMatrixFilter = __webpack_require__(571);
 
 Object.defineProperty(exports, 'ColorMatrixFilter', {
   enumerable: true,
@@ -34492,7 +31680,7 @@ Object.defineProperty(exports, 'ColorMatrixFilter', {
   }
 });
 
-var _VoidFilter = __webpack_require__(574);
+var _VoidFilter = __webpack_require__(575);
 
 Object.defineProperty(exports, 'VoidFilter', {
   enumerable: true,
@@ -34505,7 +31693,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 261 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34581,7 +31769,7 @@ exports.default = InteractionData;
 //# sourceMappingURL=InteractionData.js.map
 
 /***/ }),
-/* 262 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34696,7 +31884,7 @@ exports.default = {
 //# sourceMappingURL=interactiveTarget.js.map
 
 /***/ }),
-/* 263 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34775,7 +31963,7 @@ var _core = __webpack_require__(0);
 
 var _resourceLoader = __webpack_require__(59);
 
-var _extras = __webpack_require__(133);
+var _extras = __webpack_require__(132);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -34829,7 +32017,7 @@ function parse(resource, texture) {
 //# sourceMappingURL=bitmapFontParser.js.map
 
 /***/ }),
-/* 264 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34837,7 +32025,7 @@ function parse(resource, texture) {
 
 exports.__esModule = true;
 
-var _loader = __webpack_require__(578);
+var _loader = __webpack_require__(579);
 
 Object.defineProperty(exports, 'Loader', {
   enumerable: true,
@@ -34846,7 +32034,7 @@ Object.defineProperty(exports, 'Loader', {
   }
 });
 
-var _bitmapFontParser = __webpack_require__(263);
+var _bitmapFontParser = __webpack_require__(262);
 
 Object.defineProperty(exports, 'bitmapFontParser', {
   enumerable: true,
@@ -34861,7 +32049,7 @@ Object.defineProperty(exports, 'parseBitmapFontData', {
   }
 });
 
-var _spritesheetParser = __webpack_require__(265);
+var _spritesheetParser = __webpack_require__(264);
 
 Object.defineProperty(exports, 'spritesheetParser', {
   enumerable: true,
@@ -34870,7 +32058,7 @@ Object.defineProperty(exports, 'spritesheetParser', {
   }
 });
 
-var _textureParser = __webpack_require__(266);
+var _textureParser = __webpack_require__(265);
 
 Object.defineProperty(exports, 'textureParser', {
   enumerable: true,
@@ -34892,7 +32080,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 265 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35033,7 +32221,7 @@ var BATCH_SIZE = 1000;
 //# sourceMappingURL=spritesheetParser.js.map
 
 /***/ }),
-/* 266 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35075,7 +32263,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //# sourceMappingURL=textureParser.js.map
 
 /***/ }),
-/* 267 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35223,7 +32411,7 @@ exports.default = Plane;
 //# sourceMappingURL=Plane.js.map
 
 /***/ }),
-/* 268 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35240,7 +32428,7 @@ Object.defineProperty(exports, 'Mesh', {
   }
 });
 
-var _MeshRenderer = __webpack_require__(582);
+var _MeshRenderer = __webpack_require__(583);
 
 Object.defineProperty(exports, 'MeshRenderer', {
   enumerable: true,
@@ -35249,7 +32437,7 @@ Object.defineProperty(exports, 'MeshRenderer', {
   }
 });
 
-var _CanvasMeshRenderer = __webpack_require__(581);
+var _CanvasMeshRenderer = __webpack_require__(582);
 
 Object.defineProperty(exports, 'CanvasMeshRenderer', {
   enumerable: true,
@@ -35258,7 +32446,7 @@ Object.defineProperty(exports, 'CanvasMeshRenderer', {
   }
 });
 
-var _Plane = __webpack_require__(267);
+var _Plane = __webpack_require__(266);
 
 Object.defineProperty(exports, 'Plane', {
   enumerable: true,
@@ -35267,7 +32455,7 @@ Object.defineProperty(exports, 'Plane', {
   }
 });
 
-var _NineSlicePlane = __webpack_require__(579);
+var _NineSlicePlane = __webpack_require__(580);
 
 Object.defineProperty(exports, 'NineSlicePlane', {
   enumerable: true,
@@ -35276,12 +32464,42 @@ Object.defineProperty(exports, 'NineSlicePlane', {
   }
 });
 
-var _Rope = __webpack_require__(580);
+var _Rope = __webpack_require__(581);
 
 Object.defineProperty(exports, 'Rope', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_Rope).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 268 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _ParticleContainer = __webpack_require__(584);
+
+Object.defineProperty(exports, 'ParticleContainer', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_ParticleContainer).default;
+  }
+});
+
+var _ParticleRenderer = __webpack_require__(586);
+
+Object.defineProperty(exports, 'ParticleRenderer', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_ParticleRenderer).default;
   }
 });
 
@@ -35297,37 +32515,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.__esModule = true;
 
-var _ParticleContainer = __webpack_require__(583);
-
-Object.defineProperty(exports, 'ParticleContainer', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_ParticleContainer).default;
-  }
-});
-
-var _ParticleRenderer = __webpack_require__(585);
-
-Object.defineProperty(exports, 'ParticleRenderer', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_ParticleRenderer).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 270 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _WebGLPrepare = __webpack_require__(593);
+var _WebGLPrepare = __webpack_require__(594);
 
 Object.defineProperty(exports, 'webgl', {
   enumerable: true,
@@ -35336,7 +32524,7 @@ Object.defineProperty(exports, 'webgl', {
   }
 });
 
-var _CanvasPrepare = __webpack_require__(591);
+var _CanvasPrepare = __webpack_require__(592);
 
 Object.defineProperty(exports, 'canvas', {
   enumerable: true,
@@ -35345,7 +32533,7 @@ Object.defineProperty(exports, 'canvas', {
   }
 });
 
-var _BasePrepare = __webpack_require__(134);
+var _BasePrepare = __webpack_require__(133);
 
 Object.defineProperty(exports, 'BasePrepare', {
   enumerable: true,
@@ -35354,7 +32542,7 @@ Object.defineProperty(exports, 'BasePrepare', {
   }
 });
 
-var _CountLimiter = __webpack_require__(271);
+var _CountLimiter = __webpack_require__(270);
 
 Object.defineProperty(exports, 'CountLimiter', {
   enumerable: true,
@@ -35363,7 +32551,7 @@ Object.defineProperty(exports, 'CountLimiter', {
   }
 });
 
-var _TimeLimiter = __webpack_require__(592);
+var _TimeLimiter = __webpack_require__(593);
 
 Object.defineProperty(exports, 'TimeLimiter', {
   enumerable: true,
@@ -35376,7 +32564,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 271 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35439,7 +32627,7 @@ exports.default = CountLimiter;
 //# sourceMappingURL=CountLimiter.js.map
 
 /***/ }),
-/* 272 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35646,7 +32834,7 @@ function queue(worker, concurrency) {
 //# sourceMappingURL=async.js.map
 
 /***/ }),
-/* 273 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35719,29 +32907,23 @@ function encodeBinary(input) {
 //# sourceMappingURL=b64.js.map
 
 /***/ }),
-/* 274 */
+/* 273 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_howler__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_howler___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_howler__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_pixi_js__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_util__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_util__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_levels_json__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_levels_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__data_levels_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Stage__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dist_audio_json__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dist_audio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__dist_audio_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_util__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_util__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_levels_json__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_levels_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__data_levels_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Stage__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Sound__ = __webpack_require__(87);
 
 
 
 
 
-
-
-const sound = new __WEBPACK_IMPORTED_MODULE_0_howler__["Howl"](__WEBPACK_IMPORTED_MODULE_5__dist_audio_json___default.a);
 
 const BLUE_SKY_COLOR = 0x64b0ff;
 const PINK_SKY_COLOR = 0xfbb4d4;
@@ -35756,14 +32938,15 @@ class Game {
    */
   constructor(opts) {
     this.spritesheet = opts.spritesheet;
-    this.loader = __WEBPACK_IMPORTED_MODULE_1_pixi_js__["loader"];
-    this.renderer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_pixi_js__["autoDetectRenderer"])(window.innerWidth, window.innerHeight, {
+    this.loader = __WEBPACK_IMPORTED_MODULE_0_pixi_js__["loader"];
+    this.renderer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["autoDetectRenderer"])(window.innerWidth, window.innerHeight, {
       backgroundColor: BLUE_SKY_COLOR
     });
     this.levelIndex = 0;
 
     this.waveEnding = false;
-    this.levels = __WEBPACK_IMPORTED_MODULE_3__data_levels_json___default.a.normal;
+    this.quackingSoundId = null;
+    this.levels = __WEBPACK_IMPORTED_MODULE_2__data_levels_json___default.a.normal;
     return this;
   }
 
@@ -35780,7 +32963,7 @@ class Game {
         this.stage.hud.createTextureBasedCounter('ducksMissed', {
           texture: 'hud/score-live/0.png',
           spritesheet: this.spritesheet,
-          location: __WEBPACK_IMPORTED_MODULE_4__Stage__["a" /* default */].missedDuckStatusBoxLocation()
+          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].missedDuckStatusBoxLocation()
         });
       }
 
@@ -35801,7 +32984,7 @@ class Game {
         this.stage.hud.createTextureBasedCounter('ducksShot', {
           texture: 'hud/score-dead/0.png',
           spritesheet: this.spritesheet,
-          location: __WEBPACK_IMPORTED_MODULE_4__Stage__["a" /* default */].deadDuckStatusBoxLocation()
+          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].deadDuckStatusBoxLocation()
         });
       }
 
@@ -35832,7 +33015,7 @@ class Game {
         this.stage.hud.createTextureBasedCounter('bullets', {
           texture: 'hud/bullet/0.png',
           spritesheet: this.spritesheet,
-          location: __WEBPACK_IMPORTED_MODULE_4__Stage__["a" /* default */].bulletStatusBoxLocation()
+          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].bulletStatusBoxLocation()
         });
       }
 
@@ -35868,7 +33051,7 @@ class Game {
             align: 'left',
             fill: 'white'
           },
-          location: __WEBPACK_IMPORTED_MODULE_4__Stage__["a" /* default */].scoreBoxLocation(),
+          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].scoreBoxLocation(),
           anchor: {
             x: 1,
             y: 0
@@ -35908,7 +33091,7 @@ class Game {
             align: 'left',
             fill: 'white'
           },
-          location: __WEBPACK_IMPORTED_MODULE_4__Stage__["a" /* default */].waveStatusBoxLocation(),
+          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].waveStatusBoxLocation(),
           anchor: {
             x: 1,
             y: 1
@@ -35949,7 +33132,7 @@ class Game {
             align: 'left',
             fill: 'white'
           },
-          location: __WEBPACK_IMPORTED_MODULE_4__Stage__["a" /* default */].gameStatusBoxLocation()
+          location: __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */].gameStatusBoxLocation()
         });
       }
 
@@ -35964,7 +33147,7 @@ class Game {
   onLoad() {
     document.body.appendChild(this.renderer.view);
 
-    this.stage = new __WEBPACK_IMPORTED_MODULE_4__Stage__["a" /* default */]({
+    this.stage = new __WEBPACK_IMPORTED_MODULE_3__Stage__["a" /* default */]({
       spritesheet: this.spritesheet
     });
 
@@ -35998,7 +33181,7 @@ class Game {
   }
 
   startWave() {
-    sound.play('quacking');
+    this.quackingSoundId = __WEBPACK_IMPORTED_MODULE_4__Sound__["a" /* default */].play('quacking');
     this.wave += 1;
     this.waveStartTime = Date.now();
     this.bullets = this.level.bullets;
@@ -36012,7 +33195,7 @@ class Game {
   endWave() {
     this.waveEnding = true;
     this.bullets = 0;
-    sound.stop('quacking');
+    __WEBPACK_IMPORTED_MODULE_4__Sound__["a" /* default */].stop(this.quackingSoundId);
     if (this.stage.ducksAlive()) {
       this.ducksMissed += this.level.ducks - this.ducksShotThisWave;
       this.renderer.backgroundColor = PINK_SKY_COLOR;
@@ -36074,18 +33257,18 @@ class Game {
   }
 
   win() {
-    sound.play('champ');
+    __WEBPACK_IMPORTED_MODULE_4__Sound__["a" /* default */].play('champ');
     this.gameStatus = 'You Win!';
   }
 
   loss() {
-    sound.play('loserSound');
+    __WEBPACK_IMPORTED_MODULE_4__Sound__["a" /* default */].play('loserSound');
     this.gameStatus = 'You Lose!';
   }
 
   handleClick(event) {
     if (!this.outOfAmmo()) {
-      sound.play('gunSound');
+      __WEBPACK_IMPORTED_MODULE_4__Sound__["a" /* default */].play('gunSound');
       this.bullets -= 1;
       this.updateScore(this.stage.shotsFired({
         x: event.data.global.x,
@@ -36105,7 +33288,7 @@ class Game {
   }
 
   unbindInteractions() {
-    this.stage.mousedown = this.stage.touchstart = __WEBPACK_IMPORTED_MODULE_2_lodash_util__["noop"];
+    this.stage.mousedown = this.stage.touchstart = __WEBPACK_IMPORTED_MODULE_1_lodash_util__["noop"];
   }
 
   animate() {
@@ -36123,31 +33306,25 @@ class Game {
 /* harmony default export */ __webpack_exports__["a"] = Game;
 
 /***/ }),
-/* 275 */
+/* 274 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_gsap__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_gsap__ = __webpack_require__(139);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_gsap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_gsap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_util__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_util__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_util__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_object__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_object__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_howler__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_howler___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_howler__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dist_audio_json__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dist_audio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__dist_audio_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Character__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Sound__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Character__ = __webpack_require__(137);
 
 
 
 
 
 
-
-const sound = new __WEBPACK_IMPORTED_MODULE_3_howler__["Howl"](__WEBPACK_IMPORTED_MODULE_4__dist_audio_json___default.a);
-
-class Dog extends __WEBPACK_IMPORTED_MODULE_5__Character__["a" /* default */] {
+class Dog extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
   /**
    * Dog Constructor
    * @param options
@@ -36180,6 +33357,7 @@ class Dog extends __WEBPACK_IMPORTED_MODULE_5__Character__["a" /* default */] {
     this.toRetrieve = 0;
     this.anchor.set(0.5, 0);
     this.options = options;
+    this.sniffSoundId = null;
   }
 
   /**
@@ -36214,11 +33392,11 @@ class Dog extends __WEBPACK_IMPORTED_MODULE_5__Character__["a" /* default */] {
         this.visible = true;
         this.parent.setChildIndex(this, this.parent.children.length - 1);
         this.state = 'sniff';
-        sound.play('sniff');
+        this.sniffSoundId = __WEBPACK_IMPORTED_MODULE_3__Sound__["a" /* default */].play('sniff');
         options.onStart();
       },
       onComplete: () => {
-        sound.stop('sniff');
+        __WEBPACK_IMPORTED_MODULE_3__Sound__["a" /* default */].stop(this.sniffSoundId);
         options.onComplete();
       }
     });
@@ -36276,16 +33454,15 @@ class Dog extends __WEBPACK_IMPORTED_MODULE_5__Character__["a" /* default */] {
     }, opts);
 
     this.timeline.add(() => {
-      sound.stop('sniff'); // stop gap for some race condition bug
-      sound.play('barkDucks');
+      __WEBPACK_IMPORTED_MODULE_3__Sound__["a" /* default */].play('barkDucks');
       this.state = 'find';
       options.onStart();
     });
 
-    this.timeline.to(this.position, 0.2, {
+    this.timeline.add(__WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].to(this.position, 0.2, {
       y: '-=100',
       ease: 'Strong.easeOut',
-      delay: 0.6,
+      delay: 0.4,
       onStart: () => {
         this.state = 'jump';
       },
@@ -36293,7 +33470,7 @@ class Dog extends __WEBPACK_IMPORTED_MODULE_5__Character__["a" /* default */] {
         this.visible = false;
         options.onComplete();
       }
-    });
+    }));
 
     return this;
   }
@@ -36352,7 +33529,7 @@ class Dog extends __WEBPACK_IMPORTED_MODULE_5__Character__["a" /* default */] {
       onStart: () => {
         this.toRetrieve = 0;
         this.state = 'laugh';
-        sound.play('laugh');
+        __WEBPACK_IMPORTED_MODULE_3__Sound__["a" /* default */].play('laugh');
       }
     });
 
@@ -36371,23 +33548,20 @@ class Dog extends __WEBPACK_IMPORTED_MODULE_5__Character__["a" /* default */] {
 /* harmony default export */ __webpack_exports__["a"] = Dog;
 
 /***/ }),
-/* 276 */
+/* 275 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_howler__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_howler___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_howler__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_number__ = __webpack_require__(463);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_number__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_object__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_util__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash_util__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dist_audio_json__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dist_audio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__dist_audio_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__libs_utils__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__libs_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__libs_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Character__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_number__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_number__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_object__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_object__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_util__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_util__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__libs_utils__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__libs_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__libs_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Character__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Sound__ = __webpack_require__(87);
 
 
 
@@ -36395,12 +33569,10 @@ class Dog extends __WEBPACK_IMPORTED_MODULE_5__Character__["a" /* default */] {
 
 
 
-
-const sound = new __WEBPACK_IMPORTED_MODULE_0_howler__["Howl"](__WEBPACK_IMPORTED_MODULE_4__dist_audio_json___default.a);
 const DEATH_ANIMATION_SECONDS = 0.6;
 const RANDOM_FLIGHT_DELTA = 300;
 
-class Duck extends __WEBPACK_IMPORTED_MODULE_6__Character__["a" /* default */] {
+class Duck extends __WEBPACK_IMPORTED_MODULE_4__Character__["a" /* default */] {
   /**
    * Duck constructor
    * Method to instantiate a new Duck character
@@ -36457,7 +33629,7 @@ class Duck extends __WEBPACK_IMPORTED_MODULE_6__Character__["a" /* default */] {
    * @param {Number} [opts.speed=1] Speed of travel on a scale of 0 (slow) to 10 (fast)
    */
   randomFlight(opts) {
-    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_object__["assign"])({
+    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash_object__["assign"])({
       minX: 0,
       maxX: this.options.maxX || Infinity,
       minY: 0,
@@ -36469,10 +33641,10 @@ class Duck extends __WEBPACK_IMPORTED_MODULE_6__Character__["a" /* default */] {
     let distance, destination;
     do {
       destination = {
-        x: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash_number__["random"])(options.minX, options.maxX),
-        y: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash_number__["random"])(options.minY, options.maxY)
+        x: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_lodash_number__["random"])(options.minX, options.maxX),
+        y: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_lodash_number__["random"])(options.minY, options.maxY)
       };
-      distance = __WEBPACK_IMPORTED_MODULE_5__libs_utils___default.a.pointDistance(this.position, destination);
+      distance = __WEBPACK_IMPORTED_MODULE_3__libs_utils___default.a.pointDistance(this.position, destination);
     } while (distance < options.randomFlightDelta);
 
     this.flyTo({
@@ -36493,17 +33665,17 @@ class Duck extends __WEBPACK_IMPORTED_MODULE_6__Character__["a" /* default */] {
    * @returns {Duck}
    */
   flyTo(opts) {
-    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_lodash_object__["assign"])({
+    const options = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash_object__["assign"])({
       point: this.position,
       speed: this.speed,
-      onStart: __WEBPACK_IMPORTED_MODULE_3_lodash_util__["noop"],
-      onComplete: __WEBPACK_IMPORTED_MODULE_3_lodash_util__["noop"]
+      onStart: __WEBPACK_IMPORTED_MODULE_2_lodash_util__["noop"],
+      onComplete: __WEBPACK_IMPORTED_MODULE_2_lodash_util__["noop"]
     }, opts);
 
     this.speed = options.speed;
 
-    const direction = __WEBPACK_IMPORTED_MODULE_5__libs_utils___default.a.directionOfTravel(this.position, options.point);
-    const tweenSeconds = (this.flightAnimationMs + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash_number__["random"])(0, 300)) / 1000;
+    const direction = __WEBPACK_IMPORTED_MODULE_3__libs_utils___default.a.directionOfTravel(this.position, options.point);
+    const tweenSeconds = (this.flightAnimationMs + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_lodash_number__["random"])(0, 300)) / 1000;
 
     this.timeline.to(this.position, tweenSeconds, {
       x: options.point.x,
@@ -36536,7 +33708,7 @@ class Duck extends __WEBPACK_IMPORTED_MODULE_6__Character__["a" /* default */] {
     this.stopAndClearTimeline();
     this.timeline.add(() => {
       this.state = 'shot';
-      sound.play('quak', __WEBPACK_IMPORTED_MODULE_3_lodash_util__["noop"]);
+      __WEBPACK_IMPORTED_MODULE_5__Sound__["a" /* default */].play('quak', __WEBPACK_IMPORTED_MODULE_2_lodash_util__["noop"]);
     });
 
     this.timeline.to(this.position, DEATH_ANIMATION_SECONDS, {
@@ -36547,7 +33719,7 @@ class Duck extends __WEBPACK_IMPORTED_MODULE_6__Character__["a" /* default */] {
         this.state = 'dead';
       },
       onComplete: () => {
-        sound.play('thud', __WEBPACK_IMPORTED_MODULE_3_lodash_util__["noop"]);
+        __WEBPACK_IMPORTED_MODULE_5__Sound__["a" /* default */].play('thud', __WEBPACK_IMPORTED_MODULE_2_lodash_util__["noop"]);
         this.visible = false;
       }
     });
@@ -36627,13 +33799,13 @@ class Duck extends __WEBPACK_IMPORTED_MODULE_6__Character__["a" /* default */] {
 /* harmony default export */ __webpack_exports__["a"] = Duck;
 
 /***/ }),
-/* 277 */
+/* 276 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_object__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_object__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_object__);
 
 
@@ -36727,23 +33899,23 @@ class Hud extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"] {
 /* harmony default export */ __webpack_exports__["a"] = Hud;
 
 /***/ }),
-/* 278 */
+/* 277 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bluebird__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bluebird__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bluebird___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bluebird__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_collection__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_function__ = __webpack_require__(438);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_function__ = __webpack_require__(439);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__libs_utils__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__libs_utils__ = __webpack_require__(136);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__libs_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__libs_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Duck__ = __webpack_require__(276);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Dog__ = __webpack_require__(275);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Hud__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Duck__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Dog__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Hud__ = __webpack_require__(276);
 
 
 
@@ -37028,7 +34200,7 @@ class Stage extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"] {
 /* harmony default export */ __webpack_exports__["a"] = Stage;
 
 /***/ }),
-/* 279 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global, setImmediate) {/* @preserve
@@ -42612,10 +39784,2843 @@ module.exports = ret;
 
 },{"./es5":13}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(135), __webpack_require__(30), __webpack_require__(510).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(134), __webpack_require__(30), __webpack_require__(511).setImmediate))
+
+/***/ }),
+/* 279 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ *  howler.js v2.0.2
+ *  howlerjs.com
+ *
+ *  (c) 2013-2016, James Simpson of GoldFire Studios
+ *  goldfirestudios.com
+ *
+ *  MIT License
+ */
+
+(function() {
+
+  'use strict';
+
+  /** Global Methods **/
+  /***************************************************************************/
+
+  /**
+   * Create the global controller. All contained methods and properties apply
+   * to all sounds that are currently playing or will be in the future.
+   */
+  var HowlerGlobal = function() {
+    this.init();
+  };
+  HowlerGlobal.prototype = {
+    /**
+     * Initialize the global Howler object.
+     * @return {Howler}
+     */
+    init: function() {
+      var self = this || Howler;
+
+      // Internal properties.
+      self._codecs = {};
+      self._howls = [];
+      self._muted = false;
+      self._volume = 1;
+      self._canPlayEvent = 'canplaythrough';
+      self._navigator = (typeof window !== 'undefined' && window.navigator) ? window.navigator : null;
+
+      // Public properties.
+      self.masterGain = null;
+      self.noAudio = false;
+      self.usingWebAudio = true;
+      self.autoSuspend = true;
+      self.ctx = null;
+
+      // Set to false to disable the auto iOS enabler.
+      self.mobileAutoEnable = true;
+
+      // Setup the various state values for global tracking.
+      self._setup();
+
+      return self;
+    },
+
+    /**
+     * Get/set the global volume for all sounds.
+     * @param  {Float} vol Volume from 0.0 to 1.0.
+     * @return {Howler/Float}     Returns self or current volume.
+     */
+    volume: function(vol) {
+      var self = this || Howler;
+      vol = parseFloat(vol);
+
+      // If we don't have an AudioContext created yet, run the setup.
+      if (!self.ctx) {
+        setupAudioContext();
+      }
+
+      if (typeof vol !== 'undefined' && vol >= 0 && vol <= 1) {
+        self._volume = vol;
+
+        // Don't update any of the nodes if we are muted.
+        if (self._muted) {
+          return self;
+        }
+
+        // When using Web Audio, we just need to adjust the master gain.
+        if (self.usingWebAudio) {
+          self.masterGain.gain.value = vol;
+        }
+
+        // Loop through and change volume for all HTML5 audio nodes.
+        for (var i=0; i<self._howls.length; i++) {
+          if (!self._howls[i]._webAudio) {
+            // Get all of the sounds in this Howl group.
+            var ids = self._howls[i]._getSoundIds();
+
+            // Loop through all sounds and change the volumes.
+            for (var j=0; j<ids.length; j++) {
+              var sound = self._howls[i]._soundById(ids[j]);
+
+              if (sound && sound._node) {
+                sound._node.volume = sound._volume * vol;
+              }
+            }
+          }
+        }
+
+        return self;
+      }
+
+      return self._volume;
+    },
+
+    /**
+     * Handle muting and unmuting globally.
+     * @param  {Boolean} muted Is muted or not.
+     */
+    mute: function(muted) {
+      var self = this || Howler;
+
+      // If we don't have an AudioContext created yet, run the setup.
+      if (!self.ctx) {
+        setupAudioContext();
+      }
+
+      self._muted = muted;
+
+      // With Web Audio, we just need to mute the master gain.
+      if (self.usingWebAudio) {
+        self.masterGain.gain.value = muted ? 0 : self._volume;
+      }
+
+      // Loop through and mute all HTML5 Audio nodes.
+      for (var i=0; i<self._howls.length; i++) {
+        if (!self._howls[i]._webAudio) {
+          // Get all of the sounds in this Howl group.
+          var ids = self._howls[i]._getSoundIds();
+
+          // Loop through all sounds and mark the audio node as muted.
+          for (var j=0; j<ids.length; j++) {
+            var sound = self._howls[i]._soundById(ids[j]);
+
+            if (sound && sound._node) {
+              sound._node.muted = (muted) ? true : sound._muted;
+            }
+          }
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Unload and destroy all currently loaded Howl objects.
+     * @return {Howler}
+     */
+    unload: function() {
+      var self = this || Howler;
+
+      for (var i=self._howls.length-1; i>=0; i--) {
+        self._howls[i].unload();
+      }
+
+      // Create a new AudioContext to make sure it is fully reset.
+      if (self.usingWebAudio && self.ctx && typeof self.ctx.close !== 'undefined') {
+        self.ctx.close();
+        self.ctx = null;
+        setupAudioContext();
+      }
+
+      return self;
+    },
+
+    /**
+     * Check for codec support of specific extension.
+     * @param  {String} ext Audio file extention.
+     * @return {Boolean}
+     */
+    codecs: function(ext) {
+      return (this || Howler)._codecs[ext.replace(/^x-/, '')];
+    },
+
+    /**
+     * Setup various state values for global tracking.
+     * @return {Howler}
+     */
+    _setup: function() {
+      var self = this || Howler;
+
+      // Keeps track of the suspend/resume state of the AudioContext.
+      self.state = self.ctx ? self.ctx.state || 'running' : 'running';
+
+      // Automatically begin the 30-second suspend process
+      self._autoSuspend();
+
+      // Check if audio is available.
+      if (!self.usingWebAudio) {
+        // No audio is available on this system if noAudio is set to true.
+        if (typeof Audio !== 'undefined') {
+          try {
+            var test = new Audio();
+
+            // Check if the canplaythrough event is available.
+            if (typeof test.oncanplaythrough === 'undefined') {
+              self._canPlayEvent = 'canplay';
+            }
+          } catch(e) {
+            self.noAudio = true;
+          }
+        } else {
+          self.noAudio = true;
+        }
+      }
+
+      // Test to make sure audio isn't disabled in Internet Explorer.
+      try {
+        var test = new Audio();
+        if (test.muted) {
+          self.noAudio = true;
+        }
+      } catch (e) {}
+
+      // Check for supported codecs.
+      if (!self.noAudio) {
+        self._setupCodecs();
+      }
+
+      return self;
+    },
+
+    /**
+     * Check for browser support for various codecs and cache the results.
+     * @return {Howler}
+     */
+    _setupCodecs: function() {
+      var self = this || Howler;
+      var audioTest = null;
+
+      // Must wrap in a try/catch because IE11 in server mode throws an error.
+      try {
+        audioTest = (typeof Audio !== 'undefined') ? new Audio() : null;
+      } catch (err) {
+        return self;
+      }
+
+      if (!audioTest || typeof audioTest.canPlayType !== 'function') {
+        return self;
+      }
+
+      var mpegTest = audioTest.canPlayType('audio/mpeg;').replace(/^no$/, '');
+
+      // Opera version <33 has mixed MP3 support, so we need to check for and block it.
+      var checkOpera = self._navigator && self._navigator.userAgent.match(/OPR\/([0-6].)/g);
+      var isOldOpera = (checkOpera && parseInt(checkOpera[0].split('/')[1], 10) < 33);
+
+      self._codecs = {
+        mp3: !!(!isOldOpera && (mpegTest || audioTest.canPlayType('audio/mp3;').replace(/^no$/, ''))),
+        mpeg: !!mpegTest,
+        opus: !!audioTest.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ''),
+        ogg: !!audioTest.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ''),
+        oga: !!audioTest.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ''),
+        wav: !!audioTest.canPlayType('audio/wav; codecs="1"').replace(/^no$/, ''),
+        aac: !!audioTest.canPlayType('audio/aac;').replace(/^no$/, ''),
+        caf: !!audioTest.canPlayType('audio/x-caf;').replace(/^no$/, ''),
+        m4a: !!(audioTest.canPlayType('audio/x-m4a;') || audioTest.canPlayType('audio/m4a;') || audioTest.canPlayType('audio/aac;')).replace(/^no$/, ''),
+        mp4: !!(audioTest.canPlayType('audio/x-mp4;') || audioTest.canPlayType('audio/mp4;') || audioTest.canPlayType('audio/aac;')).replace(/^no$/, ''),
+        weba: !!audioTest.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, ''),
+        webm: !!audioTest.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, ''),
+        dolby: !!audioTest.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ''),
+        flac: !!(audioTest.canPlayType('audio/x-flac;') || audioTest.canPlayType('audio/flac;')).replace(/^no$/, '')
+      };
+
+      return self;
+    },
+
+    /**
+     * Mobile browsers will only allow audio to be played after a user interaction.
+     * Attempt to automatically unlock audio on the first user interaction.
+     * Concept from: http://paulbakaus.com/tutorials/html5/web-audio-on-ios/
+     * @return {Howler}
+     */
+    _enableMobileAudio: function() {
+      var self = this || Howler;
+
+      // Only run this on mobile devices if audio isn't already eanbled.
+      var isMobile = /iPhone|iPad|iPod|Android|BlackBerry|BB10|Silk|Mobi/i.test(self._navigator && self._navigator.userAgent);
+      var isTouch = !!(('ontouchend' in window) || (self._navigator && self._navigator.maxTouchPoints > 0) || (self._navigator && self._navigator.msMaxTouchPoints > 0));
+      if (self._mobileEnabled || !self.ctx || (!isMobile && !isTouch)) {
+        return;
+      }
+
+      self._mobileEnabled = false;
+
+      // Some mobile devices/platforms have distortion issues when opening/closing tabs and/or web views.
+      // Bugs in the browser (especially Mobile Safari) can cause the sampleRate to change from 44100 to 48000.
+      // By calling Howler.unload(), we create a new AudioContext with the correct sampleRate.
+      if (!self._mobileUnloaded && self.ctx.sampleRate !== 44100) {
+        self._mobileUnloaded = true;
+        self.unload();
+      }
+
+      // Scratch buffer for enabling iOS to dispose of web audio buffers correctly, as per:
+      // http://stackoverflow.com/questions/24119684
+      self._scratchBuffer = self.ctx.createBuffer(1, 1, 22050);
+
+      // Call this method on touch start to create and play a buffer,
+      // then check if the audio actually played to determine if
+      // audio has now been unlocked on iOS, Android, etc.
+      var unlock = function() {
+        // Create an empty buffer.
+        var source = self.ctx.createBufferSource();
+        source.buffer = self._scratchBuffer;
+        source.connect(self.ctx.destination);
+
+        // Play the empty buffer.
+        if (typeof source.start === 'undefined') {
+          source.noteOn(0);
+        } else {
+          source.start(0);
+        }
+
+        // Setup a timeout to check that we are unlocked on the next event loop.
+        source.onended = function() {
+          source.disconnect(0);
+
+          // Update the unlocked state and prevent this check from happening again.
+          self._mobileEnabled = true;
+          self.mobileAutoEnable = false;
+
+          // Remove the touch start listener.
+          document.removeEventListener('touchend', unlock, true);
+        };
+      };
+
+      // Setup a touch start listener to attempt an unlock in.
+      document.addEventListener('touchend', unlock, true);
+
+      return self;
+    },
+
+    /**
+     * Automatically suspend the Web Audio AudioContext after no sound has played for 30 seconds.
+     * This saves processing/energy and fixes various browser-specific bugs with audio getting stuck.
+     * @return {Howler}
+     */
+    _autoSuspend: function() {
+      var self = this;
+
+      if (!self.autoSuspend || !self.ctx || typeof self.ctx.suspend === 'undefined' || !Howler.usingWebAudio) {
+        return;
+      }
+
+      // Check if any sounds are playing.
+      for (var i=0; i<self._howls.length; i++) {
+        if (self._howls[i]._webAudio) {
+          for (var j=0; j<self._howls[i]._sounds.length; j++) {
+            if (!self._howls[i]._sounds[j]._paused) {
+              return self;
+            }
+          }
+        }
+      }
+
+      if (self._suspendTimer) {
+        clearTimeout(self._suspendTimer);
+      }
+
+      // If no sound has played after 30 seconds, suspend the context.
+      self._suspendTimer = setTimeout(function() {
+        if (!self.autoSuspend) {
+          return;
+        }
+
+        self._suspendTimer = null;
+        self.state = 'suspending';
+        self.ctx.suspend().then(function() {
+          self.state = 'suspended';
+
+          if (self._resumeAfterSuspend) {
+            delete self._resumeAfterSuspend;
+            self._autoResume();
+          }
+        });
+      }, 30000);
+
+      return self;
+    },
+
+    /**
+     * Automatically resume the Web Audio AudioContext when a new sound is played.
+     * @return {Howler}
+     */
+    _autoResume: function() {
+      var self = this;
+
+      if (!self.ctx || typeof self.ctx.resume === 'undefined' || !Howler.usingWebAudio) {
+        return;
+      }
+
+      if (self.state === 'running' && self._suspendTimer) {
+        clearTimeout(self._suspendTimer);
+        self._suspendTimer = null;
+      } else if (self.state === 'suspended') {
+        self.state = 'resuming';
+        self.ctx.resume().then(function() {
+          self.state = 'running';
+
+          // Emit to all Howls that the audio has resumed.
+          for (var i=0; i<self._howls.length; i++) {
+            self._howls[i]._emit('resume');
+          }
+        });
+
+        if (self._suspendTimer) {
+          clearTimeout(self._suspendTimer);
+          self._suspendTimer = null;
+        }
+      } else if (self.state === 'suspending') {
+        self._resumeAfterSuspend = true;
+      }
+
+      return self;
+    }
+  };
+
+  // Setup the global audio controller.
+  var Howler = new HowlerGlobal();
+
+  /** Group Methods **/
+  /***************************************************************************/
+
+  /**
+   * Create an audio group controller.
+   * @param {Object} o Passed in properties for this group.
+   */
+  var Howl = function(o) {
+    var self = this;
+
+    // Throw an error if no source is provided.
+    if (!o.src || o.src.length === 0) {
+      console.error('An array of source files must be passed with any new Howl.');
+      return;
+    }
+
+    self.init(o);
+  };
+  Howl.prototype = {
+    /**
+     * Initialize a new Howl group object.
+     * @param  {Object} o Passed in properties for this group.
+     * @return {Howl}
+     */
+    init: function(o) {
+      var self = this;
+
+      // If we don't have an AudioContext created yet, run the setup.
+      if (!Howler.ctx) {
+        setupAudioContext();
+      }
+
+      // Setup user-defined default properties.
+      self._autoplay = o.autoplay || false;
+      self._format = (typeof o.format !== 'string') ? o.format : [o.format];
+      self._html5 = o.html5 || false;
+      self._muted = o.mute || false;
+      self._loop = o.loop || false;
+      self._pool = o.pool || 5;
+      self._preload = (typeof o.preload === 'boolean') ? o.preload : true;
+      self._rate = o.rate || 1;
+      self._sprite = o.sprite || {};
+      self._src = (typeof o.src !== 'string') ? o.src : [o.src];
+      self._volume = o.volume !== undefined ? o.volume : 1;
+
+      // Setup all other default properties.
+      self._duration = 0;
+      self._state = 'unloaded';
+      self._sounds = [];
+      self._endTimers = {};
+      self._queue = [];
+
+      // Setup event listeners.
+      self._onend = o.onend ? [{fn: o.onend}] : [];
+      self._onfade = o.onfade ? [{fn: o.onfade}] : [];
+      self._onload = o.onload ? [{fn: o.onload}] : [];
+      self._onloaderror = o.onloaderror ? [{fn: o.onloaderror}] : [];
+      self._onpause = o.onpause ? [{fn: o.onpause}] : [];
+      self._onplay = o.onplay ? [{fn: o.onplay}] : [];
+      self._onstop = o.onstop ? [{fn: o.onstop}] : [];
+      self._onmute = o.onmute ? [{fn: o.onmute}] : [];
+      self._onvolume = o.onvolume ? [{fn: o.onvolume}] : [];
+      self._onrate = o.onrate ? [{fn: o.onrate}] : [];
+      self._onseek = o.onseek ? [{fn: o.onseek}] : [];
+      self._onresume = [];
+
+      // Web Audio or HTML5 Audio?
+      self._webAudio = Howler.usingWebAudio && !self._html5;
+
+      // Automatically try to enable audio on iOS.
+      if (typeof Howler.ctx !== 'undefined' && Howler.ctx && Howler.mobileAutoEnable) {
+        Howler._enableMobileAudio();
+      }
+
+      // Keep track of this Howl group in the global controller.
+      Howler._howls.push(self);
+
+      // If they selected autoplay, add a play event to the load queue.
+      if (self._autoplay) {
+        self._queue.push({
+          event: 'play',
+          action: function() {
+            self.play();
+          }
+        });
+      }
+
+      // Load the source file unless otherwise specified.
+      if (self._preload) {
+        self.load();
+      }
+
+      return self;
+    },
+
+    /**
+     * Load the audio file.
+     * @return {Howler}
+     */
+    load: function() {
+      var self = this;
+      var url = null;
+
+      // If no audio is available, quit immediately.
+      if (Howler.noAudio) {
+        self._emit('loaderror', null, 'No audio support.');
+        return;
+      }
+
+      // Make sure our source is in an array.
+      if (typeof self._src === 'string') {
+        self._src = [self._src];
+      }
+
+      // Loop through the sources and pick the first one that is compatible.
+      for (var i=0; i<self._src.length; i++) {
+        var ext, str;
+
+        if (self._format && self._format[i]) {
+          // If an extension was specified, use that instead.
+          ext = self._format[i];
+        } else {
+          // Make sure the source is a string.
+          str = self._src[i];
+          if (typeof str !== 'string') {
+            self._emit('loaderror', null, 'Non-string found in selected audio sources - ignoring.');
+            continue;
+          }
+
+          // Extract the file extension from the URL or base64 data URI.
+          ext = /^data:audio\/([^;,]+);/i.exec(str);
+          if (!ext) {
+            ext = /\.([^.]+)$/.exec(str.split('?', 1)[0]);
+          }
+
+          if (ext) {
+            ext = ext[1].toLowerCase();
+          }
+        }
+
+        // Check if this extension is available.
+        if (Howler.codecs(ext)) {
+          url = self._src[i];
+          break;
+        }
+      }
+
+      if (!url) {
+        self._emit('loaderror', null, 'No codec support for selected audio sources.');
+        return;
+      }
+
+      self._src = url;
+      self._state = 'loading';
+
+      // If the hosting page is HTTPS and the source isn't,
+      // drop down to HTML5 Audio to avoid Mixed Content errors.
+      if (window.location.protocol === 'https:' && url.slice(0, 5) === 'http:') {
+        self._html5 = true;
+        self._webAudio = false;
+      }
+
+      // Create a new sound object and add it to the pool.
+      new Sound(self);
+
+      // Load and decode the audio data for playback.
+      if (self._webAudio) {
+        loadBuffer(self);
+      }
+
+      return self;
+    },
+
+    /**
+     * Play a sound or resume previous playback.
+     * @param  {String/Number} sprite   Sprite name for sprite playback or sound id to continue previous.
+     * @param  {Boolean} internal Internal Use: true prevents event firing.
+     * @return {Number}          Sound ID.
+     */
+    play: function(sprite, internal) {
+      var self = this;
+      var id = null;
+
+      // Determine if a sprite, sound id or nothing was passed
+      if (typeof sprite === 'number') {
+        id = sprite;
+        sprite = null;
+      } else if (typeof sprite === 'string' && self._state === 'loaded' && !self._sprite[sprite]) {
+        // If the passed sprite doesn't exist, do nothing.
+        return null;
+      } else if (typeof sprite === 'undefined') {
+        // Use the default sound sprite (plays the full audio length).
+        sprite = '__default';
+
+        // Check if there is a single paused sound that isn't ended.
+        // If there is, play that sound. If not, continue as usual.
+        var num = 0;
+        for (var i=0; i<self._sounds.length; i++) {
+          if (self._sounds[i]._paused && !self._sounds[i]._ended) {
+            num++;
+            id = self._sounds[i]._id;
+          }
+        }
+
+        if (num === 1) {
+          sprite = null;
+        } else {
+          id = null;
+        }
+      }
+
+      // Get the selected node, or get one from the pool.
+      var sound = id ? self._soundById(id) : self._inactiveSound();
+
+      // If the sound doesn't exist, do nothing.
+      if (!sound) {
+        return null;
+      }
+
+      // Select the sprite definition.
+      if (id && !sprite) {
+        sprite = sound._sprite || '__default';
+      }
+
+      // If we have no sprite and the sound hasn't loaded, we must wait
+      // for the sound to load to get our audio's duration.
+      if (self._state !== 'loaded' && !self._sprite[sprite]) {
+        self._queue.push({
+          event: 'play',
+          action: function() {
+            self.play(self._soundById(sound._id) ? sound._id : undefined);
+          }
+        });
+
+        return sound._id;
+      }
+
+      // Don't play the sound if an id was passed and it is already playing.
+      if (id && !sound._paused) {
+        // Trigger the play event, in order to keep iterating through queue.
+        if (!internal) {
+          setTimeout(function() {
+            self._emit('play', sound._id);
+          }, 0);
+        }
+
+        return sound._id;
+      }
+
+      // Make sure the AudioContext isn't suspended, and resume it if it is.
+      if (self._webAudio) {
+        Howler._autoResume();
+      }
+
+      // Determine how long to play for and where to start playing.
+      var seek = Math.max(0, sound._seek > 0 ? sound._seek : self._sprite[sprite][0] / 1000);
+      var duration = Math.max(0, ((self._sprite[sprite][0] + self._sprite[sprite][1]) / 1000) - seek);
+      var timeout = (duration * 1000) / Math.abs(sound._rate);
+
+      // Update the parameters of the sound
+      sound._paused = false;
+      sound._ended = false;
+      sound._sprite = sprite;
+      sound._seek = seek;
+      sound._start = self._sprite[sprite][0] / 1000;
+      sound._stop = (self._sprite[sprite][0] + self._sprite[sprite][1]) / 1000;
+      sound._loop = !!(sound._loop || self._sprite[sprite][2]);
+
+      // Begin the actual playback.
+      var node = sound._node;
+      if (self._webAudio) {
+        // Fire this when the sound is ready to play to begin Web Audio playback.
+        var playWebAudio = function() {
+          self._refreshBuffer(sound);
+
+          // Setup the playback params.
+          var vol = (sound._muted || self._muted) ? 0 : sound._volume;
+          node.gain.setValueAtTime(vol, Howler.ctx.currentTime);
+          sound._playStart = Howler.ctx.currentTime;
+
+          // Play the sound using the supported method.
+          if (typeof node.bufferSource.start === 'undefined') {
+            sound._loop ? node.bufferSource.noteGrainOn(0, seek, 86400) : node.bufferSource.noteGrainOn(0, seek, duration);
+          } else {
+            sound._loop ? node.bufferSource.start(0, seek, 86400) : node.bufferSource.start(0, seek, duration);
+          }
+
+          // Start a new timer if none is present.
+          if (timeout !== Infinity) {
+            self._endTimers[sound._id] = setTimeout(self._ended.bind(self, sound), timeout);
+          }
+
+          if (!internal) {
+            setTimeout(function() {
+              self._emit('play', sound._id);
+            }, 0);
+          }
+        };
+
+        var isRunning = (Howler.state === 'running');
+        if (self._state === 'loaded' && isRunning) {
+          playWebAudio();
+        } else {
+          // Wait for the audio to load and then begin playback.
+          self.once(isRunning ? 'load' : 'resume', playWebAudio, isRunning ? sound._id : null);
+
+          // Cancel the end timer.
+          self._clearTimer(sound._id);
+        }
+      } else {
+        // Fire this when the sound is ready to play to begin HTML5 Audio playback.
+        var playHtml5 = function() {
+          node.currentTime = seek;
+          node.muted = sound._muted || self._muted || Howler._muted || node.muted;
+          node.volume = sound._volume * Howler.volume();
+          node.playbackRate = sound._rate;
+
+          setTimeout(function() {
+            node.play();
+
+            // Setup the new end timer.
+            if (timeout !== Infinity) {
+              self._endTimers[sound._id] = setTimeout(self._ended.bind(self, sound), timeout);
+            }
+
+            if (!internal) {
+              self._emit('play', sound._id);
+            }
+          }, 0);
+        };
+
+        // Play immediately if ready, or wait for the 'canplaythrough'e vent.
+        var loadedNoReadyState = (self._state === 'loaded' && (window && window.ejecta || !node.readyState && Howler._navigator.isCocoonJS));
+        if (node.readyState === 4 || loadedNoReadyState) {
+          playHtml5();
+        } else {
+          var listener = function() {
+            // Begin playback.
+            playHtml5();
+
+            // Clear this listener.
+            node.removeEventListener(Howler._canPlayEvent, listener, false);
+          };
+          node.addEventListener(Howler._canPlayEvent, listener, false);
+
+          // Cancel the end timer.
+          self._clearTimer(sound._id);
+        }
+      }
+
+      return sound._id;
+    },
+
+    /**
+     * Pause playback and save current position.
+     * @param  {Number} id The sound ID (empty to pause all in group).
+     * @return {Howl}
+     */
+    pause: function(id) {
+      var self = this;
+
+      // If the sound hasn't loaded, add it to the load queue to pause when capable.
+      if (self._state !== 'loaded') {
+        self._queue.push({
+          event: 'pause',
+          action: function() {
+            self.pause(id);
+          }
+        });
+
+        return self;
+      }
+
+      // If no id is passed, get all ID's to be paused.
+      var ids = self._getSoundIds(id);
+
+      for (var i=0; i<ids.length; i++) {
+        // Clear the end timer.
+        self._clearTimer(ids[i]);
+
+        // Get the sound.
+        var sound = self._soundById(ids[i]);
+
+        if (sound && !sound._paused) {
+          // Reset the seek position.
+          sound._seek = self.seek(ids[i]);
+          sound._rateSeek = 0;
+          sound._paused = true;
+
+          // Stop currently running fades.
+          self._stopFade(ids[i]);
+
+          if (sound._node) {
+            if (self._webAudio) {
+              // make sure the sound has been created
+              if (!sound._node.bufferSource) {
+                return self;
+              }
+
+              if (typeof sound._node.bufferSource.stop === 'undefined') {
+                sound._node.bufferSource.noteOff(0);
+              } else {
+                sound._node.bufferSource.stop(0);
+              }
+
+              // Clean up the buffer source.
+              self._cleanBuffer(sound._node);
+            } else if (!isNaN(sound._node.duration) || sound._node.duration === Infinity) {
+              sound._node.pause();
+            }
+          }
+        }
+
+        // Fire the pause event, unless `true` is passed as the 2nd argument.
+        if (!arguments[1]) {
+          self._emit('pause', sound ? sound._id : null);
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Stop playback and reset to start.
+     * @param  {Number} id The sound ID (empty to stop all in group).
+     * @param  {Boolean} internal Internal Use: true prevents event firing.
+     * @return {Howl}
+     */
+    stop: function(id, internal) {
+      var self = this;
+
+      // If the sound hasn't loaded, add it to the load queue to stop when capable.
+      if (self._state !== 'loaded') {
+        self._queue.push({
+          event: 'stop',
+          action: function() {
+            self.stop(id);
+          }
+        });
+
+        return self;
+      }
+
+      // If no id is passed, get all ID's to be stopped.
+      var ids = self._getSoundIds(id);
+
+      for (var i=0; i<ids.length; i++) {
+        // Clear the end timer.
+        self._clearTimer(ids[i]);
+
+        // Get the sound.
+        var sound = self._soundById(ids[i]);
+
+        if (sound) {
+          // Reset the seek position.
+          sound._seek = sound._start || 0;
+          sound._rateSeek = 0;
+          sound._paused = true;
+          sound._ended = true;
+
+          // Stop currently running fades.
+          self._stopFade(ids[i]);
+
+          if (sound._node) {
+            if (self._webAudio) {
+              // make sure the sound has been created
+              if (!sound._node.bufferSource) {
+                if (!internal) {
+                  self._emit('stop', sound._id);
+                }
+
+                return self;
+              }
+
+              if (typeof sound._node.bufferSource.stop === 'undefined') {
+                sound._node.bufferSource.noteOff(0);
+              } else {
+                sound._node.bufferSource.stop(0);
+              }
+
+              // Clean up the buffer source.
+              self._cleanBuffer(sound._node);
+            } else if (!isNaN(sound._node.duration) || sound._node.duration === Infinity) {
+              sound._node.currentTime = sound._start || 0;
+              sound._node.pause();
+            }
+          }
+        }
+
+        if (sound && !internal) {
+          self._emit('stop', sound._id);
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Mute/unmute a single sound or all sounds in this Howl group.
+     * @param  {Boolean} muted Set to true to mute and false to unmute.
+     * @param  {Number} id    The sound ID to update (omit to mute/unmute all).
+     * @return {Howl}
+     */
+    mute: function(muted, id) {
+      var self = this;
+
+      // If the sound hasn't loaded, add it to the load queue to mute when capable.
+      if (self._state !== 'loaded') {
+        self._queue.push({
+          event: 'mute',
+          action: function() {
+            self.mute(muted, id);
+          }
+        });
+
+        return self;
+      }
+
+      // If applying mute/unmute to all sounds, update the group's value.
+      if (typeof id === 'undefined') {
+        if (typeof muted === 'boolean') {
+          self._muted = muted;
+        } else {
+          return self._muted;
+        }
+      }
+
+      // If no id is passed, get all ID's to be muted.
+      var ids = self._getSoundIds(id);
+
+      for (var i=0; i<ids.length; i++) {
+        // Get the sound.
+        var sound = self._soundById(ids[i]);
+
+        if (sound) {
+          sound._muted = muted;
+
+          if (self._webAudio && sound._node) {
+            sound._node.gain.setValueAtTime(muted ? 0 : sound._volume, Howler.ctx.currentTime);
+          } else if (sound._node) {
+            sound._node.muted = Howler._muted ? true : muted;
+          }
+
+          self._emit('mute', sound._id);
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Get/set the volume of this sound or of the Howl group. This method can optionally take 0, 1 or 2 arguments.
+     *   volume() -> Returns the group's volume value.
+     *   volume(id) -> Returns the sound id's current volume.
+     *   volume(vol) -> Sets the volume of all sounds in this Howl group.
+     *   volume(vol, id) -> Sets the volume of passed sound id.
+     * @return {Howl/Number} Returns self or current volume.
+     */
+    volume: function() {
+      var self = this;
+      var args = arguments;
+      var vol, id;
+
+      // Determine the values based on arguments.
+      if (args.length === 0) {
+        // Return the value of the groups' volume.
+        return self._volume;
+      } else if (args.length === 1 || args.length === 2 && typeof args[1] === 'undefined') {
+        // First check if this is an ID, and if not, assume it is a new volume.
+        var ids = self._getSoundIds();
+        var index = ids.indexOf(args[0]);
+        if (index >= 0) {
+          id = parseInt(args[0], 10);
+        } else {
+          vol = parseFloat(args[0]);
+        }
+      } else if (args.length >= 2) {
+        vol = parseFloat(args[0]);
+        id = parseInt(args[1], 10);
+      }
+
+      // Update the volume or return the current volume.
+      var sound;
+      if (typeof vol !== 'undefined' && vol >= 0 && vol <= 1) {
+        // If the sound hasn't loaded, add it to the load queue to change volume when capable.
+        if (self._state !== 'loaded') {
+          self._queue.push({
+            event: 'volume',
+            action: function() {
+              self.volume.apply(self, args);
+            }
+          });
+
+          return self;
+        }
+
+        // Set the group volume.
+        if (typeof id === 'undefined') {
+          self._volume = vol;
+        }
+
+        // Update one or all volumes.
+        id = self._getSoundIds(id);
+        for (var i=0; i<id.length; i++) {
+          // Get the sound.
+          sound = self._soundById(id[i]);
+
+          if (sound) {
+            sound._volume = vol;
+
+            // Stop currently running fades.
+            if (!args[2]) {
+              self._stopFade(id[i]);
+            }
+
+            if (self._webAudio && sound._node && !sound._muted) {
+              sound._node.gain.setValueAtTime(vol, Howler.ctx.currentTime);
+            } else if (sound._node && !sound._muted) {
+              sound._node.volume = vol * Howler.volume();
+            }
+
+            self._emit('volume', sound._id);
+          }
+        }
+      } else {
+        sound = id ? self._soundById(id) : self._sounds[0];
+        return sound ? sound._volume : 0;
+      }
+
+      return self;
+    },
+
+    /**
+     * Fade a currently playing sound between two volumes (if no id is passsed, all sounds will fade).
+     * @param  {Number} from The value to fade from (0.0 to 1.0).
+     * @param  {Number} to   The volume to fade to (0.0 to 1.0).
+     * @param  {Number} len  Time in milliseconds to fade.
+     * @param  {Number} id   The sound id (omit to fade all sounds).
+     * @return {Howl}
+     */
+    fade: function(from, to, len, id) {
+      var self = this;
+      var diff = Math.abs(from - to);
+      var dir = from > to ? 'out' : 'in';
+      var steps = diff / 0.01;
+      var stepLen = (steps > 0) ? len / steps : len;
+
+      // Since browsers clamp timeouts to 4ms, we need to clamp our steps to that too.
+      if (stepLen < 4) {
+        steps = Math.ceil(steps / (4 / stepLen));
+        stepLen = 4;
+      }
+
+      // If the sound hasn't loaded, add it to the load queue to fade when capable.
+      if (self._state !== 'loaded') {
+        self._queue.push({
+          event: 'fade',
+          action: function() {
+            self.fade(from, to, len, id);
+          }
+        });
+
+        return self;
+      }
+
+      // Set the volume to the start position.
+      self.volume(from, id);
+
+      // Fade the volume of one or all sounds.
+      var ids = self._getSoundIds(id);
+      for (var i=0; i<ids.length; i++) {
+        // Get the sound.
+        var sound = self._soundById(ids[i]);
+
+        // Create a linear fade or fall back to timeouts with HTML5 Audio.
+        if (sound) {
+          // Stop the previous fade if no sprite is being used (otherwise, volume handles this).
+          if (!id) {
+            self._stopFade(ids[i]);
+          }
+
+          // If we are using Web Audio, let the native methods do the actual fade.
+          if (self._webAudio && !sound._muted) {
+            var currentTime = Howler.ctx.currentTime;
+            var end = currentTime + (len / 1000);
+            sound._volume = from;
+            sound._node.gain.setValueAtTime(from, currentTime);
+            sound._node.gain.linearRampToValueAtTime(to, end);
+          }
+
+          var vol = from;
+          sound._interval = setInterval(function(soundId, sound) {
+            // Update the volume amount, but only if the volume should change.
+            if (steps > 0) {
+              vol += (dir === 'in' ? 0.01 : -0.01);
+            }
+
+            // Make sure the volume is in the right bounds.
+            vol = Math.max(0, vol);
+            vol = Math.min(1, vol);
+
+            // Round to within 2 decimal points.
+            vol = Math.round(vol * 100) / 100;
+
+            // Change the volume.
+            if (self._webAudio) {
+              if (typeof id === 'undefined') {
+                self._volume = vol;
+              }
+
+              sound._volume = vol;
+            } else {
+              self.volume(vol, soundId, true);
+            }
+
+            // When the fade is complete, stop it and fire event.
+            if (vol === to) {
+              clearInterval(sound._interval);
+              sound._interval = null;
+              self.volume(vol, soundId);
+              self._emit('fade', soundId);
+            }
+          }.bind(self, ids[i], sound), stepLen);
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Internal method that stops the currently playing fade when
+     * a new fade starts, volume is changed or the sound is stopped.
+     * @param  {Number} id The sound id.
+     * @return {Howl}
+     */
+    _stopFade: function(id) {
+      var self = this;
+      var sound = self._soundById(id);
+
+      if (sound && sound._interval) {
+        if (self._webAudio) {
+          sound._node.gain.cancelScheduledValues(Howler.ctx.currentTime);
+        }
+
+        clearInterval(sound._interval);
+        sound._interval = null;
+        self._emit('fade', id);
+      }
+
+      return self;
+    },
+
+    /**
+     * Get/set the loop parameter on a sound. This method can optionally take 0, 1 or 2 arguments.
+     *   loop() -> Returns the group's loop value.
+     *   loop(id) -> Returns the sound id's loop value.
+     *   loop(loop) -> Sets the loop value for all sounds in this Howl group.
+     *   loop(loop, id) -> Sets the loop value of passed sound id.
+     * @return {Howl/Boolean} Returns self or current loop value.
+     */
+    loop: function() {
+      var self = this;
+      var args = arguments;
+      var loop, id, sound;
+
+      // Determine the values for loop and id.
+      if (args.length === 0) {
+        // Return the grou's loop value.
+        return self._loop;
+      } else if (args.length === 1) {
+        if (typeof args[0] === 'boolean') {
+          loop = args[0];
+          self._loop = loop;
+        } else {
+          // Return this sound's loop value.
+          sound = self._soundById(parseInt(args[0], 10));
+          return sound ? sound._loop : false;
+        }
+      } else if (args.length === 2) {
+        loop = args[0];
+        id = parseInt(args[1], 10);
+      }
+
+      // If no id is passed, get all ID's to be looped.
+      var ids = self._getSoundIds(id);
+      for (var i=0; i<ids.length; i++) {
+        sound = self._soundById(ids[i]);
+
+        if (sound) {
+          sound._loop = loop;
+          if (self._webAudio && sound._node && sound._node.bufferSource) {
+            sound._node.bufferSource.loop = loop;
+            if (loop) {
+              sound._node.bufferSource.loopStart = sound._start || 0;
+              sound._node.bufferSource.loopEnd = sound._stop;
+            }
+          }
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Get/set the playback rate of a sound. This method can optionally take 0, 1 or 2 arguments.
+     *   rate() -> Returns the first sound node's current playback rate.
+     *   rate(id) -> Returns the sound id's current playback rate.
+     *   rate(rate) -> Sets the playback rate of all sounds in this Howl group.
+     *   rate(rate, id) -> Sets the playback rate of passed sound id.
+     * @return {Howl/Number} Returns self or the current playback rate.
+     */
+    rate: function() {
+      var self = this;
+      var args = arguments;
+      var rate, id;
+
+      // Determine the values based on arguments.
+      if (args.length === 0) {
+        // We will simply return the current rate of the first node.
+        id = self._sounds[0]._id;
+      } else if (args.length === 1) {
+        // First check if this is an ID, and if not, assume it is a new rate value.
+        var ids = self._getSoundIds();
+        var index = ids.indexOf(args[0]);
+        if (index >= 0) {
+          id = parseInt(args[0], 10);
+        } else {
+          rate = parseFloat(args[0]);
+        }
+      } else if (args.length === 2) {
+        rate = parseFloat(args[0]);
+        id = parseInt(args[1], 10);
+      }
+
+      // Update the playback rate or return the current value.
+      var sound;
+      if (typeof rate === 'number') {
+        // If the sound hasn't loaded, add it to the load queue to change playback rate when capable.
+        if (self._state !== 'loaded') {
+          self._queue.push({
+            event: 'rate',
+            action: function() {
+              self.rate.apply(self, args);
+            }
+          });
+
+          return self;
+        }
+
+        // Set the group rate.
+        if (typeof id === 'undefined') {
+          self._rate = rate;
+        }
+
+        // Update one or all volumes.
+        id = self._getSoundIds(id);
+        for (var i=0; i<id.length; i++) {
+          // Get the sound.
+          sound = self._soundById(id[i]);
+
+          if (sound) {
+            // Keep track of our position when the rate changed and update the playback
+            // start position so we can properly adjust the seek position for time elapsed.
+            sound._rateSeek = self.seek(id[i]);
+            sound._playStart = self._webAudio ? Howler.ctx.currentTime : sound._playStart;
+            sound._rate = rate;
+
+            // Change the playback rate.
+            if (self._webAudio && sound._node && sound._node.bufferSource) {
+              sound._node.bufferSource.playbackRate.value = rate;
+            } else if (sound._node) {
+              sound._node.playbackRate = rate;
+            }
+
+            // Reset the timers.
+            var seek = self.seek(id[i]);
+            var duration = ((self._sprite[sound._sprite][0] + self._sprite[sound._sprite][1]) / 1000) - seek;
+            var timeout = (duration * 1000) / Math.abs(sound._rate);
+
+            // Start a new end timer if sound is already playing.
+            if (self._endTimers[id[i]] || !sound._paused) {
+              self._clearTimer(id[i]);
+              self._endTimers[id[i]] = setTimeout(self._ended.bind(self, sound), timeout);
+            }
+
+            self._emit('rate', sound._id);
+          }
+        }
+      } else {
+        sound = self._soundById(id);
+        return sound ? sound._rate : self._rate;
+      }
+
+      return self;
+    },
+
+    /**
+     * Get/set the seek position of a sound. This method can optionally take 0, 1 or 2 arguments.
+     *   seek() -> Returns the first sound node's current seek position.
+     *   seek(id) -> Returns the sound id's current seek position.
+     *   seek(seek) -> Sets the seek position of the first sound node.
+     *   seek(seek, id) -> Sets the seek position of passed sound id.
+     * @return {Howl/Number} Returns self or the current seek position.
+     */
+    seek: function() {
+      var self = this;
+      var args = arguments;
+      var seek, id;
+
+      // Determine the values based on arguments.
+      if (args.length === 0) {
+        // We will simply return the current position of the first node.
+        id = self._sounds[0]._id;
+      } else if (args.length === 1) {
+        // First check if this is an ID, and if not, assume it is a new seek position.
+        var ids = self._getSoundIds();
+        var index = ids.indexOf(args[0]);
+        if (index >= 0) {
+          id = parseInt(args[0], 10);
+        } else {
+          id = self._sounds[0]._id;
+          seek = parseFloat(args[0]);
+        }
+      } else if (args.length === 2) {
+        seek = parseFloat(args[0]);
+        id = parseInt(args[1], 10);
+      }
+
+      // If there is no ID, bail out.
+      if (typeof id === 'undefined') {
+        return self;
+      }
+
+      // If the sound hasn't loaded, add it to the load queue to seek when capable.
+      if (self._state !== 'loaded') {
+        self._queue.push({
+          event: 'seek',
+          action: function() {
+            self.seek.apply(self, args);
+          }
+        });
+
+        return self;
+      }
+
+      // Get the sound.
+      var sound = self._soundById(id);
+
+      if (sound) {
+        if (typeof seek === 'number' && seek >= 0) {
+          // Pause the sound and update position for restarting playback.
+          var playing = self.playing(id);
+          if (playing) {
+            self.pause(id, true);
+          }
+
+          // Move the position of the track and cancel timer.
+          sound._seek = seek;
+          sound._ended = false;
+          self._clearTimer(id);
+
+          // Restart the playback if the sound was playing.
+          if (playing) {
+            self.play(id, true);
+          }
+
+          // Update the seek position for HTML5 Audio.
+          if (!self._webAudio && sound._node) {
+            sound._node.currentTime = seek;
+          }
+
+          self._emit('seek', id);
+        } else {
+          if (self._webAudio) {
+            var realTime = self.playing(id) ? Howler.ctx.currentTime - sound._playStart : 0;
+            var rateSeek = sound._rateSeek ? sound._rateSeek - sound._seek : 0;
+            return sound._seek + (rateSeek + realTime * Math.abs(sound._rate));
+          } else {
+            return sound._node.currentTime;
+          }
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Check if a specific sound is currently playing or not (if id is provided), or check if at least one of the sounds in the group is playing or not.
+     * @param  {Number}  id The sound id to check. If none is passed, the whole sound group is checked.
+     * @return {Boolean} True if playing and false if not.
+     */
+    playing: function(id) {
+      var self = this;
+
+      // Check the passed sound ID (if any).
+      if (typeof id === 'number') {
+        var sound = self._soundById(id);
+        return sound ? !sound._paused : false;
+      }
+
+      // Otherwise, loop through all sounds and check if any are playing.
+      for (var i=0; i<self._sounds.length; i++) {
+        if (!self._sounds[i]._paused) {
+          return true;
+        }
+      }
+
+      return false;
+    },
+
+    /**
+     * Get the duration of this sound. Passing a sound id will return the sprite duration.
+     * @param  {Number} id The sound id to check. If none is passed, return full source duration.
+     * @return {Number} Audio duration in seconds.
+     */
+    duration: function(id) {
+      var self = this;
+      var duration = self._duration;
+
+      // If we pass an ID, get the sound and return the sprite length.
+      var sound = self._soundById(id);
+      if (sound) {
+        duration = self._sprite[sound._sprite][1] / 1000;
+      }
+
+      return duration;
+    },
+
+    /**
+     * Returns the current loaded state of this Howl.
+     * @return {String} 'unloaded', 'loading', 'loaded'
+     */
+    state: function() {
+      return this._state;
+    },
+
+    /**
+     * Unload and destroy the current Howl object.
+     * This will immediately stop all sound instances attached to this group.
+     */
+    unload: function() {
+      var self = this;
+
+      // Stop playing any active sounds.
+      var sounds = self._sounds;
+      for (var i=0; i<sounds.length; i++) {
+        // Stop the sound if it is currently playing.
+        if (!sounds[i]._paused) {
+          self.stop(sounds[i]._id);
+          self._emit('end', sounds[i]._id);
+        }
+
+        // Remove the source or disconnect.
+        if (!self._webAudio) {
+          // Set the source to 0-second silence to stop any downloading.
+          sounds[i]._node.src = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=';
+
+          // Remove any event listeners.
+          sounds[i]._node.removeEventListener('error', sounds[i]._errorFn, false);
+          sounds[i]._node.removeEventListener(Howler._canPlayEvent, sounds[i]._loadFn, false);
+        }
+
+        // Empty out all of the nodes.
+        delete sounds[i]._node;
+
+        // Make sure all timers are cleared out.
+        self._clearTimer(sounds[i]._id);
+
+        // Remove the references in the global Howler object.
+        var index = Howler._howls.indexOf(self);
+        if (index >= 0) {
+          Howler._howls.splice(index, 1);
+        }
+      }
+
+      // Delete this sound from the cache (if no other Howl is using it).
+      var remCache = true;
+      for (i=0; i<Howler._howls.length; i++) {
+        if (Howler._howls[i]._src === self._src) {
+          remCache = false;
+          break;
+        }
+      }
+
+      if (cache && remCache) {
+        delete cache[self._src];
+      }
+
+      // Clear global errors.
+      Howler.noAudio = false;
+
+      // Clear out `self`.
+      self._state = 'unloaded';
+      self._sounds = [];
+      self = null;
+
+      return null;
+    },
+
+    /**
+     * Listen to a custom event.
+     * @param  {String}   event Event name.
+     * @param  {Function} fn    Listener to call.
+     * @param  {Number}   id    (optional) Only listen to events for this sound.
+     * @param  {Number}   once  (INTERNAL) Marks event to fire only once.
+     * @return {Howl}
+     */
+    on: function(event, fn, id, once) {
+      var self = this;
+      var events = self['_on' + event];
+
+      if (typeof fn === 'function') {
+        events.push(once ? {id: id, fn: fn, once: once} : {id: id, fn: fn});
+      }
+
+      return self;
+    },
+
+    /**
+     * Remove a custom event. Call without parameters to remove all events.
+     * @param  {String}   event Event name.
+     * @param  {Function} fn    Listener to remove. Leave empty to remove all.
+     * @param  {Number}   id    (optional) Only remove events for this sound.
+     * @return {Howl}
+     */
+    off: function(event, fn, id) {
+      var self = this;
+      var events = self['_on' + event];
+      var i = 0;
+
+      if (fn) {
+        // Loop through event store and remove the passed function.
+        for (i=0; i<events.length; i++) {
+          if (fn === events[i].fn && id === events[i].id) {
+            events.splice(i, 1);
+            break;
+          }
+        }
+      } else if (event) {
+        // Clear out all events of this type.
+        self['_on' + event] = [];
+      } else {
+        // Clear out all events of every type.
+        var keys = Object.keys(self);
+        for (i=0; i<keys.length; i++) {
+          if ((keys[i].indexOf('_on') === 0) && Array.isArray(self[keys[i]])) {
+            self[keys[i]] = [];
+          }
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Listen to a custom event and remove it once fired.
+     * @param  {String}   event Event name.
+     * @param  {Function} fn    Listener to call.
+     * @param  {Number}   id    (optional) Only listen to events for this sound.
+     * @return {Howl}
+     */
+    once: function(event, fn, id) {
+      var self = this;
+
+      // Setup the event listener.
+      self.on(event, fn, id, 1);
+
+      return self;
+    },
+
+    /**
+     * Emit all events of a specific type and pass the sound id.
+     * @param  {String} event Event name.
+     * @param  {Number} id    Sound ID.
+     * @param  {Number} msg   Message to go with event.
+     * @return {Howl}
+     */
+    _emit: function(event, id, msg) {
+      var self = this;
+      var events = self['_on' + event];
+
+      // Loop through event store and fire all functions.
+      for (var i=events.length-1; i>=0; i--) {
+        if (!events[i].id || events[i].id === id || event === 'load') {
+          setTimeout(function(fn) {
+            fn.call(this, id, msg);
+          }.bind(self, events[i].fn), 0);
+
+          // If this event was setup with `once`, remove it.
+          if (events[i].once) {
+            self.off(event, events[i].fn, events[i].id);
+          }
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Queue of actions initiated before the sound has loaded.
+     * These will be called in sequence, with the next only firing
+     * after the previous has finished executing (even if async like play).
+     * @return {Howl}
+     */
+    _loadQueue: function() {
+      var self = this;
+
+      if (self._queue.length > 0) {
+        var task = self._queue[0];
+
+        // don't move onto the next task until this one is done
+        self.once(task.event, function() {
+          self._queue.shift();
+          self._loadQueue();
+        });
+
+        task.action();
+      }
+
+      return self;
+    },
+
+    /**
+     * Fired when playback ends at the end of the duration.
+     * @param  {Sound} sound The sound object to work with.
+     * @return {Howl}
+     */
+    _ended: function(sound) {
+      var self = this;
+      var sprite = sound._sprite;
+
+      // Should this sound loop?
+      var loop = !!(sound._loop || self._sprite[sprite][2]);
+
+      // Fire the ended event.
+      self._emit('end', sound._id);
+
+      // Restart the playback for HTML5 Audio loop.
+      if (!self._webAudio && loop) {
+        self.stop(sound._id, true).play(sound._id);
+      }
+
+      // Restart this timer if on a Web Audio loop.
+      if (self._webAudio && loop) {
+        self._emit('play', sound._id);
+        sound._seek = sound._start || 0;
+        sound._rateSeek = 0;
+        sound._playStart = Howler.ctx.currentTime;
+
+        var timeout = ((sound._stop - sound._start) * 1000) / Math.abs(sound._rate);
+        self._endTimers[sound._id] = setTimeout(self._ended.bind(self, sound), timeout);
+      }
+
+      // Mark the node as paused.
+      if (self._webAudio && !loop) {
+        sound._paused = true;
+        sound._ended = true;
+        sound._seek = sound._start || 0;
+        sound._rateSeek = 0;
+        self._clearTimer(sound._id);
+
+        // Clean up the buffer source.
+        self._cleanBuffer(sound._node);
+
+        // Attempt to auto-suspend AudioContext if no sounds are still playing.
+        Howler._autoSuspend();
+      }
+
+      // When using a sprite, end the track.
+      if (!self._webAudio && !loop) {
+        self.stop(sound._id);
+      }
+
+      return self;
+    },
+
+    /**
+     * Clear the end timer for a sound playback.
+     * @param  {Number} id The sound ID.
+     * @return {Howl}
+     */
+    _clearTimer: function(id) {
+      var self = this;
+
+      if (self._endTimers[id]) {
+        clearTimeout(self._endTimers[id]);
+        delete self._endTimers[id];
+      }
+
+      return self;
+    },
+
+    /**
+     * Return the sound identified by this ID, or return null.
+     * @param  {Number} id Sound ID
+     * @return {Object}    Sound object or null.
+     */
+    _soundById: function(id) {
+      var self = this;
+
+      // Loop through all sounds and find the one with this ID.
+      for (var i=0; i<self._sounds.length; i++) {
+        if (id === self._sounds[i]._id) {
+          return self._sounds[i];
+        }
+      }
+
+      return null;
+    },
+
+    /**
+     * Return an inactive sound from the pool or create a new one.
+     * @return {Sound} Sound playback object.
+     */
+    _inactiveSound: function() {
+      var self = this;
+
+      self._drain();
+
+      // Find the first inactive node to recycle.
+      for (var i=0; i<self._sounds.length; i++) {
+        if (self._sounds[i]._ended) {
+          return self._sounds[i].reset();
+        }
+      }
+
+      // If no inactive node was found, create a new one.
+      return new Sound(self);
+    },
+
+    /**
+     * Drain excess inactive sounds from the pool.
+     */
+    _drain: function() {
+      var self = this;
+      var limit = self._pool;
+      var cnt = 0;
+      var i = 0;
+
+      // If there are less sounds than the max pool size, we are done.
+      if (self._sounds.length < limit) {
+        return;
+      }
+
+      // Count the number of inactive sounds.
+      for (i=0; i<self._sounds.length; i++) {
+        if (self._sounds[i]._ended) {
+          cnt++;
+        }
+      }
+
+      // Remove excess inactive sounds, going in reverse order.
+      for (i=self._sounds.length - 1; i>=0; i--) {
+        if (cnt <= limit) {
+          return;
+        }
+
+        if (self._sounds[i]._ended) {
+          // Disconnect the audio source when using Web Audio.
+          if (self._webAudio && self._sounds[i]._node) {
+            self._sounds[i]._node.disconnect(0);
+          }
+
+          // Remove sounds until we have the pool size.
+          self._sounds.splice(i, 1);
+          cnt--;
+        }
+      }
+    },
+
+    /**
+     * Get all ID's from the sounds pool.
+     * @param  {Number} id Only return one ID if one is passed.
+     * @return {Array}    Array of IDs.
+     */
+    _getSoundIds: function(id) {
+      var self = this;
+
+      if (typeof id === 'undefined') {
+        var ids = [];
+        for (var i=0; i<self._sounds.length; i++) {
+          ids.push(self._sounds[i]._id);
+        }
+
+        return ids;
+      } else {
+        return [id];
+      }
+    },
+
+    /**
+     * Load the sound back into the buffer source.
+     * @param  {Sound} sound The sound object to work with.
+     * @return {Howl}
+     */
+    _refreshBuffer: function(sound) {
+      var self = this;
+
+      // Setup the buffer source for playback.
+      sound._node.bufferSource = Howler.ctx.createBufferSource();
+      sound._node.bufferSource.buffer = cache[self._src];
+
+      // Connect to the correct node.
+      if (sound._panner) {
+        sound._node.bufferSource.connect(sound._panner);
+      } else {
+        sound._node.bufferSource.connect(sound._node);
+      }
+
+      // Setup looping and playback rate.
+      sound._node.bufferSource.loop = sound._loop;
+      if (sound._loop) {
+        sound._node.bufferSource.loopStart = sound._start || 0;
+        sound._node.bufferSource.loopEnd = sound._stop;
+      }
+      sound._node.bufferSource.playbackRate.value = sound._rate;
+
+      return self;
+    },
+
+    /**
+     * Prevent memory leaks by cleaning up the buffer source after playback.
+     * @param  {Object} node Sound's audio node containing the buffer source.
+     * @return {Howl}
+     */
+    _cleanBuffer: function(node) {
+      var self = this;
+
+      if (self._scratchBuffer) {
+        node.bufferSource.onended = null;
+        node.bufferSource.disconnect(0);
+        try { node.bufferSource.buffer = self._scratchBuffer; } catch(e) {}
+      }
+      node.bufferSource = null;
+
+      return self;
+    }
+  };
+
+  /** Single Sound Methods **/
+  /***************************************************************************/
+
+  /**
+   * Setup the sound object, which each node attached to a Howl group is contained in.
+   * @param {Object} howl The Howl parent group.
+   */
+  var Sound = function(howl) {
+    this._parent = howl;
+    this.init();
+  };
+  Sound.prototype = {
+    /**
+     * Initialize a new Sound object.
+     * @return {Sound}
+     */
+    init: function() {
+      var self = this;
+      var parent = self._parent;
+
+      // Setup the default parameters.
+      self._muted = parent._muted;
+      self._loop = parent._loop;
+      self._volume = parent._volume;
+      self._muted = parent._muted;
+      self._rate = parent._rate;
+      self._seek = 0;
+      self._paused = true;
+      self._ended = true;
+      self._sprite = '__default';
+
+      // Generate a unique ID for this sound.
+      self._id = Math.round(Date.now() * Math.random());
+
+      // Add itself to the parent's pool.
+      parent._sounds.push(self);
+
+      // Create the new node.
+      self.create();
+
+      return self;
+    },
+
+    /**
+     * Create and setup a new sound object, whether HTML5 Audio or Web Audio.
+     * @return {Sound}
+     */
+    create: function() {
+      var self = this;
+      var parent = self._parent;
+      var volume = (Howler._muted || self._muted || self._parent._muted) ? 0 : self._volume;
+
+      if (parent._webAudio) {
+        // Create the gain node for controlling volume (the source will connect to this).
+        self._node = (typeof Howler.ctx.createGain === 'undefined') ? Howler.ctx.createGainNode() : Howler.ctx.createGain();
+        self._node.gain.setValueAtTime(volume, Howler.ctx.currentTime);
+        self._node.paused = true;
+        self._node.connect(Howler.masterGain);
+      } else {
+        self._node = new Audio();
+
+        // Listen for errors (http://dev.w3.org/html5/spec-author-view/spec.html#mediaerror).
+        self._errorFn = self._errorListener.bind(self);
+        self._node.addEventListener('error', self._errorFn, false);
+
+        // Listen for 'canplaythrough' event to let us know the sound is ready.
+        self._loadFn = self._loadListener.bind(self);
+        self._node.addEventListener(Howler._canPlayEvent, self._loadFn, false);
+
+        // Setup the new audio node.
+        self._node.src = parent._src;
+        self._node.preload = 'auto';
+        self._node.volume = volume * Howler.volume();
+
+        // Begin loading the source.
+        self._node.load();
+      }
+
+      return self;
+    },
+
+    /**
+     * Reset the parameters of this sound to the original state (for recycle).
+     * @return {Sound}
+     */
+    reset: function() {
+      var self = this;
+      var parent = self._parent;
+
+      // Reset all of the parameters of this sound.
+      self._muted = parent._muted;
+      self._loop = parent._loop;
+      self._volume = parent._volume;
+      self._muted = parent._muted;
+      self._rate = parent._rate;
+      self._seek = 0;
+      self._rateSeek = 0;
+      self._paused = true;
+      self._ended = true;
+      self._sprite = '__default';
+
+      // Generate a new ID so that it isn't confused with the previous sound.
+      self._id = Math.round(Date.now() * Math.random());
+
+      return self;
+    },
+
+    /**
+     * HTML5 Audio error listener callback.
+     */
+    _errorListener: function() {
+      var self = this;
+
+      // Fire an error event and pass back the code.
+      self._parent._emit('loaderror', self._id, self._node.error ? self._node.error.code : 0);
+
+      // Clear the event listener.
+      self._node.removeEventListener('error', self._errorListener, false);
+    },
+
+    /**
+     * HTML5 Audio canplaythrough listener callback.
+     */
+    _loadListener: function() {
+      var self = this;
+      var parent = self._parent;
+
+      // Round up the duration to account for the lower precision in HTML5 Audio.
+      parent._duration = Math.ceil(self._node.duration * 10) / 10;
+
+      // Setup a sprite if none is defined.
+      if (Object.keys(parent._sprite).length === 0) {
+        parent._sprite = {__default: [0, parent._duration * 1000]};
+      }
+
+      if (parent._state !== 'loaded') {
+        parent._state = 'loaded';
+        parent._emit('load');
+        parent._loadQueue();
+      }
+
+      // Clear the event listener.
+      self._node.removeEventListener(Howler._canPlayEvent, self._loadFn, false);
+    }
+  };
+
+  /** Helper Methods **/
+  /***************************************************************************/
+
+  var cache = {};
+
+  /**
+   * Buffer a sound from URL, Data URI or cache and decode to audio source (Web Audio API).
+   * @param  {Howl} self
+   */
+  var loadBuffer = function(self) {
+    var url = self._src;
+
+    // Check if the buffer has already been cached and use it instead.
+    if (cache[url]) {
+      // Set the duration from the cache.
+      self._duration = cache[url].duration;
+
+      // Load the sound into this Howl.
+      loadSound(self);
+
+      return;
+    }
+
+    if (/^data:[^;]+;base64,/.test(url)) {
+      // Decode the base64 data URI without XHR, since some browsers don't support it.
+      var data = atob(url.split(',')[1]);
+      var dataView = new Uint8Array(data.length);
+      for (var i=0; i<data.length; ++i) {
+        dataView[i] = data.charCodeAt(i);
+      }
+
+      decodeAudioData(dataView.buffer, self);
+    } else {
+      // Load the buffer from the URL.
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.responseType = 'arraybuffer';
+      xhr.onload = function() {
+        // Make sure we get a successful response back.
+        var code = (xhr.status + '')[0];
+        if (code !== '0' && code !== '2' && code !== '3') {
+          self._emit('loaderror', null, 'Failed loading audio file with status: ' + xhr.status + '.');
+          return;
+        }
+
+        decodeAudioData(xhr.response, self);
+      };
+      xhr.onerror = function() {
+        // If there is an error, switch to HTML5 Audio.
+        if (self._webAudio) {
+          self._html5 = true;
+          self._webAudio = false;
+          self._sounds = [];
+          delete cache[url];
+          self.load();
+        }
+      };
+      safeXhrSend(xhr);
+    }
+  };
+
+  /**
+   * Send the XHR request wrapped in a try/catch.
+   * @param  {Object} xhr XHR to send.
+   */
+  var safeXhrSend = function(xhr) {
+    try {
+      xhr.send();
+    } catch (e) {
+      xhr.onerror();
+    }
+  };
+
+  /**
+   * Decode audio data from an array buffer.
+   * @param  {ArrayBuffer} arraybuffer The audio data.
+   * @param  {Howl}        self
+   */
+  var decodeAudioData = function(arraybuffer, self) {
+    // Decode the buffer into an audio source.
+    Howler.ctx.decodeAudioData(arraybuffer, function(buffer) {
+      if (buffer && self._sounds.length > 0) {
+        cache[self._src] = buffer;
+        loadSound(self, buffer);
+      }
+    }, function() {
+      self._emit('loaderror', null, 'Decoding audio data failed.');
+    });
+  };
+
+  /**
+   * Sound is now loaded, so finish setting everything up and fire the loaded event.
+   * @param  {Howl} self
+   * @param  {Object} buffer The decoded buffer sound source.
+   */
+  var loadSound = function(self, buffer) {
+    // Set the duration.
+    if (buffer && !self._duration) {
+      self._duration = buffer.duration;
+    }
+
+    // Setup a sprite if none is defined.
+    if (Object.keys(self._sprite).length === 0) {
+      self._sprite = {__default: [0, self._duration * 1000]};
+    }
+
+    // Fire the loaded event.
+    if (self._state !== 'loaded') {
+      self._state = 'loaded';
+      self._emit('load');
+      self._loadQueue();
+    }
+  };
+
+  /**
+   * Setup the audio context when available, or switch to HTML5 Audio mode.
+   */
+  var setupAudioContext = function() {
+    // Check if we are using Web Audio and setup the AudioContext if we are.
+    try {
+      if (typeof AudioContext !== 'undefined') {
+        Howler.ctx = new AudioContext();
+      } else if (typeof webkitAudioContext !== 'undefined') {
+        Howler.ctx = new webkitAudioContext();
+      } else {
+        Howler.usingWebAudio = false;
+      }
+    } catch(e) {
+      Howler.usingWebAudio = false;
+    }
+
+    // Check if a webview is being used on iOS8 or earlier (rather than the browser).
+    // If it is, disable Web Audio as it causes crashing.
+    var iOS = (/iP(hone|od|ad)/.test(Howler._navigator && Howler._navigator.platform));
+    var appVersion = Howler._navigator && Howler._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/);
+    var version = appVersion ? parseInt(appVersion[1], 10) : null;
+    if (iOS && version && version < 9) {
+      var safari = /safari/.test(Howler._navigator && Howler._navigator.userAgent.toLowerCase());
+      if (Howler._navigator && Howler._navigator.standalone && !safari || Howler._navigator && !Howler._navigator.standalone && !safari) {
+        Howler.usingWebAudio = false;
+      }
+    }
+
+    // Create and expose the master GainNode when using Web Audio (useful for plugins or advanced usage).
+    if (Howler.usingWebAudio) {
+      Howler.masterGain = (typeof Howler.ctx.createGain === 'undefined') ? Howler.ctx.createGainNode() : Howler.ctx.createGain();
+      Howler.masterGain.gain.value = 1;
+      Howler.masterGain.connect(Howler.ctx.destination);
+    }
+
+    // Re-run the setup on Howler.
+    Howler._setup();
+  };
+
+  // Add support for AMD (Asynchronous Module Definition) libraries such as require.js.
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+      return {
+        Howler: Howler,
+        Howl: Howl
+      };
+    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  }
+
+  // Add support for CommonJS libraries such as browserify.
+  if (true) {
+    exports.Howler = Howler;
+    exports.Howl = Howl;
+  }
+
+  // Define globally in case AMD is not available or unused.
+  if (typeof window !== 'undefined') {
+    window.HowlerGlobal = HowlerGlobal;
+    window.Howler = Howler;
+    window.Howl = Howl;
+    window.Sound = Sound;
+  } else if (typeof global !== 'undefined') { // Add to global in Node.js (for testing, etc).
+    global.HowlerGlobal = HowlerGlobal;
+    global.Howler = Howler;
+    global.Howl = Howl;
+    global.Sound = Sound;
+  }
+})();
+
+
+/*!
+ *  Spatial Plugin - Adds support for stereo and 3D audio where Web Audio is supported.
+ *  
+ *  howler.js v2.0.2
+ *  howlerjs.com
+ *
+ *  (c) 2013-2016, James Simpson of GoldFire Studios
+ *  goldfirestudios.com
+ *
+ *  MIT License
+ */
+
+(function() {
+
+  'use strict';
+
+  // Setup default properties.
+  HowlerGlobal.prototype._pos = [0, 0, 0];
+  HowlerGlobal.prototype._orientation = [0, 0, -1, 0, 1, 0];
+  
+  /** Global Methods **/
+  /***************************************************************************/
+
+  /**
+   * Helper method to update the stereo panning position of all current Howls.
+   * Future Howls will not use this value unless explicitly set.
+   * @param  {Number} pan A value of -1.0 is all the way left and 1.0 is all the way right.
+   * @return {Howler/Number}     Self or current stereo panning value.
+   */
+  HowlerGlobal.prototype.stereo = function(pan) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self.ctx || !self.ctx.listener) {
+      return self;
+    }
+
+    // Loop through all Howls and update their stereo panning.
+    for (var i=self._howls.length-1; i>=0; i--) {
+      self._howls[i].stereo(pan);
+    }
+
+    return self;
+  };
+
+  /**
+   * Get/set the position of the listener in 3D cartesian space. Sounds using
+   * 3D position will be relative to the listener's position.
+   * @param  {Number} x The x-position of the listener.
+   * @param  {Number} y The y-position of the listener.
+   * @param  {Number} z The z-position of the listener.
+   * @return {Howler/Array}   Self or current listener position.
+   */
+  HowlerGlobal.prototype.pos = function(x, y, z) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self.ctx || !self.ctx.listener) {
+      return self;
+    }
+
+    // Set the defaults for optional 'y' & 'z'.
+    y = (typeof y !== 'number') ? self._pos[1] : y;
+    z = (typeof z !== 'number') ? self._pos[2] : z;
+
+    if (typeof x === 'number') {
+      self._pos = [x, y, z];
+      self.ctx.listener.setPosition(self._pos[0], self._pos[1], self._pos[2]);
+    } else {
+      return self._pos;
+    }
+
+    return self;
+  };
+
+  /**
+   * Get/set the direction the listener is pointing in the 3D cartesian space.
+   * A front and up vector must be provided. The front is the direction the
+   * face of the listener is pointing, and up is the direction the top of the
+   * listener is pointing. Thus, these values are expected to be at right angles
+   * from each other.
+   * @param  {Number} x   The x-orientation of the listener.
+   * @param  {Number} y   The y-orientation of the listener.
+   * @param  {Number} z   The z-orientation of the listener.
+   * @param  {Number} xUp The x-orientation of the top of the listener.
+   * @param  {Number} yUp The y-orientation of the top of the listener.
+   * @param  {Number} zUp The z-orientation of the top of the listener.
+   * @return {Howler/Array}     Returns self or the current orientation vectors.
+   */
+  HowlerGlobal.prototype.orientation = function(x, y, z, xUp, yUp, zUp) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self.ctx || !self.ctx.listener) {
+      return self;
+    }
+
+    // Set the defaults for optional 'y' & 'z'.
+    var or = self._orientation;
+    y = (typeof y !== 'number') ? or[1] : y;
+    z = (typeof z !== 'number') ? or[2] : z;
+    xUp = (typeof xUp !== 'number') ? or[3] : xUp;
+    yUp = (typeof yUp !== 'number') ? or[4] : yUp;
+    zUp = (typeof zUp !== 'number') ? or[5] : zUp;
+
+    if (typeof x === 'number') {
+      self._orientation = [x, y, z, xUp, yUp, zUp];
+      self.ctx.listener.setOrientation(x, y, z, xUp, yUp, zUp);
+    } else {
+      return or;
+    }
+
+    return self;
+  };
+
+  /** Group Methods **/
+  /***************************************************************************/
+
+  /**
+   * Add new properties to the core init.
+   * @param  {Function} _super Core init method.
+   * @return {Howl}
+   */
+  Howl.prototype.init = (function(_super) {
+    return function(o) {
+      var self = this;
+
+      // Setup user-defined default properties.
+      self._orientation = o.orientation || [1, 0, 0];
+      self._stereo = o.stereo || null;
+      self._pos = o.pos || null;
+      self._pannerAttr = {
+        coneInnerAngle: typeof o.coneInnerAngle !== 'undefined' ? o.coneInnerAngle : 360,
+        coneOuterAngle: typeof o.coneOuterAngle !== 'undefined' ? o.coneOuterAngle : 360,
+        coneOuterGain: typeof o.coneOuterGain !== 'undefined' ? o.coneOuterGain : 0,
+        distanceModel: typeof o.distanceModel !== 'undefined' ? o.distanceModel : 'inverse',
+        maxDistance: typeof o.maxDistance !== 'undefined' ? o.maxDistance : 10000,
+        panningModel: typeof o.panningModel !== 'undefined' ? o.panningModel : 'HRTF',
+        refDistance: typeof o.refDistance !== 'undefined' ? o.refDistance : 1,
+        rolloffFactor: typeof o.rolloffFactor !== 'undefined' ? o.rolloffFactor : 1
+      };
+
+      // Setup event listeners.
+      self._onstereo = o.onstereo ? [{fn: o.onstereo}] : [];
+      self._onpos = o.onpos ? [{fn: o.onpos}] : [];
+      self._onorientation = o.onorientation ? [{fn: o.onorientation}] : [];
+
+      // Complete initilization with howler.js core's init function.
+      return _super.call(this, o);
+    };
+  })(Howl.prototype.init);
+
+  /**
+   * Get/set the stereo panning of the audio source for this sound or all in the group.
+   * @param  {Number} pan  A value of -1.0 is all the way left and 1.0 is all the way right.
+   * @param  {Number} id (optional) The sound ID. If none is passed, all in group will be updated.
+   * @return {Howl/Number}    Returns self or the current stereo panning value.
+   */
+  Howl.prototype.stereo = function(pan, id) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self._webAudio) {
+      return self;
+    }
+
+    // If the sound hasn't loaded, add it to the load queue to change stereo pan when capable.
+    if (self._state !== 'loaded') {
+      self._queue.push({
+        event: 'stereo',
+        action: function() {
+          self.stereo(pan, id);
+        }
+      });
+
+      return self;
+    }
+
+    // Check for PannerStereoNode support and fallback to PannerNode if it doesn't exist.
+    var pannerType = (typeof Howler.ctx.createStereoPanner === 'undefined') ? 'spatial' : 'stereo';
+
+    // Setup the group's stereo panning if no ID is passed.
+    if (typeof id === 'undefined') {
+      // Return the group's stereo panning if no parameters are passed.
+      if (typeof pan === 'number') {
+        self._stereo = pan;
+        self._pos = [pan, 0, 0];
+      } else {
+        return self._stereo;
+      }
+    }
+
+    // Change the streo panning of one or all sounds in group.
+    var ids = self._getSoundIds(id);
+    for (var i=0; i<ids.length; i++) {
+      // Get the sound.
+      var sound = self._soundById(ids[i]);
+
+      if (sound) {
+        if (typeof pan === 'number') {
+          sound._stereo = pan;
+          sound._pos = [pan, 0, 0];
+
+          if (sound._node) {
+            // If we are falling back, make sure the panningModel is equalpower.
+            sound._pannerAttr.panningModel = 'equalpower';
+
+            // Check if there is a panner setup and create a new one if not.
+            if (!sound._panner || !sound._panner.pan) {
+              setupPanner(sound, pannerType);
+            }
+
+            if (pannerType === 'spatial') {
+              sound._panner.setPosition(pan, 0, 0);
+            } else {
+              sound._panner.pan.value = pan;
+            }
+          }
+
+          self._emit('stereo', sound._id);
+        } else {
+          return sound._stereo;
+        }
+      }
+    }
+
+    return self;
+  };
+
+  /**
+   * Get/set the 3D spatial position of the audio source for this sound or
+   * all in the group. The most common usage is to set the 'x' position for
+   * left/right panning. Setting any value higher than 1.0 will begin to
+   * decrease the volume of the sound as it moves further away.
+   * @param  {Number} x  The x-position of the audio from -1000.0 to 1000.0.
+   * @param  {Number} y  The y-position of the audio from -1000.0 to 1000.0.
+   * @param  {Number} z  The z-position of the audio from -1000.0 to 1000.0.
+   * @param  {Number} id (optional) The sound ID. If none is passed, all in group will be updated.
+   * @return {Howl/Array}    Returns self or the current 3D spatial position: [x, y, z].
+   */
+  Howl.prototype.pos = function(x, y, z, id) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self._webAudio) {
+      return self;
+    }
+
+    // If the sound hasn't loaded, add it to the load queue to change position when capable.
+    if (self._state !== 'loaded') {
+      self._queue.push({
+        event: 'pos',
+        action: function() {
+          self.pos(x, y, z, id);
+        }
+      });
+
+      return self;
+    }
+
+    // Set the defaults for optional 'y' & 'z'.
+    y = (typeof y !== 'number') ? 0 : y;
+    z = (typeof z !== 'number') ? -0.5 : z;
+
+    // Setup the group's spatial position if no ID is passed.
+    if (typeof id === 'undefined') {
+      // Return the group's spatial position if no parameters are passed.
+      if (typeof x === 'number') {
+        self._pos = [x, y, z];
+      } else {
+        return self._pos;
+      }
+    }
+
+    // Change the spatial position of one or all sounds in group.
+    var ids = self._getSoundIds(id);
+    for (var i=0; i<ids.length; i++) {
+      // Get the sound.
+      var sound = self._soundById(ids[i]);
+
+      if (sound) {
+        if (typeof x === 'number') {
+          sound._pos = [x, y, z];
+
+          if (sound._node) {
+            // Check if there is a panner setup and create a new one if not.
+            if (!sound._panner || sound._panner.pan) {
+              setupPanner(sound, 'spatial');
+            }
+
+            sound._panner.setPosition(x, y, z);
+          }
+
+          self._emit('pos', sound._id);
+        } else {
+          return sound._pos;
+        }
+      }
+    }
+
+    return self;
+  };
+
+  /**
+   * Get/set the direction the audio source is pointing in the 3D cartesian coordinate
+   * space. Depending on how direction the sound is, based on the `cone` attributes,
+   * a sound pointing away from the listener can be quiet or silent.
+   * @param  {Number} x  The x-orientation of the source.
+   * @param  {Number} y  The y-orientation of the source.
+   * @param  {Number} z  The z-orientation of the source.
+   * @param  {Number} id (optional) The sound ID. If none is passed, all in group will be updated.
+   * @return {Howl/Array}    Returns self or the current 3D spatial orientation: [x, y, z].
+   */
+  Howl.prototype.orientation = function(x, y, z, id) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self._webAudio) {
+      return self;
+    }
+
+    // If the sound hasn't loaded, add it to the load queue to change orientation when capable.
+    if (self._state !== 'loaded') {
+      self._queue.push({
+        event: 'orientation',
+        action: function() {
+          self.orientation(x, y, z, id);
+        }
+      });
+
+      return self;
+    }
+
+    // Set the defaults for optional 'y' & 'z'.
+    y = (typeof y !== 'number') ? self._orientation[1] : y;
+    z = (typeof z !== 'number') ? self._orientation[2] : z;
+
+    // Setup the group's spatial orientation if no ID is passed.
+    if (typeof id === 'undefined') {
+      // Return the group's spatial orientation if no parameters are passed.
+      if (typeof x === 'number') {
+        self._orientation = [x, y, z];
+      } else {
+        return self._orientation;
+      }
+    }
+
+    // Change the spatial orientation of one or all sounds in group.
+    var ids = self._getSoundIds(id);
+    for (var i=0; i<ids.length; i++) {
+      // Get the sound.
+      var sound = self._soundById(ids[i]);
+
+      if (sound) {
+        if (typeof x === 'number') {
+          sound._orientation = [x, y, z];
+
+          if (sound._node) {
+            // Check if there is a panner setup and create a new one if not.
+            if (!sound._panner) {
+              // Make sure we have a position to setup the node with.
+              if (!sound._pos) {
+                sound._pos = self._pos || [0, 0, -0.5];
+              }
+
+              setupPanner(sound, 'spatial');
+            }
+
+            sound._panner.setOrientation(x, y, z);
+          }
+
+          self._emit('orientation', sound._id);
+        } else {
+          return sound._orientation;
+        }
+      }
+    }
+
+    return self;
+  };
+
+  /**
+   * Get/set the panner node's attributes for a sound or group of sounds.
+   * This method can optionall take 0, 1 or 2 arguments.
+   *   pannerAttr() -> Returns the group's values.
+   *   pannerAttr(id) -> Returns the sound id's values.
+   *   pannerAttr(o) -> Set's the values of all sounds in this Howl group.
+   *   pannerAttr(o, id) -> Set's the values of passed sound id.
+   *
+   *   Attributes:
+   *     coneInnerAngle - (360 by default) There will be no volume reduction inside this angle.
+   *     coneOuterAngle - (360 by default) The volume will be reduced to a constant value of
+   *                      `coneOuterGain` outside this angle.
+   *     coneOuterGain - (0 by default) The amount of volume reduction outside of `coneOuterAngle`.
+   *     distanceModel - ('inverse' by default) Determines algorithm to use to reduce volume as audio moves
+   *                      away from listener. Can be `linear`, `inverse` or `exponential`.
+   *     maxDistance - (10000 by default) Volume won't reduce between source/listener beyond this distance.
+   *     panningModel - ('HRTF' by default) Determines which spatialization algorithm is used to position audio.
+   *                     Can be `HRTF` or `equalpower`.
+   *     refDistance - (1 by default) A reference distance for reducing volume as the source
+   *                    moves away from the listener.
+   *     rolloffFactor - (1 by default) How quickly the volume reduces as source moves from listener.
+   * 
+   * @return {Howl/Object} Returns self or current panner attributes.
+   */
+  Howl.prototype.pannerAttr = function() {
+    var self = this;
+    var args = arguments;
+    var o, id, sound;
+
+    // Stop right here if not using Web Audio.
+    if (!self._webAudio) {
+      return self;
+    }
+
+    // Determine the values based on arguments.
+    if (args.length === 0) {
+      // Return the group's panner attribute values.
+      return self._pannerAttr;
+    } else if (args.length === 1) {
+      if (typeof args[0] === 'object') {
+        o = args[0];
+
+        // Set the grou's panner attribute values.
+        if (typeof id === 'undefined') {
+          self._pannerAttr = {
+            coneInnerAngle: typeof o.coneInnerAngle !== 'undefined' ? o.coneInnerAngle : self._coneInnerAngle,
+            coneOuterAngle: typeof o.coneOuterAngle !== 'undefined' ? o.coneOuterAngle : self._coneOuterAngle,
+            coneOuterGain: typeof o.coneOuterGain !== 'undefined' ? o.coneOuterGain : self._coneOuterGain,
+            distanceModel: typeof o.distanceModel !== 'undefined' ? o.distanceModel : self._distanceModel,
+            maxDistance: typeof o.maxDistance !== 'undefined' ? o.maxDistance : self._maxDistance,
+            panningModel: typeof o.panningModel !== 'undefined' ? o.panningModel : self._panningModel,
+            refDistance: typeof o.refDistance !== 'undefined' ? o.refDistance : self._refDistance,
+            rolloffFactor: typeof o.rolloffFactor !== 'undefined' ? o.rolloffFactor : self._rolloffFactor
+          };
+        }
+      } else {
+        // Return this sound's panner attribute values.
+        sound = self._soundById(parseInt(args[0], 10));
+        return sound ? sound._pannerAttr : self._pannerAttr;
+      }
+    } else if (args.length === 2) {
+      o = args[0];
+      id = parseInt(args[1], 10);
+    }
+
+    // Update the values of the specified sounds.
+    var ids = self._getSoundIds(id);
+    for (var i=0; i<ids.length; i++) {
+      sound = self._soundById(ids[i]);
+
+      if (sound) {
+        // Merge the new values into the sound.
+        var pa = sound._pannerAttr;
+        pa = {
+          coneInnerAngle: typeof o.coneInnerAngle !== 'undefined' ? o.coneInnerAngle : pa.coneInnerAngle,
+          coneOuterAngle: typeof o.coneOuterAngle !== 'undefined' ? o.coneOuterAngle : pa.coneOuterAngle,
+          coneOuterGain: typeof o.coneOuterGain !== 'undefined' ? o.coneOuterGain : pa.coneOuterGain,
+          distanceModel: typeof o.distanceModel !== 'undefined' ? o.distanceModel : pa.distanceModel,
+          maxDistance: typeof o.maxDistance !== 'undefined' ? o.maxDistance : pa.maxDistance,
+          panningModel: typeof o.panningModel !== 'undefined' ? o.panningModel : pa.panningModel,
+          refDistance: typeof o.refDistance !== 'undefined' ? o.refDistance : pa.refDistance,
+          rolloffFactor: typeof o.rolloffFactor !== 'undefined' ? o.rolloffFactor : pa.rolloffFactor
+        };
+
+        // Update the panner values or create a new panner if none exists.
+        var panner = sound._panner;
+        if (panner) {
+          panner.coneInnerAngle = pa.coneInnerAngle;
+          panner.coneOuterAngle = pa.coneOuterAngle;
+          panner.coneOuterGain = pa.coneOuterGain;
+          panner.distanceModel = pa.distanceModel;
+          panner.maxDistance = pa.maxDistance;
+          panner.panningModel = pa.panningModel;
+          panner.refDistance = pa.refDistance;
+          panner.rolloffFactor = pa.rolloffFactor;
+        } else {
+          // Make sure we have a position to setup the node with.
+          if (!sound._pos) {
+            sound._pos = self._pos || [0, 0, -0.5];
+          }
+
+          // Create a new panner node.
+          setupPanner(sound, 'spatial');
+        }
+      }
+    }
+
+    return self;
+  };
+
+  /** Single Sound Methods **/
+  /***************************************************************************/
+
+  /**
+   * Add new properties to the core Sound init.
+   * @param  {Function} _super Core Sound init method.
+   * @return {Sound}
+   */
+  Sound.prototype.init = (function(_super) {
+    return function() {
+      var self = this;
+      var parent = self._parent;
+
+      // Setup user-defined default properties.
+      self._orientation = parent._orientation;
+      self._stereo = parent._stereo;
+      self._pos = parent._pos;
+      self._pannerAttr = parent._pannerAttr;
+
+      // Complete initilization with howler.js core Sound's init function.
+      _super.call(this);
+
+      // If a stereo or position was specified, set it up.
+      if (self._stereo) {
+        parent.stereo(self._stereo);
+      } else if (self._pos) {
+        parent.pos(self._pos[0], self._pos[1], self._pos[2], self._id);
+      }
+    };
+  })(Sound.prototype.init);
+
+  /**
+   * Override the Sound.reset method to clean up properties from the spatial plugin.
+   * @param  {Function} _super Sound reset method.
+   * @return {Sound}
+   */
+  Sound.prototype.reset = (function(_super) {
+    return function() {
+      var self = this;
+      var parent = self._parent;
+
+      // Reset all spatial plugin properties on this sound.
+      self._orientation = parent._orientation;
+      self._pos = parent._pos;
+      self._pannerAttr = parent._pannerAttr;
+
+      // Complete resetting of the sound.
+      return _super.call(this);
+    };
+  })(Sound.prototype.reset);
+
+  /** Helper Methods **/
+  /***************************************************************************/
+
+  /**
+   * Create a new panner node and save it on the sound.
+   * @param  {Sound} sound Specific sound to setup panning on.
+   * @param {String} type Type of panner to create: 'stereo' or 'spatial'.
+   */
+  var setupPanner = function(sound, type) {
+    type = type || 'spatial';
+
+    // Create the new panner node.
+    if (type === 'spatial') {
+      sound._panner = Howler.ctx.createPanner();
+      sound._panner.coneInnerAngle = sound._pannerAttr.coneInnerAngle;
+      sound._panner.coneOuterAngle = sound._pannerAttr.coneOuterAngle;
+      sound._panner.coneOuterGain = sound._pannerAttr.coneOuterGain;
+      sound._panner.distanceModel = sound._pannerAttr.distanceModel;
+      sound._panner.maxDistance = sound._pannerAttr.maxDistance;
+      sound._panner.panningModel = sound._pannerAttr.panningModel;
+      sound._panner.refDistance = sound._pannerAttr.refDistance;
+      sound._panner.rolloffFactor = sound._pannerAttr.rolloffFactor;
+      sound._panner.setPosition(sound._pos[0], sound._pos[1], sound._pos[2]);
+      sound._panner.setOrientation(sound._orientation[0], sound._orientation[1], sound._orientation[2]);
+    } else {
+      sound._panner = Howler.ctx.createStereoPanner();
+      sound._panner.pan.value = sound._stereo;
+    }
+
+    sound._panner.connect(sound._node);
+
+    // Update the connections.
+    if (!sound._paused) {
+      sound._parent.pause(sound._id, true).play(sound._id);
+    }
+  };
+})();
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
 
 /***/ }),
 /* 280 */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"src": [
+		"audio.ogg",
+		"audio.mp3"
+	],
+	"sprite": {
+		"barkDucks": [
+			0,
+			2403.265306122449
+		],
+		"champ": [
+			4000,
+			9639.183673469388
+		],
+		"gunSound": [
+			15000,
+			504.01360544217687
+		],
+		"laugh": [
+			17000,
+			1368.0045351473923
+		],
+		"loserSound": [
+			20000,
+			3631.0204081632664
+		],
+		"ohYeah": [
+			25000,
+			1071.020408163264
+		],
+		"quacking": [
+			28000,
+			6817.959183673466,
+			true
+		],
+		"quak": [
+			36000,
+			783.6734693877575
+		],
+		"sniff": [
+			38000,
+			1985.306122448982,
+			true
+		],
+		"thud": [
+			41000,
+			548.571428571428
+		]
+	}
+};
+
+/***/ }),
+/* 281 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -42684,7 +42689,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(33),
@@ -42697,14 +42702,14 @@ module.exports = DataView;
 
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hashClear = __webpack_require__(352),
-    hashDelete = __webpack_require__(353),
-    hashGet = __webpack_require__(354),
-    hashHas = __webpack_require__(355),
-    hashSet = __webpack_require__(356);
+var hashClear = __webpack_require__(353),
+    hashDelete = __webpack_require__(354),
+    hashGet = __webpack_require__(355),
+    hashHas = __webpack_require__(356),
+    hashSet = __webpack_require__(357);
 
 /**
  * Creates a hash object.
@@ -42735,7 +42740,7 @@ module.exports = Hash;
 
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(33),
@@ -42748,7 +42753,7 @@ module.exports = Promise;
 
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(33),
@@ -42761,12 +42766,12 @@ module.exports = Set;
 
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var MapCache = __webpack_require__(93),
-    setCacheAdd = __webpack_require__(381),
-    setCacheHas = __webpack_require__(382);
+var MapCache = __webpack_require__(92),
+    setCacheAdd = __webpack_require__(382),
+    setCacheHas = __webpack_require__(383);
 
 /**
  *
@@ -42794,7 +42799,7 @@ module.exports = SetCache;
 
 
 /***/ }),
-/* 286 */
+/* 287 */
 /***/ (function(module, exports) {
 
 /**
@@ -42815,7 +42820,7 @@ module.exports = addMapEntry;
 
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, exports) {
 
 /**
@@ -42836,7 +42841,7 @@ module.exports = addSetEntry;
 
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, exports) {
 
 /**
@@ -42864,7 +42869,7 @@ module.exports = arrayAggregator;
 
 
 /***/ }),
-/* 289 */
+/* 290 */
 /***/ (function(module, exports) {
 
 /**
@@ -42891,10 +42896,10 @@ module.exports = arrayEachRight;
 
 
 /***/ }),
-/* 290 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIndexOf = __webpack_require__(154);
+var baseIndexOf = __webpack_require__(153);
 
 /**
  * A specialized version of `_.includes` for arrays without support for
@@ -42914,7 +42919,7 @@ module.exports = arrayIncludes;
 
 
 /***/ }),
-/* 291 */
+/* 292 */
 /***/ (function(module, exports) {
 
 /**
@@ -42944,10 +42949,10 @@ module.exports = arrayReduceRight;
 
 
 /***/ }),
-/* 292 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseClamp = __webpack_require__(96),
+var baseClamp = __webpack_require__(95),
     copyArray = __webpack_require__(28),
     shuffleSelf = __webpack_require__(76);
 
@@ -42967,7 +42972,7 @@ module.exports = arraySampleSize;
 
 
 /***/ }),
-/* 293 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyArray = __webpack_require__(28),
@@ -42988,10 +42993,10 @@ module.exports = arrayShuffle;
 
 
 /***/ }),
-/* 294 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseProperty = __webpack_require__(162);
+var baseProperty = __webpack_require__(161);
 
 /**
  * Gets the size of an ASCII `string`.
@@ -43006,7 +43011,7 @@ module.exports = asciiSize;
 
 
 /***/ }),
-/* 295 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseEach = __webpack_require__(25);
@@ -43033,7 +43038,7 @@ module.exports = baseAggregator;
 
 
 /***/ }),
-/* 296 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(19),
@@ -43056,10 +43061,10 @@ module.exports = baseAssignIn;
 
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var get = __webpack_require__(114);
+var get = __webpack_require__(113);
 
 /**
  * The base implementation of `_.at` without support for individual paths.
@@ -43085,10 +43090,10 @@ module.exports = baseAt;
 
 
 /***/ }),
-/* 298 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseConformsTo = __webpack_require__(299),
+var baseConformsTo = __webpack_require__(300),
     keys = __webpack_require__(9);
 
 /**
@@ -43109,7 +43114,7 @@ module.exports = baseConforms;
 
 
 /***/ }),
-/* 299 */
+/* 300 */
 /***/ (function(module, exports) {
 
 /**
@@ -43142,7 +43147,7 @@ module.exports = baseConformsTo;
 
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseEach = __webpack_require__(25);
@@ -43169,7 +43174,7 @@ module.exports = baseEvery;
 
 
 /***/ }),
-/* 301 */
+/* 302 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -43194,7 +43199,7 @@ module.exports = baseHas;
 
 
 /***/ }),
-/* 302 */
+/* 303 */
 /***/ (function(module, exports) {
 
 /**
@@ -43213,7 +43218,7 @@ module.exports = baseHasIn;
 
 
 /***/ }),
-/* 303 */
+/* 304 */
 /***/ (function(module, exports) {
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -43237,7 +43242,7 @@ module.exports = baseInRange;
 
 
 /***/ }),
-/* 304 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseForOwn = __webpack_require__(31);
@@ -43264,7 +43269,7 @@ module.exports = baseInverter;
 
 
 /***/ }),
-/* 305 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(26),
@@ -43288,13 +43293,13 @@ module.exports = baseIsArguments;
 
 
 /***/ }),
-/* 306 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Stack = __webpack_require__(62),
-    equalArrays = __webpack_require__(184),
-    equalByTag = __webpack_require__(345),
-    equalObjects = __webpack_require__(346),
+    equalArrays = __webpack_require__(183),
+    equalByTag = __webpack_require__(346),
+    equalObjects = __webpack_require__(347),
     getTag = __webpack_require__(73),
     isArray = __webpack_require__(1),
     isBuffer = __webpack_require__(49),
@@ -43377,11 +43382,11 @@ module.exports = baseIsEqualDeep;
 
 
 /***/ }),
-/* 307 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Stack = __webpack_require__(62),
-    baseIsEqual = __webpack_require__(155);
+    baseIsEqual = __webpack_require__(154);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -43445,7 +43450,7 @@ module.exports = baseIsMatch;
 
 
 /***/ }),
-/* 308 */
+/* 309 */
 /***/ (function(module, exports) {
 
 /**
@@ -43463,13 +43468,13 @@ module.exports = baseIsNaN;
 
 
 /***/ }),
-/* 309 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isFunction = __webpack_require__(36),
-    isMasked = __webpack_require__(362),
+    isMasked = __webpack_require__(363),
     isObject = __webpack_require__(6),
-    toSource = __webpack_require__(203);
+    toSource = __webpack_require__(202);
 
 /**
  * Used to match `RegExp`
@@ -43516,11 +43521,11 @@ module.exports = baseIsNative;
 
 
 /***/ }),
-/* 310 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(26),
-    isLength = __webpack_require__(116),
+    isLength = __webpack_require__(115),
     isObjectLike = __webpack_require__(21);
 
 /** `Object#toString` result references. */
@@ -43582,12 +43587,12 @@ module.exports = baseIsTypedArray;
 
 
 /***/ }),
-/* 311 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(6),
     isPrototype = __webpack_require__(74),
-    nativeKeysIn = __webpack_require__(376);
+    nativeKeysIn = __webpack_require__(377);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -43621,23 +43626,23 @@ module.exports = baseKeysIn;
 
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assignMergeValue = __webpack_require__(146),
-    cloneBuffer = __webpack_require__(170),
-    cloneTypedArray = __webpack_require__(171),
+var assignMergeValue = __webpack_require__(145),
+    cloneBuffer = __webpack_require__(169),
+    cloneTypedArray = __webpack_require__(170),
     copyArray = __webpack_require__(28),
-    initCloneObject = __webpack_require__(190),
+    initCloneObject = __webpack_require__(189),
     isArguments = __webpack_require__(77),
     isArray = __webpack_require__(1),
-    isArrayLikeObject = __webpack_require__(449),
+    isArrayLikeObject = __webpack_require__(450),
     isBuffer = __webpack_require__(49),
     isFunction = __webpack_require__(36),
     isObject = __webpack_require__(6),
-    isPlainObject = __webpack_require__(117),
+    isPlainObject = __webpack_require__(116),
     isTypedArray = __webpack_require__(78),
-    toPlainObject = __webpack_require__(500);
+    toPlainObject = __webpack_require__(501);
 
 /**
  * A specialized version of `baseMerge` for arrays and objects which performs
@@ -43720,7 +43725,7 @@ module.exports = baseMergeDeep;
 
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isIndex = __webpack_require__(44);
@@ -43746,11 +43751,11 @@ module.exports = baseNth;
 
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var basePickBy = __webpack_require__(161),
-    hasIn = __webpack_require__(115);
+var basePickBy = __webpack_require__(160),
+    hasIn = __webpack_require__(114);
 
 /**
  * The base implementation of `_.pick` without support for individual
@@ -43771,7 +43776,7 @@ module.exports = basePick;
 
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(41);
@@ -43793,7 +43798,7 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, exports) {
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -43827,10 +43832,10 @@ module.exports = baseRange;
 
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arraySample = __webpack_require__(145),
+var arraySample = __webpack_require__(144),
     values = __webpack_require__(51);
 
 /**
@@ -43848,10 +43853,10 @@ module.exports = baseSample;
 
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseClamp = __webpack_require__(96),
+var baseClamp = __webpack_require__(95),
     shuffleSelf = __webpack_require__(76),
     values = __webpack_require__(51);
 
@@ -43872,11 +43877,11 @@ module.exports = baseSampleSize;
 
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var constant = __webpack_require__(113),
-    defineProperty = __webpack_require__(183),
+var constant = __webpack_require__(112),
+    defineProperty = __webpack_require__(182),
     identity = __webpack_require__(29);
 
 /**
@@ -43900,7 +43905,7 @@ module.exports = baseSetToString;
 
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var shuffleSelf = __webpack_require__(76),
@@ -43921,7 +43926,7 @@ module.exports = baseShuffle;
 
 
 /***/ }),
-/* 321 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseEach = __webpack_require__(25);
@@ -43949,7 +43954,7 @@ module.exports = baseSome;
 
 
 /***/ }),
-/* 322 */
+/* 323 */
 /***/ (function(module, exports) {
 
 /**
@@ -43976,7 +43981,7 @@ module.exports = baseSortBy;
 
 
 /***/ }),
-/* 323 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(12);
@@ -44000,7 +44005,7 @@ module.exports = baseToPairs;
 
 
 /***/ }),
-/* 324 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(37),
@@ -44043,7 +44048,7 @@ module.exports = baseToString;
 
 
 /***/ }),
-/* 325 */
+/* 326 */
 /***/ (function(module, exports) {
 
 /**
@@ -44062,7 +44067,7 @@ module.exports = cacheHas;
 
 
 /***/ }),
-/* 326 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseRest = __webpack_require__(4);
@@ -44082,10 +44087,10 @@ module.exports = castRest;
 
 
 /***/ }),
-/* 327 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSlice = __webpack_require__(165);
+var baseSlice = __webpack_require__(164);
 
 /**
  * Casts `array` to a slice if it's needed.
@@ -44106,10 +44111,10 @@ module.exports = castSlice;
 
 
 /***/ }),
-/* 328 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(104);
+var cloneArrayBuffer = __webpack_require__(103);
 
 /**
  * Creates a clone of `dataView`.
@@ -44128,12 +44133,12 @@ module.exports = cloneDataView;
 
 
 /***/ }),
-/* 329 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var addMapEntry = __webpack_require__(286),
-    arrayReduce = __webpack_require__(94),
-    mapToArray = __webpack_require__(110);
+var addMapEntry = __webpack_require__(287),
+    arrayReduce = __webpack_require__(93),
+    mapToArray = __webpack_require__(109);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1;
@@ -44156,7 +44161,7 @@ module.exports = cloneMap;
 
 
 /***/ }),
-/* 330 */
+/* 331 */
 /***/ (function(module, exports) {
 
 /** Used to match `RegExp` flags from their coerced string values. */
@@ -44179,12 +44184,12 @@ module.exports = cloneRegExp;
 
 
 /***/ }),
-/* 331 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var addSetEntry = __webpack_require__(287),
-    arrayReduce = __webpack_require__(94),
-    setToArray = __webpack_require__(199);
+var addSetEntry = __webpack_require__(288),
+    arrayReduce = __webpack_require__(93),
+    setToArray = __webpack_require__(198);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1;
@@ -44207,7 +44212,7 @@ module.exports = cloneSet;
 
 
 /***/ }),
-/* 332 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(37);
@@ -44231,7 +44236,7 @@ module.exports = cloneSymbol;
 
 
 /***/ }),
-/* 333 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isSymbol = __webpack_require__(46);
@@ -44278,10 +44283,10 @@ module.exports = compareAscending;
 
 
 /***/ }),
-/* 334 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var compareAscending = __webpack_require__(333);
+var compareAscending = __webpack_require__(334);
 
 /**
  * Used by `_.orderBy` to compare multiple properties of a value to another
@@ -44328,11 +44333,11 @@ module.exports = compareMultiple;
 
 
 /***/ }),
-/* 335 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(19),
-    getSymbols = __webpack_require__(108);
+    getSymbols = __webpack_require__(107);
 
 /**
  * Copies own symbols of `source` to `object`.
@@ -44350,11 +44355,11 @@ module.exports = copySymbols;
 
 
 /***/ }),
-/* 336 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(19),
-    getSymbolsIn = __webpack_require__(188);
+    getSymbolsIn = __webpack_require__(187);
 
 /**
  * Copies own and inherited symbols of `source` to `object`.
@@ -44372,7 +44377,7 @@ module.exports = copySymbolsIn;
 
 
 /***/ }),
-/* 337 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(8);
@@ -44384,7 +44389,7 @@ module.exports = coreJsData;
 
 
 /***/ }),
-/* 338 */
+/* 339 */
 /***/ (function(module, exports) {
 
 /**
@@ -44411,7 +44416,7 @@ module.exports = countHolders;
 
 
 /***/ }),
-/* 339 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var createCtor = __webpack_require__(70),
@@ -44445,13 +44450,13 @@ module.exports = createBind;
 
 
 /***/ }),
-/* 340 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11),
     createCtor = __webpack_require__(70),
-    createHybrid = __webpack_require__(178),
-    createRecurry = __webpack_require__(181),
+    createHybrid = __webpack_require__(177),
+    createRecurry = __webpack_require__(180),
     getHolder = __webpack_require__(43),
     replaceHolders = __webpack_require__(35),
     root = __webpack_require__(8);
@@ -44497,7 +44502,7 @@ module.exports = createCurry;
 
 
 /***/ }),
-/* 341 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11),
@@ -44546,7 +44551,7 @@ module.exports = createPartial;
 
 
 /***/ }),
-/* 342 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var eq = __webpack_require__(45);
@@ -44581,10 +44586,10 @@ module.exports = customDefaultsAssignIn;
 
 
 /***/ }),
-/* 343 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMerge = __webpack_require__(102),
+var baseMerge = __webpack_require__(101),
     isObject = __webpack_require__(6);
 
 /**
@@ -44615,10 +44620,10 @@ module.exports = customDefaultsMerge;
 
 
 /***/ }),
-/* 344 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isPlainObject = __webpack_require__(117);
+var isPlainObject = __webpack_require__(116);
 
 /**
  * Used by `_.omit` to customize its `_.cloneDeep` use to only clone plain
@@ -44637,15 +44642,15 @@ module.exports = customOmitClone;
 
 
 /***/ }),
-/* 345 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(37),
-    Uint8Array = __webpack_require__(141),
+    Uint8Array = __webpack_require__(140),
     eq = __webpack_require__(45),
-    equalArrays = __webpack_require__(184),
-    mapToArray = __webpack_require__(110),
-    setToArray = __webpack_require__(199);
+    equalArrays = __webpack_require__(183),
+    mapToArray = __webpack_require__(109),
+    setToArray = __webpack_require__(198);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -44755,10 +44760,10 @@ module.exports = equalByTag;
 
 
 /***/ }),
-/* 346 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getAllKeys = __webpack_require__(186);
+var getAllKeys = __webpack_require__(185);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -44850,10 +44855,10 @@ module.exports = equalObjects;
 
 
 /***/ }),
-/* 347 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isStrictComparable = __webpack_require__(192),
+var isStrictComparable = __webpack_require__(191),
     keys = __webpack_require__(9);
 
 /**
@@ -44880,7 +44885,7 @@ module.exports = getMatchData;
 
 
 /***/ }),
-/* 348 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(37);
@@ -44932,7 +44937,7 @@ module.exports = getRawTag;
 
 
 /***/ }),
-/* 349 */
+/* 350 */
 /***/ (function(module, exports) {
 
 /**
@@ -44951,7 +44956,7 @@ module.exports = getValue;
 
 
 /***/ }),
-/* 350 */
+/* 351 */
 /***/ (function(module, exports) {
 
 /** Used to match wrap detail comments. */
@@ -44974,7 +44979,7 @@ module.exports = getWrapDetails;
 
 
 /***/ }),
-/* 351 */
+/* 352 */
 /***/ (function(module, exports) {
 
 /** Used to compose unicode character classes. */
@@ -45006,7 +45011,7 @@ module.exports = hasUnicode;
 
 
 /***/ }),
-/* 352 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(75);
@@ -45027,7 +45032,7 @@ module.exports = hashClear;
 
 
 /***/ }),
-/* 353 */
+/* 354 */
 /***/ (function(module, exports) {
 
 /**
@@ -45050,7 +45055,7 @@ module.exports = hashDelete;
 
 
 /***/ }),
-/* 354 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(75);
@@ -45086,7 +45091,7 @@ module.exports = hashGet;
 
 
 /***/ }),
-/* 355 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(75);
@@ -45115,7 +45120,7 @@ module.exports = hashHas;
 
 
 /***/ }),
-/* 356 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(75);
@@ -45144,7 +45149,7 @@ module.exports = hashSet;
 
 
 /***/ }),
-/* 357 */
+/* 358 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -45176,16 +45181,16 @@ module.exports = initCloneArray;
 
 
 /***/ }),
-/* 358 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(104),
-    cloneDataView = __webpack_require__(328),
-    cloneMap = __webpack_require__(329),
-    cloneRegExp = __webpack_require__(330),
-    cloneSet = __webpack_require__(331),
-    cloneSymbol = __webpack_require__(332),
-    cloneTypedArray = __webpack_require__(171);
+var cloneArrayBuffer = __webpack_require__(103),
+    cloneDataView = __webpack_require__(329),
+    cloneMap = __webpack_require__(330),
+    cloneRegExp = __webpack_require__(331),
+    cloneSet = __webpack_require__(332),
+    cloneSymbol = __webpack_require__(333),
+    cloneTypedArray = __webpack_require__(170);
 
 /** `Object#toString` result references. */
 var boolTag = '[object Boolean]',
@@ -45262,7 +45267,7 @@ module.exports = initCloneByTag;
 
 
 /***/ }),
-/* 359 */
+/* 360 */
 /***/ (function(module, exports) {
 
 /** Used to match wrap detail comments. */
@@ -45291,7 +45296,7 @@ module.exports = insertWrapDetails;
 
 
 /***/ }),
-/* 360 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(37),
@@ -45317,7 +45322,7 @@ module.exports = isFlattenable;
 
 
 /***/ }),
-/* 361 */
+/* 362 */
 /***/ (function(module, exports) {
 
 /**
@@ -45338,10 +45343,10 @@ module.exports = isKeyable;
 
 
 /***/ }),
-/* 362 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var coreJsData = __webpack_require__(337);
+var coreJsData = __webpack_require__(338);
 
 /** Used to detect methods masquerading as native. */
 var maskSrcKey = (function() {
@@ -45364,7 +45369,7 @@ module.exports = isMasked;
 
 
 /***/ }),
-/* 363 */
+/* 364 */
 /***/ (function(module, exports) {
 
 /**
@@ -45383,7 +45388,7 @@ module.exports = listCacheClear;
 
 
 /***/ }),
-/* 364 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(65);
@@ -45424,7 +45429,7 @@ module.exports = listCacheDelete;
 
 
 /***/ }),
-/* 365 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(65);
@@ -45449,7 +45454,7 @@ module.exports = listCacheGet;
 
 
 /***/ }),
-/* 366 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(65);
@@ -45471,7 +45476,7 @@ module.exports = listCacheHas;
 
 
 /***/ }),
-/* 367 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(65);
@@ -45503,12 +45508,12 @@ module.exports = listCacheSet;
 
 
 /***/ }),
-/* 368 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Hash = __webpack_require__(282),
+var Hash = __webpack_require__(283),
     ListCache = __webpack_require__(61),
-    Map = __webpack_require__(92);
+    Map = __webpack_require__(91);
 
 /**
  * Removes all key-value entries from the map.
@@ -45530,7 +45535,7 @@ module.exports = mapCacheClear;
 
 
 /***/ }),
-/* 369 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(71);
@@ -45554,7 +45559,7 @@ module.exports = mapCacheDelete;
 
 
 /***/ }),
-/* 370 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(71);
@@ -45576,7 +45581,7 @@ module.exports = mapCacheGet;
 
 
 /***/ }),
-/* 371 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(71);
@@ -45598,7 +45603,7 @@ module.exports = mapCacheHas;
 
 
 /***/ }),
-/* 372 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(71);
@@ -45626,10 +45631,10 @@ module.exports = mapCacheSet;
 
 
 /***/ }),
-/* 373 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoize = __webpack_require__(214);
+var memoize = __webpack_require__(213);
 
 /** Used as the maximum memoize cache size. */
 var MAX_MEMOIZE_SIZE = 500;
@@ -45658,11 +45663,11 @@ module.exports = memoizeCapped;
 
 
 /***/ }),
-/* 374 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var composeArgs = __webpack_require__(172),
-    composeArgsRight = __webpack_require__(173),
+var composeArgs = __webpack_require__(171),
+    composeArgsRight = __webpack_require__(172),
     replaceHolders = __webpack_require__(35);
 
 /** Used as the internal argument placeholder. */
@@ -45754,10 +45759,10 @@ module.exports = mergeData;
 
 
 /***/ }),
-/* 375 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(195);
+var overArg = __webpack_require__(194);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = overArg(Object.keys, Object);
@@ -45766,7 +45771,7 @@ module.exports = nativeKeys;
 
 
 /***/ }),
-/* 376 */
+/* 377 */
 /***/ (function(module, exports) {
 
 /**
@@ -45792,10 +45797,10 @@ module.exports = nativeKeysIn;
 
 
 /***/ }),
-/* 377 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(185);
+/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(184);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -45821,7 +45826,7 @@ module.exports = nodeUtil;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(86)(module)))
 
 /***/ }),
-/* 378 */
+/* 379 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -45849,7 +45854,7 @@ module.exports = objectToString;
 
 
 /***/ }),
-/* 379 */
+/* 380 */
 /***/ (function(module, exports) {
 
 /** Used to lookup unminified function names. */
@@ -45859,7 +45864,7 @@ module.exports = realNames;
 
 
 /***/ }),
-/* 380 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyArray = __webpack_require__(28),
@@ -45894,7 +45899,7 @@ module.exports = reorder;
 
 
 /***/ }),
-/* 381 */
+/* 382 */
 /***/ (function(module, exports) {
 
 /** Used to stand-in for `undefined` hash values. */
@@ -45919,7 +45924,7 @@ module.exports = setCacheAdd;
 
 
 /***/ }),
-/* 382 */
+/* 383 */
 /***/ (function(module, exports) {
 
 /**
@@ -45939,7 +45944,7 @@ module.exports = setCacheHas;
 
 
 /***/ }),
-/* 383 */
+/* 384 */
 /***/ (function(module, exports) {
 
 /**
@@ -45963,7 +45968,7 @@ module.exports = setToPairs;
 
 
 /***/ }),
-/* 384 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(61);
@@ -45984,7 +45989,7 @@ module.exports = stackClear;
 
 
 /***/ }),
-/* 385 */
+/* 386 */
 /***/ (function(module, exports) {
 
 /**
@@ -46008,7 +46013,7 @@ module.exports = stackDelete;
 
 
 /***/ }),
-/* 386 */
+/* 387 */
 /***/ (function(module, exports) {
 
 /**
@@ -46028,7 +46033,7 @@ module.exports = stackGet;
 
 
 /***/ }),
-/* 387 */
+/* 388 */
 /***/ (function(module, exports) {
 
 /**
@@ -46048,12 +46053,12 @@ module.exports = stackHas;
 
 
 /***/ }),
-/* 388 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(61),
-    Map = __webpack_require__(92),
-    MapCache = __webpack_require__(93);
+    Map = __webpack_require__(91),
+    MapCache = __webpack_require__(92);
 
 /** Used as the size to enable large array optimizations. */
 var LARGE_ARRAY_SIZE = 200;
@@ -46088,7 +46093,7 @@ module.exports = stackSet;
 
 
 /***/ }),
-/* 389 */
+/* 390 */
 /***/ (function(module, exports) {
 
 /**
@@ -46117,12 +46122,12 @@ module.exports = strictIndexOf;
 
 
 /***/ }),
-/* 390 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var asciiSize = __webpack_require__(294),
-    hasUnicode = __webpack_require__(351),
-    unicodeSize = __webpack_require__(391);
+var asciiSize = __webpack_require__(295),
+    hasUnicode = __webpack_require__(352),
+    unicodeSize = __webpack_require__(392);
 
 /**
  * Gets the number of symbols in `string`.
@@ -46141,7 +46146,7 @@ module.exports = stringSize;
 
 
 /***/ }),
-/* 391 */
+/* 392 */
 /***/ (function(module, exports) {
 
 /** Used to compose unicode character classes. */
@@ -46191,11 +46196,11 @@ module.exports = unicodeSize;
 
 
 /***/ }),
-/* 392 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayEach = __webpack_require__(38),
-    arrayIncludes = __webpack_require__(290);
+    arrayIncludes = __webpack_require__(291);
 
 /** Used to compose bitmasks for function metadata. */
 var WRAP_BIND_FLAG = 1,
@@ -46243,11 +46248,11 @@ module.exports = updateWrapDetails;
 
 
 /***/ }),
-/* 393 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LazyWrapper = __webpack_require__(90),
-    LodashWrapper = __webpack_require__(91),
+var LazyWrapper = __webpack_require__(89),
+    LodashWrapper = __webpack_require__(90),
     copyArray = __webpack_require__(28);
 
 /**
@@ -46272,7 +46277,7 @@ module.exports = wrapperClone;
 
 
 /***/ }),
-/* 394 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(14);
@@ -46320,7 +46325,7 @@ module.exports = after;
 
 
 /***/ }),
-/* 395 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assignValue = __webpack_require__(64),
@@ -46384,7 +46389,7 @@ module.exports = assign;
 
 
 /***/ }),
-/* 396 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(19),
@@ -46427,10 +46432,10 @@ module.exports = assignWith;
 
 
 /***/ }),
-/* 397 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAt = __webpack_require__(297),
+var baseAt = __webpack_require__(298),
     flatRest = __webpack_require__(32);
 
 /**
@@ -46456,12 +46461,12 @@ module.exports = at;
 
 
 /***/ }),
-/* 398 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11),
     baseRest = __webpack_require__(4),
-    isError = __webpack_require__(450);
+    isError = __webpack_require__(451);
 
 /**
  * Attempts to invoke `func`, returning either the result or the caught error
@@ -46497,12 +46502,12 @@ module.exports = attempt;
 
 
 /***/ }),
-/* 399 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayEach = __webpack_require__(38),
     baseAssignValue = __webpack_require__(22),
-    bind = __webpack_require__(207),
+    bind = __webpack_require__(206),
     flatRest = __webpack_require__(32),
     toKey = __webpack_require__(20);
 
@@ -46544,7 +46549,7 @@ module.exports = bindAll;
 
 
 /***/ }),
-/* 400 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseRest = __webpack_require__(4),
@@ -46618,10 +46623,10 @@ module.exports = bindKey;
 
 
 /***/ }),
-/* 401 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseClamp = __webpack_require__(96),
+var baseClamp = __webpack_require__(95),
     toNumber = __webpack_require__(50);
 
 /**
@@ -46663,7 +46668,7 @@ module.exports = clamp;
 
 
 /***/ }),
-/* 402 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11),
@@ -46729,11 +46734,11 @@ module.exports = cond;
 
 
 /***/ }),
-/* 403 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseClone = __webpack_require__(48),
-    baseConforms = __webpack_require__(298);
+    baseConforms = __webpack_require__(299);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1;
@@ -46770,7 +46775,7 @@ module.exports = conforms;
 
 
 /***/ }),
-/* 404 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(22),
@@ -46816,10 +46821,10 @@ module.exports = countBy;
 
 
 /***/ }),
-/* 405 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssign = __webpack_require__(147),
+var baseAssign = __webpack_require__(146),
     baseCreate = __webpack_require__(39);
 
 /**
@@ -46865,7 +46870,7 @@ module.exports = create;
 
 
 /***/ }),
-/* 406 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var createWrap = __webpack_require__(23);
@@ -46928,7 +46933,7 @@ module.exports = curry;
 
 
 /***/ }),
-/* 407 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var createWrap = __webpack_require__(23);
@@ -46988,7 +46993,7 @@ module.exports = curryRight;
 
 
 /***/ }),
-/* 408 */
+/* 409 */
 /***/ (function(module, exports) {
 
 /**
@@ -47019,13 +47024,13 @@ module.exports = defaultTo;
 
 
 /***/ }),
-/* 409 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11),
-    assignInWith = __webpack_require__(112),
+    assignInWith = __webpack_require__(111),
     baseRest = __webpack_require__(4),
-    customDefaultsAssignIn = __webpack_require__(342);
+    customDefaultsAssignIn = __webpack_require__(343);
 
 /**
  * Assigns own and inherited enumerable string keyed properties of source
@@ -47057,13 +47062,13 @@ module.exports = defaults;
 
 
 /***/ }),
-/* 410 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11),
     baseRest = __webpack_require__(4),
-    customDefaultsMerge = __webpack_require__(343),
-    mergeWith = __webpack_require__(215);
+    customDefaultsMerge = __webpack_require__(344),
+    mergeWith = __webpack_require__(214);
 
 /**
  * This method is like `_.defaults` except that it recursively assigns
@@ -47093,10 +47098,10 @@ module.exports = defaultsDeep;
 
 
 /***/ }),
-/* 411 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseDelay = __webpack_require__(148),
+var baseDelay = __webpack_require__(147),
     baseRest = __webpack_require__(4);
 
 /**
@@ -47125,10 +47130,10 @@ module.exports = defer;
 
 
 /***/ }),
-/* 412 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseDelay = __webpack_require__(148),
+var baseDelay = __webpack_require__(147),
     baseRest = __webpack_require__(4),
     toNumber = __webpack_require__(50);
 
@@ -47159,39 +47164,39 @@ module.exports = delay;
 
 
 /***/ }),
-/* 413 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(210);
-
-
-/***/ }),
 /* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(211);
+module.exports = __webpack_require__(209);
 
 
 /***/ }),
 /* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(221);
+module.exports = __webpack_require__(210);
 
 
 /***/ }),
 /* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(222);
+module.exports = __webpack_require__(220);
 
 
 /***/ }),
 /* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayEvery = __webpack_require__(143),
-    baseEvery = __webpack_require__(300),
+module.exports = __webpack_require__(221);
+
+
+/***/ }),
+/* 418 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayEvery = __webpack_require__(142),
+    baseEvery = __webpack_require__(301),
     baseIteratee = __webpack_require__(3),
     isArray = __webpack_require__(1),
     isIterateeCall = __webpack_require__(34);
@@ -47249,25 +47254,25 @@ module.exports = every;
 
 
 /***/ }),
-/* 418 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(205);
-
-
-/***/ }),
 /* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(112);
+module.exports = __webpack_require__(204);
 
 
 /***/ }),
 /* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(111);
+
+
+/***/ }),
+/* 421 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var arrayFilter = __webpack_require__(63),
-    baseFilter = __webpack_require__(150),
+    baseFilter = __webpack_require__(149),
     baseIteratee = __webpack_require__(3),
     isArray = __webpack_require__(1);
 
@@ -47317,11 +47322,11 @@ module.exports = filter;
 
 
 /***/ }),
-/* 421 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createFind = __webpack_require__(176),
-    findIndex = __webpack_require__(422);
+var createFind = __webpack_require__(175),
+    findIndex = __webpack_require__(423);
 
 /**
  * Iterates over elements of `collection`, returning the first element
@@ -47365,10 +47370,10 @@ module.exports = find;
 
 
 /***/ }),
-/* 422 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFindIndex = __webpack_require__(97),
+var baseFindIndex = __webpack_require__(96),
     baseIteratee = __webpack_require__(3),
     toInteger = __webpack_require__(14);
 
@@ -47426,10 +47431,10 @@ module.exports = findIndex;
 
 
 /***/ }),
-/* 423 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFindKey = __webpack_require__(151),
+var baseFindKey = __webpack_require__(150),
     baseForOwn = __webpack_require__(31),
     baseIteratee = __webpack_require__(3);
 
@@ -47476,11 +47481,11 @@ module.exports = findKey;
 
 
 /***/ }),
-/* 424 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createFind = __webpack_require__(176),
-    findLastIndex = __webpack_require__(425);
+var createFind = __webpack_require__(175),
+    findLastIndex = __webpack_require__(426);
 
 /**
  * This method is like `_.find` except that it iterates over elements of
@@ -47507,10 +47512,10 @@ module.exports = findLast;
 
 
 /***/ }),
-/* 425 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFindIndex = __webpack_require__(97),
+var baseFindIndex = __webpack_require__(96),
     baseIteratee = __webpack_require__(3),
     toInteger = __webpack_require__(14);
 
@@ -47572,11 +47577,11 @@ module.exports = findLastIndex;
 
 
 /***/ }),
-/* 426 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFindKey = __webpack_require__(151),
-    baseForOwnRight = __webpack_require__(99),
+var baseFindKey = __webpack_require__(150),
+    baseForOwnRight = __webpack_require__(98),
     baseIteratee = __webpack_require__(3);
 
 /**
@@ -47622,7 +47627,7 @@ module.exports = findLastKey;
 
 
 /***/ }),
-/* 427 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseFlatten = __webpack_require__(40),
@@ -47657,7 +47662,7 @@ module.exports = flatMap;
 
 
 /***/ }),
-/* 428 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseFlatten = __webpack_require__(40),
@@ -47694,7 +47699,7 @@ module.exports = flatMapDeep;
 
 
 /***/ }),
-/* 429 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseFlatten = __webpack_require__(40),
@@ -47731,7 +47736,7 @@ module.exports = flatMapDepth;
 
 
 /***/ }),
-/* 430 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseFlatten = __webpack_require__(40);
@@ -47759,7 +47764,7 @@ module.exports = flatten;
 
 
 /***/ }),
-/* 431 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var createWrap = __webpack_require__(23);
@@ -47793,10 +47798,10 @@ module.exports = flip;
 
 
 /***/ }),
-/* 432 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createFlow = __webpack_require__(177);
+var createFlow = __webpack_require__(176);
 
 /**
  * Creates a function that returns the result of invoking the given functions
@@ -47826,10 +47831,10 @@ module.exports = flow;
 
 
 /***/ }),
-/* 433 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createFlow = __webpack_require__(177);
+var createFlow = __webpack_require__(176);
 
 /**
  * This method is like `_.flow` except that it creates a function that
@@ -47858,10 +47863,10 @@ module.exports = flowRight;
 
 
 /***/ }),
-/* 434 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFor = __webpack_require__(98),
+var baseFor = __webpack_require__(97),
     castFunction = __webpack_require__(18),
     keysIn = __webpack_require__(13);
 
@@ -47903,10 +47908,10 @@ module.exports = forIn;
 
 
 /***/ }),
-/* 435 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseForRight = __webpack_require__(152),
+var baseForRight = __webpack_require__(151),
     castFunction = __webpack_require__(18),
     keysIn = __webpack_require__(13);
 
@@ -47946,7 +47951,7 @@ module.exports = forInRight;
 
 
 /***/ }),
-/* 436 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseForOwn = __webpack_require__(31),
@@ -47988,10 +47993,10 @@ module.exports = forOwn;
 
 
 /***/ }),
-/* 437 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseForOwnRight = __webpack_require__(99),
+var baseForOwnRight = __webpack_require__(98),
     castFunction = __webpack_require__(18);
 
 /**
@@ -48028,41 +48033,41 @@ module.exports = forOwnRight;
 
 
 /***/ }),
-/* 438 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'after': __webpack_require__(394),
-  'ary': __webpack_require__(204),
-  'before': __webpack_require__(206),
-  'bind': __webpack_require__(207),
-  'bindKey': __webpack_require__(400),
-  'curry': __webpack_require__(406),
-  'curryRight': __webpack_require__(407),
-  'debounce': __webpack_require__(209),
-  'defer': __webpack_require__(411),
-  'delay': __webpack_require__(412),
-  'flip': __webpack_require__(431),
-  'memoize': __webpack_require__(214),
-  'negate': __webpack_require__(118),
-  'once': __webpack_require__(466),
-  'overArgs': __webpack_require__(469),
-  'partial': __webpack_require__(217),
-  'partialRight': __webpack_require__(472),
-  'rearg': __webpack_require__(479),
-  'rest': __webpack_require__(483),
-  'spread': __webpack_require__(493),
-  'throttle': __webpack_require__(497),
-  'unary': __webpack_require__(502),
-  'wrap': __webpack_require__(508)
+  'after': __webpack_require__(395),
+  'ary': __webpack_require__(203),
+  'before': __webpack_require__(205),
+  'bind': __webpack_require__(206),
+  'bindKey': __webpack_require__(401),
+  'curry': __webpack_require__(407),
+  'curryRight': __webpack_require__(408),
+  'debounce': __webpack_require__(208),
+  'defer': __webpack_require__(412),
+  'delay': __webpack_require__(413),
+  'flip': __webpack_require__(432),
+  'memoize': __webpack_require__(213),
+  'negate': __webpack_require__(117),
+  'once': __webpack_require__(467),
+  'overArgs': __webpack_require__(470),
+  'partial': __webpack_require__(216),
+  'partialRight': __webpack_require__(473),
+  'rearg': __webpack_require__(480),
+  'rest': __webpack_require__(484),
+  'spread': __webpack_require__(494),
+  'throttle': __webpack_require__(498),
+  'unary': __webpack_require__(503),
+  'wrap': __webpack_require__(509)
 };
 
 
 /***/ }),
-/* 439 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFunctions = __webpack_require__(100),
+var baseFunctions = __webpack_require__(99),
     keys = __webpack_require__(9);
 
 /**
@@ -48096,10 +48101,10 @@ module.exports = functions;
 
 
 /***/ }),
-/* 440 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFunctions = __webpack_require__(100),
+var baseFunctions = __webpack_require__(99),
     keysIn = __webpack_require__(13);
 
 /**
@@ -48133,7 +48138,7 @@ module.exports = functionsIn;
 
 
 /***/ }),
-/* 441 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(22),
@@ -48180,11 +48185,11 @@ module.exports = groupBy;
 
 
 /***/ }),
-/* 442 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseHas = __webpack_require__(301),
-    hasPath = __webpack_require__(189);
+var baseHas = __webpack_require__(302),
+    hasPath = __webpack_require__(188);
 
 /**
  * Checks if `path` is a direct property of `object`.
@@ -48221,10 +48226,10 @@ module.exports = has;
 
 
 /***/ }),
-/* 443 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseInRange = __webpack_require__(303),
+var baseInRange = __webpack_require__(304),
     toFinite = __webpack_require__(80),
     toNumber = __webpack_require__(50);
 
@@ -48282,12 +48287,12 @@ module.exports = inRange;
 
 
 /***/ }),
-/* 444 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIndexOf = __webpack_require__(154),
+var baseIndexOf = __webpack_require__(153),
     isArrayLike = __webpack_require__(16),
-    isString = __webpack_require__(212),
+    isString = __webpack_require__(211),
     toInteger = __webpack_require__(14),
     values = __webpack_require__(51);
 
@@ -48341,11 +48346,11 @@ module.exports = includes;
 
 
 /***/ }),
-/* 445 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var constant = __webpack_require__(113),
-    createInverter = __webpack_require__(179),
+var constant = __webpack_require__(112),
+    createInverter = __webpack_require__(178),
     identity = __webpack_require__(29);
 
 /**
@@ -48374,11 +48379,11 @@ module.exports = invert;
 
 
 /***/ }),
-/* 446 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIteratee = __webpack_require__(3),
-    createInverter = __webpack_require__(179);
+    createInverter = __webpack_require__(178);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -48424,7 +48429,7 @@ module.exports = invertBy;
 
 
 /***/ }),
-/* 447 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseInvoke = __webpack_require__(66),
@@ -48454,7 +48459,7 @@ module.exports = invoke;
 
 
 /***/ }),
-/* 448 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11),
@@ -48501,7 +48506,7 @@ module.exports = invokeMap;
 
 
 /***/ }),
-/* 449 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArrayLike = __webpack_require__(16),
@@ -48540,12 +48545,12 @@ module.exports = isArrayLikeObject;
 
 
 /***/ }),
-/* 450 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(26),
     isObjectLike = __webpack_require__(21),
-    isPlainObject = __webpack_require__(117);
+    isPlainObject = __webpack_require__(116);
 
 /** `Object#toString` result references. */
 var domExcTag = '[object DOMException]',
@@ -48582,7 +48587,7 @@ module.exports = isError;
 
 
 /***/ }),
-/* 451 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseClone = __webpack_require__(48),
@@ -48641,7 +48646,7 @@ module.exports = iteratee;
 
 
 /***/ }),
-/* 452 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(22),
@@ -48683,7 +48688,7 @@ module.exports = keyBy;
 
 
 /***/ }),
-/* 453 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(22),
@@ -48725,7 +48730,7 @@ module.exports = mapKeys;
 
 
 /***/ }),
-/* 454 */
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(22),
@@ -48774,11 +48779,11 @@ module.exports = mapValues;
 
 
 /***/ }),
-/* 455 */
+/* 456 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseClone = __webpack_require__(48),
-    baseMatches = __webpack_require__(158);
+    baseMatches = __webpack_require__(157);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1;
@@ -48819,11 +48824,11 @@ module.exports = matches;
 
 
 /***/ }),
-/* 456 */
+/* 457 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseClone = __webpack_require__(48),
-    baseMatchesProperty = __webpack_require__(159);
+    baseMatchesProperty = __webpack_require__(158);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1;
@@ -48862,10 +48867,10 @@ module.exports = matchesProperty;
 
 
 /***/ }),
-/* 457 */
+/* 458 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMerge = __webpack_require__(102),
+var baseMerge = __webpack_require__(101),
     createAssigner = __webpack_require__(42);
 
 /**
@@ -48907,7 +48912,7 @@ module.exports = merge;
 
 
 /***/ }),
-/* 458 */
+/* 459 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseInvoke = __webpack_require__(66),
@@ -48947,7 +48952,7 @@ module.exports = method;
 
 
 /***/ }),
-/* 459 */
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseInvoke = __webpack_require__(66),
@@ -48986,12 +48991,12 @@ module.exports = methodOf;
 
 
 /***/ }),
-/* 460 */
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayEach = __webpack_require__(38),
     arrayPush = __webpack_require__(47),
-    baseFunctions = __webpack_require__(100),
+    baseFunctions = __webpack_require__(99),
     copyArray = __webpack_require__(28),
     isFunction = __webpack_require__(36),
     isObject = __webpack_require__(6),
@@ -49066,7 +49071,7 @@ module.exports = mixin;
 
 
 /***/ }),
-/* 461 */
+/* 462 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(8);
@@ -49095,10 +49100,10 @@ module.exports = now;
 
 
 /***/ }),
-/* 462 */
+/* 463 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseNth = __webpack_require__(313),
+var baseNth = __webpack_require__(314),
     baseRest = __webpack_require__(4),
     toInteger = __webpack_require__(14);
 
@@ -49133,28 +49138,28 @@ module.exports = nthArg;
 
 
 /***/ }),
-/* 463 */
+/* 464 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'clamp': __webpack_require__(401),
-  'inRange': __webpack_require__(443),
-  'random': __webpack_require__(476)
+  'clamp': __webpack_require__(402),
+  'inRange': __webpack_require__(444),
+  'random': __webpack_require__(477)
 };
 
 
 /***/ }),
-/* 464 */
+/* 465 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(12),
     baseClone = __webpack_require__(48),
-    baseUnset = __webpack_require__(167),
+    baseUnset = __webpack_require__(166),
     castPath = __webpack_require__(27),
     copyObject = __webpack_require__(19),
-    customOmitClone = __webpack_require__(344),
+    customOmitClone = __webpack_require__(345),
     flatRest = __webpack_require__(32),
-    getAllKeysIn = __webpack_require__(106);
+    getAllKeysIn = __webpack_require__(105);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1,
@@ -49207,12 +49212,12 @@ module.exports = omit;
 
 
 /***/ }),
-/* 465 */
+/* 466 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIteratee = __webpack_require__(3),
-    negate = __webpack_require__(118),
-    pickBy = __webpack_require__(218);
+    negate = __webpack_require__(117),
+    pickBy = __webpack_require__(217);
 
 /**
  * The opposite of `_.pickBy`; this method creates an object composed of
@@ -49242,10 +49247,10 @@ module.exports = omitBy;
 
 
 /***/ }),
-/* 466 */
+/* 467 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var before = __webpack_require__(206);
+var before = __webpack_require__(205);
 
 /**
  * Creates a function that is restricted to invoking `func` once. Repeat calls
@@ -49273,10 +49278,10 @@ module.exports = once;
 
 
 /***/ }),
-/* 467 */
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseOrderBy = __webpack_require__(160),
+var baseOrderBy = __webpack_require__(159),
     isArray = __webpack_require__(1);
 
 /**
@@ -49326,11 +49331,11 @@ module.exports = orderBy;
 
 
 /***/ }),
-/* 468 */
+/* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(12),
-    createOver = __webpack_require__(105);
+    createOver = __webpack_require__(104);
 
 /**
  * Creates a function that invokes `iteratees` with the arguments it receives
@@ -49356,7 +49361,7 @@ module.exports = over;
 
 
 /***/ }),
-/* 469 */
+/* 470 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11),
@@ -49365,7 +49370,7 @@ var apply = __webpack_require__(11),
     baseIteratee = __webpack_require__(3),
     baseRest = __webpack_require__(4),
     baseUnary = __webpack_require__(68),
-    castRest = __webpack_require__(326),
+    castRest = __webpack_require__(327),
     isArray = __webpack_require__(1);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -49423,11 +49428,11 @@ module.exports = overArgs;
 
 
 /***/ }),
-/* 470 */
+/* 471 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayEvery = __webpack_require__(143),
-    createOver = __webpack_require__(105);
+var arrayEvery = __webpack_require__(142),
+    createOver = __webpack_require__(104);
 
 /**
  * Creates a function that checks if **all** of the `predicates` return
@@ -49459,11 +49464,11 @@ module.exports = overEvery;
 
 
 /***/ }),
-/* 471 */
+/* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arraySome = __webpack_require__(95),
-    createOver = __webpack_require__(105);
+var arraySome = __webpack_require__(94),
+    createOver = __webpack_require__(104);
 
 /**
  * Creates a function that checks if **any** of the `predicates` return
@@ -49495,7 +49500,7 @@ module.exports = overSome;
 
 
 /***/ }),
-/* 472 */
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseRest = __webpack_require__(4),
@@ -49550,7 +49555,7 @@ module.exports = partialRight;
 
 
 /***/ }),
-/* 473 */
+/* 474 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var createAggregator = __webpack_require__(69);
@@ -49599,10 +49604,10 @@ module.exports = partition;
 
 
 /***/ }),
-/* 474 */
+/* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var basePick = __webpack_require__(314),
+var basePick = __webpack_require__(315),
     flatRest = __webpack_require__(32);
 
 /**
@@ -49630,7 +49635,7 @@ module.exports = pick;
 
 
 /***/ }),
-/* 475 */
+/* 476 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(41);
@@ -49666,10 +49671,10 @@ module.exports = propertyOf;
 
 
 /***/ }),
-/* 476 */
+/* 477 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseRandom = __webpack_require__(103),
+var baseRandom = __webpack_require__(102),
     isIterateeCall = __webpack_require__(34),
     toFinite = __webpack_require__(80);
 
@@ -49754,10 +49759,10 @@ module.exports = random;
 
 
 /***/ }),
-/* 477 */
+/* 478 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createRange = __webpack_require__(180);
+var createRange = __webpack_require__(179);
 
 /**
  * Creates an array of numbers (positive and/or negative) progressing from
@@ -49806,10 +49811,10 @@ module.exports = range;
 
 
 /***/ }),
-/* 478 */
+/* 479 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createRange = __webpack_require__(180);
+var createRange = __webpack_require__(179);
 
 /**
  * This method is like `_.range` except that it populates values in
@@ -49853,7 +49858,7 @@ module.exports = rangeRight;
 
 
 /***/ }),
-/* 479 */
+/* 480 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var createWrap = __webpack_require__(23),
@@ -49892,13 +49897,13 @@ module.exports = rearg;
 
 
 /***/ }),
-/* 480 */
+/* 481 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayReduce = __webpack_require__(94),
+var arrayReduce = __webpack_require__(93),
     baseEach = __webpack_require__(25),
     baseIteratee = __webpack_require__(3),
-    baseReduce = __webpack_require__(163),
+    baseReduce = __webpack_require__(162),
     isArray = __webpack_require__(1);
 
 /**
@@ -49949,13 +49954,13 @@ module.exports = reduce;
 
 
 /***/ }),
-/* 481 */
+/* 482 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayReduceRight = __webpack_require__(291),
-    baseEachRight = __webpack_require__(149),
+var arrayReduceRight = __webpack_require__(292),
+    baseEachRight = __webpack_require__(148),
     baseIteratee = __webpack_require__(3),
-    baseReduce = __webpack_require__(163),
+    baseReduce = __webpack_require__(162),
     isArray = __webpack_require__(1);
 
 /**
@@ -49991,14 +49996,14 @@ module.exports = reduceRight;
 
 
 /***/ }),
-/* 482 */
+/* 483 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayFilter = __webpack_require__(63),
-    baseFilter = __webpack_require__(150),
+    baseFilter = __webpack_require__(149),
     baseIteratee = __webpack_require__(3),
     isArray = __webpack_require__(1),
-    negate = __webpack_require__(118);
+    negate = __webpack_require__(117);
 
 /**
  * The opposite of `_.filter`; this method returns the elements of `collection`
@@ -50043,7 +50048,7 @@ module.exports = reject;
 
 
 /***/ }),
-/* 483 */
+/* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseRest = __webpack_require__(4),
@@ -50089,7 +50094,7 @@ module.exports = rest;
 
 
 /***/ }),
-/* 484 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var castPath = __webpack_require__(27),
@@ -50151,11 +50156,11 @@ module.exports = result;
 
 
 /***/ }),
-/* 485 */
+/* 486 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arraySample = __webpack_require__(145),
-    baseSample = __webpack_require__(317),
+var arraySample = __webpack_require__(144),
+    baseSample = __webpack_require__(318),
     isArray = __webpack_require__(1);
 
 /**
@@ -50181,11 +50186,11 @@ module.exports = sample;
 
 
 /***/ }),
-/* 486 */
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arraySampleSize = __webpack_require__(292),
-    baseSampleSize = __webpack_require__(318),
+var arraySampleSize = __webpack_require__(293),
+    baseSampleSize = __webpack_require__(319),
     isArray = __webpack_require__(1),
     isIterateeCall = __webpack_require__(34),
     toInteger = __webpack_require__(14);
@@ -50224,7 +50229,7 @@ module.exports = sampleSize;
 
 
 /***/ }),
-/* 487 */
+/* 488 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseSet = __webpack_require__(67);
@@ -50265,7 +50270,7 @@ module.exports = set;
 
 
 /***/ }),
-/* 488 */
+/* 489 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseSet = __webpack_require__(67);
@@ -50303,11 +50308,11 @@ module.exports = setWith;
 
 
 /***/ }),
-/* 489 */
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayShuffle = __webpack_require__(293),
-    baseShuffle = __webpack_require__(320),
+var arrayShuffle = __webpack_require__(294),
+    baseShuffle = __webpack_require__(321),
     isArray = __webpack_require__(1);
 
 /**
@@ -50334,14 +50339,14 @@ module.exports = shuffle;
 
 
 /***/ }),
-/* 490 */
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseKeys = __webpack_require__(156),
+var baseKeys = __webpack_require__(155),
     getTag = __webpack_require__(73),
     isArrayLike = __webpack_require__(16),
-    isString = __webpack_require__(212),
-    stringSize = __webpack_require__(390);
+    isString = __webpack_require__(211),
+    stringSize = __webpack_require__(391);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -50386,12 +50391,12 @@ module.exports = size;
 
 
 /***/ }),
-/* 491 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arraySome = __webpack_require__(95),
+var arraySome = __webpack_require__(94),
     baseIteratee = __webpack_require__(3),
-    baseSome = __webpack_require__(321),
+    baseSome = __webpack_require__(322),
     isArray = __webpack_require__(1),
     isIterateeCall = __webpack_require__(34);
 
@@ -50443,11 +50448,11 @@ module.exports = some;
 
 
 /***/ }),
-/* 492 */
+/* 493 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseFlatten = __webpack_require__(40),
-    baseOrderBy = __webpack_require__(160),
+    baseOrderBy = __webpack_require__(159),
     baseRest = __webpack_require__(4),
     isIterateeCall = __webpack_require__(34);
 
@@ -50497,13 +50502,13 @@ module.exports = sortBy;
 
 
 /***/ }),
-/* 493 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(11),
     arrayPush = __webpack_require__(47),
     baseRest = __webpack_require__(4),
-    castSlice = __webpack_require__(327),
+    castSlice = __webpack_require__(328),
     toInteger = __webpack_require__(14);
 
 /** Error message constants. */
@@ -50566,7 +50571,7 @@ module.exports = spread;
 
 
 /***/ }),
-/* 494 */
+/* 495 */
 /***/ (function(module, exports) {
 
 /**
@@ -50595,7 +50600,7 @@ module.exports = stubObject;
 
 
 /***/ }),
-/* 495 */
+/* 496 */
 /***/ (function(module, exports) {
 
 /**
@@ -50619,7 +50624,7 @@ module.exports = stubString;
 
 
 /***/ }),
-/* 496 */
+/* 497 */
 /***/ (function(module, exports) {
 
 /**
@@ -50643,10 +50648,10 @@ module.exports = stubTrue;
 
 
 /***/ }),
-/* 497 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var debounce = __webpack_require__(209),
+var debounce = __webpack_require__(208),
     isObject = __webpack_require__(6);
 
 /** Error message constants. */
@@ -50718,10 +50723,10 @@ module.exports = throttle;
 
 
 /***/ }),
-/* 498 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseTimes = __webpack_require__(166),
+var baseTimes = __webpack_require__(165),
     castFunction = __webpack_require__(18),
     toInteger = __webpack_require__(14);
 
@@ -50775,16 +50780,16 @@ module.exports = times;
 
 
 /***/ }),
-/* 499 */
+/* 500 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(12),
     copyArray = __webpack_require__(28),
     isArray = __webpack_require__(1),
     isSymbol = __webpack_require__(46),
-    stringToPath = __webpack_require__(202),
+    stringToPath = __webpack_require__(201),
     toKey = __webpack_require__(20),
-    toString = __webpack_require__(121);
+    toString = __webpack_require__(120);
 
 /**
  * Converts `value` to a property path array.
@@ -50814,7 +50819,7 @@ module.exports = toPath;
 
 
 /***/ }),
-/* 500 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(19),
@@ -50852,7 +50857,7 @@ module.exports = toPlainObject;
 
 
 /***/ }),
-/* 501 */
+/* 502 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayEach = __webpack_require__(38),
@@ -50923,10 +50928,10 @@ module.exports = transform;
 
 
 /***/ }),
-/* 502 */
+/* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ary = __webpack_require__(204);
+var ary = __webpack_require__(203);
 
 /**
  * Creates a function that accepts up to one argument, ignoring any
@@ -50951,10 +50956,10 @@ module.exports = unary;
 
 
 /***/ }),
-/* 503 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toString = __webpack_require__(121);
+var toString = __webpack_require__(120);
 
 /** Used to generate unique IDs. */
 var idCounter = 0;
@@ -50985,10 +50990,10 @@ module.exports = uniqueId;
 
 
 /***/ }),
-/* 504 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseUnset = __webpack_require__(167);
+var baseUnset = __webpack_require__(166);
 
 /**
  * Removes the property at `path` of `object`.
@@ -51025,10 +51030,10 @@ module.exports = unset;
 
 
 /***/ }),
-/* 505 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseUpdate = __webpack_require__(168),
+var baseUpdate = __webpack_require__(167),
     castFunction = __webpack_require__(18);
 
 /**
@@ -51066,10 +51071,10 @@ module.exports = update;
 
 
 /***/ }),
-/* 506 */
+/* 507 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseUpdate = __webpack_require__(168),
+var baseUpdate = __webpack_require__(167),
     castFunction = __webpack_require__(18);
 
 /**
@@ -51105,10 +51110,10 @@ module.exports = updateWith;
 
 
 /***/ }),
-/* 507 */
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseValues = __webpack_require__(169),
+var baseValues = __webpack_require__(168),
     keysIn = __webpack_require__(13);
 
 /**
@@ -51143,11 +51148,11 @@ module.exports = valuesIn;
 
 
 /***/ }),
-/* 508 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var castFunction = __webpack_require__(18),
-    partial = __webpack_require__(217);
+    partial = __webpack_require__(216);
 
 /**
  * Creates a function that provides `value` to `wrapper` as its first
@@ -51179,15 +51184,15 @@ module.exports = wrap;
 
 
 /***/ }),
-/* 509 */
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LazyWrapper = __webpack_require__(90),
-    LodashWrapper = __webpack_require__(91),
-    baseLodash = __webpack_require__(101),
+var LazyWrapper = __webpack_require__(89),
+    LodashWrapper = __webpack_require__(90),
+    baseLodash = __webpack_require__(100),
     isArray = __webpack_require__(1),
     isObjectLike = __webpack_require__(21),
-    wrapperClone = __webpack_require__(393);
+    wrapperClone = __webpack_require__(394);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -51332,7 +51337,7 @@ module.exports = lodash;
 
 
 /***/ }),
-/* 510 */
+/* 511 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -51385,13 +51390,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(600);
+__webpack_require__(601);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 511 */
+/* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51488,7 +51493,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 512 */
+/* 513 */
 /***/ (function(module, exports) {
 
 var EMPTY_ARRAY_BUFFER = new ArrayBuffer(0);
@@ -51613,11 +51618,11 @@ module.exports = Buffer;
 
 
 /***/ }),
-/* 513 */
+/* 514 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var Texture = __webpack_require__(225);
+var Texture = __webpack_require__(224);
 
 /**
  * Helper class to create a webGL Framebuffer
@@ -51844,15 +51849,15 @@ module.exports = Framebuffer;
 
 
 /***/ }),
-/* 514 */
+/* 515 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var compileProgram = __webpack_require__(227),
-	extractAttributes = __webpack_require__(229),
-	extractUniforms = __webpack_require__(230),
-	setPrecision = __webpack_require__(233),
-	generateUniformAccessObject = __webpack_require__(231);
+var compileProgram = __webpack_require__(226),
+	extractAttributes = __webpack_require__(228),
+	extractUniforms = __webpack_require__(229),
+	setPrecision = __webpack_require__(232),
+	generateUniformAccessObject = __webpack_require__(230);
 
 /**
  * Helper class to create a webGL Shader
@@ -51941,12 +51946,12 @@ module.exports = Shader;
 
 
 /***/ }),
-/* 515 */
+/* 516 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 // state object//
-var setVertexAttribArrays = __webpack_require__( 226 );
+var setVertexAttribArrays = __webpack_require__( 225 );
 
 /**
  * Helper class to work with WebGL VertexArrayObjects (vaos)
@@ -52209,7 +52214,7 @@ VertexArrayObject.prototype.getSize = function()
 
 
 /***/ }),
-/* 516 */
+/* 517 */
 /***/ (function(module, exports) {
 
 
@@ -52241,22 +52246,22 @@ module.exports = createContext;
 
 
 /***/ }),
-/* 517 */
+/* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    compileProgram: __webpack_require__(227),
-    defaultValue: __webpack_require__(228),
-    extractAttributes: __webpack_require__(229),
-    extractUniforms: __webpack_require__(230),
-    generateUniformAccessObject: __webpack_require__(231),
-    setPrecision: __webpack_require__(233),
-    mapSize: __webpack_require__(232),
-    mapType: __webpack_require__(123)
+    compileProgram: __webpack_require__(226),
+    defaultValue: __webpack_require__(227),
+    extractAttributes: __webpack_require__(228),
+    extractUniforms: __webpack_require__(229),
+    generateUniformAccessObject: __webpack_require__(230),
+    setPrecision: __webpack_require__(232),
+    mapSize: __webpack_require__(231),
+    mapType: __webpack_require__(122)
 };
 
 /***/ }),
-/* 518 */
+/* 519 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52272,7 +52277,7 @@ var _ismobilejs = __webpack_require__(60);
 
 var _ismobilejs2 = _interopRequireDefault(_ismobilejs);
 
-var _accessibleTarget = __webpack_require__(234);
+var _accessibleTarget = __webpack_require__(233);
 
 var _accessibleTarget2 = _interopRequireDefault(_accessibleTarget);
 
@@ -52755,7 +52760,7 @@ core.CanvasRenderer.registerPlugin('accessibility', AccessibilityManager);
 //# sourceMappingURL=AccessibilityManager.js.map
 
 /***/ }),
-/* 519 */
+/* 520 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52763,7 +52768,7 @@ core.CanvasRenderer.registerPlugin('accessibility', AccessibilityManager);
 
 exports.__esModule = true;
 
-var _accessibleTarget = __webpack_require__(234);
+var _accessibleTarget = __webpack_require__(233);
 
 Object.defineProperty(exports, 'accessibleTarget', {
   enumerable: true,
@@ -52772,7 +52777,7 @@ Object.defineProperty(exports, 'accessibleTarget', {
   }
 });
 
-var _AccessibilityManager = __webpack_require__(518);
+var _AccessibilityManager = __webpack_require__(519);
 
 Object.defineProperty(exports, 'AccessibilityManager', {
   enumerable: true,
@@ -52785,7 +52790,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 520 */
+/* 521 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52795,13 +52800,13 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _autoDetectRenderer = __webpack_require__(235);
+var _autoDetectRenderer = __webpack_require__(234);
 
 var _Container = __webpack_require__(53);
 
 var _Container2 = _interopRequireDefault(_Container);
 
-var _Ticker = __webpack_require__(252);
+var _Ticker = __webpack_require__(251);
 
 var _Ticker2 = _interopRequireDefault(_Ticker);
 
@@ -52931,7 +52936,7 @@ exports.default = Application;
 //# sourceMappingURL=Application.js.map
 
 /***/ }),
-/* 521 */
+/* 522 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52943,7 +52948,7 @@ var _Container2 = __webpack_require__(53);
 
 var _Container3 = _interopRequireDefault(_Container2);
 
-var _RenderTexture = __webpack_require__(131);
+var _RenderTexture = __webpack_require__(130);
 
 var _RenderTexture2 = _interopRequireDefault(_RenderTexture);
 
@@ -52951,11 +52956,11 @@ var _Texture = __webpack_require__(57);
 
 var _Texture2 = _interopRequireDefault(_Texture);
 
-var _GraphicsData = __webpack_require__(239);
+var _GraphicsData = __webpack_require__(238);
 
 var _GraphicsData2 = _interopRequireDefault(_GraphicsData);
 
-var _Sprite = __webpack_require__(129);
+var _Sprite = __webpack_require__(128);
 
 var _Sprite2 = _interopRequireDefault(_Sprite);
 
@@ -52965,11 +52970,11 @@ var _utils = __webpack_require__(5);
 
 var _const = __webpack_require__(2);
 
-var _Bounds = __webpack_require__(124);
+var _Bounds = __webpack_require__(123);
 
 var _Bounds2 = _interopRequireDefault(_Bounds);
 
-var _bezierCurveTo2 = __webpack_require__(523);
+var _bezierCurveTo2 = __webpack_require__(524);
 
 var _bezierCurveTo3 = _interopRequireDefault(_bezierCurveTo2);
 
@@ -54095,7 +54100,7 @@ Graphics._SPRITE_TEXTURE = null;
 //# sourceMappingURL=Graphics.js.map
 
 /***/ }),
-/* 522 */
+/* 523 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54369,7 +54374,7 @@ _CanvasRenderer2.default.registerPlugin('graphics', CanvasGraphicsRenderer);
 //# sourceMappingURL=CanvasGraphicsRenderer.js.map
 
 /***/ }),
-/* 523 */
+/* 524 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54424,7 +54429,7 @@ function bezierCurveTo(fromX, fromY, cpX, cpY, cpX2, cpY2, toX, toY) {
 //# sourceMappingURL=bezierCurveTo.js.map
 
 /***/ }),
-/* 524 */
+/* 525 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54444,27 +54449,27 @@ var _WebGLRenderer = __webpack_require__(82);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
-var _WebGLGraphicsData = __webpack_require__(525);
+var _WebGLGraphicsData = __webpack_require__(526);
 
 var _WebGLGraphicsData2 = _interopRequireDefault(_WebGLGraphicsData);
 
-var _PrimitiveShader = __webpack_require__(526);
+var _PrimitiveShader = __webpack_require__(527);
 
 var _PrimitiveShader2 = _interopRequireDefault(_PrimitiveShader);
 
-var _buildPoly = __webpack_require__(528);
+var _buildPoly = __webpack_require__(529);
 
 var _buildPoly2 = _interopRequireDefault(_buildPoly);
 
-var _buildRectangle = __webpack_require__(529);
+var _buildRectangle = __webpack_require__(530);
 
 var _buildRectangle2 = _interopRequireDefault(_buildRectangle);
 
-var _buildRoundedRectangle = __webpack_require__(530);
+var _buildRoundedRectangle = __webpack_require__(531);
 
 var _buildRoundedRectangle2 = _interopRequireDefault(_buildRoundedRectangle);
 
-var _buildCircle = __webpack_require__(527);
+var _buildCircle = __webpack_require__(528);
 
 var _buildCircle2 = _interopRequireDefault(_buildCircle);
 
@@ -54682,7 +54687,7 @@ _WebGLRenderer2.default.registerPlugin('graphics', GraphicsRenderer);
 //# sourceMappingURL=GraphicsRenderer.js.map
 
 /***/ }),
-/* 525 */
+/* 526 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54824,7 +54829,7 @@ exports.default = WebGLGraphicsData;
 //# sourceMappingURL=WebGLGraphicsData.js.map
 
 /***/ }),
-/* 526 */
+/* 527 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54874,7 +54879,7 @@ exports.default = PrimitiveShader;
 //# sourceMappingURL=PrimitiveShader.js.map
 
 /***/ }),
-/* 527 */
+/* 528 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54967,7 +54972,7 @@ function buildCircle(graphicsData, webGLData) {
 //# sourceMappingURL=buildCircle.js.map
 
 /***/ }),
-/* 528 */
+/* 529 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54982,7 +54987,7 @@ var _buildLine2 = _interopRequireDefault(_buildLine);
 
 var _utils = __webpack_require__(5);
 
-var _earcut = __webpack_require__(139);
+var _earcut = __webpack_require__(138);
 
 var _earcut2 = _interopRequireDefault(_earcut);
 
@@ -55057,7 +55062,7 @@ function buildPoly(graphicsData, webGLData) {
 //# sourceMappingURL=buildPoly.js.map
 
 /***/ }),
-/* 529 */
+/* 530 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55137,7 +55142,7 @@ function buildRectangle(graphicsData, webGLData) {
 //# sourceMappingURL=buildRectangle.js.map
 
 /***/ }),
-/* 530 */
+/* 531 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55146,7 +55151,7 @@ function buildRectangle(graphicsData, webGLData) {
 exports.__esModule = true;
 exports.default = buildRoundedRectangle;
 
-var _earcut = __webpack_require__(139);
+var _earcut = __webpack_require__(138);
 
 var _earcut2 = _interopRequireDefault(_earcut);
 
@@ -55284,7 +55289,7 @@ function quadraticBezierCurve(fromX, fromY, cpX, cpY, toX, toY) {
 //# sourceMappingURL=buildRoundedRectangle.js.map
 
 /***/ }),
-/* 531 */
+/* 532 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55292,7 +55297,7 @@ function quadraticBezierCurve(fromX, fromY, cpX, cpY, toX, toY) {
 
 exports.__esModule = true;
 
-var _Rectangle = __webpack_require__(128);
+var _Rectangle = __webpack_require__(127);
 
 var _Rectangle2 = _interopRequireDefault(_Rectangle);
 
@@ -55403,7 +55408,7 @@ exports.default = Circle;
 //# sourceMappingURL=Circle.js.map
 
 /***/ }),
-/* 532 */
+/* 533 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55411,7 +55416,7 @@ exports.default = Circle;
 
 exports.__esModule = true;
 
-var _Rectangle = __webpack_require__(128);
+var _Rectangle = __webpack_require__(127);
 
 var _Rectangle2 = _interopRequireDefault(_Rectangle);
 
@@ -55530,7 +55535,7 @@ exports.default = Ellipse;
 //# sourceMappingURL=Ellipse.js.map
 
 /***/ }),
-/* 533 */
+/* 534 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55538,7 +55543,7 @@ exports.default = Ellipse;
 
 exports.__esModule = true;
 
-var _Point = __webpack_require__(127);
+var _Point = __webpack_require__(126);
 
 var _Point2 = _interopRequireDefault(_Point);
 
@@ -55666,7 +55671,7 @@ exports.default = Polygon;
 //# sourceMappingURL=Polygon.js.map
 
 /***/ }),
-/* 534 */
+/* 535 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55804,7 +55809,7 @@ exports.default = RoundedRectangle;
 //# sourceMappingURL=RoundedRectangle.js.map
 
 /***/ }),
-/* 535 */
+/* 536 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55977,7 +55982,7 @@ exports.default = CanvasMaskManager;
 //# sourceMappingURL=CanvasMaskManager.js.map
 
 /***/ }),
-/* 536 */
+/* 537 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55988,7 +55993,7 @@ exports.default = mapCanvasBlendModesToPixi;
 
 var _const = __webpack_require__(2);
 
-var _canUseNewCanvasBlendModes = __webpack_require__(244);
+var _canUseNewCanvasBlendModes = __webpack_require__(243);
 
 var _canUseNewCanvasBlendModes2 = _interopRequireDefault(_canUseNewCanvasBlendModes);
 
@@ -56050,7 +56055,7 @@ function mapCanvasBlendModesToPixi() {
 //# sourceMappingURL=mapCanvasBlendModesToPixi.js.map
 
 /***/ }),
-/* 537 */
+/* 538 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56175,7 +56180,7 @@ exports.default = TextureGarbageCollector;
 //# sourceMappingURL=TextureGarbageCollector.js.map
 
 /***/ }),
-/* 538 */
+/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56427,7 +56432,7 @@ exports.default = TextureManager;
 //# sourceMappingURL=TextureManager.js.map
 
 /***/ }),
-/* 539 */
+/* 540 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56435,7 +56440,7 @@ exports.default = TextureManager;
 
 exports.__esModule = true;
 
-var _mapWebGLBlendModesToPixi = __webpack_require__(546);
+var _mapWebGLBlendModesToPixi = __webpack_require__(547);
 
 var _mapWebGLBlendModesToPixi2 = _interopRequireDefault(_mapWebGLBlendModesToPixi);
 
@@ -56704,7 +56709,7 @@ exports.default = WebGLState;
 //# sourceMappingURL=WebGLState.js.map
 
 /***/ }),
-/* 540 */
+/* 541 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56771,7 +56776,7 @@ function extractUniformsFromString(string) {
 //# sourceMappingURL=extractUniformsFromSrc.js.map
 
 /***/ }),
-/* 541 */
+/* 542 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56858,7 +56863,7 @@ function calculateSpriteMatrix(outputMatrix, filterArea, textureSize, sprite) {
 //# sourceMappingURL=filterTransforms.js.map
 
 /***/ }),
-/* 542 */
+/* 543 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56874,7 +56879,7 @@ var _RenderTarget = __webpack_require__(84);
 
 var _RenderTarget2 = _interopRequireDefault(_RenderTarget);
 
-var _Quad = __webpack_require__(247);
+var _Quad = __webpack_require__(246);
 
 var _Quad2 = _interopRequireDefault(_Quad);
 
@@ -56884,11 +56889,11 @@ var _Shader = __webpack_require__(52);
 
 var _Shader2 = _interopRequireDefault(_Shader);
 
-var _filterTransforms = __webpack_require__(541);
+var _filterTransforms = __webpack_require__(542);
 
 var filterTransforms = _interopRequireWildcard(_filterTransforms);
 
-var _bitTwiddle = __webpack_require__(87);
+var _bitTwiddle = __webpack_require__(88);
 
 var _bitTwiddle2 = _interopRequireDefault(_bitTwiddle);
 
@@ -57427,7 +57432,7 @@ exports.default = FilterManager;
 //# sourceMappingURL=FilterManager.js.map
 
 /***/ }),
-/* 543 */
+/* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57439,7 +57444,7 @@ var _WebGLManager2 = __webpack_require__(55);
 
 var _WebGLManager3 = _interopRequireDefault(_WebGLManager2);
 
-var _SpriteMaskFilter = __webpack_require__(246);
+var _SpriteMaskFilter = __webpack_require__(245);
 
 var _SpriteMaskFilter2 = _interopRequireDefault(_SpriteMaskFilter);
 
@@ -57642,7 +57647,7 @@ exports.default = MaskManager;
 //# sourceMappingURL=MaskManager.js.map
 
 /***/ }),
-/* 544 */
+/* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57781,7 +57786,7 @@ exports.default = StencilManager;
 //# sourceMappingURL=StencilManager.js.map
 
 /***/ }),
-/* 545 */
+/* 546 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57861,7 +57866,7 @@ function generateIfTestSrc(maxIfs) {
 //# sourceMappingURL=checkMaxIfStatmentsInShader.js.map
 
 /***/ }),
-/* 546 */
+/* 547 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57910,7 +57915,7 @@ function mapWebGLBlendModesToPixi(gl) {
 //# sourceMappingURL=mapWebGLBlendModesToPixi.js.map
 
 /***/ }),
-/* 547 */
+/* 548 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57947,7 +57952,7 @@ function mapWebGLDrawModesToPixi(gl) {
 //# sourceMappingURL=mapWebGLDrawModesToPixi.js.map
 
 /***/ }),
-/* 548 */
+/* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57968,7 +57973,7 @@ function validateContext(gl) {
 //# sourceMappingURL=validateContext.js.map
 
 /***/ }),
-/* 549 */
+/* 550 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57984,7 +57989,7 @@ var _const = __webpack_require__(2);
 
 var _math = __webpack_require__(7);
 
-var _CanvasTinter = __webpack_require__(130);
+var _CanvasTinter = __webpack_require__(129);
 
 var _CanvasTinter2 = _interopRequireDefault(_CanvasTinter);
 
@@ -58126,7 +58131,7 @@ _CanvasRenderer2.default.registerPlugin('sprite', CanvasSpriteRenderer);
 //# sourceMappingURL=CanvasSpriteRenderer.js.map
 
 /***/ }),
-/* 550 */
+/* 551 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58184,7 +58189,7 @@ exports.default = Buffer;
 //# sourceMappingURL=BatchBuffer.js.map
 
 /***/ }),
-/* 551 */
+/* 552 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58200,19 +58205,19 @@ var _WebGLRenderer = __webpack_require__(82);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
-var _createIndicesForQuads = __webpack_require__(132);
+var _createIndicesForQuads = __webpack_require__(131);
 
 var _createIndicesForQuads2 = _interopRequireDefault(_createIndicesForQuads);
 
-var _generateMultiTextureShader = __webpack_require__(552);
+var _generateMultiTextureShader = __webpack_require__(553);
 
 var _generateMultiTextureShader2 = _interopRequireDefault(_generateMultiTextureShader);
 
-var _checkMaxIfStatmentsInShader = __webpack_require__(545);
+var _checkMaxIfStatmentsInShader = __webpack_require__(546);
 
 var _checkMaxIfStatmentsInShader2 = _interopRequireDefault(_checkMaxIfStatmentsInShader);
 
-var _BatchBuffer = __webpack_require__(550);
+var _BatchBuffer = __webpack_require__(551);
 
 var _BatchBuffer2 = _interopRequireDefault(_BatchBuffer);
 
@@ -58224,7 +58229,7 @@ var _pixiGlCore = __webpack_require__(15);
 
 var _pixiGlCore2 = _interopRequireDefault(_pixiGlCore);
 
-var _bitTwiddle = __webpack_require__(87);
+var _bitTwiddle = __webpack_require__(88);
 
 var _bitTwiddle2 = _interopRequireDefault(_bitTwiddle);
 
@@ -58709,7 +58714,7 @@ _WebGLRenderer2.default.registerPlugin('sprite', SpriteRenderer);
 //# sourceMappingURL=SpriteRenderer.js.map
 
 /***/ }),
-/* 552 */
+/* 553 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58777,7 +58782,7 @@ function generateSampleSrc(maxTextures) {
 //# sourceMappingURL=generateMultiTextureShader.js.map
 
 /***/ }),
-/* 553 */
+/* 554 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58787,7 +58792,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Sprite2 = __webpack_require__(129);
+var _Sprite2 = __webpack_require__(128);
 
 var _Sprite3 = _interopRequireDefault(_Sprite2);
 
@@ -58805,7 +58810,7 @@ var _settings = __webpack_require__(10);
 
 var _settings2 = _interopRequireDefault(_settings);
 
-var _TextStyle = __webpack_require__(248);
+var _TextStyle = __webpack_require__(247);
 
 var _TextStyle2 = _interopRequireDefault(_TextStyle);
 
@@ -59600,7 +59605,7 @@ Text.fontPropertiesContext = Text.fontPropertiesCanvas.getContext('2d');
 //# sourceMappingURL=Text.js.map
 
 /***/ }),
-/* 554 */
+/* 555 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59619,7 +59624,7 @@ function canUploadSameBuffer() {
 //# sourceMappingURL=canUploadSameBuffer.js.map
 
 /***/ }),
-/* 555 */
+/* 556 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59628,7 +59633,7 @@ function canUploadSameBuffer() {
 exports.__esModule = true;
 exports.default = determineCrossOrigin;
 
-var _url2 = __webpack_require__(601);
+var _url2 = __webpack_require__(602);
 
 var _url3 = _interopRequireDefault(_url2);
 
@@ -59680,7 +59685,7 @@ function determineCrossOrigin(url) {
 //# sourceMappingURL=determineCrossOrigin.js.map
 
 /***/ }),
-/* 556 */
+/* 557 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59707,7 +59712,7 @@ function maxRecommendedTextures(max) {
 //# sourceMappingURL=maxRecommendedTextures.js.map
 
 /***/ }),
-/* 557 */
+/* 558 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59778,7 +59783,7 @@ exports.default = {
 //# sourceMappingURL=pluginTarget.js.map
 
 /***/ }),
-/* 558 */
+/* 559 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59788,27 +59793,27 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _mesh = __webpack_require__(268);
+var _mesh = __webpack_require__(267);
 
 var mesh = _interopRequireWildcard(_mesh);
 
-var _particles = __webpack_require__(269);
+var _particles = __webpack_require__(268);
 
 var particles = _interopRequireWildcard(_particles);
 
-var _extras = __webpack_require__(133);
+var _extras = __webpack_require__(132);
 
 var extras = _interopRequireWildcard(_extras);
 
-var _filters = __webpack_require__(260);
+var _filters = __webpack_require__(259);
 
 var filters = _interopRequireWildcard(_filters);
 
-var _prepare = __webpack_require__(270);
+var _prepare = __webpack_require__(269);
 
 var prepare = _interopRequireWildcard(_prepare);
 
-var _loaders = __webpack_require__(264);
+var _loaders = __webpack_require__(263);
 
 var loaders = _interopRequireWildcard(_loaders);
 
@@ -60702,7 +60707,7 @@ Object.defineProperties(loaders.Loader.prototype, {
 //# sourceMappingURL=deprecation.js.map
 
 /***/ }),
-/* 559 */
+/* 560 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60887,7 +60892,7 @@ core.CanvasRenderer.registerPlugin('extract', CanvasExtract);
 //# sourceMappingURL=CanvasExtract.js.map
 
 /***/ }),
-/* 560 */
+/* 561 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60895,7 +60900,7 @@ core.CanvasRenderer.registerPlugin('extract', CanvasExtract);
 
 exports.__esModule = true;
 
-var _WebGLExtract = __webpack_require__(561);
+var _WebGLExtract = __webpack_require__(562);
 
 Object.defineProperty(exports, 'webgl', {
   enumerable: true,
@@ -60904,7 +60909,7 @@ Object.defineProperty(exports, 'webgl', {
   }
 });
 
-var _CanvasExtract = __webpack_require__(559);
+var _CanvasExtract = __webpack_require__(560);
 
 Object.defineProperty(exports, 'canvas', {
   enumerable: true,
@@ -60917,7 +60922,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 561 */
+/* 562 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61145,7 +61150,7 @@ core.WebGLRenderer.registerPlugin('extract', WebGLExtract);
 //# sourceMappingURL=WebGLExtract.js.map
 
 /***/ }),
-/* 562 */
+/* 563 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61535,7 +61540,7 @@ exports.default = AnimatedSprite;
 //# sourceMappingURL=AnimatedSprite.js.map
 
 /***/ }),
-/* 563 */
+/* 564 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61549,7 +61554,7 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _ObservablePoint = __webpack_require__(241);
+var _ObservablePoint = __webpack_require__(240);
 
 var _ObservablePoint2 = _interopRequireDefault(_ObservablePoint);
 
@@ -62023,7 +62028,7 @@ BitmapText.fonts = {};
 //# sourceMappingURL=BitmapText.js.map
 
 /***/ }),
-/* 564 */
+/* 565 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62037,11 +62042,11 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _CanvasTinter = __webpack_require__(130);
+var _CanvasTinter = __webpack_require__(129);
 
 var _CanvasTinter2 = _interopRequireDefault(_CanvasTinter);
 
-var _TextureTransform = __webpack_require__(254);
+var _TextureTransform = __webpack_require__(253);
 
 var _TextureTransform2 = _interopRequireDefault(_TextureTransform);
 
@@ -62464,7 +62469,7 @@ exports.default = TilingSprite;
 //# sourceMappingURL=TilingSprite.js.map
 
 /***/ }),
-/* 565 */
+/* 566 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62821,7 +62826,7 @@ DisplayObject.prototype._cacheAsBitmapDestroy = function _cacheAsBitmapDestroy()
 //# sourceMappingURL=cacheAsBitmap.js.map
 
 /***/ }),
-/* 566 */
+/* 567 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62860,7 +62865,7 @@ core.Container.prototype.getChildByName = function getChildByName(name) {
 //# sourceMappingURL=getChildByName.js.map
 
 /***/ }),
-/* 567 */
+/* 568 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62898,7 +62903,7 @@ core.DisplayObject.prototype.getGlobalPosition = function getGlobalPosition() {
 //# sourceMappingURL=getGlobalPosition.js.map
 
 /***/ }),
-/* 568 */
+/* 569 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63071,7 +63076,7 @@ core.WebGLRenderer.registerPlugin('tilingSprite', TilingSpriteRenderer);
 //# sourceMappingURL=TilingSpriteRenderer.js.map
 
 /***/ }),
-/* 569 */
+/* 570 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63085,11 +63090,11 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _BlurXFilter = __webpack_require__(255);
+var _BlurXFilter = __webpack_require__(254);
 
 var _BlurXFilter2 = _interopRequireDefault(_BlurXFilter);
 
-var _BlurYFilter = __webpack_require__(256);
+var _BlurYFilter = __webpack_require__(255);
 
 var _BlurYFilter2 = _interopRequireDefault(_BlurYFilter);
 
@@ -63234,7 +63239,7 @@ exports.default = BlurFilter;
 //# sourceMappingURL=BlurFilter.js.map
 
 /***/ }),
-/* 570 */
+/* 571 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63767,7 +63772,7 @@ ColorMatrixFilter.prototype.grayscale = ColorMatrixFilter.prototype.greyscale;
 //# sourceMappingURL=ColorMatrixFilter.js.map
 
 /***/ }),
-/* 571 */
+/* 572 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63882,7 +63887,7 @@ exports.default = DisplacementFilter;
 //# sourceMappingURL=DisplacementFilter.js.map
 
 /***/ }),
-/* 572 */
+/* 573 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63941,7 +63946,7 @@ exports.default = FXAAFilter;
 //# sourceMappingURL=FXAAFilter.js.map
 
 /***/ }),
-/* 573 */
+/* 574 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64022,7 +64027,7 @@ exports.default = NoiseFilter;
 //# sourceMappingURL=NoiseFilter.js.map
 
 /***/ }),
-/* 574 */
+/* 575 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64077,7 +64082,7 @@ exports.default = VoidFilter;
 //# sourceMappingURL=VoidFilter.js.map
 
 /***/ }),
-/* 575 */
+/* 576 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64167,7 +64172,7 @@ exports.default = InteractionEvent;
 //# sourceMappingURL=InteractionEvent.js.map
 
 /***/ }),
-/* 576 */
+/* 577 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64179,11 +64184,11 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _InteractionData = __webpack_require__(261);
+var _InteractionData = __webpack_require__(260);
 
 var _InteractionData2 = _interopRequireDefault(_InteractionData);
 
-var _InteractionEvent = __webpack_require__(575);
+var _InteractionEvent = __webpack_require__(576);
 
 var _InteractionEvent2 = _interopRequireDefault(_InteractionEvent);
 
@@ -64191,7 +64196,7 @@ var _eventemitter = __webpack_require__(24);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _interactiveTarget = __webpack_require__(262);
+var _interactiveTarget = __webpack_require__(261);
 
 var _interactiveTarget2 = _interopRequireDefault(_interactiveTarget);
 
@@ -65768,7 +65773,7 @@ core.CanvasRenderer.registerPlugin('interaction', InteractionManager);
 //# sourceMappingURL=InteractionManager.js.map
 
 /***/ }),
-/* 577 */
+/* 578 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65776,7 +65781,7 @@ core.CanvasRenderer.registerPlugin('interaction', InteractionManager);
 
 exports.__esModule = true;
 
-var _InteractionData = __webpack_require__(261);
+var _InteractionData = __webpack_require__(260);
 
 Object.defineProperty(exports, 'InteractionData', {
   enumerable: true,
@@ -65785,7 +65790,7 @@ Object.defineProperty(exports, 'InteractionData', {
   }
 });
 
-var _InteractionManager = __webpack_require__(576);
+var _InteractionManager = __webpack_require__(577);
 
 Object.defineProperty(exports, 'InteractionManager', {
   enumerable: true,
@@ -65794,7 +65799,7 @@ Object.defineProperty(exports, 'InteractionManager', {
   }
 });
 
-var _interactiveTarget = __webpack_require__(262);
+var _interactiveTarget = __webpack_require__(261);
 
 Object.defineProperty(exports, 'interactiveTarget', {
   enumerable: true,
@@ -65807,7 +65812,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 578 */
+/* 579 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65819,21 +65824,21 @@ var _resourceLoader = __webpack_require__(59);
 
 var _resourceLoader2 = _interopRequireDefault(_resourceLoader);
 
-var _blob = __webpack_require__(599);
+var _blob = __webpack_require__(600);
 
 var _eventemitter = __webpack_require__(24);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _textureParser = __webpack_require__(266);
+var _textureParser = __webpack_require__(265);
 
 var _textureParser2 = _interopRequireDefault(_textureParser);
 
-var _spritesheetParser = __webpack_require__(265);
+var _spritesheetParser = __webpack_require__(264);
 
 var _spritesheetParser2 = _interopRequireDefault(_spritesheetParser);
 
-var _bitmapFontParser = __webpack_require__(263);
+var _bitmapFontParser = __webpack_require__(262);
 
 var _bitmapFontParser2 = _interopRequireDefault(_bitmapFontParser);
 
@@ -65946,7 +65951,7 @@ Resource.setExtensionXhrType('fnt', Resource.XHR_RESPONSE_TYPE.DOCUMENT);
 //# sourceMappingURL=loader.js.map
 
 /***/ }),
-/* 579 */
+/* 580 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65956,7 +65961,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Plane2 = __webpack_require__(267);
+var _Plane2 = __webpack_require__(266);
 
 var _Plane3 = _interopRequireDefault(_Plane2);
 
@@ -66343,7 +66348,7 @@ exports.default = NineSlicePlane;
 //# sourceMappingURL=NineSlicePlane.js.map
 
 /***/ }),
-/* 580 */
+/* 581 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66589,7 +66594,7 @@ exports.default = Rope;
 //# sourceMappingURL=Rope.js.map
 
 /***/ }),
-/* 581 */
+/* 582 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66858,7 +66863,7 @@ core.CanvasRenderer.registerPlugin('mesh', MeshSpriteRenderer);
 //# sourceMappingURL=CanvasMeshRenderer.js.map
 
 /***/ }),
-/* 582 */
+/* 583 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67004,7 +67009,7 @@ core.WebGLRenderer.registerPlugin('mesh', MeshRenderer);
 //# sourceMappingURL=MeshRenderer.js.map
 
 /***/ }),
-/* 583 */
+/* 584 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67345,7 +67350,7 @@ exports.default = ParticleContainer;
 //# sourceMappingURL=ParticleContainer.js.map
 
 /***/ }),
-/* 584 */
+/* 585 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67357,7 +67362,7 @@ var _pixiGlCore = __webpack_require__(15);
 
 var _pixiGlCore2 = _interopRequireDefault(_pixiGlCore);
 
-var _createIndicesForQuads = __webpack_require__(132);
+var _createIndicesForQuads = __webpack_require__(131);
 
 var _createIndicesForQuads2 = _interopRequireDefault(_createIndicesForQuads);
 
@@ -67590,7 +67595,7 @@ exports.default = ParticleBuffer;
 //# sourceMappingURL=ParticleBuffer.js.map
 
 /***/ }),
-/* 585 */
+/* 586 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67602,11 +67607,11 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _ParticleShader = __webpack_require__(586);
+var _ParticleShader = __webpack_require__(587);
 
 var _ParticleShader2 = _interopRequireDefault(_ParticleShader);
 
-var _ParticleBuffer = __webpack_require__(584);
+var _ParticleBuffer = __webpack_require__(585);
 
 var _ParticleBuffer2 = _interopRequireDefault(_ParticleBuffer);
 
@@ -68039,7 +68044,7 @@ core.WebGLRenderer.registerPlugin('particle', ParticleRenderer);
 //# sourceMappingURL=ParticleRenderer.js.map
 
 /***/ }),
-/* 586 */
+/* 587 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68087,7 +68092,7 @@ exports.default = ParticleShader;
 //# sourceMappingURL=ParticleShader.js.map
 
 /***/ }),
-/* 587 */
+/* 588 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68110,13 +68115,13 @@ if (!Math.sign) {
 //# sourceMappingURL=Math.sign.js.map
 
 /***/ }),
-/* 588 */
+/* 589 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _objectAssign = __webpack_require__(511);
+var _objectAssign = __webpack_require__(512);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -68130,17 +68135,17 @@ if (!Object.assign) {
 //# sourceMappingURL=Object.assign.js.map
 
 /***/ }),
-/* 589 */
+/* 590 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+__webpack_require__(589);
+
+__webpack_require__(591);
+
 __webpack_require__(588);
-
-__webpack_require__(590);
-
-__webpack_require__(587);
 
 if (!window.ArrayBuffer) {
     window.ArrayBuffer = Array;
@@ -68160,7 +68165,7 @@ if (!window.Uint16Array) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 590 */
+/* 591 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68243,7 +68248,7 @@ if (!global.cancelAnimationFrame) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
 
 /***/ }),
-/* 591 */
+/* 592 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68255,7 +68260,7 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _BasePrepare2 = __webpack_require__(134);
+var _BasePrepare2 = __webpack_require__(133);
 
 var _BasePrepare3 = _interopRequireDefault(_BasePrepare2);
 
@@ -68396,7 +68401,7 @@ core.CanvasRenderer.registerPlugin('prepare', CanvasPrepare);
 //# sourceMappingURL=CanvasPrepare.js.map
 
 /***/ }),
-/* 592 */
+/* 593 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68459,7 +68464,7 @@ exports.default = TimeLimiter;
 //# sourceMappingURL=TimeLimiter.js.map
 
 /***/ }),
-/* 593 */
+/* 594 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68471,7 +68476,7 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _BasePrepare2 = __webpack_require__(134);
+var _BasePrepare2 = __webpack_require__(133);
 
 var _BasePrepare3 = _interopRequireDefault(_BasePrepare2);
 
@@ -68613,7 +68618,7 @@ core.WebGLRenderer.registerPlugin('prepare', WebGLPrepare);
 //# sourceMappingURL=WebGLPrepare.js.map
 
 /***/ }),
-/* 594 */
+/* 595 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -69152,7 +69157,7 @@ core.WebGLRenderer.registerPlugin('prepare', WebGLPrepare);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(86)(module), __webpack_require__(30)))
 
 /***/ }),
-/* 595 */
+/* 596 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69243,7 +69248,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 596 */
+/* 597 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69335,18 +69340,18 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 597 */
+/* 598 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(595);
-exports.encode = exports.stringify = __webpack_require__(596);
+exports.decode = exports.parse = __webpack_require__(596);
+exports.encode = exports.stringify = __webpack_require__(597);
 
 
 /***/ }),
-/* 598 */
+/* 599 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69356,19 +69361,19 @@ exports.__esModule = true;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _miniSignals = __webpack_require__(223);
+var _miniSignals = __webpack_require__(222);
 
 var _miniSignals2 = _interopRequireDefault(_miniSignals);
 
-var _parseUri = __webpack_require__(224);
+var _parseUri = __webpack_require__(223);
 
 var _parseUri2 = _interopRequireDefault(_parseUri);
 
-var _async = __webpack_require__(272);
+var _async = __webpack_require__(271);
 
 var async = _interopRequireWildcard(_async);
 
-var _Resource = __webpack_require__(136);
+var _Resource = __webpack_require__(135);
 
 var _Resource2 = _interopRequireDefault(_Resource);
 
@@ -69970,7 +69975,7 @@ exports.default = Loader;
 //# sourceMappingURL=Loader.js.map
 
 /***/ }),
-/* 599 */
+/* 600 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69982,11 +69987,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 exports.blobMiddlewareFactory = blobMiddlewareFactory;
 
-var _Resource = __webpack_require__(136);
+var _Resource = __webpack_require__(135);
 
 var _Resource2 = _interopRequireDefault(_Resource);
 
-var _b = __webpack_require__(273);
+var _b = __webpack_require__(272);
 
 var _b2 = _interopRequireDefault(_b);
 
@@ -70063,7 +70068,7 @@ function blobMiddlewareFactory() {
 //# sourceMappingURL=blob.js.map
 
 /***/ }),
-/* 600 */
+/* 601 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -70253,10 +70258,10 @@ function blobMiddlewareFactory() {
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30), __webpack_require__(135)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30), __webpack_require__(134)))
 
 /***/ }),
-/* 601 */
+/* 602 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70283,8 +70288,8 @@ function blobMiddlewareFactory() {
 
 
 
-var punycode = __webpack_require__(594);
-var util = __webpack_require__(602);
+var punycode = __webpack_require__(595);
+var util = __webpack_require__(603);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -70359,7 +70364,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring = __webpack_require__(597);
+    querystring = __webpack_require__(598);
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -70995,7 +71000,7 @@ Url.prototype.parseHost = function() {
 
 
 /***/ }),
-/* 602 */
+/* 603 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -71018,7 +71023,7 @@ module.exports = {
 
 
 /***/ }),
-/* 603 */
+/* 604 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -71027,12 +71032,12 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ }),
-/* 604 */
+/* 605 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_modules_Game__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_modules_Game__ = __webpack_require__(273);
 
 
 document.addEventListener('DOMContentLoaded', function () {
