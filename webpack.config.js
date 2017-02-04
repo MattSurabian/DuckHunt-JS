@@ -2,6 +2,7 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var HardSourcePlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -9,7 +10,7 @@ module.exports = {
     duckhunt: './main.js',
   },
   output: {
-    path: 'dist',
+    path: path.join(__dirname, 'dist'),
     filename: '[name].js',
   },
   devtool: 'source-map',
@@ -46,5 +47,12 @@ module.exports = {
     port: 8080
   },
   plugins: [
+    new HardSourcePlugin({
+      cacheDirectory: '../node_modules/.cache/hardsource/[confighash]',
+      recordsPath: '../node_modules/.cache/hardsource/[confighash]/records.json',
+      configHash: function(webpackConfig) {
+        return require('node-object-hash')().hash(webpackConfig);
+      }
+    })
   ],
 };

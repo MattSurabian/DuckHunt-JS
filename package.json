@@ -36,13 +36,15 @@
     "gsap": "^1.18.0",
     "gulp": "^3.9.0",
     "gulp-shell": "^0.5.2",
+    "hard-source-webpack-plugin": "^0.3.9",
     "howler": "^2.0.2",
     "json-loader": "^0.5.4",
     "lodash": "^4.17.4",
+    "node-object-hash": "^1.1.5",
     "pixi.js": "^4.3.4",
     "script-loader": "^0.7.0",
     "tween.js": "^16.6.0",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^1.16.3"
+    "webpack-dev-server": "^2.3.0"
   }
 }
