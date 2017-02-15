@@ -48,8 +48,8 @@ module.exports = {
   },
   plugins: [
     new HardSourcePlugin({
-      cacheDirectory: '../node_modules/.cache/hardsource/[confighash]',
-      recordsPath: '../node_modules/.cache/hardsource/[confighash]/records.json',
+      cacheDirectory: path.join(__dirname, 'node_modules/.cache/hardsource/[confighash]'),
+      recordsPath: path.join(__dirname, 'node_modules/.cache/hardsource/[confighash]/records.json'),
       configHash: function(webpackConfig) {
         return require('node-object-hash')().hash(webpackConfig);
       }
