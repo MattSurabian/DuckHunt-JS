@@ -45,6 +45,6 @@
     "script-loader": "^0.7.0",
     "tween.js": "^16.6.0",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
+    "webpack-dev-server": "2.2.1"
   }
 }

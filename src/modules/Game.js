@@ -343,21 +343,64 @@ class Game {
   win() {
     sound.play('champ');
     this.gameStatus = 'You Win!';
+    this.showReplay(this.getScoreMessage());
   }
 
   loss() {
     sound.play('loserSound');
     this.gameStatus = 'You Lose!';
+    this.showReplay(this.getScoreMessage());
+  }
+
+  getScoreMessage() {
+      let scoreMessage;
+
+      if (this.score === 9400) {
+        scoreMessage = 'Flawless victory.';
+      }
+
+      if (this.score < 9400) {
+        scoreMessage = 'Close to perfection.';
+      }
+
+      if (this.score <= 9000) {
+        scoreMessage = 'Truly impressive score.';
+      }
+
+      if (this.score <= 8000) {
+        scoreMessage = 'Solid score.'
+      }
+
+      if (this.score <= 6000) {
+        scoreMessage = 'Yikes.';
+      }
+
+      return scoreMessage;
+  }
+
+  showReplay(replayText) {
+      this.stage.hud.createTextBox('replayButton', {
+          location: Stage.replayButtonLocation()
+      });
+    this.stage.hud.replayButton = replayText + ' Play Again?';
+    this.bindInteractions();
+
   }
 
   handleClick(event) {
-    if (!this.outOfAmmo()) {
-      sound.play('gunSound');
-      this.bullets -= 1;
-      this.updateScore(this.stage.shotsFired({
+    let clickPoint = {
         x: event.data.global.x,
         y: event.data.global.y
-      }));
+    };
+
+    if (!this.stage.hud.replayButton && !this.outOfAmmo()) {
+      sound.play('gunSound');
+      this.bullets -= 1;
+      this.updateScore(this.stage.shotsFired(clickPoint));
+    }
+
+    if (this.stage.hud.replayButton && this.stage.clickedReplay(clickPoint)) {
+      window.location.reload();
     }
   }
 

@@ -23,6 +23,7 @@ const HUD_LOCATIONS = {
   SCORE: new Point(MAX_X - 10, 10),
   WAVE_STATUS: new Point(MAX_X - 10, MAX_Y - 20),
   GAME_STATUS: new Point(MAX_X / 2, MAX_Y * 0.45),
+  REPLAY_BUTTON: new Point(MAX_X / 2, MAX_Y * 0.56),
   BULLET_STATUS: new Point(10, 10),
   DEAD_DUCK_STATUS: new Point(10, MAX_Y * 0.91),
   MISSED_DUCK_STATUS: new Point(10, MAX_Y * 0.95)
@@ -73,6 +74,10 @@ class Stage extends Container {
 
   static gameStatusBoxLocation() {
     return HUD_LOCATIONS.GAME_STATUS;
+  }
+
+  static replayButtonLocation() {
+    return HUD_LOCATIONS.REPLAY_BUTTON;
   }
 
   static bulletStatusBoxLocation() {
@@ -185,12 +190,10 @@ class Stage extends Container {
       this.flashScreen.visible = false;
     }, FLASH_MS);
 
-    clickPoint.x /= this.scale.x;
-    clickPoint.y /= this.scale.y;
     let ducksShot = 0;
     for (let i = 0; i < this.ducks.length; i++) {
       const duck = this.ducks[i];
-      if (duck.alive && Utils.pointDistance(duck.position, clickPoint) < 60) {
+      if (duck.alive && Utils.pointDistance(duck.position, this.getScaledClickLocation(clickPoint)) < 60) {
         ducksShot++;
         duck.shot();
         duck.timeline.add(() => {
@@ -201,6 +204,16 @@ class Stage extends Container {
     return ducksShot;
   }
 
+  clickedReplay(clickPoint) {
+    return Utils.pointDistance(this.getScaledClickLocation(clickPoint), HUD_LOCATIONS.REPLAY_BUTTON) < 200;
+  }
+
+  getScaledClickLocation(clickPoint) {
+    return {
+      x: clickPoint.x / this.scale.x,
+      y: clickPoint.y / this.scale.y
+    };
+  }
   /**
    * flyAway
    * Helper method that causes the sky to change color and the ducks to fly away
