@@ -47,6 +47,7 @@ class Stage extends Container {
    */
   constructor(opts) {
     super();
+    this.locked = false;
     this.spritesheet = opts.spritesheet;
     this.interactive = true;
     this.ducks = [];
@@ -197,7 +198,9 @@ class Stage extends Container {
         ducksShot++;
         duck.shot();
         duck.timeline.add(() => {
-          this.dog.retrieve();
+          if (!this.isLocked()) {
+            this.dog.retrieve();
+          }
         });
       }
     }
@@ -222,7 +225,7 @@ class Stage extends Container {
   flyAway() {
     this.dog.stopAndClearTimeline()
     this.dog.laugh();
-
+    this.lock();
     const duckPromises = [];
 
     for (let i = 0; i < this.ducks.length; i++) {
@@ -238,7 +241,7 @@ class Stage extends Container {
       }
     }
 
-    return BPromise.all(duckPromises).then(this.cleanUpDucks.bind(this));
+    return BPromise.all(duckPromises).then(this.cleanUpDucks.bind(this)).then(this.unlock.bind(this));
   }
 
   /**
@@ -292,6 +295,32 @@ class Stage extends Container {
    */
   isActive() {
     return this.dogActive() || this.ducksAlive() || this.ducksActive();
+  }
+
+  /**
+   * lock
+   * Lock the stage to prevent new animations from being added to timelines, specifically useful for managing race and
+   * edge conditions around dogs and ducks.
+   */
+  lock() {
+    this.locked = true;
+  }
+
+  /**
+   * unlock
+   * Unlock the stage so that new animations can be added to timelines.
+   */
+  unlock() {
+    this.locked = false;
+  }
+
+  /**
+   * isLocked
+   * Helper to tell if the stage is locked to new animations or not
+   * @returns {Boolean}
+   */
+  isLocked() {
+    return this.locked;
   }
 }
 
