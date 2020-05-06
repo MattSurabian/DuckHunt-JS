@@ -40,8 +40,6 @@ gulp.task('images', gulp.parallel(function(){
 gulp.task('deploy', gulp.parallel(function() {
   return gulp.src('*', {read:false})
     .pipe(shell([
-    'AWS_PROFILE=duckhunt terraform plan',
-    'AWS_PROFILE=duckhunt terraform apply',
     'aws --profile duckhunt s3 sync dist/ s3://duckhuntjs.com --include \'*\' --acl \'public-read\''
   ]));
 }));

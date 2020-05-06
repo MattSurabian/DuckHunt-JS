@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "www-duckhuntjs-com" {
 resource "aws_s3_bucket" "duckhuntjs-com" {
   bucket = "duckhuntjs.com"
   acl = "public-read"
-  policy = "${file("s3policy.json")}"
+  policy = file("s3policy.json")
 
   website {
     index_document = "index.html"
@@ -23,17 +23,17 @@ resource "aws_s3_bucket" "duckhuntjs-com" {
 }
 
 resource "cloudflare_record" "www-duckhuntjs-com" {
-  domain = "duckhuntjs.com"
+  zone_id = "1628b8b553f25aaa53447ae74afc7e50"
   name = "www"
-  value = "${aws_s3_bucket.www-duckhuntjs-com.website_endpoint}"
+  value = aws_s3_bucket.www-duckhuntjs-com.website_endpoint
   type = "CNAME"
   ttl = 3600
 }
 
 resource "cloudflare_record" "duckhuntjs-com" {
-  domain = "duckhuntjs.com"
+  zone_id = "1628b8b553f25aaa53447ae74afc7e50"
   name = "duckhuntjs.com"
-  value = "${aws_s3_bucket.duckhuntjs-com.website_endpoint}"
+  value = aws_s3_bucket.duckhuntjs-com.website_endpoint
   type = "CNAME"
   ttl = 3600
 }
