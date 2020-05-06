@@ -43,6 +43,7 @@ class Dog extends Character {
     ];
     super('dog', options.spritesheet, states);
     this.toRetrieve = 0;
+    this.maxRetrieve = 3;
     this.anchor.set(0.5, 0);
     this.options = options;
     this.sniffSoundId = null;
@@ -191,8 +192,11 @@ class Dog extends Character {
    * @retuns {Dog}
    */
   retrieve() {
+    // To avoid ridiculous chains of animations that last forever we can limit this a bit
+    if (this.toRetrieve + 1 >= this.maxRetrieve) {
+      return this;
+    }
     this.toRetrieve++;
-
     this.upDownTween({
       onStart: () => {
         if (this.toRetrieve >= 2) {
@@ -212,10 +216,10 @@ class Dog extends Character {
    * @returns {Dog}
    */
   laugh() {
+    this.toRetrieve=0;
     this.upDownTween({
       state: 'laugh',
       onStart: () => {
-        this.toRetrieve = 0;
         this.state = 'laugh';
         sound.play('laugh');
       }
