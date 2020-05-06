@@ -223,7 +223,7 @@ class Stage extends Container {
    * @returns {Promise} - This promise is resolved when all the ducks have flown away
    */
   flyAway() {
-    this.dog.stopAndClearTimeline()
+    this.dog.stopAndClearTimeline();
     this.dog.laugh();
     this.lock();
     const duckPromises = [];
