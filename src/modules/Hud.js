@@ -73,10 +73,19 @@ class Hud extends Container {
         const gameTextures = loader.resources[options.spritesheet].textures;
         const texture = gameTextures[options.texture];
         const childCount = container.children.length;
+        if (options.max && val > options.max) {
+          val = options.max;
+        }
         if (childCount < val) {
           for (let i = childCount; i < val; i++) {
             const item = new extras.AnimatedSprite([texture]);
-            item.position.set(item.width * i, 0);
+            let yPos = 0;
+            let xPosDelta = i;
+            if (options.rowMax && options.rowMax < val) {
+              yPos = item.height * Math.floor(i/options.rowMax);
+              xPosDelta = i%options.rowMax;
+            }
+            item.position.set(item.width * xPosDelta, yPos);
             container.addChild(item);
           }
         } else if (val != childCount) {

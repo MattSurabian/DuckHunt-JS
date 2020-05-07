@@ -182,9 +182,10 @@ class Stage extends Container {
    * Click handler for the stage, scale's the location of the click to ensure coordinate system
    * alignment and then calculates if any of the ducks were hit and should be shot.
    * @param {{x:Number, y:Number}} clickPoint - Point where the container was clicked in real coordinates
+   * @param {Number} radius - The "blast radius" of the player's weapon
    * @returns {Number} - The number of ducks hit with the shot
    */
-  shotsFired(clickPoint) {
+  shotsFired(clickPoint, radius) {
     // flash the screen
     this.flashScreen.visible = true;
     _delay(() => {
@@ -194,7 +195,7 @@ class Stage extends Container {
     let ducksShot = 0;
     for (let i = 0; i < this.ducks.length; i++) {
       const duck = this.ducks[i];
-      if (duck.alive && Utils.pointDistance(duck.position, this.getScaledClickLocation(clickPoint)) < 60) {
+      if (duck.alive && Utils.pointDistance(duck.position, this.getScaledClickLocation(clickPoint)) < radius) {
         ducksShot++;
         duck.shot();
         duck.timeline.add(() => {

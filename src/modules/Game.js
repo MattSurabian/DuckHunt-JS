@@ -3,6 +3,7 @@ import {noop as _noop} from 'lodash/util';
 import levels from '../data/levels.json';
 import Stage from './Stage';
 import sound from './Sound';
+import levelGenerator from '../libs/levelGenerator.js';
 
 const BLUE_SKY_COLOR = 0x64b0ff;
 const PINK_SKY_COLOR = 0xfbb4d4;
@@ -42,7 +43,9 @@ class Game {
         this.stage.hud.createTextureBasedCounter('ducksMissed', {
           texture: 'hud/score-live/0.png',
           spritesheet: this.spritesheet,
-          location: Stage.missedDuckStatusBoxLocation()
+          location: Stage.missedDuckStatusBoxLocation(),
+          rowMax: 33,
+          max: 33
         });
       }
 
@@ -63,7 +66,9 @@ class Game {
         this.stage.hud.createTextureBasedCounter('ducksShot', {
           texture: 'hud/score-dead/0.png',
           spritesheet: this.spritesheet,
-          location: Stage.deadDuckStatusBoxLocation()
+          location: Stage.deadDuckStatusBoxLocation(),
+          rowMax:33,
+          max: 33
         });
       }
 
@@ -94,7 +99,9 @@ class Game {
         this.stage.hud.createTextureBasedCounter('bullets', {
           texture: 'hud/bullet/0.png',
           spritesheet: this.spritesheet,
-          location: Stage.bulletStatusBoxLocation()
+          location: Stage.bulletStatusBoxLocation(),
+          max: 80,
+          rowMax: 20
         });
       }
 
@@ -251,7 +258,12 @@ class Game {
   }
 
   startLevel() {
-    this.level = this.levels[this.levelIndex];
+    if (levelGenerator.urlContainsLevelData()) {
+      this.level = levelGenerator.parseLevelQueryString();
+      this.levelIndex = this.levels.length - 1;
+    } else {
+      this.level = this.levels[this.levelIndex];
+    }
     this.ducksShot = 0;
     this.ducksMissed = 0;
     this.wave = 0;
@@ -355,6 +367,7 @@ class Game {
   getScoreMessage() {
     let scoreMessage;
 
+    // todo: convert to percentages so it'll work with level generator or something similar
     if (this.score === 9400) {
       scoreMessage = 'Flawless victory.';
     }
@@ -396,7 +409,7 @@ class Game {
     if (!this.stage.hud.replayButton && !this.outOfAmmo()) {
       sound.play('gunSound');
       this.bullets -= 1;
-      this.updateScore(this.stage.shotsFired(clickPoint));
+      this.updateScore(this.stage.shotsFired(clickPoint, this.level.radius));
     }
 
     if (this.stage.hud.replayButton && this.stage.clickedReplay(clickPoint)) {

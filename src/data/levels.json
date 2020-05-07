@@ -8,6 +8,7 @@
       "pointsPerDuck": 100,
       "speed": 5,
       "bullets": 3,
+      "radius": 60,
       "time": 13
     },
     {
@@ -18,6 +19,7 @@
       "pointsPerDuck": 100,
       "speed": 6,
       "bullets": 4,
+      "radius": 60,
       "time": 10
     },
     {
@@ -28,6 +30,7 @@
       "pointsPerDuck": 100,
       "speed": 7,
       "bullets": 4,
+      "radius": 60,
       "time": 10
     },
     {
@@ -38,6 +41,7 @@
       "pointsPerDuck": 100,
       "speed": 7,
       "bullets": 11,
+      "radius": 60,
       "time": 18
     },
     {
@@ -48,6 +52,7 @@
       "pointsPerDuck": 100,
       "speed": 8,
       "bullets": 3,
+      "radius": 60,
       "time": 13
     },
     {
@@ -58,6 +63,7 @@
       "pointsPerDuck": 100,
       "speed": 8,
       "bullets": 15,
+      "radius": 60,
       "time": 25
     }
   ]
