@@ -1,5 +1,5 @@
 import {loader, autoDetectRenderer} from 'pixi.js';
-import {noop as _noop} from 'lodash/util';
+import {remove as _remove} from 'lodash/array';
 import levels from '../data/levels.json';
 import Stage from './Stage';
 import sound from './Sound';
@@ -24,6 +24,8 @@ class Game {
     });
     this.levelIndex = 0;
     this.maxScore = 0;
+    this.paused = false;
+    this.activeSounds = [];
 
     this.waveEnding = false;
     this.quackingSoundId = null;
@@ -269,7 +271,49 @@ class Game {
 
   bindEvents() {
     window.addEventListener('resize', this.scaleToWindow.bind(this));
+
     this.stage.mousedown = this.stage.touchstart = this.handleClick.bind(this);
+
+    document.addEventListener('keypress', (event) => {
+      event.stopImmediatePropagation();
+
+      if (event.key === "p") {
+        this.pause();
+      }
+    });
+
+    sound.on('play', (soundId) => {
+      // there are a handful of reasons why the same soundId might appear multiple times in the active sounds array
+      // some legitimate, some a side effect of not checking here if the item is already there. Ultimately though,
+      // it doesn't matter if we have multiple references to the same sound here and it's faster to allow those
+      // duplicates and make sure to clean then up at removal time than taking the hit at checking in both spots.
+      this.activeSounds.push(soundId);
+    });
+    sound.on('stop', this.removeActiveSound.bind(this));
+    sound.on('end', this.removeActiveSound.bind(this));
+  }
+
+  pause() {
+    this.paused = !this.paused;
+    if(this.paused) {
+      this.pauseStartTime = Date.now();
+      this.stage.pause();
+      this.activeSounds.forEach((soundId) => {
+        sound.pause(soundId);
+      })
+    } else{
+      this.timePaused += (Date.now() - this.pauseStartTime)/1000;
+      this.stage.resume();
+      this.activeSounds.forEach(soundId => {
+        sound.play(soundId);
+      })
+    }
+  }
+
+  removeActiveSound(soundId) {
+    _remove(this.activeSounds, function(item) {
+      return item === soundId
+    });
   }
 
   scaleToWindow() {
@@ -345,7 +389,7 @@ class Game {
   }
 
   waveElapsedTime() {
-    return (Date.now() - this.waveStartTime) / 1000;
+    return ((Date.now() - this.waveStartTime) / 1000) - this.timePaused;
   }
 
   outOfAmmo() {
@@ -433,7 +477,7 @@ class Game {
       window.open('/creator.html', '_blank');
     }
 
-    if (!this.stage.hud.replayButton && !this.outOfAmmo() && !this.shouldWaveEnd()) {
+    if (!this.stage.hud.replayButton && !this.outOfAmmo() && !this.shouldWaveEnd() && !this.paused) {
       sound.play('gunSound');
       this.bullets -= 1;
       this.updateScore(this.stage.shotsFired(clickPoint, this.level.radius));
@@ -451,10 +495,12 @@ class Game {
   }
 
   animate() {
-    this.renderer.render(this.stage);
+    if (!this.paused) {
+      this.renderer.render(this.stage);
 
-    if (this.shouldWaveEnd()) {
-      this.endWave();
+      if (this.shouldWaveEnd()) {
+        this.endWave();
+      }
     }
 
     requestAnimationFrame(this.animate.bind(this));

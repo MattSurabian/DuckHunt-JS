@@ -97,6 +97,21 @@ class Stage extends Container {
   static missedDuckStatusBoxLocation() {
     return HUD_LOCATIONS.MISSED_DUCK_STATUS;
   }
+
+  pause() {
+    this.dog.timeline.pause();
+    this.ducks.forEach((duck) => {
+      duck.timeline.pause();
+    })
+  }
+
+  resume() {
+    this.dog.timeline.play();
+    this.ducks.forEach((duck) => {
+      duck.timeline.play();
+    })
+  }
+
   /**
    * scaleToWindow
    * Helper method that scales the stage container to the window size
