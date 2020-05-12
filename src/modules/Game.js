@@ -3,7 +3,7 @@ import {noop as _noop} from 'lodash/util';
 import levels from '../data/levels.json';
 import Stage from './Stage';
 import sound from './Sound';
-import levelGenerator from '../libs/levelGenerator.js';
+import levelCreator from '../libs/levelCreator.js';
 
 const BLUE_SKY_COLOR = 0x64b0ff;
 const PINK_SKY_COLOR = 0xfbb4d4;
@@ -23,6 +23,7 @@ class Game {
       backgroundColor: BLUE_SKY_COLOR
     });
     this.levelIndex = 0;
+    this.maxScore = 0;
 
     this.waveEnding = false;
     this.quackingSoundId = null;
@@ -175,7 +176,7 @@ class Game {
         this.stage.hud.createTextBox('waveStatus', {
           style: {
             fontFamily: 'Arial',
-            fontSize: '18px',
+            fontSize: '12px',
             align: 'left',
             fill: 'white'
           },
@@ -242,14 +243,33 @@ class Game {
     });
 
     this.scaleToWindow();
+    this.addLinkToLevelCreator();
     this.bindEvents();
     this.startLevel();
     this.animate();
 
   }
 
+  addLinkToLevelCreator() {
+    this.stage.hud.createTextBox('levelCreatorLink', {
+      style: {
+        fontFamily: 'Arial',
+        fontSize: '12px',
+        align: 'left',
+        fill: 'white'
+      },
+      location: Stage.levelCreatorLinkBoxLocation(),
+      anchor: {
+        x: 1,
+        y: 1
+      }
+    });
+    this.stage.hud.levelCreatorLink = "Level Creator";
+  }
+
   bindEvents() {
     window.addEventListener('resize', this.scaleToWindow.bind(this));
+    this.stage.mousedown = this.stage.touchstart = this.handleClick.bind(this);
   }
 
   scaleToWindow() {
@@ -258,12 +278,14 @@ class Game {
   }
 
   startLevel() {
-    if (levelGenerator.urlContainsLevelData()) {
-      this.level = levelGenerator.parseLevelQueryString();
+    if (levelCreator.urlContainsLevelData()) {
+      this.level = levelCreator.parseLevelQueryString();
       this.levelIndex = this.levels.length - 1;
     } else {
       this.level = this.levels[this.levelIndex];
     }
+
+    this.maxScore += this.level.waves * this.level.ducks * this.level.pointsPerDuck;
     this.ducksShot = 0;
     this.ducksMissed = 0;
     this.wave = 0;
@@ -271,7 +293,6 @@ class Game {
     this.gameStatus = this.level.title;
     this.stage.preLevelAnimation().then(() => {
       this.gameStatus = '';
-      this.bindInteractions();
       this.startWave();
     });
   }
@@ -285,7 +306,6 @@ class Game {
     this.waveEnding = false;
 
     this.stage.addDucks(this.level.ducks, this.level.speed);
-    this.bindInteractions();
   }
 
   endWave() {
@@ -367,24 +387,29 @@ class Game {
   getScoreMessage() {
     let scoreMessage;
 
-    // todo: convert to percentages so it'll work with level generator or something similar
-    if (this.score === 9400) {
+    let percentage = (this.score / this.maxScore) * 100;
+
+    if (percentage === 100) {
       scoreMessage = 'Flawless victory.';
     }
 
-    if (this.score < 9400) {
+    if (percentage < 100) {
       scoreMessage = 'Close to perfection.';
     }
 
-    if (this.score <= 9000) {
+    if (percentage <= 95) {
       scoreMessage = 'Truly impressive score.';
     }
 
-    if (this.score <= 8000) {
+    if (percentage <= 85) {
       scoreMessage = 'Solid score.';
     }
 
-    if (this.score <= 6000) {
+    if (percentage <= 75) {
+      scoreMessage = 'Participation award.';
+    }
+
+    if (percentage <= 63) {
       scoreMessage = 'Yikes.';
     }
 
@@ -396,8 +421,6 @@ class Game {
       location: Stage.replayButtonLocation()
     });
     this.stage.hud.replayButton = replayText + ' Play Again?';
-    this.bindInteractions();
-
   }
 
   handleClick(event) {
@@ -406,14 +429,18 @@ class Game {
       y: event.data.global.y
     };
 
-    if (!this.stage.hud.replayButton && !this.outOfAmmo()) {
+    if (this.stage.clickedLevelCreatorLink(clickPoint)) {
+      window.open('/creator.html', '_blank');
+    }
+
+    if (!this.stage.hud.replayButton && !this.outOfAmmo() && !this.shouldWaveEnd()) {
       sound.play('gunSound');
       this.bullets -= 1;
       this.updateScore(this.stage.shotsFired(clickPoint, this.level.radius));
     }
 
     if (this.stage.hud.replayButton && this.stage.clickedReplay(clickPoint)) {
-      window.location.reload();
+      window.location = window.location.pathname;
     }
   }
 
@@ -423,19 +450,10 @@ class Game {
     this.score += ducksShot * this.level.pointsPerDuck;
   }
 
-  bindInteractions() {
-    this.stage.mousedown = this.stage.touchstart = this.handleClick.bind(this);
-  }
-
-  unbindInteractions() {
-    this.stage.mousedown = this.stage.touchstart = _noop;
-  }
-
   animate() {
     this.renderer.render(this.stage);
 
     if (this.shouldWaveEnd()) {
-      this.unbindInteractions();
       this.endWave();
     }
 

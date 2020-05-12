@@ -21,7 +21,8 @@ const DOG_POINTS = {
 };
 const HUD_LOCATIONS = {
   SCORE: new Point(MAX_X - 10, 10),
-  WAVE_STATUS: new Point(MAX_X - 10, MAX_Y - 20),
+  WAVE_STATUS: new Point(MAX_X - 10, MAX_Y - 30),
+  LEVEL_CREATOR_LINK: new Point(MAX_X - 9, MAX_Y - 12),
   GAME_STATUS: new Point(MAX_X / 2, MAX_Y * 0.45),
   REPLAY_BUTTON: new Point(MAX_X / 2, MAX_Y * 0.56),
   BULLET_STATUS: new Point(10, 10),
@@ -75,6 +76,10 @@ class Stage extends Container {
 
   static gameStatusBoxLocation() {
     return HUD_LOCATIONS.GAME_STATUS;
+  }
+
+  static levelCreatorLinkBoxLocation() {
+    return HUD_LOCATIONS.LEVEL_CREATOR_LINK;
   }
 
   static replayButtonLocation() {
@@ -209,7 +214,16 @@ class Stage extends Container {
   }
 
   clickedReplay(clickPoint) {
+    // this link is in the middle of the page, general radius search is sufficient here
     return Utils.pointDistance(this.getScaledClickLocation(clickPoint), HUD_LOCATIONS.REPLAY_BUTTON) < 200;
+  }
+
+  clickedLevelCreatorLink(clickPoint) {
+    let scaledClickPoint = this.getScaledClickLocation(clickPoint);
+
+    // with this link we have a very narrow hit box, radius search is not appropriate
+    return Math.abs(HUD_LOCATIONS.LEVEL_CREATOR_LINK.x - scaledClickPoint.x) <= 90 &&
+      Math.abs(HUD_LOCATIONS.LEVEL_CREATOR_LINK.y - scaledClickPoint.y) <= 15;
   }
 
   getScaledClickLocation(clickPoint) {
