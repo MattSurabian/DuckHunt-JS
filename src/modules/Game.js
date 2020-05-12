@@ -4,6 +4,7 @@ import levels from '../data/levels.json';
 import Stage from './Stage';
 import sound from './Sound';
 import levelCreator from '../libs/levelCreator.js';
+import utils from '../libs/utils';
 
 const BLUE_SKY_COLOR = 0x64b0ff;
 const PINK_SKY_COLOR = 0xfbb4d4;
@@ -26,6 +27,7 @@ class Game {
     this.maxScore = 0;
     this.muted = false;
     this.paused = false;
+    this.isFullscreen = false;
     this.activeSounds = [];
 
     this.waveEnding = false;
@@ -249,12 +251,29 @@ class Game {
     this.addLinkToLevelCreator();
     this.addPauseLink();
     this.addMuteLink();
+    this.addFullscreenLink();
     this.bindEvents();
     this.startLevel();
     this.animate();
 
   }
 
+  addFullscreenLink() {
+    this.stage.hud.createTextBox('fullscreenLink', {
+      style: {
+        fontFamily: 'Arial',
+        fontSize: '12px',
+        align: 'left',
+        fill: 'white'
+      },
+      location: Stage.fullscreenLinkBoxLocation(),
+      anchor: {
+        x: 1,
+        y: 1
+      }
+    });
+    this.stage.hud.fullscreenLink = 'fullscreen (f)';
+  }
   addMuteLink() {
     this.stage.hud.createTextBox('muteLink', {
       style: {
@@ -325,6 +344,10 @@ class Game {
       if(event.key === 'c') {
         this.openLevelCreator();
       }
+
+      if(event.key === 'f') {
+        this.fullscreen();
+      }
     });
 
     sound.on('play', (soundId) => {
@@ -334,6 +357,16 @@ class Game {
     });
     sound.on('stop', this.removeActiveSound.bind(this));
     sound.on('end', this.removeActiveSound.bind(this));
+  }
+
+  fullscreen() {
+    this.isFullscreen = !this.isFullscreen;
+    utils.toggleFullscreen();
+    if (this.isFullscreen) {
+      this.stage.hud.fullscreenLink = 'unfullscreen (f)';
+    } else {
+      this.stage.hud.fullscreenLink = 'fullscreen (f)';
+    }
   }
 
   pause() {
@@ -545,6 +578,11 @@ class Game {
       return;
     }
 
+    if(this.stage.clickedFullscreenLink(clickPoint)) {
+      this.fullscreen();
+      return;
+    }
+    
     if (this.stage.clickedLevelCreatorLink(clickPoint)) {
       this.openLevelCreator();
       return;
