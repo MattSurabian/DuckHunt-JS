@@ -24,6 +24,7 @@ class Game {
     });
     this.levelIndex = 0;
     this.maxScore = 0;
+    this.muted = false;
     this.paused = false;
     this.activeSounds = [];
 
@@ -70,8 +71,8 @@ class Game {
           texture: 'hud/score-dead/0.png',
           spritesheet: this.spritesheet,
           location: Stage.deadDuckStatusBoxLocation(),
-          rowMax:33,
-          max: 33
+          rowMax:32,
+          max: 32
         });
       }
 
@@ -178,8 +179,8 @@ class Game {
         this.stage.hud.createTextBox('waveStatus', {
           style: {
             fontFamily: 'Arial',
-            fontSize: '12px',
-            align: 'left',
+            fontSize: '13px',
+            align: 'center',
             fill: 'white'
           },
           location: Stage.waveStatusBoxLocation(),
@@ -191,7 +192,7 @@ class Game {
       }
 
       if (!isNaN(val) && val > 0) {
-        this.stage.hud.waveStatus = 'Wave ' + val + ' of ' + this.level.waves;
+        this.stage.hud.waveStatus = 'wave\n' + val + ' of ' + this.level.waves;
       } else {
         this.stage.hud.waveStatus = '';
       }
@@ -246,10 +247,46 @@ class Game {
 
     this.scaleToWindow();
     this.addLinkToLevelCreator();
+    this.addPauseLink();
+    this.addMuteLink();
     this.bindEvents();
     this.startLevel();
     this.animate();
 
+  }
+
+  addMuteLink() {
+    this.stage.hud.createTextBox('muteLink', {
+      style: {
+        fontFamily: 'Arial',
+        fontSize: '12px',
+        align: 'left',
+        fill: 'white'
+      },
+      location: Stage.muteLinkBoxLocation(),
+      anchor: {
+        x: 1,
+        y: 1
+      }
+    });
+    this.stage.hud.muteLink = 'mute (m)';
+  }
+
+  addPauseLink() {
+    this.stage.hud.createTextBox('pauseLink', {
+      style: {
+        fontFamily: 'Arial',
+        fontSize: '12px',
+        align: 'left',
+        fill: 'white'
+      },
+      location: Stage.pauseLinkBoxLocation(),
+      anchor: {
+        x: 1,
+        y: 1
+      }
+    });
+    this.stage.hud.pauseLink = 'pause (p)';
   }
 
   addLinkToLevelCreator() {
@@ -266,7 +303,7 @@ class Game {
         y: 1
       }
     });
-    this.stage.hud.levelCreatorLink = "Level Creator";
+    this.stage.hud.levelCreatorLink = "level creator (c)";
   }
 
   bindEvents() {
@@ -277,43 +314,60 @@ class Game {
     document.addEventListener('keypress', (event) => {
       event.stopImmediatePropagation();
 
-      if (event.key === "p") {
+      if (event.key === 'p') {
         this.pause();
+      }
+
+      if(event.key === 'm') {
+        this.mute();
+      }
+
+      if(event.key === 'c') {
+        this.openLevelCreator();
       }
     });
 
     sound.on('play', (soundId) => {
-      // there are a handful of reasons why the same soundId might appear multiple times in the active sounds array
-      // some legitimate, some a side effect of not checking here if the item is already there. Ultimately though,
-      // it doesn't matter if we have multiple references to the same sound here and it's faster to allow those
-      // duplicates and make sure to clean then up at removal time than taking the hit at checking in both spots.
-      this.activeSounds.push(soundId);
+      if (this.activeSounds.indexOf(soundId) === -1) {
+        this.activeSounds.push(soundId);
+      }
     });
     sound.on('stop', this.removeActiveSound.bind(this));
     sound.on('end', this.removeActiveSound.bind(this));
   }
 
   pause() {
-    this.paused = !this.paused;
-    if(this.paused) {
-      this.pauseStartTime = Date.now();
-      this.stage.pause();
-      this.activeSounds.forEach((soundId) => {
-        sound.pause(soundId);
-      })
-    } else{
-      this.timePaused += (Date.now() - this.pauseStartTime)/1000;
-      this.stage.resume();
-      this.activeSounds.forEach(soundId => {
-        sound.play(soundId);
-      })
-    }
+    this.stage.hud.pauseLink = this.paused ? 'pause (p)' : 'unpause (p)';
+    // SetTimeout, woof. Thing is here we need to leave enough animation frames for the HUD status to be updated
+    // before pausing all rendering, otherwise the text update we need above won't be shown to the user.
+    setTimeout(() => {
+      this.paused = !this.paused;
+      if (this.paused) {
+        this.pauseStartTime = Date.now();
+        this.stage.pause();
+        this.activeSounds.forEach((soundId) => {
+          sound.pause(soundId);
+        })
+      } else {
+        this.timePaused += (Date.now() - this.pauseStartTime) / 1000;
+        this.stage.resume();
+        this.activeSounds.forEach(soundId => {
+          sound.play(soundId);
+        })
+      }
+    }, 40);
   }
 
   removeActiveSound(soundId) {
     _remove(this.activeSounds, function(item) {
       return item === soundId
     });
+  }
+
+  mute() {
+    this.stage.hud.muteLink = this.muted ? 'mute (m)' : 'unmute (m)';
+    this.muted = !this.muted;
+    sound.mute(this.muted);
   }
 
   scaleToWindow() {
@@ -467,20 +521,40 @@ class Game {
     this.stage.hud.replayButton = replayText + ' Play Again?';
   }
 
+  openLevelCreator() {
+    // If they didn't pause the game, pause it for them
+    if (!this.paused) {
+      this.pause();
+    }
+    window.open('/creator.html', '_blank');
+  }
+
   handleClick(event) {
     const clickPoint = {
       x: event.data.global.x,
       y: event.data.global.y
     };
 
+    if (this.stage.clickedPauseLink(clickPoint)) {
+      this.pause();
+      return;
+    }
+
+    if (this.stage.clickedMuteLink(clickPoint)) {
+      this.mute();
+      return;
+    }
+
     if (this.stage.clickedLevelCreatorLink(clickPoint)) {
-      window.open('/creator.html', '_blank');
+      this.openLevelCreator();
+      return;
     }
 
     if (!this.stage.hud.replayButton && !this.outOfAmmo() && !this.shouldWaveEnd() && !this.paused) {
       sound.play('gunSound');
       this.bullets -= 1;
       this.updateScore(this.stage.shotsFired(clickPoint, this.level.radius));
+      return;
     }
 
     if (this.stage.hud.replayButton && this.stage.clickedReplay(clickPoint)) {

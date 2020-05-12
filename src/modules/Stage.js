@@ -2,6 +2,7 @@ import {Point, Graphics, Container, loader, extras} from 'pixi.js';
 import BPromise from 'bluebird';
 import {some as _some} from 'lodash/collection';
 import {delay as _delay} from 'lodash/function';
+import {inRange as _inRange} from 'lodash/number';
 import Utils from '../libs/utils';
 import Duck from './Duck';
 import Dog from './Dog';
@@ -21,8 +22,10 @@ const DOG_POINTS = {
 };
 const HUD_LOCATIONS = {
   SCORE: new Point(MAX_X - 10, 10),
-  WAVE_STATUS: new Point(MAX_X - 10, MAX_Y - 30),
-  LEVEL_CREATOR_LINK: new Point(MAX_X - 9, MAX_Y - 12),
+  WAVE_STATUS: new Point(MAX_X - 106, MAX_Y - 15),
+  LEVEL_CREATOR_LINK: new Point(MAX_X - 11, MAX_Y - 10),
+  PAUSE_LINK: new Point(MAX_X - 11, MAX_Y - 38),
+  MUTE_LINK: new Point(MAX_X - 11, MAX_Y - 24),
   GAME_STATUS: new Point(MAX_X / 2, MAX_Y * 0.45),
   REPLAY_BUTTON: new Point(MAX_X / 2, MAX_Y * 0.56),
   BULLET_STATUS: new Point(10, 10),
@@ -76,6 +79,14 @@ class Stage extends Container {
 
   static gameStatusBoxLocation() {
     return HUD_LOCATIONS.GAME_STATUS;
+  }
+
+  static pauseLinkBoxLocation() {
+    return HUD_LOCATIONS.PAUSE_LINK;
+  }
+
+  static muteLinkBoxLocation() {
+    return HUD_LOCATIONS.MUTE_LINK;
   }
 
   static levelCreatorLinkBoxLocation() {
@@ -237,8 +248,20 @@ class Stage extends Container {
     let scaledClickPoint = this.getScaledClickLocation(clickPoint);
 
     // with this link we have a very narrow hit box, radius search is not appropriate
-    return Math.abs(HUD_LOCATIONS.LEVEL_CREATOR_LINK.x - scaledClickPoint.x) <= 90 &&
-      Math.abs(HUD_LOCATIONS.LEVEL_CREATOR_LINK.y - scaledClickPoint.y) <= 15;
+    return _inRange(scaledClickPoint.x, HUD_LOCATIONS.LEVEL_CREATOR_LINK.x-90, HUD_LOCATIONS.LEVEL_CREATOR_LINK.x) &&
+      _inRange(scaledClickPoint.y, HUD_LOCATIONS.LEVEL_CREATOR_LINK.y-15, HUD_LOCATIONS.LEVEL_CREATOR_LINK.y)
+  }
+
+  clickedPauseLink(clickPoint) {
+    let scaledClickPoint = this.getScaledClickLocation(clickPoint);
+    return _inRange(scaledClickPoint.x, HUD_LOCATIONS.PAUSE_LINK.x-70, HUD_LOCATIONS.PAUSE_LINK.x) &&
+      _inRange(scaledClickPoint.y, HUD_LOCATIONS.PAUSE_LINK.y-15, HUD_LOCATIONS.PAUSE_LINK.y)
+  }
+
+  clickedMuteLink(clickPoint) {
+    let scaledClickPoint = this.getScaledClickLocation(clickPoint);
+    return _inRange(scaledClickPoint.x, HUD_LOCATIONS.MUTE_LINK.x-70, HUD_LOCATIONS.MUTE_LINK.x) &&
+      _inRange(scaledClickPoint.y, HUD_LOCATIONS.MUTE_LINK.y-15, HUD_LOCATIONS.MUTE_LINK.y)
   }
 
   getScaledClickLocation(clickPoint) {
