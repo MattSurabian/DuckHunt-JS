@@ -13,7 +13,7 @@ class Character extends extras.AnimatedSprite {
   constructor(spriteId, spritesheet, states) {
     const gameTextures = loader.resources[spritesheet].textures;
     for (const textureKey in gameTextures) {
-      if (!gameTextures.hasOwnProperty(textureKey) || textureKey.indexOf(spriteId) === -1) {
+      if (!Object.prototype.hasOwnProperty.call(gameTextures,textureKey) || textureKey.indexOf(spriteId) === -1) {
         continue;
       }
 
@@ -28,7 +28,7 @@ class Character extends extras.AnimatedSprite {
         continue;
       }
 
-      if (stateObj.hasOwnProperty('textures')) {
+      if (Object.prototype.hasOwnProperty.call(stateObj,'textures')) {
         stateObj.textures.push(gameTextures[textureKey]);
       } else {
         Object.defineProperty(stateObj, 'textures', {
@@ -106,7 +106,7 @@ class Character extends extras.AnimatedSprite {
     }
     this.textures = stateObj.textures;
     this.animationSpeed = stateObj.animationSpeed;
-    this.loop = stateObj.hasOwnProperty('loop') ? stateObj.loop : true;
+    this.loop = Object.prototype.hasOwnProperty.call(stateObj,'loop') ? stateObj.loop : true;
     this.play();
   }
 

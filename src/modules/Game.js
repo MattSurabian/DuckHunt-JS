@@ -14,7 +14,7 @@ const BOTTOM_LINK_STYLE = {
   fontSize: '15px',
   align: 'left',
   fill: 'white'
-}
+};
 
 class Game {
   /**
@@ -50,7 +50,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!this.stage.hud.hasOwnProperty('ducksMissed')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'ducksMissed')) {
         this.stage.hud.createTextureBasedCounter('ducksMissed', {
           texture: 'hud/score-live/0.png',
           spritesheet: this.spritesheet,
@@ -73,7 +73,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!this.stage.hud.hasOwnProperty('ducksShot')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'ducksShot')) {
         this.stage.hud.createTextureBasedCounter('ducksShot', {
           texture: 'hud/score-dead/0.png',
           spritesheet: this.spritesheet,
@@ -106,7 +106,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!this.stage.hud.hasOwnProperty('bullets')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'bullets')) {
         this.stage.hud.createTextureBasedCounter('bullets', {
           texture: 'hud/bullet/0.png',
           spritesheet: this.spritesheet,
@@ -141,7 +141,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!this.stage.hud.hasOwnProperty('score')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'score')) {
         this.stage.hud.createTextBox('score', {
           style: {
             fontFamily: 'Arial',
@@ -182,7 +182,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!this.stage.hud.hasOwnProperty('waveStatus')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'waveStatus')) {
         this.stage.hud.createTextBox('waveStatus', {
           style: {
             fontFamily: 'Arial',
@@ -223,7 +223,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!this.stage.hud.hasOwnProperty('gameStatus')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'gameStatus')) {
         this.stage.hud.createTextBox('gameStatus', {
           style: {
             fontFamily: 'Arial',
@@ -307,7 +307,7 @@ class Game {
         y: 1
       }
     });
-    this.stage.hud.levelCreatorLink = "level creator (c)";
+    this.stage.hud.levelCreatorLink = 'level creator (c)';
   }
 
   bindEvents() {
@@ -322,20 +322,20 @@ class Game {
         this.pause();
       }
 
-      if(event.key === 'm') {
+      if (event.key === 'm') {
         this.mute();
       }
 
-      if(event.key === 'c') {
+      if (event.key === 'c') {
         this.openLevelCreator();
       }
 
-      if(event.key === 'f') {
+      if (event.key === 'f') {
         this.fullscreen();
       }
     });
 
-    document.addEventListener('fullscreenchange', (event) => {
+    document.addEventListener('fullscreenchange', () => {
       if (document.fullscreenElement) {
         this.stage.hud.fullscreenLink = 'unfullscreen (f)';
       } else {
@@ -368,20 +368,20 @@ class Game {
         this.stage.pause();
         this.activeSounds.forEach((soundId) => {
           sound.pause(soundId);
-        })
+        });
       } else {
         this.timePaused += (Date.now() - this.pauseStartTime) / 1000;
         this.stage.resume();
-        this.activeSounds.forEach(soundId => {
+        this.activeSounds.forEach((soundId) => {
           sound.play(soundId);
-        })
+        });
       }
     }, 40);
   }
 
   removeActiveSound(soundId) {
     _remove(this.activeSounds, function(item) {
-      return item === soundId
+      return item === soundId;
     });
   }
 
@@ -506,7 +506,7 @@ class Game {
   getScoreMessage() {
     let scoreMessage;
 
-    let percentage = (this.score / this.maxScore) * 100;
+    const percentage = (this.score / this.maxScore) * 100;
 
     if (percentage === 100) {
       scoreMessage = 'Flawless victory.';
@@ -566,7 +566,7 @@ class Game {
       return;
     }
 
-    if(this.stage.clickedFullscreenLink(clickPoint)) {
+    if (this.stage.clickedFullscreenLink(clickPoint)) {
       this.fullscreen();
       return;
     }

@@ -118,14 +118,14 @@ class Stage extends Container {
     this.dog.timeline.pause();
     this.ducks.forEach((duck) => {
       duck.timeline.pause();
-    })
+    });
   }
 
   resume() {
     this.dog.timeline.play();
     this.ducks.forEach((duck) => {
       duck.timeline.play();
-    })
+    });
   }
 
   /**
@@ -250,29 +250,29 @@ class Stage extends Container {
   }
 
   clickedLevelCreatorLink(clickPoint) {
-    let scaledClickPoint = this.getScaledClickLocation(clickPoint);
+    const scaledClickPoint = this.getScaledClickLocation(clickPoint);
 
     // with this link we have a very narrow hit box, radius search is not appropriate
     return _inRange(scaledClickPoint.x, HUD_LOCATIONS.LEVEL_CREATOR_LINK.x-110, HUD_LOCATIONS.LEVEL_CREATOR_LINK.x) &&
-      _inRange(scaledClickPoint.y, HUD_LOCATIONS.LEVEL_CREATOR_LINK.y-30, HUD_LOCATIONS.LEVEL_CREATOR_LINK.y+10)
+      _inRange(scaledClickPoint.y, HUD_LOCATIONS.LEVEL_CREATOR_LINK.y-30, HUD_LOCATIONS.LEVEL_CREATOR_LINK.y+10);
   }
 
   clickedPauseLink(clickPoint) {
-    let scaledClickPoint = this.getScaledClickLocation(clickPoint);
+    const scaledClickPoint = this.getScaledClickLocation(clickPoint);
     return _inRange(scaledClickPoint.x, HUD_LOCATIONS.PAUSE_LINK.x-110, HUD_LOCATIONS.PAUSE_LINK.x) &&
-      _inRange(scaledClickPoint.y, HUD_LOCATIONS.PAUSE_LINK.y-30, HUD_LOCATIONS.PAUSE_LINK.y+10)
+      _inRange(scaledClickPoint.y, HUD_LOCATIONS.PAUSE_LINK.y-30, HUD_LOCATIONS.PAUSE_LINK.y+10);
   }
 
   clickedFullscreenLink(clickPoint) {
-    let scaledClickPoint = this.getScaledClickLocation(clickPoint);
+    const scaledClickPoint = this.getScaledClickLocation(clickPoint);
     return _inRange(scaledClickPoint.x, HUD_LOCATIONS.FULL_SCREEN_LINK.x-110, HUD_LOCATIONS.FULL_SCREEN_LINK.x) &&
-      _inRange(scaledClickPoint.y, HUD_LOCATIONS.FULL_SCREEN_LINK.y-30, HUD_LOCATIONS.FULL_SCREEN_LINK.y+10)
+      _inRange(scaledClickPoint.y, HUD_LOCATIONS.FULL_SCREEN_LINK.y-30, HUD_LOCATIONS.FULL_SCREEN_LINK.y+10);
   }
 
   clickedMuteLink(clickPoint) {
-    let scaledClickPoint = this.getScaledClickLocation(clickPoint);
+    const scaledClickPoint = this.getScaledClickLocation(clickPoint);
     return _inRange(scaledClickPoint.x, HUD_LOCATIONS.MUTE_LINK.x-110, HUD_LOCATIONS.MUTE_LINK.x) &&
-      _inRange(scaledClickPoint.y, HUD_LOCATIONS.MUTE_LINK.y-30, HUD_LOCATIONS.MUTE_LINK.y+10)
+      _inRange(scaledClickPoint.y, HUD_LOCATIONS.MUTE_LINK.y-30, HUD_LOCATIONS.MUTE_LINK.y+10);
   }
 
   getScaledClickLocation(clickPoint) {
