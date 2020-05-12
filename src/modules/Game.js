@@ -9,6 +9,12 @@ import utils from '../libs/utils';
 const BLUE_SKY_COLOR = 0x64b0ff;
 const PINK_SKY_COLOR = 0xfbb4d4;
 const SUCCESS_RATIO = 0.6;
+const BOTTOM_LINK_STYLE = {
+  fontFamily: 'Arial',
+  fontSize: '15px',
+  align: 'left',
+  fill: 'white'
+}
 
 class Game {
   /**
@@ -27,7 +33,6 @@ class Game {
     this.maxScore = 0;
     this.muted = false;
     this.paused = false;
-    this.isFullscreen = false;
     this.activeSounds = [];
 
     this.waveEnding = false;
@@ -50,8 +55,8 @@ class Game {
           texture: 'hud/score-live/0.png',
           spritesheet: this.spritesheet,
           location: Stage.missedDuckStatusBoxLocation(),
-          rowMax: 33,
-          max: 33
+          rowMax: 20,
+          max: 20
         });
       }
 
@@ -73,8 +78,8 @@ class Game {
           texture: 'hud/score-dead/0.png',
           spritesheet: this.spritesheet,
           location: Stage.deadDuckStatusBoxLocation(),
-          rowMax:32,
-          max: 32
+          rowMax:20,
+          max: 20
         });
       }
 
@@ -181,7 +186,7 @@ class Game {
         this.stage.hud.createTextBox('waveStatus', {
           style: {
             fontFamily: 'Arial',
-            fontSize: '13px',
+            fontSize: '14px',
             align: 'center',
             fill: 'white'
           },
@@ -194,7 +199,7 @@ class Game {
       }
 
       if (!isNaN(val) && val > 0) {
-        this.stage.hud.waveStatus = 'wave\n' + val + ' of ' + this.level.waves;
+        this.stage.hud.waveStatus = 'wave ' + val + ' of ' + this.level.waves;
       } else {
         this.stage.hud.waveStatus = '';
       }
@@ -260,12 +265,7 @@ class Game {
 
   addFullscreenLink() {
     this.stage.hud.createTextBox('fullscreenLink', {
-      style: {
-        fontFamily: 'Arial',
-        fontSize: '12px',
-        align: 'left',
-        fill: 'white'
-      },
+      style: BOTTOM_LINK_STYLE,
       location: Stage.fullscreenLinkBoxLocation(),
       anchor: {
         x: 1,
@@ -276,12 +276,7 @@ class Game {
   }
   addMuteLink() {
     this.stage.hud.createTextBox('muteLink', {
-      style: {
-        fontFamily: 'Arial',
-        fontSize: '12px',
-        align: 'left',
-        fill: 'white'
-      },
+      style: BOTTOM_LINK_STYLE,
       location: Stage.muteLinkBoxLocation(),
       anchor: {
         x: 1,
@@ -293,12 +288,7 @@ class Game {
 
   addPauseLink() {
     this.stage.hud.createTextBox('pauseLink', {
-      style: {
-        fontFamily: 'Arial',
-        fontSize: '12px',
-        align: 'left',
-        fill: 'white'
-      },
+      style: BOTTOM_LINK_STYLE,
       location: Stage.pauseLinkBoxLocation(),
       anchor: {
         x: 1,
@@ -310,12 +300,7 @@ class Game {
 
   addLinkToLevelCreator() {
     this.stage.hud.createTextBox('levelCreatorLink', {
-      style: {
-        fontFamily: 'Arial',
-        fontSize: '12px',
-        align: 'left',
-        fill: 'white'
-      },
+      style: BOTTOM_LINK_STYLE,
       location: Stage.levelCreatorLinkBoxLocation(),
       anchor: {
         x: 1,
@@ -350,6 +335,14 @@ class Game {
       }
     });
 
+    document.addEventListener('fullscreenchange', (event) => {
+      if (document.fullscreenElement) {
+        this.stage.hud.fullscreenLink = 'unfullscreen (f)';
+      } else {
+        this.stage.hud.fullscreenLink = 'fullscreen (f)';
+      }
+    });
+
     sound.on('play', (soundId) => {
       if (this.activeSounds.indexOf(soundId) === -1) {
         this.activeSounds.push(soundId);
@@ -362,11 +355,6 @@ class Game {
   fullscreen() {
     this.isFullscreen = !this.isFullscreen;
     utils.toggleFullscreen();
-    if (this.isFullscreen) {
-      this.stage.hud.fullscreenLink = 'unfullscreen (f)';
-    } else {
-      this.stage.hud.fullscreenLink = 'fullscreen (f)';
-    }
   }
 
   pause() {
@@ -582,7 +570,7 @@ class Game {
       this.fullscreen();
       return;
     }
-    
+
     if (this.stage.clickedLevelCreatorLink(clickPoint)) {
       this.openLevelCreator();
       return;
