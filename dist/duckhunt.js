@@ -19703,7 +19703,7 @@ var Character = function (_extras$AnimatedSprit) {
 
     var gameTextures = _pixi.loader.resources[spritesheet].textures;
     for (var textureKey in gameTextures) {
-      if (!gameTextures.hasOwnProperty(textureKey) || textureKey.indexOf(spriteId) === -1) {
+      if (!Object.prototype.hasOwnProperty.call(gameTextures, textureKey) || textureKey.indexOf(spriteId) === -1) {
         continue;
       }
 
@@ -19718,7 +19718,7 @@ var Character = function (_extras$AnimatedSprit) {
         continue;
       }
 
-      if (stateObj.hasOwnProperty('textures')) {
+      if (Object.prototype.hasOwnProperty.call(stateObj, 'textures')) {
         stateObj.textures.push(gameTextures[textureKey]);
       } else {
         Object.defineProperty(stateObj, 'textures', {
@@ -19810,7 +19810,7 @@ var Character = function (_extras$AnimatedSprit) {
       }
       this.textures = stateObj.textures;
       this.animationSpeed = stateObj.animationSpeed;
-      this.loop = stateObj.hasOwnProperty('loop') ? stateObj.loop : true;
+      this.loop = Object.prototype.hasOwnProperty.call(stateObj, 'loop') ? stateObj.loop : true;
       this.play();
     }
 
@@ -37241,6 +37241,7 @@ var Game = function () {
     });
     this.levelIndex = 0;
     this.maxScore = 0;
+    this.timePaused = 0;
     this.muted = false;
     this.paused = false;
     this.activeSounds = [];
@@ -37324,7 +37325,7 @@ var Game = function () {
           y: 1
         }
       });
-      this.stage.hud.levelCreatorLink = "level creator (c)";
+      this.stage.hud.levelCreatorLink = 'level creator (c)';
     }
   }, {
     key: 'bindEvents',
@@ -37355,7 +37356,7 @@ var Game = function () {
         }
       });
 
-      document.addEventListener('fullscreenchange', function (event) {
+      document.addEventListener('fullscreenchange', function () {
         if (document.fullscreenElement) {
           _this.stage.hud.fullscreenLink = 'unfullscreen (f)';
         } else {
@@ -37663,7 +37664,7 @@ var Game = function () {
 
       if (this.stage && this.stage.hud) {
 
-        if (!this.stage.hud.hasOwnProperty('ducksMissed')) {
+        if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'ducksMissed')) {
           this.stage.hud.createTextureBasedCounter('ducksMissed', {
             texture: 'hud/score-live/0.png',
             spritesheet: this.spritesheet,
@@ -37686,7 +37687,7 @@ var Game = function () {
 
       if (this.stage && this.stage.hud) {
 
-        if (!this.stage.hud.hasOwnProperty('ducksShot')) {
+        if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'ducksShot')) {
           this.stage.hud.createTextureBasedCounter('ducksShot', {
             texture: 'hud/score-dead/0.png',
             spritesheet: this.spritesheet,
@@ -37723,7 +37724,7 @@ var Game = function () {
 
       if (this.stage && this.stage.hud) {
 
-        if (!this.stage.hud.hasOwnProperty('bullets')) {
+        if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'bullets')) {
           this.stage.hud.createTextureBasedCounter('bullets', {
             texture: 'hud/bullet/0.png',
             spritesheet: this.spritesheet,
@@ -37761,7 +37762,7 @@ var Game = function () {
 
       if (this.stage && this.stage.hud) {
 
-        if (!this.stage.hud.hasOwnProperty('score')) {
+        if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'score')) {
           this.stage.hud.createTextBox('score', {
             style: {
               fontFamily: 'Arial',
@@ -37805,7 +37806,7 @@ var Game = function () {
 
       if (this.stage && this.stage.hud) {
 
-        if (!this.stage.hud.hasOwnProperty('waveStatus')) {
+        if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'waveStatus')) {
           this.stage.hud.createTextBox('waveStatus', {
             style: {
               fontFamily: 'Arial',
@@ -37850,7 +37851,7 @@ var Game = function () {
 
       if (this.stage && this.stage.hud) {
 
-        if (!this.stage.hud.hasOwnProperty('gameStatus')) {
+        if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'gameStatus')) {
           this.stage.hud.createTextBox('gameStatus', {
             style: {
               fontFamily: 'Arial',
