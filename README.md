@@ -31,3 +31,5 @@ Please report bugs as [issues](https://github.com/MattSurabian/DuckHunt-JS/issue
 
 ## Contributing
 Pull requests are welcome! Please ensure code style and quality compliance with `npm run lint` and include any built files.
+
+[![Run on Repl.it](https://repl.it/badge/github/MattSurabian/DuckHunt-JS)](https://repl.it/github/MattSurabian/DuckHunt-JS)
