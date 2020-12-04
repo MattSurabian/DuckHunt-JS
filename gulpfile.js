@@ -4,7 +4,7 @@ var glob = require('glob');
 var shell = require('gulp-shell');
 var fs = require('fs');
 
-gulp.task('audio', gulp.parallel(function() {
+gulp.task('audio', gulp.parallel(function(cb) {
   var files = glob.sync('./src/assets/sounds/*.mp3');
   var outputPath = './dist/audio';
   var opts = {
@@ -20,7 +20,7 @@ gulp.task('audio', gulp.parallel(function() {
       console.error(err);
     }
 
-    return fs.writeFile('./dist/audio' + '.json', JSON.stringify(obj, null, 2));
+    return fs.writeFile('./dist/audio' + '.json', JSON.stringify(obj, null, 2), cb);
   });
 }));
 
