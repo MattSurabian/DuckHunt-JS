@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var connect = require('gulp-connect');
 var audiosprite = require('./vendor/audiosprite');
 var glob = require('glob');
 var shell = require('gulp-shell');
