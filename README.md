@@ -23,8 +23,13 @@ The flow of this game is managed using Javascript. The main chunks of business l
  - `cd` into that directory and run `npm install`
  - Use `npm start` to start a local webserver which will make the site available at http://localhost:8080/. Cross origin errors prevent this project from being accessed in the browser with the `file://` protocol. This will also trigger automatic builds and reloads of the page when changes are detected in the `src` directory.
  - If you want to manually cut a build of the application code run `npm run build`
- - If you want to rebuild audio assets use `npm run audio`
- - If you want to rebuild image assets use `npm run images`
+ 
+## Working With Audio and Visual Assets
+This repo ships with committed dist files to make it easy for developers to get up and running. If you really want to get into some leet haxing and change the way
+this game looks and sounds then you'll need to work with audio and image sprites. The following tasks make that possible: 
+
+ - To rebuild audio assets use `npm run audio` (there is a hard dependency on [ffmpeg](https://ffmpeg.org/download.html) to run this task)
+ - To rebuild image assets use `npm run images` (there is a hard dependency on [texturepacker](https://www.codeandweb.com/texturepacker/download) to run this task)
 
 ## Bugs
 Please report bugs as [issues](https://github.com/MattSurabian/DuckHunt-JS/issues).
