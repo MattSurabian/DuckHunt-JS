@@ -33,7 +33,7 @@
     "exports-loader": "^0.6.3",
     "file-loader": "^0.10.0",
     "glob": "^7.1.6",
-    "gsap": "^1.20.6",
+    "gsap": "^3.6.0",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
     "gulp-shell": "^0.8.0",
