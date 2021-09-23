@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+    <title>DuckHuntJS Level Creator</title>
+    <meta name="description"
+          content="An open source, web based, responsive implementation of Duck Hunt in canvas or webgl depending on your client.">
+    <meta name="author" content="Matt Surabian">
+    <style>
+        body {
+            background-color: #64b0ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        p {
+            font-size: 2.25em;
+        }
+
+        input {
+            font-size: 2.25em;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        button[type=submit] {
+            font-size: 2.25em;
+            border-radius: 12px;
+            grid-column: span;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ffffff;
+        }
+
+        label {
+            font-size: 2.25em;
+            display: block;
+        }
+
+        small {
+            font-size: 1.2em;
+        }
+
+        form div {
+            margin: 10px 0;
+        }
+
+        .form-grid {
+            display: block;
+        }
+
+        ul {
+            overflow: visible;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 700px),(max-height: 500px) {
+            body {
+                font-size: 9px;
+            }
+        }
+
+        @media (min-width: 700px) and (min-height: 500px) {
+            body {
+                font-size: 12px;
+            }
+
+            .form-grid {
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<h1>DuckHuntJS Level Creator</h1>
+<p>
+  <strong>Submitting this form will generate a link to a custom DuckHuntJS level that you can share with friends!</strong><br>
+  Field limits are meant to avoid browser crashes from render overload and indicate sporting values. <br>
+</p>
+<form action="index.html">
+    <div class="form-grid">
+        <div><label for="title">level title:</label> <input type="text" id="title" name="title"></div>
+        <div><label for="waves">total waves*:</label> <input type="number" id="waves" name="waves" min="1" max="100"
+                                                       placeholder="1-100" value="3" required></div>
+        <div><label for="ducks">ducks per wave*:</label> <input type="number" id="ducks" name="ducks" min="1" max="5000"
+                                                       placeholder="1-5000" value="50" required></div>
+        <div><label for="points">points per duck*:</label> <input type="number" id="points" name="points" min="1" max="1000"
+                                                         placeholder="1-1000" value="100" required></div>
+        <div><label for="bullets">bullets per wave*:</label> <input type="number" id="bullets" name="bullets" min="1"
+                                                           max="10000" placeholder="1-10000" value="100" required>
+        </div>
+        <div><label for="radius">blast radius*:</label><input type="number" id="radius" name="radius" min="30"
+                                                              max="200" placeholder="30-200" value="60"></div>
+        <div><label for="speed">duck speed*:</label> <input type="number" id="speed" name="speed" min="1" max="10"
+                                                       placeholder="1-10" value="6" required></div>
+        <div><label for="time">time per wave:</label> <input type="number" id="time" name="time" min="10" max="120"
+                                                    placeholder="10-120" value="30"></div>
+    </div>
+    <br><br>
+    <button type="submit">Generate Level <br> GLHF!</button>
+</form>
+
+<br><br>
+<small>Field limit validation is not performed in game, so if you really want to see what happens when you <a
+        href="index.html?title=1%20Click%20Challenge&ducks=1000&radius=1000">shoot
+    1000 ducks all at once</a>, you can make that happen.</small>
+<br><br>
+<h2>Legendary Levels</h2>
+<ul>
+    <li><a href="https://duckhuntjs.com/index.html?title=10+for+10&waves=10&ducks=1&points=1&bullets=1&radius=30&speed=10&time=10">10 for 10</a></li>
+    <li><a href="index.html?title=Splits-ville&waves=5&ducks=2&points=100&bullets=1&radius=100&speed=6&time=30">Splits-ville</a></li>
+    <li><a href="index.html?title=Marathon&waves=26&ducks=2&points=100&bullets=2&radius=60&speed=6&time=5">Marathon</a></li>
+</ul>
+</body>
+</html>

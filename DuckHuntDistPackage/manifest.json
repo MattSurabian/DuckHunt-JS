@@ -1,0 +1,28 @@
+{
+    "background_color": "#fff",
+    "display": "standalone",
+    "homepage_url": "https://github.com/MattSurabian/DuckHunt-JS",
+    "providedBy": { "name": "MattSurabian", "url": "https://github.com/MattSurabian/DuckHunt-JS" },
+    "icons": [
+      {
+        "src": "./img/192x192_App_Icon.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "./img/512x512_App_Icon.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "orientation": "portrait",
+    "name": "DuckHunt",
+    "description": "This is an implementation of DuckHunt in Javascript and HTML5.",
+    "iconPath": "./img/256x256_App_Icon.png",
+    "short_name": "DuckHunt",
+    "start_url": ".",
+    "theme_color": "#ff007a",
+    "skylink": "AQDgyujLpv2i_nHer2pi3prtNNe-g1ghs6rm3D6baD9AyQ"
+  }
