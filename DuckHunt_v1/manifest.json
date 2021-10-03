@@ -1,8 +1,8 @@
 {
     "background_color": "#fff",
     "display": "standalone",
-    "homepage_url": "https://github.com/MattSurabian/DuckHunt-JS",
-    "providedBy": { "name": "MattSurabian", "url": "https://github.com/MattSurabian/DuckHunt-JS" },
+    "homepage_url": "https://github.com/skunk-ink/DuckHunt-JS",
+    "providedBy": { "name": "skunk-ink", "url": "https://github.com/skunk-ink/DuckHunt-JS" },
     "icons": [
       {
         "src": "./img/192x192_App_Icon.png",
