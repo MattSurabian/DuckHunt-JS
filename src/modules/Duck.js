@@ -24,32 +24,32 @@ class Duck extends Character {
     const states = [
       {
         name: 'left',
-        animationSpeed: 0.18
+        animationSpeed: 0.20
 
       },
       {
         name: 'right',
-        animationSpeed: 0.18
+        animationSpeed: 0.20
 
       },
       {
         name: 'top-left',
-        animationSpeed: 0.18
+        animationSpeed: 0.20
 
       },
       {
         name: 'top-right',
-        animationSpeed: 0.18
+        animationSpeed: 0.20
 
       },
       {
         name: 'dead',
-        animationSpeed: 0.18
+        animationSpeed: 0.20
 
       },
       {
         name: 'shot',
-        animationSpeed: 0.18
+        animationSpeed: 0.20
 
       }
     ];
