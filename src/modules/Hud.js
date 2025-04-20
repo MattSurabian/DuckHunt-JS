@@ -44,6 +44,7 @@ class Hud extends Container {
     const textBox = this[name + 'TextBox'];
     textBox.position.set(options.location.x, options.location.y);
     textBox.anchor.set(options.anchor.x, options.anchor.y);
+    textBox.rotation = Math.PI; // Keep HUD text upright
     this.addChild(textBox);
 
     Object.defineProperty(this, name, {

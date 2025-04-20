@@ -1,4 +1,4 @@
-import {loader, autoDetectRenderer} from 'pixi.js';
+import {loader, autoDetectRenderer, filters as PIXIFilters} from 'pixi.js';
 import {remove as _remove} from 'lodash/array';
 import levels from '../data/levels.json';
 import Stage from './Stage';
@@ -6,8 +6,8 @@ import sound from './Sound';
 import levelCreator from '../libs/levelCreator.js';
 import utils from '../libs/utils';
 
-const BLUE_SKY_COLOR = 0x64b0ff;
-const PINK_SKY_COLOR = 0xfbb4d4;
+const BLUE_SKY_COLOR = 0x5c94fc; // Original blue sky
+const PINK_SKY_COLOR = 0xffb7dd; // Original pink miss background
 const SUCCESS_RATIO = 0.6;
 const BOTTOM_LINK_STYLE = {
   fontFamily: 'Arial',
@@ -252,6 +252,11 @@ class Game {
     this.stage = new Stage({
       spritesheet: this.spritesheet
     });
+
+    // --- Removed grayscale filter to restore color ---
+  // No color filter applied; game is in full color.
+  this.stage.filters = []; // Clear filters
+  // --- End Filter ---
 
     this.scaleToWindow();
     this.addLinkToLevelCreator();
@@ -552,27 +557,28 @@ class Game {
   }
 
   handleClick(event) {
-    const clickPoint = {
-      x: event.data.global.x,
-      y: event.data.global.y
+    const renderer = this.renderer;
+    const correctedClickPoint = {
+      x: renderer.width - event.data.global.x,
+      y: renderer.height - event.data.global.y
     };
 
-    if (this.stage.clickedPauseLink(clickPoint)) {
+    if (this.stage.clickedPauseLink(correctedClickPoint)) {
       this.pause();
       return;
     }
 
-    if (this.stage.clickedMuteLink(clickPoint)) {
+    if (this.stage.clickedMuteLink(correctedClickPoint)) {
       this.mute();
       return;
     }
 
-    if (this.stage.clickedFullscreenLink(clickPoint)) {
+    if (this.stage.clickedFullscreenLink(correctedClickPoint)) {
       this.fullscreen();
       return;
     }
 
-    if (this.stage.clickedLevelCreatorLink(clickPoint)) {
+    if (this.stage.clickedLevelCreatorLink(correctedClickPoint)) {
       this.openLevelCreator();
       return;
     }
@@ -580,11 +586,11 @@ class Game {
     if (!this.stage.hud.replayButton && !this.outOfAmmo() && !this.shouldWaveEnd() && !this.paused) {
       sound.play('gunSound');
       this.bullets -= 1;
-      this.updateScore(this.stage.shotsFired(clickPoint, this.level.radius));
+      this.updateScore(this.stage.shotsFired(correctedClickPoint, this.level.radius));
       return;
     }
 
-    if (this.stage.hud.replayButton && this.stage.clickedReplay(clickPoint)) {
+    if (this.stage.hud.replayButton && this.stage.clickedReplay(correctedClickPoint)) {
       window.location = window.location.pathname;
     }
   }
