@@ -1,5 +1,5 @@
-import {loader, autoDetectRenderer} from 'pixi.js';
-import {remove as _remove} from 'lodash/array';
+import { Application, Assets } from 'pixi.js';
+import { remove as _remove } from 'lodash/array';
 import levels from '../data/levels.json';
 import Stage from './Stage';
 import sound from './Sound';
@@ -25,10 +25,6 @@ class Game {
    */
   constructor(opts) {
     this.spritesheet = opts.spritesheet;
-    this.loader = loader;
-    this.renderer =  autoDetectRenderer(window.innerWidth, window.innerHeight, {
-      backgroundColor: BLUE_SKY_COLOR
-    });
     this.levelIndex = 0;
     this.maxScore = 0;
     this.timePaused = 0;
@@ -51,7 +47,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'ducksMissed')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'ducksMissed')) {
         this.stage.hud.createTextureBasedCounter('ducksMissed', {
           texture: 'hud/score-live/0.png',
           spritesheet: this.spritesheet,
@@ -74,12 +70,12 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'ducksShot')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'ducksShot')) {
         this.stage.hud.createTextureBasedCounter('ducksShot', {
           texture: 'hud/score-dead/0.png',
           spritesheet: this.spritesheet,
           location: Stage.deadDuckStatusBoxLocation(),
-          rowMax:20,
+          rowMax: 20,
           max: 20
         });
       }
@@ -107,7 +103,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'bullets')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'bullets')) {
         this.stage.hud.createTextureBasedCounter('bullets', {
           texture: 'hud/bullet/0.png',
           spritesheet: this.spritesheet,
@@ -142,7 +138,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'score')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'score')) {
         this.stage.hud.createTextBox('score', {
           style: {
             fontFamily: 'Arial',
@@ -183,7 +179,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'waveStatus')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'waveStatus')) {
         this.stage.hud.createTextBox('waveStatus', {
           style: {
             fontFamily: 'Arial',
@@ -224,7 +220,7 @@ class Game {
 
     if (this.stage && this.stage.hud) {
 
-      if (!Object.prototype.hasOwnProperty.call(this.stage.hud,'gameStatus')) {
+      if (!Object.prototype.hasOwnProperty.call(this.stage.hud, 'gameStatus')) {
         this.stage.hud.createTextBox('gameStatus', {
           style: {
             fontFamily: 'Arial',
@@ -240,18 +236,24 @@ class Game {
     }
   }
 
-  load() {
-    this.loader
-      .add(this.spritesheet)
-      .load(this.onLoad.bind(this));
+  async load() {
+    this.app = new Application();
+    await this.app.init({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      background: BLUE_SKY_COLOR,
+    })
+    document.body.appendChild(this.app.canvas);
+
+    this.textures = (await Assets.load(this.spritesheet)).textures;
+    return this.onLoad();
   }
 
   onLoad() {
-    document.body.appendChild(this.renderer.view);
-
     this.stage = new Stage({
-      spritesheet: this.spritesheet
+      textures: this.textures
     });
+    this.app.stage.addChild(this.stage);
 
     this.scaleToWindow();
     this.addLinkToLevelCreator();
@@ -313,8 +315,7 @@ class Game {
 
   bindEvents() {
     window.addEventListener('resize', this.scaleToWindow.bind(this));
-
-    this.stage.mousedown = this.stage.touchstart = this.handleClick.bind(this);
+    this.stage.on('pointerdown', this.handleClick.bind(this));
 
     document.addEventListener('keypress', (event) => {
       event.stopImmediatePropagation();
@@ -381,7 +382,7 @@ class Game {
   }
 
   removeActiveSound(soundId) {
-    _remove(this.activeSounds, function(item) {
+    _remove(this.activeSounds, function (item) {
       return item === soundId;
     });
   }
@@ -393,11 +394,11 @@ class Game {
   }
 
   scaleToWindow() {
-    this.renderer.resize(window.innerWidth, window.innerHeight);
+    this.app.renderer.resize(window.innerWidth, window.innerHeight);
     this.stage.scaleToWindow();
   }
 
-  startLevel() {
+  async startLevel() {
     if (levelCreator.urlContainsLevelData()) {
       this.level = levelCreator.parseLevelQueryString();
       this.levelIndex = this.levels.length - 1;
@@ -411,10 +412,9 @@ class Game {
     this.wave = 0;
 
     this.gameStatus = this.level.title;
-    this.stage.preLevelAnimation().then(() => {
-      this.gameStatus = '';
-      this.startWave();
-    });
+    await this.stage.preLevelAnimation()
+    this.gameStatus = '';
+    this.startWave();
   }
 
   startWave() {
@@ -434,7 +434,7 @@ class Game {
     sound.stop(this.quackingSoundId);
     if (this.stage.ducksAlive()) {
       this.ducksMissed += this.level.ducks - this.ducksShotThisWave;
-      this.renderer.backgroundColor = PINK_SKY_COLOR;
+      this.app.renderer.backgroundColor = PINK_SKY_COLOR;
       this.stage.flyAway().then(this.goToNextWave.bind(this));
     } else {
       this.stage.cleanUpDucks();
@@ -443,7 +443,7 @@ class Game {
   }
 
   goToNextWave() {
-    this.renderer.backgroundColor = BLUE_SKY_COLOR;
+    this.app.renderer.backgroundColor = BLUE_SKY_COLOR;
     if (this.level.waves === this.wave) {
       this.endLevel();
     } else {
@@ -553,8 +553,8 @@ class Game {
 
   handleClick(event) {
     const clickPoint = {
-      x: event.data.global.x,
-      y: event.data.global.y
+      x: event.global.x,
+      y: event.global.y
     };
 
     if (this.stage.clickedPauseLink(clickPoint)) {
@@ -596,15 +596,13 @@ class Game {
   }
 
   animate() {
-    if (!this.paused) {
-      this.renderer.render(this.stage);
-
-      if (this.shouldWaveEnd()) {
-        this.endWave();
+    this.app.ticker.add(() => {
+      if (!this.paused) {
+        if (this.shouldWaveEnd()) {
+          this.endWave();
+        }
       }
-    }
-
-    requestAnimationFrame(this.animate.bind(this));
+    });
   }
 }
 

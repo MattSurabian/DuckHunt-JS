@@ -1,6 +1,6 @@
-import {random as _random} from 'lodash/number';
-import {assign as _extend} from 'lodash/object';
-import {noop as _noop} from 'lodash/util';
+import { random as _random } from 'lodash/number';
+import { assign as _extend } from 'lodash/object';
+import { noop as _noop } from 'lodash/util';
 import Utils from '../libs/utils';
 import Character from './Character';
 import sound from './Sound';
@@ -53,7 +53,8 @@ class Duck extends Character {
 
       }
     ];
-    super(spriteId, options.spritesheet, states);
+    super({ spriteId, textures: options.textures, states });
+
     this.alive = true;
     this.visible = true;
     this.options = options;

@@ -1,6 +1,6 @@
-import {TweenMax} from 'gsap';
-import {noop as _noop} from 'lodash/util';
-import {assign as _extend} from 'lodash/object';
+import { TweenMax } from 'gsap';
+import { noop as _noop } from 'lodash/util';
+import { assign as _extend } from 'lodash/object';
 import sound from './Sound';
 import Character from './Character';
 
@@ -41,7 +41,8 @@ class Dog extends Character {
         animationSpeed: 0.1
       }
     ];
-    super('dog', options.spritesheet, states);
+    super({ spriteId: 'dog', textures: options.textures, states });
+
     this.toRetrieve = 0;
     this.maxRetrieve = 3;
     this.anchor.set(0.5, 0);
@@ -201,10 +202,10 @@ class Dog extends Character {
       onStart: () => {
         if (this.toRetrieve >= 2) {
           this.state = 'double';
-          this.toRetrieve-=2;
+          this.toRetrieve -= 2;
         } else if (this.toRetrieve === 1) {
           this.state = 'single';
-          this.toRetrieve-=1;
+          this.toRetrieve -= 1;
         }
       }
     });
@@ -216,7 +217,7 @@ class Dog extends Character {
    * @returns {Dog}
    */
   laugh() {
-    this.toRetrieve=0;
+    this.toRetrieve = 0;
     this.upDownTween({
       state: 'laugh',
       onStart: () => {

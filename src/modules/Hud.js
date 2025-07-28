@@ -1,5 +1,5 @@
-import {Container, Point, Text, loader, extras} from 'pixi.js';
-import {assign as _extend} from 'lodash/object';
+import { Container, Point, Text, Sprite } from 'pixi.js';
+import { assign as _extend } from 'lodash/object';
 
 /**
  * Hud
@@ -11,8 +11,9 @@ import {assign as _extend} from 'lodash/object';
  * depth in it's parent container.
  */
 class Hud extends Container {
-  constructor() {
+  constructor({ textures }) {
     super();
+    this.textures = textures;
   }
 
   /**
@@ -40,7 +41,7 @@ class Hud extends Container {
       }
     }, opts);
 
-    this[name + 'TextBox'] = new Text('', options.style);
+    this[name + 'TextBox'] = new Text({ text: '', style: options.style });
     const textBox = this[name + 'TextBox'];
     textBox.position.set(options.location.x, options.location.y);
     textBox.anchor.set(options.anchor.x, options.anchor.y);
@@ -70,20 +71,19 @@ class Hud extends Container {
 
     Object.defineProperty(this, name, {
       set: (val) => {
-        const gameTextures = loader.resources[options.spritesheet].textures;
-        const texture = gameTextures[options.texture];
+        const texture = this.textures[options.texture];
         const childCount = container.children.length;
         if (options.max && val > options.max) {
           val = options.max;
         }
         if (childCount < val) {
           for (let i = childCount; i < val; i++) {
-            const item = new extras.AnimatedSprite([texture]);
+            const item = new Sprite(texture);
             let yPos = 0;
             let xPosDelta = i;
             if (options.rowMax && options.rowMax < val) {
-              yPos = item.height * Math.floor(i/options.rowMax);
-              xPosDelta = i%options.rowMax;
+              yPos = item.height * Math.floor(i / options.rowMax);
+              xPosDelta = i % options.rowMax;
             }
             item.position.set(item.width * xPosDelta, yPos);
             container.addChild(item);

@@ -1,8 +1,9 @@
-import {extras, loader} from 'pixi.js';
-import {TimelineLite} from 'gsap';
-import {find as _find} from 'lodash/collection';
+import { AnimatedSprite } from 'pixi.js';
 
-class Character extends extras.AnimatedSprite {
+import { TimelineLite } from 'gsap';
+import { find as _find } from 'lodash/collection';
+
+class Character extends AnimatedSprite {
   /**
    * Character Constructor
    * @param {String} spriteId The leading id of this Character's resources in the spritesheet
@@ -10,29 +11,22 @@ class Character extends extras.AnimatedSprite {
    * @param {{name:String, animationSpeed:Number}[]} states The states that can be found in the spritesheet for the
    *   given sprite id.
    */
-  constructor(spriteId, spritesheet, states) {
-    const gameTextures = loader.resources[spritesheet].textures;
-    for (const textureKey in gameTextures) {
-      if (!Object.prototype.hasOwnProperty.call(gameTextures,textureKey) || textureKey.indexOf(spriteId) === -1) {
+  constructor({ spriteId, textures, states }) {
+    for (const textureKey of Object.keys(textures)) {
+      if (!textureKey.includes(spriteId)) {
         continue;
       }
-
       const parts = textureKey.split('/');
-      parts.length -= 1; //truncate to remove media file
+      parts.length -= 1;
+      const state = parts.join('/').replace(`${spriteId}/`, '');
+      const stateObj = _find(states, { name: state });
+      if (!stateObj) continue
 
-      const state = parts.join('/').replace(spriteId + '/', '');
-
-      // Only add textures if the state is supported by the class
-      const stateObj = _find(states, {name: state});
-      if (!stateObj) {
-        continue;
-      }
-
-      if (Object.prototype.hasOwnProperty.call(stateObj,'textures')) {
-        stateObj.textures.push(gameTextures[textureKey]);
+      if (Object.prototype.hasOwnProperty.call(stateObj, 'textures')) {
+        stateObj.textures.push(textures[textureKey]);
       } else {
         Object.defineProperty(stateObj, 'textures', {
-          value: [gameTextures[textureKey]],
+          value: [textures[textureKey]],
           writable: true,
           enumerable: true,
           configurable: true
@@ -44,7 +38,7 @@ class Character extends extras.AnimatedSprite {
     this.states = states;
     this.animationSpeed = this.states[0].animationSpeed;
     this.timeline = new TimelineLite({
-      autoRemoveChildren:true
+      autoRemoveChildren: true
     });
     return this;
   }
@@ -93,7 +87,7 @@ class Character extends extras.AnimatedSprite {
    * @throws {Error} In order for a state to be set, a texture must be specified in the spritesheet
    */
   set state(value) {
-    const stateObj = _find(this.states, {name: value});
+    const stateObj = _find(this.states, { name: value });
     if (!stateObj) {
       throw new Error('The requested state (' + value + ') is not availble for this Character.');
     }
@@ -106,7 +100,7 @@ class Character extends extras.AnimatedSprite {
     }
     this.textures = stateObj.textures;
     this.animationSpeed = stateObj.animationSpeed;
-    this.loop = Object.prototype.hasOwnProperty.call(stateObj,'loop') ? stateObj.loop : true;
+    this.loop = Object.prototype.hasOwnProperty.call(stateObj, 'loop') ? stateObj.loop : true;
     this.play();
   }
 
