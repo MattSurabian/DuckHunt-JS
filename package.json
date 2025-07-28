@@ -23,9 +23,12 @@
   "author": "Matt Surabian",
   "license": "MIT",
   "devDependencies": {
+    "@pixi/graphics": "^7.4.3",
+    "@pixi/sprite-animated": "^7.4.3",
+    "@pixi/text": "^7.4.3",
     "audiosprite": "^0.6.0",
     "babel-core": "^6.26.3",
-    "babel-loader": "^6.2.10",
+    "babel-loader": "^10.0.0",
     "babel-preset-es2015": "^6.22.0",
     "bluebird": "^3.7.2",
     "eslint": "^4.18.2",
@@ -42,10 +45,14 @@
     "json-loader": "^0.5.4",
     "lodash": "^4.17.21",
     "node-object-hash": "^1.4.2",
-    "pixi.js": "^4.8.9",
+    "pixi.js": "^8.11.0",
     "script-loader": "^0.7.2",
     "tween.js": "^16.6.0",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.9.1"
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.28.0"
   }
 }
