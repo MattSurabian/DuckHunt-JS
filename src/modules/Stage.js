@@ -234,7 +234,7 @@ class Stage extends Container {
       if (duck.alive && Utils.pointDistance(duck.position, this.getScaledClickLocation(clickPoint)) < radius) {
         ducksShot++;
         duck.shot();
-        duck.timeline.add(() => {
+        duck.timeline.call(() => {
           if (!this.isLocked()) {
             this.dog.retrieve();
           }

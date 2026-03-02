@@ -1,5 +1,5 @@
 import {extras, loader} from 'pixi.js';
-import {TimelineLite} from 'gsap';
+import {gsap} from 'gsap';
 import {find as _find} from 'lodash/collection';
 
 class Character extends extras.AnimatedSprite {
@@ -43,9 +43,7 @@ class Character extends extras.AnimatedSprite {
     super(states[0].textures);
     this.states = states;
     this.animationSpeed = this.states[0].animationSpeed;
-    this.timeline = new TimelineLite({
-      autoRemoveChildren:true
-    });
+    this.timeline = gsap.timeline();
     return this;
   }
 
@@ -56,12 +54,8 @@ class Character extends extras.AnimatedSprite {
    * @returns {Character}
    */
   stopAndClearTimeline() {
-    this.timeline.pause();
-    const timelineItem = this.timeline.getChildren();
-    for (let i = 0; i < timelineItem.length; i++) {
-      timelineItem[i].kill();
-    }
-    this.timeline.play();
+    this.timeline.kill();
+    this.timeline = gsap.timeline();
     return this;
   }
 
