@@ -35,11 +35,6 @@ module.exports = {
   resolve: {
     modules: ['node_modules'],
     extensions: ['.js', '.min.js'],
-    // TODO: remove once pixi.js is upgraded to v5+
-    fallback: {
-      path: require.resolve('path-browserify'),
-      url: require.resolve('url'),
-    },
   },
   devServer: {
     static: path.join(__dirname, 'dist'),

@@ -39,10 +39,7 @@
     "gulp-shell": "^0.8.0",
     "howler": "^2.2.4",
     "lodash": "^4.17.23",
-    "path-browserify": "^1.0.1",
-    "pixi.js": "^4.8.9",
-
-    "url": "^0.11.4",
+    "pixi.js": "^8.0.0",
     "webpack": "^5.105.3",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.3"

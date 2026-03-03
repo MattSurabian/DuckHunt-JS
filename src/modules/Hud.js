@@ -1,4 +1,4 @@
-import {Container, Point, Text, loader, extras} from 'pixi.js';
+import {Container, Point, Text, Assets, AnimatedSprite} from 'pixi.js';
 import {assign as _extend} from 'lodash/object';
 
 /**
@@ -70,7 +70,7 @@ class Hud extends Container {
 
     Object.defineProperty(this, name, {
       set: (val) => {
-        const gameTextures = loader.resources[options.spritesheet].textures;
+        const gameTextures = Assets.get(options.spritesheet).textures;
         const texture = gameTextures[options.texture];
         const childCount = container.children.length;
         if (options.max && val > options.max) {
@@ -78,7 +78,7 @@ class Hud extends Container {
         }
         if (childCount < val) {
           for (let i = childCount; i < val; i++) {
-            const item = new extras.AnimatedSprite([texture]);
+            const item = new AnimatedSprite([texture]);
             let yPos = 0;
             let xPosDelta = i;
             if (options.rowMax && options.rowMax < val) {
