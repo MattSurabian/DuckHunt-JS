@@ -89,6 +89,7 @@ class Dog extends Character {
         options.onComplete();
       }
     });
+    this.timeline.play();
 
     return this;
   }
@@ -126,6 +127,7 @@ class Dog extends Character {
       },
       onComplete: options.onComplete
     }));
+    this.timeline.play();
     return this;
   }
 
@@ -160,6 +162,7 @@ class Dog extends Character {
         options.onComplete();
       }
     }));
+    this.timeline.play();
 
     return this;
   }
@@ -184,6 +187,7 @@ class Dog extends Character {
       this.position.set(options.point.x, options.point.y);
       options.onComplete();
     });
+    this.timeline.play();
     return this;
   }
 

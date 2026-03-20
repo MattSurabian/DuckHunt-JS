@@ -134,6 +134,7 @@ class Duck extends Character {
       },
       onComplete: options.onComplete
     });
+    this.timeline.play();
 
     return this;
   }
@@ -166,6 +167,7 @@ class Duck extends Character {
         this.visible = false;
       }
     });
+    this.timeline.play();
 
   }
 

@@ -43,9 +43,7 @@ class Character extends extras.AnimatedSprite {
     super(states[0].textures);
     this.states = states;
     this.animationSpeed = this.states[0].animationSpeed;
-    this.timeline = new TimelineLite({
-      autoRemoveChildren:true
-    });
+    this.timeline = new TimelineLite();
     return this;
   }
 
@@ -82,6 +80,7 @@ class Character extends extras.AnimatedSprite {
    */
   addToTimeline(item) {
     this.timeline.add(item);
+    this.timeline.play();
     return this;
   }
 

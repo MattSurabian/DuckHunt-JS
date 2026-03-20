@@ -1,10 +1,9 @@
 'use strict';
 
 var path = require('path');
-var webpack = require('webpack');
-var HardSourcePlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   context: __dirname,
   entry: {
     duckhunt: './main.js',
@@ -14,21 +13,20 @@ module.exports = {
     filename: '[name].js',
   },
   devtool: 'source-map',
+  cache: {
+    type: 'filesystem',
+  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader?cacheDirectory',
-        options: { presets: ['es2015'] },
+        loader: 'babel-loader',
+        options: { presets: ['@babel/preset-env'] },
       },
       {
         test: /\.png$/,
         loader: 'file-loader',
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader',
       },
       {
         test: /\.(mp3|ogg)$/,
@@ -39,20 +37,14 @@ module.exports = {
   resolve: {
     modules: ['node_modules'],
     extensions: ['.js', '.min.js'],
+    fallback: {
+      path: require.resolve('path-browserify'),
+      url: require.resolve('url/'),
+    },
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    static: path.join(__dirname, 'dist'),
     compress: true,
-    inline: true,
     port: 8080
   },
-  plugins: [
-    new HardSourcePlugin({
-      cacheDirectory: path.join(__dirname, 'node_modules/.cache/hardsource/[confighash]'),
-      recordsPath: path.join(__dirname, 'node_modules/.cache/hardsource/[confighash]/records.json'),
-      configHash: function(webpackConfig) {
-        return require('node-object-hash')().hash(webpackConfig);
-      }
-    })
-  ],
 };

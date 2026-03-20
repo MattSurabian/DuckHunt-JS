@@ -17,7 +17,6 @@
     "object-shorthand": [2, "always"],
     "prefer-const": 2,
     "prefer-spread": 2,
-    "prefer-reflect": 0,
     "require-yield": 2
   }
 }
