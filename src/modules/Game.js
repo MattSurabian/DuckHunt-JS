@@ -1,4 +1,4 @@
-import {loader, autoDetectRenderer} from 'pixi.js';
+import {Assets, autoDetectRenderer} from 'pixi.js';
 import {remove as _remove} from 'lodash/array';
 import levels from '../data/levels.json';
 import Stage from './Stage';
@@ -25,10 +25,6 @@ class Game {
    */
   constructor(opts) {
     this.spritesheet = opts.spritesheet;
-    this.loader = loader;
-    this.renderer =  autoDetectRenderer(window.innerWidth, window.innerHeight, {
-      backgroundColor: BLUE_SKY_COLOR
-    });
     this.levelIndex = 0;
     this.maxScore = 0;
     this.timePaused = 0;
@@ -240,14 +236,18 @@ class Game {
     }
   }
 
-  load() {
-    this.loader
-      .add(this.spritesheet)
-      .load(this.onLoad.bind(this));
+  async load() {
+    this.renderer = await autoDetectRenderer({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      background: BLUE_SKY_COLOR
+    });
+    await Assets.load(this.spritesheet);
+    this.onLoad();
   }
 
   onLoad() {
-    document.body.appendChild(this.renderer.view);
+    document.body.appendChild(this.renderer.canvas);
 
     this.stage = new Stage({
       spritesheet: this.spritesheet
@@ -314,7 +314,7 @@ class Game {
   bindEvents() {
     window.addEventListener('resize', this.scaleToWindow.bind(this));
 
-    this.stage.mousedown = this.stage.touchstart = this.handleClick.bind(this);
+    this.renderer.canvas.addEventListener('pointerdown', this.handleClick.bind(this));
 
     document.addEventListener('keypress', (event) => {
       event.stopImmediatePropagation();
@@ -434,7 +434,7 @@ class Game {
     sound.stop(this.quackingSoundId);
     if (this.stage.ducksAlive()) {
       this.ducksMissed += this.level.ducks - this.ducksShotThisWave;
-      this.renderer.backgroundColor = PINK_SKY_COLOR;
+      this.renderer.background.color = PINK_SKY_COLOR;
       this.stage.flyAway().then(this.goToNextWave.bind(this));
     } else {
       this.stage.cleanUpDucks();
@@ -443,7 +443,7 @@ class Game {
   }
 
   goToNextWave() {
-    this.renderer.backgroundColor = BLUE_SKY_COLOR;
+    this.renderer.background.color = BLUE_SKY_COLOR;
     if (this.level.waves === this.wave) {
       this.endLevel();
     } else {
@@ -553,8 +553,8 @@ class Game {
 
   handleClick(event) {
     const clickPoint = {
-      x: event.data.global.x,
-      y: event.data.global.y
+      x: event.clientX,
+      y: event.clientY
     };
 
     if (this.stage.clickedPauseLink(clickPoint)) {

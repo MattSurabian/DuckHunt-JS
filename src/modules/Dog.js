@@ -1,4 +1,4 @@
-import {TweenMax} from 'gsap';
+import {gsap} from 'gsap';
 import {noop as _noop} from 'lodash/util';
 import {assign as _extend} from 'lodash/object';
 import sound from './Sound';
@@ -73,10 +73,11 @@ class Dog extends Character {
       }
     });
 
-    this.timeline.to(this.position, 2, {
+    this.timeline.to(this.position, {
+      duration: 2,
       x: options.endPoint.x,
       y: options.endPoint.y,
-      ease: 'Linear.easeNone',
+      ease: 'none',
       onStart: () => {
         this.visible = true;
         this.parent.setChildIndex(this, this.parent.children.length - 1);
@@ -114,18 +115,19 @@ class Dog extends Character {
       point: options.startPoint
     });
 
-    this.timeline.add(TweenMax.to(this.position, 0.4, {
+    this.timeline.to(this.position, {
+      duration: 0.4,
       y: options.endPoint.y,
       yoyo: true,
       repeat: 1,
       repeatDelay: 0.5,
-      ease: 'Linear.easeNone',
+      ease: 'none',
       onStart: () => {
         this.visible = true;
         options.onStart.call(this);
       },
       onComplete: options.onComplete
-    }));
+    });
     return this;
   }
 
@@ -142,15 +144,16 @@ class Dog extends Character {
       onComplete: _noop
     }, opts);
 
-    this.timeline.add(() => {
+    this.timeline.call(() => {
       sound.play('barkDucks');
       this.state = 'find';
       options.onStart();
     });
 
-    this.timeline.add(TweenMax.to(this.position, 0.2, {
+    this.timeline.to(this.position, {
+      duration: 0.2,
       y: '-=100',
-      ease: 'Strong.easeOut',
+      ease: 'power4.out',
       delay: 0.4,
       onStart: () => {
         this.state = 'jump';
@@ -159,7 +162,7 @@ class Dog extends Character {
         this.visible = false;
         options.onComplete();
       }
-    }));
+    });
 
     return this;
   }
@@ -179,7 +182,7 @@ class Dog extends Character {
       onComplete: _noop
     }, opts);
 
-    this.timeline.add(() => {
+    this.timeline.call(() => {
       options.onStart();
       this.position.set(options.point.x, options.point.y);
       options.onComplete();

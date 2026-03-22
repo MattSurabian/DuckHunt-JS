@@ -1,8 +1,8 @@
-import {extras, loader} from 'pixi.js';
-import {TimelineLite} from 'gsap';
+import {AnimatedSprite, Assets} from 'pixi.js';
+import {gsap} from 'gsap';
 import {find as _find} from 'lodash/collection';
 
-class Character extends extras.AnimatedSprite {
+class Character extends AnimatedSprite {
   /**
    * Character Constructor
    * @param {String} spriteId The leading id of this Character's resources in the spritesheet
@@ -11,7 +11,7 @@ class Character extends extras.AnimatedSprite {
    *   given sprite id.
    */
   constructor(spriteId, spritesheet, states) {
-    const gameTextures = loader.resources[spritesheet].textures;
+    const gameTextures = Assets.get(spritesheet).textures;
     for (const textureKey in gameTextures) {
       if (!Object.prototype.hasOwnProperty.call(gameTextures,textureKey) || textureKey.indexOf(spriteId) === -1) {
         continue;
@@ -43,9 +43,7 @@ class Character extends extras.AnimatedSprite {
     super(states[0].textures);
     this.states = states;
     this.animationSpeed = this.states[0].animationSpeed;
-    this.timeline = new TimelineLite({
-      autoRemoveChildren:true
-    });
+    this.timeline = gsap.timeline();
     return this;
   }
 
@@ -56,12 +54,8 @@ class Character extends extras.AnimatedSprite {
    * @returns {Character}
    */
   stopAndClearTimeline() {
-    this.timeline.pause();
-    const timelineItem = this.timeline.getChildren();
-    for (let i = 0; i < timelineItem.length; i++) {
-      timelineItem[i].kill();
-    }
-    this.timeline.play();
+    this.timeline.kill();
+    this.timeline = gsap.timeline();
     return this;
   }
 

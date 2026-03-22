@@ -120,10 +120,11 @@ class Duck extends Character {
     const direction = Utils.directionOfTravel(this.position, options.point);
     const tweenSeconds = (this.flightAnimationMs + _random(0, 300)) / 1000;
 
-    this.timeline.to(this.position, tweenSeconds, {
+    this.timeline.to(this.position, {
+      duration: tweenSeconds,
       x: options.point.x,
       y: options.point.y,
-      ease: 'Linear.easeNone',
+      ease: 'none',
       onStart: () => {
         if (!this.alive) {
           this.stopAndClearTimeline();
@@ -149,14 +150,15 @@ class Duck extends Character {
     this.alive = false;
 
     this.stopAndClearTimeline();
-    this.timeline.add(() => {
+    this.timeline.call(() => {
       this.state = 'shot';
       sound.play('quak', _noop);
     });
 
-    this.timeline.to(this.position, DEATH_ANIMATION_SECONDS, {
+    this.timeline.to(this.position, {
+      duration: DEATH_ANIMATION_SECONDS,
       y: this.options.maxY,
-      ease: 'Linear.easeNone',
+      ease: 'none',
       delay: 0.3,
       onStart: () => {
         this.state = 'dead';

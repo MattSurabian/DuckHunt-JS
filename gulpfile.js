@@ -1,12 +1,12 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
 var audiosprite = require('./vendor/audiosprite');
-var glob = require('glob');
+var { globSync } = require('glob');
 var shell = require('gulp-shell');
 var fs = require('fs');
 
 gulp.task('audio', gulp.parallel(function(cb) {
-  var files = glob.sync('./src/assets/sounds/*.mp3');
+  var files = globSync('./src/assets/sounds/*.mp3');
   var outputPath = './dist/audio';
   var opts = {
     output: outputPath,

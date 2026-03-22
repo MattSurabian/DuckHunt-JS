@@ -1,4 +1,4 @@
-import {Point, Graphics, Container, loader, extras} from 'pixi.js';
+import {Point, Graphics, Container, Assets, AnimatedSprite} from 'pixi.js';
 import BPromise from 'bluebird';
 import {some as _some} from 'lodash/collection';
 import {delay as _delay} from 'lodash/function';
@@ -36,9 +36,7 @@ const HUD_LOCATIONS = {
 
 const FLASH_MS = 60;
 const FLASH_SCREEN = new Graphics();
-FLASH_SCREEN.beginFill(0xFFFFFF);
-FLASH_SCREEN.drawRect(0, 0, MAX_X, MAX_Y);
-FLASH_SCREEN.endFill();
+FLASH_SCREEN.rect(0, 0, MAX_X, MAX_Y).fill(0xFFFFFF);
 FLASH_SCREEN.position.x = 0;
 FLASH_SCREEN.position.y = 0;
 
@@ -54,7 +52,6 @@ class Stage extends Container {
     super();
     this.locked = false;
     this.spritesheet = opts.spritesheet;
-    this.interactive = true;
     this.ducks = [];
     this.dog = new Dog({
       spritesheet: opts.spritesheet,
@@ -143,12 +140,12 @@ class Stage extends Container {
    * @private
    */
   _setStage() {
-    const background = new extras.AnimatedSprite([
-      loader.resources[this.spritesheet].textures['scene/back/0.png']
+    const background = new AnimatedSprite([
+      Assets.get(this.spritesheet).textures['scene/back/0.png']
     ]);
     background.position.set(0, 0);
 
-    const tree = new extras.AnimatedSprite([loader.resources[this.spritesheet].textures['scene/tree/0.png']]);
+    const tree = new AnimatedSprite([Assets.get(this.spritesheet).textures['scene/tree/0.png']]);
     tree.position.set(100, 237);
 
     this.addChild(tree);
@@ -234,7 +231,7 @@ class Stage extends Container {
       if (duck.alive && Utils.pointDistance(duck.position, this.getScaledClickLocation(clickPoint)) < radius) {
         ducksShot++;
         duck.shot();
-        duck.timeline.add(() => {
+        duck.timeline.call(() => {
           if (!this.isLocked()) {
             this.dog.retrieve();
           }
