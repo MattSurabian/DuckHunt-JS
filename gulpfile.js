@@ -1,8 +1,7 @@
 var gulp = require('gulp');
-var connect = require('gulp-connect');
 var audiosprite = require('./vendor/audiosprite');
 var { globSync } = require('glob');
-var shell = require('gulp-shell');
+var { exec } = require('child_process');
 var fs = require('fs');
 
 gulp.task('audio', gulp.parallel(function(cb) {
@@ -25,24 +24,32 @@ gulp.task('audio', gulp.parallel(function(cb) {
   });
 }));
 
-gulp.task('images', gulp.parallel(function(){
-  // There is a texturepacker template for spritesmith but it doesn't work
-  // well with complex directory structures, so instead we use the shell
-  // checking TexturePacker --version first ensures it bails if TexturePacker
-  // isn't installed
-  return gulp.src('*', {read:false})
-    .pipe(shell([
-      'TexturePacker --version || echo ERROR: TexturePacker not found, install TexturePacker',
-      'TexturePacker --disable-rotation --data dist/sprites.json --format json --sheet dist/sprites.png src/assets/images'
-    ]))
-    .pipe(connect.reload());
+function runCommands(commands, cb) {
+  var i = 0;
+  function next() {
+    if (i >= commands.length) return cb();
+    exec(commands[i], function(err, stdout, stderr) {
+      if (stdout) process.stdout.write(stdout);
+      if (stderr) process.stderr.write(stderr);
+      if (err) return cb(err);
+      i++;
+      next();
+    });
+  }
+  next();
+}
+
+gulp.task('images', gulp.parallel(function(cb) {
+  runCommands([
+    'TexturePacker --version || echo ERROR: TexturePacker not found, install TexturePacker',
+    'TexturePacker --disable-rotation --data dist/sprites.json --format json --sheet dist/sprites.png src/assets/images'
+  ], cb);
 }));
 
-gulp.task('deploy', gulp.parallel(function() {
-  return gulp.src('*', {read:false})
-    .pipe(shell([
-    'aws --profile duckhunt s3 sync dist/ s3://duckhuntjs.com --include \'*\' --acl \'public-read\''
-  ]));
+gulp.task('deploy', gulp.parallel(function(cb) {
+  runCommands([
+    "aws --profile duckhunt s3 sync dist/ s3://duckhuntjs.com --include '*' --acl 'public-read'"
+  ], cb);
 }));
 
 gulp.task('default', gulp.parallel('images', 'audio'));
