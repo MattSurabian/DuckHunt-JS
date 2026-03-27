@@ -5,7 +5,6 @@
 var fs = require('fs')
 var path = require('path')
 var async = require('async')
-var _ = require('underscore')._
 
 var defaults = {
   output: 'output',
@@ -41,12 +40,12 @@ module.exports = function(files) {
 
   if (!files || !files.length) return callback(new Error('No input files specified.'))
 
-  opts = _.extend({}, defaults, opts)
+  opts = Object.assign({}, defaults, opts)
 
   // make sure output directory exists
   var outputDir = path.dirname(opts.output)
   if (!fs.existsSync(outputDir)) {
-    require('mkdirp').sync(outputDir)
+    fs.mkdirSync(outputDir, { recursive: true })
   }
 
   var offsetCursor = 0
@@ -80,7 +79,7 @@ module.exports = function(files) {
   })
 
   function mktemp(prefix) {
-    var tmpdir = require('os').tmpDir() || '.'
+    var tmpdir = require('os').tmpdir() || '.'
     return path.join(tmpdir, prefix + '.' + Math.random().toString().substr(2))
   }
 
@@ -151,7 +150,7 @@ module.exports = function(files) {
   }
 
   function appendSilence(duration, dest, cb) {
-    var buffer = new Buffer(Math.round(opts.samplerate * 2 * opts.channels * duration))
+    var buffer = Buffer.alloc(Math.round(opts.samplerate * 2 * opts.channels * duration))
     buffer.fill(0)
     var writeStream = fs.createWriteStream(dest, { flags: 'a' })
     writeStream.end(buffer)
@@ -220,7 +219,7 @@ module.exports = function(files) {
       , mp3: ['-ar', opts.samplerate, '-f', 'mp3']
       , mp4: ['-ab', opts.bitrate + 'k']
       , m4a: ['-ab', opts.bitrate + 'k']
-      , ogg: ['-acodec', 'libvorbis', '-f', 'ogg', '-ab', opts.bitrate + 'k']
+      , ogg: ['-acodec', 'libopus', '-f', 'ogg', '-ab', opts.bitrate + 'k']
     }
 
     if (opts.vbr >= 0 && opts.vbr <= 9) {
