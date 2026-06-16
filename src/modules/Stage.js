@@ -192,6 +192,7 @@ class Stage extends Container {
   addDucks(numDucks, speed) {
     for (let i = 0; i < numDucks; i++) {
       const duckColor = i % 2 === 0 ? 'red' : 'black';
+      const duckSpeed = duckColor === 'red' ? Math.min(speed + 1, 10) : speed;
 
       // Al was here.
       const newDuck = new Duck({
@@ -203,7 +204,7 @@ class Stage extends Container {
       newDuck.position.set(DUCK_POINTS.ORIGIN.x, DUCK_POINTS.ORIGIN.y);
       this.addChildAt(newDuck, 0);
       newDuck.randomFlight({
-        speed
+        speed: duckSpeed
       });
 
       this.ducks.push(newDuck);
@@ -216,7 +217,7 @@ class Stage extends Container {
    * alignment and then calculates if any of the ducks were hit and should be shot.
    * @param {{x:Number, y:Number}} clickPoint - Point where the container was clicked in real coordinates
    * @param {Number} radius - The "blast radius" of the player's weapon
-   * @returns {Number} - The number of ducks hit with the shot
+   * @returns {Array<Duck>} - The ducks hit with the shot
    */
   shotsFired(clickPoint, radius) {
     // flash the screen
@@ -225,11 +226,11 @@ class Stage extends Container {
       this.flashScreen.visible = false;
     }, FLASH_MS);
 
-    let ducksShot = 0;
+    const hitDucks = [];
     for (let i = 0; i < this.ducks.length; i++) {
       const duck = this.ducks[i];
       if (duck.alive && Utils.pointDistance(duck.position, this.getScaledClickLocation(clickPoint)) < radius) {
-        ducksShot++;
+        hitDucks.push(duck);
         duck.shot();
         duck.timeline.call(() => {
           if (!this.isLocked()) {
@@ -238,7 +239,7 @@ class Stage extends Container {
         });
       }
     }
-    return ducksShot;
+    return hitDucks;
   }
 
   clickedReplay(clickPoint) {
