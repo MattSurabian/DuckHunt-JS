@@ -25,7 +25,7 @@ class Game {
    */
   constructor(opts) {
     this.spritesheet = opts.spritesheet;
-    this.levelIndex = 6;
+    this.levelIndex = 0;
     this.maxScore = 0;
     this.timePaused = 0;
     this.muted = false;
