@@ -65,6 +65,17 @@
       "bullets": 15,
       "radius": 60,
       "time": 25
+    },
+    {
+      "id": 7,
+      "title": "Level 7",
+      "waves": 3,
+      "ducks": 4,
+      "pointsPerDuck": 150,
+      "speed": 9,
+      "bullets": 6,
+      "radius": 60,
+      "time": 12
     }
   ]
 }
