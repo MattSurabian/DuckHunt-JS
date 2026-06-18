@@ -60,6 +60,10 @@ class Duck extends Character {
     this.anchor.set(0.5, 0.5);
   }
 
+  get colorProfile() {
+    return this.options.colorProfile;
+  }
+
   /**
    * randomFlight
    * Method that causes the duck the randomly fly around a specific region of its parent
