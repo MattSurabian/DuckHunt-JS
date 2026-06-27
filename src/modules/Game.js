@@ -430,6 +430,7 @@ class Game {
     this.quackingSoundId = sound.play('quacking');
     this.wave += 1;
     this.waveStartTime = Date.now();
+    this.timePaused = 0;
     this.bullets = this.level.bullets;
     this.ducksShotThisWave = 0;
     this.waveEnding = false;
@@ -482,6 +483,7 @@ class Game {
   }
 
   endLevel() {
+    this.completedLevel = this.level;
     this.wave = 0;
     this.goToNextLevel();
   }
@@ -498,7 +500,7 @@ class Game {
   }
 
   levelWon() {
-    return this.ducksShot > SUCCESS_RATIO * this.level.ducks * this.level.waves;
+    return this.ducksShot > SUCCESS_RATIO * this.completedLevel.ducks * this.completedLevel.waves;
   }
 
   win() {
