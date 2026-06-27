@@ -405,7 +405,16 @@ class Game {
       this.level = this.levels[this.levelIndex];
     }
 
-    this.maxScore += this.level.waves * this.level.ducks * this.level.pointsPerDuck;
+    let levelMaxScore = 0;
+    const basePoints = this.level.pointsPerDuck;
+    for (let wave = 0; wave < this.level.waves; wave++) {
+      for (let i = 0; i < this.level.ducks; i++) {
+        const duckColor = i % 2 === 0 ? 'red' : 'black';
+        const multiplier = duckColor === 'red' ? 1.5 : 1.0;
+        levelMaxScore += Math.round(basePoints * multiplier);
+      }
+    }
+    this.maxScore += levelMaxScore;
     this.ducksShot = 0;
     this.ducksMissed = 0;
     this.wave = 0;
@@ -421,6 +430,7 @@ class Game {
     this.quackingSoundId = sound.play('quacking');
     this.wave += 1;
     this.waveStartTime = Date.now();
+    this.timePaused = 0;
     this.bullets = this.level.bullets;
     this.ducksShotThisWave = 0;
     this.waveEnding = false;
@@ -473,6 +483,7 @@ class Game {
   }
 
   endLevel() {
+    this.completedLevel = this.level;
     this.wave = 0;
     this.goToNextLevel();
   }
@@ -489,7 +500,7 @@ class Game {
   }
 
   levelWon() {
-    return this.ducksShot > SUCCESS_RATIO * this.level.ducks * this.level.waves;
+    return this.ducksShot > SUCCESS_RATIO * this.completedLevel.ducks * this.completedLevel.waves;
   }
 
   win() {
@@ -589,10 +600,17 @@ class Game {
     }
   }
 
-  updateScore(ducksShot) {
-    this.ducksShot += ducksShot;
-    this.ducksShotThisWave += ducksShot;
-    this.score += ducksShot * this.level.pointsPerDuck;
+  updateScore(hitDucks) {
+    const ducksShotCount = hitDucks.length;
+    this.ducksShot += ducksShotCount;
+    this.ducksShotThisWave += ducksShotCount;
+
+    let points = 0;
+    hitDucks.forEach((duck) => {
+      const multiplier = duck.colorProfile === 'red' ? 1.5 : 1.0;
+      points += Math.round(this.level.pointsPerDuck * multiplier);
+    });
+    this.score += points;
   }
 
   animate() {

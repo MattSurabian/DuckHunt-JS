@@ -1,4 +1,3 @@
-import {gsap} from 'gsap';
 import {noop as _noop} from 'lodash/util';
 import {assign as _extend} from 'lodash/object';
 import sound from './Sound';

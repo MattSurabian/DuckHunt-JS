@@ -60,6 +60,10 @@ class Duck extends Character {
     this.anchor.set(0.5, 0.5);
   }
 
+  get colorProfile() {
+    return this.options.colorProfile;
+  }
+
   /**
    * randomFlight
    * Method that causes the duck the randomly fly around a specific region of its parent
@@ -77,7 +81,7 @@ class Duck extends Character {
       maxX: this.options.maxX || Infinity,
       minY: 0,
       maxY: this.options.maxY || Infinity,
-      randomFlightDelta: this.options.randomFilghtDelta || RANDOM_FLIGHT_DELTA,
+      randomFlightDelta: this.options.randomFlightDelta || RANDOM_FLIGHT_DELTA,
       speed: 1
     }, opts);
 

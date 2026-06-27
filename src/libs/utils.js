@@ -12,13 +12,13 @@ module.exports.directionOfTravel = function(pointStart, pointEnd) {
   //positive means right
   const run = pointEnd.x - pointStart.x;
 
-  if (run < 1 && rise < 1) {
+  if (run <= 0 && rise <= 0) {
     direction = 'top-left';
-  } else if (run < 1 && rise > 1) {
+  } else if (run <= 0 && rise > 0) {
     direction = 'bottom-left';
-  } else if (run > 1 && rise < 1) {
+  } else if (run > 0 && rise <= 0) {
     direction = 'top-right';
-  } else if (run > 1 && rise > 1) {
+  } else if (run > 0 && rise > 0) {
     direction = 'bottom-right';
   }
 
