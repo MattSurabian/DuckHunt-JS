@@ -23,8 +23,8 @@
   "author": "Matt Surabian",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.0",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
     "@eslint/js": "^9.39.3",
     "async": "^3.2.6",
     "babel-loader": "^10.0.0",
